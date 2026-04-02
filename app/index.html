@@ -1416,8 +1416,12 @@ body {
         <span class="material-symbols-outlined text-white text-4xl" style="font-variation-settings:'FILL' 1;">call_end</span>
       </button>
 
-      <!-- ElevenLabs Widget: klein und direkt unter den Buttons, wird bei Anruf sichtbar -->
-      <div id="tutor-widget-slot" style="margin-top:16px; width:100%; display:flex; justify-content:center;"></div>
+      <!-- ElevenLabs Widget -->
+      <div id="tutor-widget-slot" style="width:100%; display:flex; justify-content:center; margin-top:16px;"></div>
+      <style>
+        /* Verstecke das Widget-Popup aber nicht das Widget selbst */
+        #tutor-widget-slot elevenlabs-convai { position: relative; }
+      </style>
     </div>
   </div>
 
@@ -2454,7 +2458,7 @@ Beziehe dich auf seinen Lernstand! Wenn er Schwächen hat, sprich sie an. Wenn e
   document.getElementById('tutor-btn-label').textContent = 'Auflegen';
   tutorCallActive = true;
 
-  // Warte auf Widget und klicke "Start a call"
+  // Warte auf Widget und klicke "Start a call" automatisch
   function tryClick(attempts) {
     if (attempts <= 0 || !tutorCallActive) return;
     const widget = document.querySelector('#tutor-widget-slot elevenlabs-convai');
@@ -2463,8 +2467,18 @@ Beziehe dich auf seinen Lernstand! Wenn er Schwächen hat, sprich sie an. Wenn e
       for (const btn of btns) {
         if (btn.textContent.trim().toLowerCase().includes('start') || btn.getBoundingClientRect().width > 100) {
           btn.click();
-          // Timer + Status nach kurzer Verzoegerung
+          // Widget-Popup nach Klick verstecken
           setTimeout(() => {
+            const w = document.querySelector('#tutor-widget-slot elevenlabs-convai');
+            if (w && w.shadowRoot) {
+              // Alle sichtbaren Overlays/Popups im Shadow DOM verstecken
+              w.shadowRoot.querySelectorAll('div').forEach(d => {
+                const r = d.getBoundingClientRect();
+                if (r.width > 200 && r.height > 200) {
+                  d.style.display = 'none';
+                }
+              });
+            }
             if (tutorCallActive) {
               document.getElementById('tutor-call-status').textContent = 'Verbunden';
               document.getElementById('tutor-call-status').style.color = '#22c55e';
