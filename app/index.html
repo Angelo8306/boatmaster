@@ -9,7 +9,7 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-<script src="https://unpkg.com/@elevenlabs/convai-widget-embed@0.11.0/dist/index.js" async></script>
+<script src="https://unpkg.com/@elevenlabs/client@1.1.0/dist/lib.iife.js"></script>
 <script>
 tailwind.config = {
   darkMode: "class",
@@ -1400,28 +1400,21 @@ body {
   <!-- ANRUFEN SCREEN — Telefon mit Kapitaen Beusti -->
   <div class="screen" id="screen-tutor">
     <div class="flex flex-col items-center justify-center min-h-[80vh] px-6 text-center">
-      <img src="beusti.jpg" alt="Kapitän Beusti" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-white shadow-xl">
+      <img src="beusti.jpg" alt="Kapitän Beusti" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-white shadow-xl" id="tutor-avatar">
       <h2 class="text-2xl font-headline italic text-primary mb-1">Kapitän Beusti</h2>
       <p class="text-secondary font-body text-sm mb-2">Dein persönlicher Bootslehrer</p>
-      <p class="text-[#22c55e] font-body text-sm font-semibold mb-6" id="tutor-call-status"></p>
+      <p class="font-body text-sm font-semibold mb-6" id="tutor-call-status"></p>
 
-      <!-- Anrufen Button (vor dem Anruf) -->
+      <!-- Anrufen Button -->
       <button id="tutor-btn-call" onclick="tutorStartCall()" class="w-20 h-20 rounded-full bg-[#22c55e] flex items-center justify-center shadow-xl shadow-green-500/30 active:scale-90 transition-transform">
         <span class="material-symbols-outlined text-white text-4xl" style="font-variation-settings:'FILL' 1;">call</span>
       </button>
       <p id="tutor-btn-label" class="text-outline text-sm font-body mt-3">Anrufen</p>
 
-      <!-- Auflegen Button (waehrend Anruf, versteckt) -->
+      <!-- Auflegen Button (versteckt) -->
       <button id="tutor-btn-hangup" onclick="tutorEndCall()" class="w-20 h-20 rounded-full bg-[#ef4444] items-center justify-center shadow-xl shadow-red-500/30 active:scale-90 transition-transform" style="display:none;">
         <span class="material-symbols-outlined text-white text-4xl" style="font-variation-settings:'FILL' 1;">call_end</span>
       </button>
-
-      <!-- ElevenLabs Widget -->
-      <div id="tutor-widget-slot" style="width:100%; display:flex; justify-content:center; margin-top:16px;"></div>
-      <style>
-        /* Verstecke das Widget-Popup aber nicht das Widget selbst */
-        #tutor-widget-slot elevenlabs-convai { position: relative; }
-      </style>
     </div>
   </div>
 
@@ -2398,9 +2391,9 @@ let tutorExamCorrect = 0;
 let tutorCallActive = false;
 let tutorCallInterval = null;
 let tutorCallSeconds = 0;
+let tutorConversationSession = null;
 
 function tutorInit() {
-  // Reset UI
   if (!tutorCallActive) {
     document.getElementById('tutor-btn-call').style.display = 'flex';
     document.getElementById('tutor-btn-hangup').style.display = 'none';
@@ -2410,7 +2403,15 @@ function tutorInit() {
 }
 
 async function tutorStartCall() {
-  // Agent-Prompt mit aktuellem Lernstand aktualisieren
+  // UI sofort umschalten
+  document.getElementById('tutor-call-status').textContent = 'Verbinde...';
+  document.getElementById('tutor-call-status').style.color = '#94455a';
+  document.getElementById('tutor-btn-call').style.display = 'none';
+  document.getElementById('tutor-btn-hangup').style.display = 'flex';
+  document.getElementById('tutor-btn-label').textContent = 'Auflegen';
+  tutorCallActive = true;
+
+  // Agent-Prompt mit Lernstand aktualisieren
   try {
     const srSummary = tutorGetSRSummary();
     const weakChapters = tutorGetWeakChapters();
@@ -2426,102 +2427,76 @@ AKTUELLER LERNSTAND VON ANDREAS:
 ${srSummary}
 ${weakChapters.length > 0 ? 'Schwache Themen: ' + weakChapters.join(', ') : 'Keine besonderen Schwächen erkannt.'}
 
-Beziehe dich auf seinen Lernstand! Wenn er Schwächen hat, sprich sie an. Wenn er gut ist, lob ihn.`;
+Beziehe dich auf seinen Lernstand! Wenn er Schwächen hat, sprich sie an.`;
 
     const firstMsg = weakChapters.length > 0
-      ? `Moin Andreas! Schön dass du anrufst. Ich hab mir deinen Lernstand angeschaut — bei ${weakChapters[0]} sollten wir nochmal ran. Was meinst du?`
-      : 'Moin Andreas! Schön dass du anrufst, alter Freund. Du machst gute Fortschritte! Was sollen wir heute angehen?';
+      ? `Moin Andreas! Ich hab mir deinen Lernstand angeschaut — bei ${weakChapters[0]} sollten wir nochmal ran. Was meinst du?`
+      : 'Moin Andreas! Du machst gute Fortschritte! Was sollen wir heute angehen?';
 
     await fetch('https://api.elevenlabs.io/v1/convai/agents/agent_5201kn7rttx4estb9481qa9vw60w', {
       method: 'PATCH',
       headers: { 'xi-api-key': ELEVENLABS_KEY, 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        conversation_config: {
-          agent: {
-            first_message: firstMsg,
-            prompt: { prompt: contextPrompt }
-          }
-        }
-      })
+      body: JSON.stringify({ conversation_config: { agent: { first_message: firstMsg, prompt: { prompt: contextPrompt } } } })
     });
   } catch(e) { console.warn('Agent update failed:', e); }
 
-  // Widget erstellen
-  const slot = document.getElementById('tutor-widget-slot');
-  slot.innerHTML = '<elevenlabs-convai agent-id="agent_5201kn7rttx4estb9481qa9vw60w"></elevenlabs-convai>';
-
-  // UI: Anrufen → Verbinde...
-  document.getElementById('tutor-call-status').textContent = 'Verbinde...';
-  document.getElementById('tutor-call-status').style.color = '#94455a';
-  document.getElementById('tutor-btn-call').style.display = 'none';
-  document.getElementById('tutor-btn-hangup').style.display = 'flex';
-  document.getElementById('tutor-btn-label').textContent = 'Auflegen';
-  tutorCallActive = true;
-
-  // Warte auf Widget und klicke "Start a call" automatisch
-  function tryClick(attempts) {
-    if (attempts <= 0 || !tutorCallActive) return;
-    const widget = document.querySelector('#tutor-widget-slot elevenlabs-convai');
-    if (widget && widget.shadowRoot) {
-      const btns = widget.shadowRoot.querySelectorAll('button');
-      for (const btn of btns) {
-        if (btn.textContent.trim().toLowerCase().includes('start') || btn.getBoundingClientRect().width > 100) {
-          btn.click();
-          // Widget-Popup nach Klick verstecken
-          setTimeout(() => {
-            const w = document.querySelector('#tutor-widget-slot elevenlabs-convai');
-            if (w && w.shadowRoot) {
-              // Alle sichtbaren Overlays/Popups im Shadow DOM verstecken
-              w.shadowRoot.querySelectorAll('div').forEach(d => {
-                const r = d.getBoundingClientRect();
-                if (r.width > 200 && r.height > 200) {
-                  d.style.display = 'none';
-                }
-              });
-            }
-            if (tutorCallActive) {
-              document.getElementById('tutor-call-status').textContent = 'Verbunden';
-              document.getElementById('tutor-call-status').style.color = '#22c55e';
-              tutorCallSeconds = 0;
-              tutorCallInterval = setInterval(() => {
-                tutorCallSeconds++;
-                const m = Math.floor(tutorCallSeconds / 60);
-                const s = tutorCallSeconds % 60;
-                document.getElementById('tutor-call-status').textContent =
-                  'Verbunden · ' + String(m).padStart(2,'0') + ':' + String(s).padStart(2,'0');
-              }, 1000);
-            }
-          }, 2000);
-          return;
-        }
+  // ElevenLabs SDK: Anruf programmatisch starten
+  try {
+    tutorConversationSession = await ElevenLabsClient.Conversation.startSession({
+      agentId: 'agent_5201kn7rttx4estb9481qa9vw60w',
+      onConnect: () => {
+        document.getElementById('tutor-call-status').textContent = 'Verbunden';
+        document.getElementById('tutor-call-status').style.color = '#22c55e';
+        // Avatar-Ring-Animation
+        document.getElementById('tutor-avatar').style.boxShadow = '0 0 0 4px #22c55e, 0 0 20px rgba(34,197,94,0.3)';
+        // Timer starten
+        tutorCallSeconds = 0;
+        tutorCallInterval = setInterval(() => {
+          tutorCallSeconds++;
+          const m = Math.floor(tutorCallSeconds / 60);
+          const s = tutorCallSeconds % 60;
+          document.getElementById('tutor-call-status').textContent =
+            'Verbunden · ' + String(m).padStart(2,'0') + ':' + String(s).padStart(2,'0');
+        }, 1000);
+      },
+      onDisconnect: () => {
+        tutorEndCallUI();
+      },
+      onError: (error) => {
+        console.error('Call error:', error);
+        document.getElementById('tutor-call-status').textContent = 'Verbindungsfehler';
+        document.getElementById('tutor-call-status').style.color = '#ef4444';
+        setTimeout(() => tutorEndCallUI(), 2000);
+      },
+      onMessage: (msg) => {
+        // Optional: Untertitel anzeigen
+        console.log('Message:', msg);
       }
-    }
-    setTimeout(() => tryClick(attempts - 1), 500);
+    });
+  } catch(e) {
+    console.error('Start call failed:', e);
+    document.getElementById('tutor-call-status').textContent = 'Fehler: ' + e.message;
+    document.getElementById('tutor-call-status').style.color = '#ef4444';
+    setTimeout(() => tutorEndCallUI(), 3000);
   }
-  tryClick(20);
 }
 
-function tutorEndCall() {
+async function tutorEndCall() {
+  if (tutorConversationSession) {
+    try { await tutorConversationSession.endSession(); } catch(e) {}
+    tutorConversationSession = null;
+  }
+  tutorEndCallUI();
+}
+
+function tutorEndCallUI() {
   tutorCallActive = false;
   if (tutorCallInterval) { clearInterval(tutorCallInterval); tutorCallInterval = null; }
+  tutorConversationSession = null;
 
-  // Widget-Endcall-Button klicken falls vorhanden
-  const widget = document.querySelector('#tutor-widget-slot elevenlabs-convai');
-  if (widget && widget.shadowRoot) {
-    const btns = widget.shadowRoot.querySelectorAll('button');
-    for (const btn of btns) {
-      if (btn.getBoundingClientRect().width > 0) { btn.click(); break; }
-    }
-  }
-
-  // Widget entfernen
-  setTimeout(() => {
-    document.getElementById('tutor-widget-slot').innerHTML = '';
-  }, 500);
-
-  // UI zuruecksetzen
   document.getElementById('tutor-btn-call').style.display = 'flex';
   document.getElementById('tutor-btn-hangup').style.display = 'none';
+  document.getElementById('tutor-avatar').style.boxShadow = '';
   document.getElementById('tutor-call-status').textContent = 'Anruf beendet';
   document.getElementById('tutor-call-status').style.color = '#94455a';
   document.getElementById('tutor-btn-label').textContent = 'Erneut anrufen';
