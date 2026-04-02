@@ -28,16 +28,29 @@
 - **Content-Pipeline**: PDF → JSON → Lernkarten + Audio vollautomatisch
 - **Stitch-Projekt**: 5 Screens generiert (Home, Dashboard, Flashcard, Audiobook, Pruefung) — aber im FALSCHEN Dark-Theme
 
-### KRITISCH — Naechste Session
-1. **ElevenLabs Konversationsqualitaet** — Agent unterbricht, reagiert nicht kontextbezogen, legt auf. Muss GRUNDLEGEND recherchiert und richtig konfiguriert werden. ElevenLabs ist fuer perfekte Echtzeit-Konversation bekannt — das aktuelle Ergebnis ist inakzeptabel.
-2. **Stitch-Design wirklich 1:1 einbauen** — Bisher nur Start-Screen. Lernen, Hoerbuch, Pruefung muessen auch Stitch-Layouts bekommen.
-3. **Startseite Seensucht-Logo** — Das Seensucht-Logo von Andreas' Restaurant einbauen
+### Naechste Session — Stitch-Screens einbauen
+1. **4 Stitch-HTMLs in die App einbauen** — Alle heruntergeladen in stitch_designs/:
+   - flashcard_seensucht.html → screen-learn (renderCard umbauen)
+   - audiobook_seensucht.html → screen-audiobook
+   - exam_config_seensucht.html → screen-exam Config
+   - exam_result_seensucht.html → screen-exam Result
+2. **Anrufen-Screen** — Stitch konnte keinen generieren (Service war kurz down), manuell im Stitch-Stil bauen
+3. **Seensucht-Logo** einbauen
+
+### Was in dieser Session erledigt wurde
+- OpenAI Realtime API statt ElevenLabs fuer Voice Agent (ElevenLabs Credits leer)
+- WebRTC Verbindung, gpt-4o-realtime-preview, ash Voice
+- Andreas-Wissensbasis (Boot, Scheine, rechtliche Situation) in den Tutor eingebunden
+- Detaillierter Lernstand pro Kapitel im System-Prompt
+- Lautsprecher-Button auf OpenAI TTS-1-HD (onyx) umgestellt
+- Lernkarten-Rendering-Bug gefixt
+- ElevenLabs Agent-Konfiguration optimiert (bevor wir auf OpenAI gewechselt haben)
+- Kapitaen Beusti mit echtem Foto (IMG_4953.JPG)
 
 ### Bekannte Probleme
-- ElevenLabs Agent: Konversation bricht ab, Agent unterbricht User, reagiert fremd
-- Agent-ID: agent_5201kn7rttx4estb9481qa9vw60w
 - Design: Nur Start-Screen hat Stitch-Layout, andere Screens sind noch altes CSS
 - GitHub Pages CDN-Cache: 10 Minuten Verzoegerung bei Deployments
+- OpenAI Realtime API Key ist im Code (verschleiert, aber trotzdem)
 
 ### Dateistruktur
 ```
