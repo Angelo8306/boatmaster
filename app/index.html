@@ -4,10 +4,58 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <title>BoatMaster — Bootsführerschein Lernsoftware</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "surface-container-high": "#fbe2e6",
+        "on-surface-variant": "#584145",
+        "outline-variant": "#dfbec4",
+        "tertiary-fixed": "#a1f5b3",
+        "on-background": "#25181b",
+        "surface-container-highest": "#f5dde0",
+        "on-surface": "#25181b",
+        "surface-tint": "#b32056",
+        "tertiary": "#004922",
+        "primary-fixed": "#ffd9df",
+        "background": "#fff8f7",
+        "tertiary-container": "#006330",
+        "surface-container-low": "#fff0f1",
+        "on-primary": "#ffffff",
+        "secondary": "#94455a",
+        "secondary-fixed": "#ffd9df",
+        "surface-bright": "#fff8f7",
+        "primary-container": "#a6144d",
+        "error": "#ba1a1a",
+        "on-tertiary": "#ffffff",
+        "surface-variant": "#f5dde0",
+        "surface": "#fff8f7",
+        "primary": "#800037",
+        "secondary-fixed-dim": "#ffb1c2",
+        "surface-container": "#ffe8eb",
+        "on-secondary-container": "#7a3045",
+        "surface-container-lowest": "#ffffff",
+        "outline": "#8c7075",
+        "on-primary-container": "#ffb7c6",
+        "on-tertiary-fixed-variant": "#005227",
+        "tertiary-fixed-dim": "#85d999",
+        "error-container": "#ffdad6"
+      },
+      fontFamily: {
+        "headline": ["Newsreader", "serif"],
+        "body": ["Manrope", "sans-serif"],
+        "label": ["Manrope", "sans-serif"]
+      },
+      borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+    },
+  },
+}
+</script>
 <style>
 .material-symbols-outlined {
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
@@ -16,35 +64,35 @@
 * { margin:0; padding:0; box-sizing:border-box; }
 
 :root {
-  --bg: #FBF9F5;
+  --bg: #FFF8F7;
   --bg-card: #FFFFFF;
-  --bg-card-hover: #F5F3EF;
-  --bg-surface-low: #F5F3EF;
-  --bg-surface-container: #EFEEEA;
-  --bg-surface-high: #EAE8E4;
-  --bg-surface-highest: #E4E2DE;
-  --accent: #6C1628;
-  --accent-light: #8B2E3D;
-  --accent-dark: #40000F;
-  --primary-container: #8B2E3D;
-  --pink: #D4467A;
-  --secondary: #835055;
-  --secondary-container: #FFBEC3;
-  --success: #004124;
-  --success-container: #005B35;
-  --warning: #C0724A;
+  --bg-card-hover: #FFF0F1;
+  --bg-surface-low: #FFF0F1;
+  --bg-surface-container: #FFE8EB;
+  --bg-surface-high: #FBE2E6;
+  --bg-surface-highest: #F5DDE0;
+  --accent: #800037;
+  --accent-light: #A6144D;
+  --accent-dark: #3F0018;
+  --primary-container: #A6144D;
+  --pink: #B32056;
+  --secondary: #94455A;
+  --secondary-container: #FF9CB3;
+  --success: #004922;
+  --success-container: #006330;
+  --warning: #94455A;
   --danger: #BA1A1A;
   --danger-container: #FFDAD6;
-  --text: #1B1C1A;
-  --text-dim: #554243;
-  --text-muted: #887273;
+  --text: #25181B;
+  --text-dim: #584145;
+  --text-muted: #8C7075;
   --text-on-dark: #FFFFFF;
-  --outline: #887273;
-  --radius: 16px;
+  --outline: #8C7075;
+  --radius: 12px;
   --font-serif: 'Newsreader', Georgia, serif;
-  --font-sans: 'Work Sans', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-  --shadow-card: 0 2px 16px rgba(27,28,26,0.06);
-  --shadow-hover: 0 8px 32px rgba(27,28,26,0.1);
+  --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --shadow-card: 0 2px 16px rgba(37,24,27,0.06);
+  --shadow-hover: 0 8px 32px rgba(37,24,27,0.1);
 }
 
 html { font-size: 18px; }
@@ -320,37 +368,11 @@ body {
 .btn-didnt { background: rgba(186,26,26,0.08); color: var(--danger); border: 1px solid rgba(186,26,26,0.15); }
 
 /* === BOTTOM NAV === */
-.bottom-nav {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #FFFFFF;
-  border-top: 1px solid rgba(219,192,193,0.3);
-  border-radius: 20px 20px 0 0;
-  box-shadow: 0 -4px 24px rgba(27,28,26,0.06);
-  display: flex;
-  justify-content: space-around;
-  padding: 8px 0 max(8px, env(safe-area-inset-bottom));
-  z-index: 100;
-}
-.nav-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-  padding: 10px 18px;
-  color: rgba(136,114,115,0.7);
-  font-size: 0.6rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  cursor: pointer;
-  border-radius: 16px;
-  transition: all 0.2s;
-}
-.nav-item.active { color: #FFFFFF; background: #8B2E3D; }
-.nav-item .material-symbols-outlined { font-size: 26px; }
+/* Nav is now Tailwind-styled in HTML */
+.nav-item { color: #94455A; transition: all 0.2s; }
+.nav-item.active { color: #A6144D; background: rgba(128,0,55,0.05); }
+.nav-item.active .material-symbols-outlined { font-variation-settings: 'FILL' 1; }
+.nav-item .material-symbols-outlined { font-size: 24px; }
 
 /* === RESULT SCREEN === */
 .result-card {
@@ -1212,35 +1234,52 @@ body {
 <div class="app">
   <!-- CHAPTER SELECT SCREEN -->
   <div class="screen active" id="screen-chapters">
-    <div class="hero-section">
-      <div class="hero-bg">
-        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuZyne7PJQDYlLpo9Y7LCuqLfWDloGkRmF4TfTKDKpG0gq37LCr2TNkSPARJ6RiqzWV2CZtQq2rlhxJtCNSGJKdBpMF-ZLGz2tnJ7H8RASTvQ0LrDlFzeK3J2BY16SX5IfVm5AbOQDW02gpGfzNdsWNqDTiQRjm1mDMpc32S-rgauB4TQ2RR8GOSK7fXlXRPB1khoOanCbKH5orz21c_d-ANq9pPaAjq3so1ytpsEnc1Zqc3wFd-hqb34neAwwnQQ5v3u9H9uL7BU" alt="Yacht auf dem Mittelmeer">
-      </div>
-      <div class="hero-content">
-        <h1 class="hero-title">BoatMaster</h1>
-        <div class="hero-subtitle">dein Weg zum Bootsführerschein</div>
-      </div>
+    <!-- Stitch "True Seensucht" Start Screen -->
+    <div class="px-6 pt-6 pb-4">
+      <h1 class="text-4xl font-headline italic leading-tight tracking-tight text-primary">
+        Guten Morgen, Kapitän
+      </h1>
+      <p class="text-secondary mt-3 font-body tracking-wide opacity-80">
+        Der Wind steht günstig für eine Lerneinheit.
+      </p>
     </div>
-    <!-- KAPITAN KAI -->
-    <div class="kai-section" onclick="switchTab('tutor')">
-      <div class="kai-avatar">
-        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6kQuMiT3Cshsu97FdBDlUI7WNDfe8X7Jua1zTQE93J9WNi2NL4MtYsMkNmejp7Y2NtxjxNxOyVmpJsz5Nib0SS6ZSlASgAcaLx3-ChK6NdiB7Px_TcvDqviZ2P59cZN-jCZgD6BfN1wtnI7wIzH-LWPr0y0xdMBSS9vBPVLi5Al7TK6wj2Cg-ugYaPqconawFZeMqPJ4RuPCnEYBGnyBhpNgE_MCM-ePZAzHVgLGHQIspkU7HmoOtJHHPBhkXAqS1ymCKL11lFMc" alt="Kapitän Kai">
+
+    <!-- Bento Grid: Progress + Yacht Photo -->
+    <div class="grid grid-cols-12 gap-4 px-6 mb-8">
+      <div class="col-span-7 bg-surface-container-low rounded-xl p-5 relative overflow-hidden">
+        <span class="text-[10px] uppercase tracking-widest text-secondary font-bold mb-2 block font-body">Aktueller Kurs</span>
+        <h2 class="text-xl font-headline italic text-on-surface mb-4">Küstenpatent C</h2>
+        <div class="flex items-end justify-between mb-2">
+          <span class="text-3xl font-headline font-light" id="hero-progress-pct">0<span class="text-base">%</span></span>
+          <span class="text-secondary text-[11px] font-body" id="hero-progress-label">0 von 25 Kapitel</span>
+        </div>
+        <div class="h-1.5 w-full bg-outline-variant/30 rounded-full overflow-hidden">
+          <div class="h-full bg-gradient-to-r from-primary to-primary-container transition-all duration-1000" id="hero-progress-bar" style="width:0%"></div>
+        </div>
       </div>
-      <div class="kai-text">
-        <div class="kai-name">Kapitän Kai</div>
-        <div class="kai-greeting">Ahoi! Tippe hier um mit mir zu sprechen — per Stimme!</div>
-      </div>
-      <div class="kai-mic-btn">
-        <span class="material-symbols-outlined">mic</span>
+      <div class="col-span-5 rounded-xl overflow-hidden relative min-h-[160px]" onclick="switchTab('tutor')">
+        <img class="absolute inset-0 w-full h-full object-cover brightness-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBTK_zrG-4lunX64IsP05Zg43lJliLPJE2weZ1hvv3v8TjakmlLZlWMKjhVB6uPJvjxIlv5am1YQHSkzXJNikommMOwHpPmFUeYE-ZOAMz7iDOYP5w3TTB77h--B1HXKyjRBY6qi7tZDdDb7cv3aX9foEhpW-qHrSMf7U0j4ckEJ1oUe8_3oXN7Q3M1SZ9VmjWjQjasGVgh5Mza3c1hm5rzRvGMVqVUbplzmQTjtv6bQr3vMeoI2_BddckJGvw3xuEF15Q3ZnSuow" alt="Yacht">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+        <div class="absolute bottom-3 left-3 right-3">
+          <button class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary py-3 rounded-lg font-body font-semibold text-sm flex items-center justify-center gap-1 active:scale-95 transition-transform">
+            Kai fragen
+            <span class="material-symbols-outlined text-sm">mic</span>
+          </button>
+        </div>
       </div>
     </div>
 
-    <div id="sr-review-container"></div>
-    <div class="chapter-header" style="display:flex; justify-content:space-between; align-items:baseline;">
-      <h1 style="font-size:1.5rem;">Deine Reise</h1>
-      <span id="chapter-progress-label" style="color:var(--accent); font-weight:700; font-size:0.75rem; letter-spacing:1px; text-transform:uppercase;"></span>
+    <!-- SR Review Box -->
+    <div class="px-6" id="sr-review-container"></div>
+
+    <!-- Chapter List (Stitch Editorial) -->
+    <div class="px-6 mb-4">
+      <div class="flex justify-between items-baseline mb-6">
+        <h3 class="text-xl font-headline italic text-on-surface">Lehrplan</h3>
+        <span class="text-xs font-body text-secondary" id="chapter-progress-label"></span>
+      </div>
     </div>
-    <div class="chapter-list" id="chapter-list"></div>
+    <div class="px-6 space-y-3 pb-4" id="chapter-list"></div>
   </div>
 
   <!-- LEARNING SCREEN -->
@@ -1456,29 +1495,29 @@ body {
   </div>
 </div>
 
-<!-- BOTTOM NAV -->
-<div class="bottom-nav">
-  <div class="nav-item active" onclick="switchTab('chapters')">
+<!-- BOTTOM NAV (Stitch Seensucht) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 bg-[#FFF8F7] rounded-t-xl shadow-[0_-4px_20px_rgba(37,24,27,0.06)]">
+  <a class="nav-item active flex flex-col items-center justify-center rounded-xl px-3 py-1 cursor-pointer" onclick="switchTab('chapters')">
     <span class="material-symbols-outlined">home</span>
-    Start
-  </div>
-  <div class="nav-item" onclick="switchTab('learn')">
+    <span class="text-[11px] font-body uppercase tracking-tighter mt-1">Home</span>
+  </a>
+  <a class="nav-item flex flex-col items-center justify-center cursor-pointer" onclick="switchTab('learn')">
     <span class="material-symbols-outlined">school</span>
-    Lernen
-  </div>
-  <div class="nav-item" onclick="switchTab('tutor')">
+    <span class="text-[11px] font-body uppercase tracking-tighter mt-1">Lernen</span>
+  </a>
+  <a class="nav-item flex flex-col items-center justify-center cursor-pointer" onclick="switchTab('tutor')">
     <span class="material-symbols-outlined">mic</span>
-    Tutor
-  </div>
-  <div class="nav-item" onclick="switchTab('audiobook')">
-    <span class="material-symbols-outlined">headphones</span>
-    Hoerbuch
-  </div>
-  <div class="nav-item" onclick="switchTab('pruefung')">
-    <span class="material-symbols-outlined">assignment_turned_in</span>
-    Pruefung
-  </div>
-</div>
+    <span class="text-[11px] font-body uppercase tracking-tighter mt-1">Tutor</span>
+  </a>
+  <a class="nav-item flex flex-col items-center justify-center cursor-pointer" onclick="switchTab('audiobook')">
+    <span class="material-symbols-outlined">headset</span>
+    <span class="text-[11px] font-body uppercase tracking-tighter mt-1">Audio</span>
+  </a>
+  <a class="nav-item flex flex-col items-center justify-center cursor-pointer" onclick="switchTab('pruefung')">
+    <span class="material-symbols-outlined">assignment</span>
+    <span class="text-[11px] font-body uppercase tracking-tighter mt-1">Prüfung</span>
+  </a>
+</nav>
 
 <script>
 // Key verschleiert gespeichert um GitHub Secret Scanner zu umgehen
@@ -1798,48 +1837,85 @@ function switchTab(tab) {
 }
 
 function renderChapterList() {
-  // Review box
+  // Update hero progress
+  const srData = srGetData();
+  const totalChapters = CHAPTERS_DATA.length;
+  let completedChapters = 0;
+  CHAPTERS_DATA.forEach(ch => {
+    const p = srGetChapterProgress(ch.id, ch.cards.length, srData);
+    if (p.learned === ch.cards.length) completedChapters++;
+  });
+  const overallPct = Math.round((completedChapters / totalChapters) * 100);
+  const pctEl = document.getElementById('hero-progress-pct');
+  const labelEl = document.getElementById('hero-progress-label');
+  const barEl = document.getElementById('hero-progress-bar');
+  if (pctEl) pctEl.innerHTML = `${overallPct}<span class="text-base">%</span>`;
+  if (labelEl) labelEl.textContent = `${completedChapters} von ${totalChapters} Kapitel`;
+  if (barEl) barEl.style.width = overallPct + '%';
+
+  // Review box (Stitch style)
   const dueCards = srGetDueCards();
   const rc = document.getElementById('sr-review-container');
   if (dueCards.length > 0) {
-    rc.innerHTML = `<div class="sr-review-box" onclick="startReview()">
-      <div style="display:flex; align-items:center; justify-content:space-between;">
-        <div>
-          <div class="sr-review-title">Wiederholung fällig</div>
-          <div class="sr-review-sub">${dueCards.length} Karten aus ${new Set(dueCards.map(c => c.chId)).size} Kapiteln</div>
-        </div>
-        <div class="sr-review-count">${dueCards.length}</div>
+    rc.innerHTML = `<div class="bg-primary text-on-primary rounded-xl p-5 mb-6 flex items-center justify-between cursor-pointer active:scale-[0.98] transition-transform shadow-xl shadow-primary/20" onclick="startReview()">
+      <div>
+        <div class="font-headline text-lg font-bold italic">Wiederholung fällig</div>
+        <div class="text-sm opacity-80 font-body">${dueCards.length} Karten aus ${new Set(dueCards.map(c => c.chId)).size} Kapiteln</div>
       </div>
+      <span class="text-3xl font-headline font-bold">${dueCards.length}</span>
     </div>`;
   } else {
-    const srData = srGetData();
     const totalSeen = Object.keys(srData).length;
     rc.innerHTML = totalSeen > 0
-      ? `<div class="sr-no-review">Alles auf dem neuesten Stand — keine Wiederholung nötig</div>`
+      ? `<div class="bg-tertiary-fixed/30 text-on-tertiary-fixed-variant rounded-xl p-4 mb-6 text-center text-sm font-body">Alles auf dem neuesten Stand — keine Wiederholung nötig</div>`
       : '';
   }
 
-  // Chapter list with progress
+  // Chapter list (Stitch Editorial style)
   const list = document.getElementById('chapter-list');
-  const srData = srGetData();
   let html = '';
   CHAPTERS_DATA.forEach((ch, i) => {
     const total = ch.cards.length;
     const progress = srGetChapterProgress(ch.id, total, srData);
     const pct = Math.round((progress.learned / total) * 100);
-    const color = pct === 100 ? 'var(--success)' : (pct > 0 ? 'var(--accent)' : 'transparent');
-    html += `<div class="chapter-card" onclick="selectChapter(${i})">
-      <div class="chapter-num">${i + 1}</div>
-      <div class="chapter-info">
-        <div class="chapter-info-title">${ch.title_de}</div>
-        <div class="chapter-info-sub">${ch.title_en}</div>
-        ${pct > 0 ? `<div class="chapter-progress"><div class="chapter-progress-fill" style="width:${pct}%; background:${color};"></div></div>
-        <div class="chapter-progress-text">${progress.learned}/${total} gelernt${progress.due > 0 ? ` · ${progress.due} fällig` : ''}</div>` : ''}
+    const numStr = String(i + 1).padStart(2, '0');
+
+    let statusBadge = '';
+    let numColor = 'text-outline-variant';
+    let bgClass = 'bg-surface-container-lowest hover:bg-surface-container-low';
+    let borderClass = '';
+
+    if (pct === 100) {
+      statusBadge = `<div class="flex items-center gap-1 bg-tertiary-fixed text-on-tertiary-fixed-variant px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-tighter"><span class="material-symbols-outlined text-[12px]" style="font-variation-settings:'FILL' 1;">check_circle</span><span>Fertig</span></div>`;
+      numColor = 'text-tertiary';
+    } else if (pct > 0) {
+      statusBadge = `<span class="text-xs font-body text-primary font-bold">${pct}%</span>`;
+      numColor = 'text-primary';
+      bgClass = 'bg-surface-container-low';
+      borderClass = 'border-l-4 border-primary';
+    } else {
+      statusBadge = `<span class="material-symbols-outlined text-outline opacity-40">chevron_right</span>`;
+    }
+
+    html += `<div class="group flex items-center justify-between p-5 ${bgClass} ${borderClass} rounded-xl cursor-pointer transition-all duration-300" onclick="selectChapter(${i})">
+      <div class="flex items-center gap-5">
+        <span class="${numColor} font-headline text-2xl italic w-8">${numStr}</span>
+        <div>
+          <h4 class="font-headline text-lg text-on-surface group-hover:text-primary transition-colors leading-tight">${ch.title_de}</h4>
+          <p class="text-sm text-secondary font-body opacity-70">${ch.title_en}</p>
+          ${pct > 0 && pct < 100 ? `<div class="h-1 w-24 bg-outline-variant/30 rounded-full overflow-hidden mt-2"><div class="h-full bg-primary rounded-full" style="width:${pct}%"></div></div>` : ''}
+        </div>
       </div>
-      <div class="chapter-card-count">${total} Karten</div>
+      <div class="flex items-center gap-3">
+        ${statusBadge}
+      </div>
     </div>`;
   });
   list.innerHTML = html;
+
+  // Update progress label
+  const plEl = document.getElementById('chapter-progress-label');
+  if (plEl) plEl.textContent = `${completedChapters}/${totalChapters} abgeschlossen`;
 }
 
 function selectChapter(idx) {
