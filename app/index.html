@@ -1265,7 +1265,7 @@ body {
         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
         <div class="absolute bottom-3 left-3 right-3">
           <button class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary py-3 rounded-lg font-body font-semibold text-sm flex items-center justify-center gap-1 active:scale-95 transition-transform">
-            Angelo fragen
+            Beusti fragen
             <span class="material-symbols-outlined text-sm">mic</span>
           </button>
         </div>
@@ -1397,21 +1397,14 @@ body {
     </div>
   </div>
 
-  <!-- TUTOR SCREEN — Telefon-Anruf mit Kapitaen Angelo -->
+  <!-- ANRUFEN SCREEN — Telefon mit Kapitaen Beusti -->
   <div class="screen" id="screen-tutor">
-    <!-- Anruf-Screen (vor dem Anruf) -->
-    <div id="tutor-call-idle" class="flex flex-col items-center justify-center min-h-[80vh] px-6 text-center">
-      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6kQuMiT3Cshsu97FdBDlUI7WNDfe8X7Jua1zTQE93J9WNi2NL4MtYsMkNmejp7Y2NtxjxNxOyVmpJsz5Nib0SS6ZSlASgAcaLx3-ChK6NdiB7Px_TcvDqviZ2P59cZN-jCZgD6BfN1wtnI7wIzH-LWPr0y0xdMBSS9vBPVLi5Al7TK6wj2Cg-ugYaPqconawFZeMqPJ4RuPCnEYBGnyBhpNgE_MCM-ePZAzHVgLGHQIspkU7HmoOtJHHPBhkXAqS1ymCKL11lFMc" alt="Kapitän Angelo" class="w-28 h-28 rounded-full object-cover mb-4 border-4 border-white shadow-lg">
-      <h2 class="text-2xl font-headline italic text-primary mb-1">Kapitän Angelo</h2>
-      <p class="text-secondary font-body text-sm mb-6">Dein persönlicher Bootslehrer</p>
-      <!-- ElevenLabs Widget direkt hier — ein Klick startet alles -->
-      <div id="tutor-widget-idle" style="width:100%; display:flex; justify-content:center;">
-        <elevenlabs-convai agent-id="agent_5201kn7rttx4estb9481qa9vw60w"></elevenlabs-convai>
-      </div>
+    <div class="flex flex-col items-center justify-center min-h-[80vh] px-6 text-center">
+      <img src="captain-angelo.jpg" alt="Kapitän Beusti" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-white shadow-xl">
+      <h2 class="text-2xl font-headline italic text-primary mb-1">Kapitän Beusti</h2>
+      <p class="text-secondary font-body text-sm mb-8">Dein persönlicher Bootslehrer</p>
+      <elevenlabs-convai agent-id="agent_5201kn7rttx4estb9481qa9vw60w"></elevenlabs-convai>
     </div>
-
-    <!-- Aktiver Anruf wird nicht separat angezeigt — das ElevenLabs Widget uebernimmt die gesamte Anruf-UI -->
-    <div id="tutor-call-active" style="display:none;"></div>
   </div>
 
   <!-- RESULT SCREEN -->
@@ -1521,7 +1514,7 @@ function renderCard() {
         <button class="btn btn-de" id="btn-de" onclick="toggleDE()">🇩🇪 Deutsch</button>
       </div>
       <div style="padding:0 20px;">
-        <button class="btn-ask-kai" onclick="askKaiAboutCard()">⚓ Frag Kapitän Angelo</button>
+        <button class="btn-ask-kai" onclick="askKaiAboutCard()">⚓ Frag Kapitän Beusti</button>
       </div>
       <div class="nav-row">
         <button class="btn btn-prev" onclick="prev()">◀</button>
@@ -1548,7 +1541,7 @@ function renderCard() {
         <button class="btn btn-de" id="btn-de" onclick="toggleDE()">🇩🇪 Deutsch</button>
       </div>
       <div style="padding:0 20px;">
-        <button class="btn-ask-kai" onclick="askKaiAboutCard()">⚓ Frag Kapitän Angelo</button>
+        <button class="btn-ask-kai" onclick="askKaiAboutCard()">⚓ Frag Kapitän Beusti</button>
       </div>
       <div class="nav-row">
         <button class="btn btn-prev" onclick="prev()">◀</button>
