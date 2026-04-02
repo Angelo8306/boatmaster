@@ -1464,6 +1464,7 @@ body {
 const _k = [115,107,45,97,110,116,45,97,112,105,48,51,45,82,84,83,103,115,90,101,105,67,73,100,113,118,69,102,56,108,75,56,99,45,73,66,76,73,74,57,111,72,95,88,72,67,103,102,89,72,106,67,56,88,77,111,104,69,120,56,122,86,109,66,73,107,49,78,75,48,109,57,82,65,111,67,102,110,82,54,76,66,77,107,88,70,87,65,70,74,112,72,45,82,55,113,76,74,103,45,97,49,70,84,106,103,65,65];
 const TUTOR_API_KEY = _k.map(c => String.fromCharCode(c)).join('');
 </script>
+<script src="andreas_context.js"></script>
 <script src="data.js"></script>
 <script src="audiobook_data.js"></script>
 <script>
@@ -2449,27 +2450,13 @@ async function tutorStartCall() {
       body: JSON.stringify({
         model: 'gpt-4o-realtime-preview',
         voice: 'ash',
-        instructions: `Du bist Kapitän Beusti, ein erfahrener Seemann und Bootsführerschein-Tutor. Du telefonierst gerade mit deinem besten Freund Andreas. Andreas war früher dein Lehrling auf See, und jetzt hilfst du ihm, seinen kroatischen Bootsführerschein Kategorie C zu machen.
+        instructions: `Du bist Kapitän Beusti. Du telefonierst mit deinem besten Freund Andreas Beuster. Ihr duzt euch. Sprich Deutsch, Fachbegriffe auf Englisch. Antworte kurz (2-3 Saetze), natuerlich wie ein echtes Telefonat. Stelle Rueckfragen.
 
-PERSOENLICHKEIT: Warm, kumpelhaft, humorvoll, ermutigend. Ihr duzt euch. Du nennst ihn Andreas. Sprich Deutsch, Fachbegriffe der Seefahrt auf Englisch einfuehren und erklaeren.
+${typeof ANDREAS_CONTEXT !== 'undefined' ? ANDREAS_CONTEXT : ''}
 
-WICHTIG: Antworte natuerlich wie in einem echten Telefonat. Nicht zu lang, 2-4 Saetze pro Antwort. Stelle Rueckfragen um das Gespraech am Laufen zu halten.
-
-ANDREAS' LERNSTAND:
+AKTUELLER LERNFORTSCHRITT IN DER APP:
 ${srSummary}
-${weakChapters.length > 0 ? 'Seine schwachen Themen: ' + weakChapters.join(', ') + '. Sprich diese aktiv an und hilf ihm dabei.' : 'Er hat noch nicht viel gelernt. Fuehre ihn sanft in die Grundlagen ein.'}
-
-KAPITELTHEMEN die ihr besprechen koennt:
-1. IALA Tonnensystem (Lateralzeichen, Kardinalzeichen, Region A)
-2. Seekarten & Navigation (Koordinaten, Kompass, Peilung)
-3. Sicherheit (Rettungsmittel, Notsignale, Mann ueber Bord)
-4. Wetter & Meteorologie (Wind, Wolken, Gezeiten)
-5. Vorfahrtsregeln & Kollisionsverhuetung
-6. Motorenkunde & Wartung
-7. Seemannschaft (Knoten, Ankern, Anlegen)
-8. Rechtliche Grundlagen & Funkverkehr
-
-Beziehe dich IMMER auf seinen Lernstand. Wenn er Schwaechen hat, sprich sie an. Wenn er etwas gut kann, lob ihn.`,
+${weakChapters.length > 0 ? 'Schwache Themen: ' + weakChapters.join(', ') : 'Noch nicht viel gelernt.'}`,
         input_audio_transcription: { model: 'gpt-4o-mini-transcribe' },
         turn_detection: { type: 'server_vad', threshold: 0.6, prefix_padding_ms: 500, silence_duration_ms: 800 }
       })
