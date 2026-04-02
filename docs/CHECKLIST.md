@@ -62,11 +62,11 @@
 ## KI-Tutor mit Avatar (Stufe 2)
 - [x] Brainstorming + Design-Entscheidungen
 - [x] Design-Spec geschrieben (`docs/superpowers/specs/2026-04-02-ki-tutor-design.md`)
-- [ ] Implementierungsplan erstellen
-- [ ] Claude API Integration (Browser → Haiku, Streaming)
-- [ ] Sprach-Ein/Ausgabe (TTS + Speech Recognition, DE/EN)
-- [ ] Kapitaen Kai Avatar mit Animationen
-- [ ] Tutor-Tab (3 Modi: Lernen | Gespraech | Pruefung)
-- [ ] "Frag den Kapitaen" Button auf Lernkarten
-- [ ] SR-Daten Integration (Schwaechen erkennen)
-- [ ] Deutsch → Englisch stufenweiser Uebergang
+- [x] Implementierungsplan erstellen
+- [x] Claude API Integration (Browser → Haiku, Streaming)
+- [x] Sprach-Ein/Ausgabe (TTS + Speech Recognition, DE/EN)
+- [x] Kapitaen Kai Avatar mit Animationen (Idle, Sprechend, Zuhoerend, Denkend)
+- [x] Tutor-Tab (3 Modi: Lernen | Gespraech | Pruefung)
+- [x] "Frag den Kapitaen" Button auf Lernkarten
+- [x] SR-Daten Integration (Schwaechen erkennen)
+- [x] Deutsch → Englisch stufenweiser Uebergang (im System-Prompt)

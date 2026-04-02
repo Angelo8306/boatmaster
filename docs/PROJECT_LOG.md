@@ -70,3 +70,19 @@
 - Design-Spec geschrieben: `docs/superpowers/specs/2026-04-02-ki-tutor-design.md`
 - Spec Review bestanden (keine Blocker)
 - Naechster Schritt: Implementierungsplan in neuer Session
+
+### Session 6 — KI-Tutor Implementierung
+- Komplett funktionaler KI-Tutor "Kapitaen Kai" eingebaut:
+  - Animierter Avatar mit 4 Zustaenden (Idle, Sprechend mit Schallwellen, Zuhoerend mit gruenem Ring, Denkend mit Puls-Animation)
+  - Claude API Integration (Haiku Modell) direkt vom Browser
+  - Web Speech Recognition fuer Spracheingabe per Mikrofon
+  - TTS Sprachausgabe auf Deutsch fuer Kais Antworten
+  - 3 Modi: Gefuehrtes Lernen | Freies Gespraech | Pruefungssimulation
+  - System-Prompt mit SR-Lernstand-Integration (erkennt Schwaechen)
+  - API-Key Setup Screen (gespeichert in localStorage)
+- "Frag Kapitaen Kai" Button auf allen Lernkarten (Vokabel + Lerninhalte)
+- 5. Tab in Bottom-Navigation (Start | Lernen | Tutor | Hoerbuch | Pruefung)
+- Script-Logo "BoatMaster" im Seensucht-Stil mit Untertitel
+- Kapitaen Kai Card auf Startseite oeffnet jetzt den Tutor-Tab
+- Git-Repo neu initialisiert und auf GitHub gepusht
+- Deployed auf GitHub Pages: https://angelo8306.github.io/boatmaster/

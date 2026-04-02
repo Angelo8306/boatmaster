@@ -1,6 +1,6 @@
 # PROJECT STATUS — BoatMaster
 
-## Stand: 2026-04-02 (Ende Session 5)
+## Stand: 2026-04-02 (Ende Session 6)
 
 ### Was funktioniert
 - **Lern-App**: 25 Kapitel mit 224 Lernkarten, 34 eingebettete Bilder
@@ -17,13 +17,20 @@
   - Fortschritts-Tracking pro Kapitel (localStorage)
 - **Pruefungssimulator**: 72 Fragen, 3 Modi (10/20/alle), Ergebnis + Historie
 - **Spaced Repetition**: SM-2 Algorithmus, Fortschrittsbalken pro Kapitel, Wiederholung-faellig Box
-- **Tab-Navigation**: Start | Lernen | Hoerbuch | Pruefung
+- **KI-Tutor "Kapitaen Kai"**: Sprachbasierter Tutor mit Claude API
+  - Animierter Avatar (Idle, Sprechend, Zuhoerend, Denkend)
+  - Spracheingabe per Mikrofon (Web Speech Recognition)
+  - Sprachausgabe per TTS (Deutsch)
+  - 3 Modi: Gefuehrtes Lernen | Freies Gespraech | Pruefungssimulation
+  - SR-Daten Integration (erkennt Schwaechen)
+  - "Frag Kapitaen Kai" Button auf Lernkarten
+- **Tab-Navigation**: Start | Lernen | Tutor | Hoerbuch | Pruefung
 - **Content-Pipeline**: PDF → JSON → Lernkarten + Audio vollautomatisch
 
 ### Was als naechstes kommt
-1. **KI-Tutor mit Avatar implementieren** (Design-Spec fertig!)
-   - Naechster Schritt: Implementierungsplan in neuer Session erstellen
-   - Spec: `docs/superpowers/specs/2026-04-02-ki-tutor-design.md`
+1. **Design weiter verbessern** — Seensucht-Stil noch authentischer machen
+2. **ElevenLabs TTS fuer Tutor** — Bessere Stimme statt Web Speech API
+3. **Deployment auf eigenem Server** — Coolify/Docker statt GitHub Pages
 
 ### Bekannte Probleme
 - Keine bekannten Probleme
