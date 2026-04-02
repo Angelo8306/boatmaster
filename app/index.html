@@ -2405,7 +2405,43 @@ function tutorInit() {
   }
 }
 
-function tutorStartCall() {
+async function tutorStartCall() {
+  // Agent-Prompt mit aktuellem Lernstand aktualisieren
+  try {
+    const srSummary = tutorGetSRSummary();
+    const weakChapters = tutorGetWeakChapters();
+    const contextPrompt = `Du bist Kapitän Beusti, ein erfahrener Seemann und Bootsführerschein-Tutor. Du sprichst mit Andreas — deinem besten Freund. Andreas war früher dein Lehrling auf See, und jetzt hilfst du ihm, seinen kroatischen Bootsführerschein Kategorie C zu machen.
+
+Dein Ton: Warm, kumpelhaft, humorvoll, ermutigend. Du sprichst Andreas immer mit Vornamen an. Ihr duzt euch.
+
+Halte deine Antworten KURZ — maximal 3-4 Sätze.
+
+Sprachregeln: Sprich hauptsächlich Deutsch. Fachbegriffe auf Englisch einführen.
+
+AKTUELLER LERNSTAND VON ANDREAS:
+${srSummary}
+${weakChapters.length > 0 ? 'Schwache Themen: ' + weakChapters.join(', ') : 'Keine besonderen Schwächen erkannt.'}
+
+Beziehe dich auf seinen Lernstand! Wenn er Schwächen hat, sprich sie an. Wenn er gut ist, lob ihn.`;
+
+    const firstMsg = weakChapters.length > 0
+      ? `Moin Andreas! Schön dass du anrufst. Ich hab mir deinen Lernstand angeschaut — bei ${weakChapters[0]} sollten wir nochmal ran. Was meinst du?`
+      : 'Moin Andreas! Schön dass du anrufst, alter Freund. Du machst gute Fortschritte! Was sollen wir heute angehen?';
+
+    await fetch('https://api.elevenlabs.io/v1/convai/agents/agent_5201kn7rttx4estb9481qa9vw60w', {
+      method: 'PATCH',
+      headers: { 'xi-api-key': ELEVENLABS_KEY, 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        conversation_config: {
+          agent: {
+            first_message: firstMsg,
+            prompt: { prompt: contextPrompt }
+          }
+        }
+      })
+    });
+  } catch(e) { console.warn('Agent update failed:', e); }
+
   // Widget erstellen
   const slot = document.getElementById('tutor-widget-slot');
   slot.innerHTML = '<elevenlabs-convai agent-id="agent_5201kn7rttx4estb9481qa9vw60w"></elevenlabs-convai>';
