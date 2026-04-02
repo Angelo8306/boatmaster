@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html class="light" lang="de"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Newsreader:ital,wght@1,400;1,600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-highest": "#fadcd6",
+              "on-secondary-fixed-variant": "#3137a8",
+              "on-tertiary-fixed": "#271814",
+              "surface-bright": "#fff8f6",
+              "surface-variant": "#fadcd6",
+              "secondary-fixed-dim": "#bfc2ff",
+              "outline-variant": "#dfbec4",
+              "on-primary-fixed-variant": "#8f003f",
+              "on-background": "#271814",
+              "tertiary-fixed": "#fadcd6",
+              "tertiary": "#4d3a36",
+              "inverse-on-surface": "#ffede9",
+              "inverse-primary": "#ffb1c2",
+              "primary-fixed": "#ffd9df",
+              "surface-tint": "#b32056",
+              "secondary": "#4a51c1",
+              "on-tertiary-fixed-variant": "#56423e",
+              "outline": "#8c7075",
+              "primary": "#800037",
+              "tertiary-container": "#66514c",
+              "surface-dim": "#f1d4ce",
+              "on-tertiary-container": "#e2c5bf",
+              "primary-fixed-dim": "#ffb1c2",
+              "on-primary-fixed": "#3f0018",
+              "surface-container": "#ffe9e5",
+              "on-error-container": "#93000a",
+              "surface-container-lowest": "#ffffff",
+              "primary-container": "#a6144d",
+              "on-surface": "#271814",
+              "error": "#ba1a1a",
+              "tertiary-fixed-dim": "#ddc0ba",
+              "on-secondary": "#ffffff",
+              "on-tertiary": "#ffffff",
+              "secondary-container": "#838bfd",
+              "on-surface-variant": "#584145",
+              "on-primary": "#ffffff",
+              "surface-container-high": "#ffe2dc",
+              "surface": "#fff8f6",
+              "on-secondary-fixed": "#00006e",
+              "on-primary-container": "#ffb7c6",
+              "surface-container-low": "#fff0ee",
+              "error-container": "#ffdad6",
+              "secondary-fixed": "#e0e0ff",
+              "inverse-surface": "#3e2c28",
+              "on-error": "#ffffff",
+              "background": "#fff8f6",
+              "on-secondary-container": "#121790"
+            },
+            fontFamily: {
+              "headline": ["Epilogue"],
+              "body": ["Plus Jakarta Sans"],
+              "label": ["Plus Jakarta Sans"],
+              "serif": ["Newsreader", "serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        body {
+            background-color: #F5F0E8;
+            color: #271814;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Top Navigation Bar -->
+<header class="bg-[#F5F0E8]/80 backdrop-blur-md fixed top-0 w-full z-50 shadow-[0_12px_40px_rgba(39,24,20,0.06)] flex items-center justify-between px-6 h-16 w-full">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="waves">waves</span>
+<span class="font-serif italic text-2xl text-[#3B1117] tracking-tight">Seensucht</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full border-2 border-[#D4467A]/20 flex items-center justify-center overflow-hidden">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="Close-up portrait of a woman looking serene in natural soft light, nautical lifestyle aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLxtEeRY67z6VZo_nVE3RkoBneYNozqapJ1faJLit5NtadH6orHKL-C4eOPi6NaQ_yII3ds-9Dn8814-u8uzwrmk5VyThyCXQertR3aH1N-gf_FIdjmLuptEn6rTv9sSKe9HXJ0tR5GJSIDJcP8gphLhybqz0CYpG0AjwAcBj0aemy41jtSW6DkO1mg53yH6or8bj6O_oNneE2CTcTlSPvqjvHuy_dl4ounHIeFHD8tOwaMCHC-a8PDoSGvSyBE8DchNXuJ3QeUpM"/>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-2xl mx-auto">
+<!-- Hero Editorial Section -->
+<div class="mb-12">
+<h1 class="font-serif italic text-5xl md:text-6xl text-[#3B1117] mb-2">Hörbuch</h1>
+<p class="text-on-surface-variant font-medium tracking-wide text-sm uppercase">Amtlicher Sportbootführerschein</p>
+</div>
+<!-- Featured Player Card (Asymmetric Layout) -->
+<div class="relative mb-16">
+<div class="bg-surface-container-lowest rounded-3xl p-8 shadow-[0_20px_50px_rgba(39,24,20,0.08)] flex flex-col md:flex-row gap-8 items-center overflow-hidden">
+<div class="w-full md:w-48 h-48 rounded-2xl overflow-hidden shadow-lg -rotate-2">
+<img alt="Lakeside Navigation" class="w-full h-full object-cover" data-alt="Artistic high-angle shot of a nautical map on a weathered wooden boat deck with soft evening sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-0nXRvAHpBC_Ydd1TnynmWeJ62mGPD60u7WMn27MPgZzsc5XD2lXG5Hm8tYxA9FaoD-z1OKuA1A0Lx_8powjmYiLCY-Pjkzy-Obx3Tr5xxyGXMiHS1lkz7UnXd_wVU5j6aehYlRq4poli86VsvTC_rZeFjQH2tGFR4OriGNK00o3ZuP5KJDShU3mn7KiRaoHcP_0eJVTHQWJV5QazBsQNiMYye8VXxMbk8RZXwgpgpNFgwHc79GtsxVD9sxiEBDOQqGMt9gPf6PM"/>
+</div>
+<div class="flex-1 text-center md:text-left">
+<span class="text-primary font-bold text-xs tracking-[0.2em] uppercase mb-2 block">Aktuelle Wiedergabe</span>
+<h2 class="text-2xl font-headline font-bold text-[#2C1810] mb-4">Navigation &amp; Seekarten</h2>
+<div class="flex items-center justify-center md:justify-start gap-6">
+<button class="w-12 h-12 flex items-center justify-center rounded-full bg-surface-container-low text-[#2C1810] hover:scale-105 transition-transform">
+<span class="material-symbols-outlined" data-icon="replay_10">replay_10</span>
+</button>
+<button class="w-16 h-16 flex items-center justify-center rounded-full bg-primary text-on-primary shadow-lg shadow-primary/30 hover:scale-105 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-4xl" data-icon="pause" style="font-variation-settings: 'FILL' 1;">pause</span>
+</button>
+<button class="w-12 h-12 flex items-center justify-center rounded-full bg-surface-container-low text-[#2C1810] hover:scale-105 transition-transform">
+<span class="material-symbols-outlined" data-icon="forward_30">forward_30</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Decorative Element -->
+<div class="absolute -top-4 -right-4 w-24 h-24 bg-primary-fixed/30 rounded-full blur-3xl -z-10"></div>
+</div>
+<!-- Chapter List -->
+<div class="space-y-6">
+<div class="flex items-center justify-between px-2 mb-4">
+<h3 class="font-headline font-bold text-[#2C1810] text-xl">Kapitel</h3>
+<span class="text-xs font-bold text-on-surface-variant uppercase tracking-widest">12 Lektionen</span>
+</div>
+<!-- Chapter 01 -->
+<div class="group bg-surface-container-lowest rounded-2xl p-6 shadow-[0_8px_30px_rgba(39,24,20,0.04)] flex items-center gap-6 hover:translate-y-[-4px] transition-all duration-300">
+<div class="font-serif italic text-4xl text-on-surface-variant/30 w-12 text-center">01</div>
+<div class="flex-1">
+<h4 class="text-[#2C1810] font-bold text-lg leading-tight">Navigation &amp; Seekarten</h4>
+<div class="flex items-center gap-3 mt-2">
+<div class="flex-1 h-1 bg-surface-container-low rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[80%]"></div>
+</div>
+<span class="text-[#6B5B4E] text-xs font-semibold">80% gehört</span>
+</div>
+</div>
+<div class="text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+<!-- Chapter 02 -->
+<div class="group bg-surface-container-lowest rounded-2xl p-6 shadow-[0_8px_30px_rgba(39,24,20,0.04)] flex items-center gap-6 hover:translate-y-[-4px] transition-all duration-300 border-l-4 border-transparent hover:border-primary-fixed">
+<div class="font-serif italic text-4xl text-on-surface-variant/30 w-12 text-center">02</div>
+<div class="flex-1">
+<h4 class="text-[#2C1810] font-bold text-lg leading-tight">Lichterführung</h4>
+<div class="flex items-center gap-3 mt-2">
+<div class="flex-1 h-1 bg-surface-container-low rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[30%]"></div>
+</div>
+<span class="text-[#6B5B4E] text-xs font-semibold">30% gehört</span>
+</div>
+</div>
+<div class="text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+<!-- Chapter 03 -->
+<div class="group bg-surface-container-lowest rounded-2xl p-6 shadow-[0_8px_30px_rgba(39,24,20,0.04)] flex items-center gap-6 hover:translate-y-[-4px] transition-all duration-300 border-l-4 border-primary">
+<div class="font-serif italic text-4xl text-primary/40 w-12 text-center">03</div>
+<div class="flex-1">
+<h4 class="text-[#2C1810] font-bold text-lg leading-tight">IALA Tonnensystem</h4>
+<div class="flex items-center gap-2 mt-2">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="play_circle" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+<span class="text-primary text-xs font-bold uppercase tracking-wider">Jetzt anhören</span>
+</div>
+</div>
+<div class="text-primary">
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+<!-- Chapter 04 (Ghosted/Locked feel) -->
+<div class="group bg-surface-container-lowest/60 rounded-2xl p-6 flex items-center gap-6 opacity-60">
+<div class="font-serif italic text-4xl text-on-surface-variant/20 w-12 text-center">04</div>
+<div class="flex-1">
+<h4 class="text-[#2C1810] font-bold text-lg leading-tight">Seemannschaft</h4>
+<p class="text-[#6B5B4E] text-xs font-medium mt-1">Dauer: 18:45 Min.</p>
+</div>
+<div class="text-on-surface-variant/40">
+<span class="material-symbols-outlined" data-icon="lock">lock</span>
+</div>
+</div>
+</div>
+<!-- More Space to prevent overlap with nav -->
+<div class="h-12"></div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pt-3 pb-8 bg-[#F5F0E8]/80 backdrop-blur-xl z-50 rounded-t-3xl shadow-[0_-8px_30px_rgba(39,24,20,0.04)]">
+<!-- HOME -->
+<a class="flex flex-col items-center justify-center text-[#3B1117]/60 hover:text-[#D4467A] transition-colors group" href="#">
+<span class="material-symbols-outlined mb-1 text-2xl group-active:scale-90 transition-transform" data-icon="home">home</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest">HOME</span>
+</a>
+<!-- LERNEN -->
+<a class="flex flex-col items-center justify-center text-[#3B1117]/60 hover:text-[#D4467A] transition-colors group" href="#">
+<span class="material-symbols-outlined mb-1 text-2xl group-active:scale-90 transition-transform" data-icon="school">school</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest">LERNEN</span>
+</a>
+<!-- ANRUFEN -->
+<a class="flex flex-col items-center justify-center text-[#3B1117]/60 hover:text-[#D4467A] transition-colors group" href="#">
+<span class="material-symbols-outlined mb-1 text-2xl group-active:scale-90 transition-transform" data-icon="call">call</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest">ANRUFEN</span>
+</a>
+<!-- AUDIO (ACTIVE) -->
+<a class="flex flex-col items-center justify-center text-[#D4467A] bg-[#3B1117]/5 rounded-xl px-4 py-1 group" href="#">
+<span class="material-symbols-outlined mb-1 text-2xl group-active:scale-90 transition-transform" data-icon="headset" style="font-variation-settings: 'FILL' 1;">headset</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest">AUDIO</span>
+</a>
+<!-- PRÜFUNG -->
+<a class="flex flex-col items-center justify-center text-[#3B1117]/60 hover:text-[#D4467A] transition-colors group" href="#">
+<span class="material-symbols-outlined mb-1 text-2xl group-active:scale-90 transition-transform" data-icon="assignment">assignment</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest">PRÜFUNG</span>
+</a>
+</nav>
+</body></html>

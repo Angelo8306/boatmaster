@@ -64,6 +64,23 @@ tailwind.config = {
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 
+/* Stitch Seensucht classes */
+.serif-italic { font-family: 'Newsreader', Georgia, serif; font-style: italic; }
+.stitch-card { background: white; border-radius: 2rem; box-shadow: 0 20px 50px rgba(44,24,16,0.06); overflow: hidden; border: 1px solid rgba(44,24,16,0.05); }
+.stitch-badge { background: #3B1117; color: white; font-size: 10px; font-weight: 700; letter-spacing: 0.15em; padding: 4px 12px; border-radius: 9999px; }
+.stitch-label { font-size: 10px; font-weight: 700; letter-spacing: 0.25em; color: #6B5B4E; text-transform: uppercase; }
+.stitch-term { font-family: 'Newsreader', Georgia, serif; font-style: italic; font-size: 2.25rem; color: #3B1117; line-height: 1.15; }
+.stitch-def { padding-left: 1.5rem; border-left: 2px solid rgba(212,70,122,0.3); color: #2C1810; font-size: 1.1rem; line-height: 1.7; font-style: italic; }
+.stitch-btn-speak { width: 56px; height: 56px; border-radius: 50%; background: #3B1117; color: white; border: none; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 4px 16px rgba(59,17,23,0.3); }
+.stitch-btn-speak:active { transform: scale(0.9); }
+.stitch-btn-de { height: 56px; padding: 0 2rem; border-radius: 9999px; border: 1.5px solid #D4467A; background: transparent; color: #D4467A; font-weight: 700; cursor: pointer; font-size: 0.95rem; }
+.stitch-btn-de.active { background: rgba(212,70,122,0.08); }
+.stitch-btn-de:active { transform: scale(0.95); }
+.stitch-btn-next { height: 56px; flex: 1; border-radius: 9999px; background: linear-gradient(135deg, #3B1117, #5A1A24); color: white; border: none; font-weight: 700; font-size: 1.1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 4px 16px rgba(59,17,23,0.25); }
+.stitch-btn-next:active { transform: scale(0.95); }
+.stitch-btn-prev { width: 48px; height: 48px; border-radius: 50%; background: rgba(44,24,16,0.06); color: #3B1117; border: none; display: flex; align-items: center; justify-content: center; cursor: pointer; }
+.stitch-btn-prev:active { transform: scale(0.9); }
+
 * { margin:0; padding:0; box-sizing:border-box; }
 
 :root {
@@ -1285,135 +1302,164 @@ body {
     <div class="px-6 space-y-3 pb-4" id="chapter-list"></div>
   </div>
 
-  <!-- LEARNING SCREEN -->
-  <div class="screen" id="screen-learn">
-    <div class="topbar">
-      <div class="topbar-chapter" id="topbar-chapter">IALA Tonnensystem</div>
-      <div class="topbar-progress" id="topbar-progress">1 / 14</div>
-    </div>
-    <div class="dots" id="dots"></div>
-    <div id="card-container"></div>
+  <!-- LEARNING SCREEN (Stitch Seensucht) -->
+  <div class="screen" id="screen-learn" style="background:#F5F0E8;">
+    <!-- Stitch TopAppBar -->
+    <header style="position:fixed;top:0;width:100%;max-width:480px;z-index:40;background:rgba(245,240,232,0.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);display:flex;justify-content:space-between;align-items:center;padding:12px 20px;border-bottom:1px solid rgba(44,24,16,0.05);">
+      <div style="display:flex;align-items:center;gap:12px;">
+        <span class="material-symbols-outlined" style="color:#3B1117;cursor:pointer;" onclick="switchTab('chapters')">arrow_back</span>
+        <h1 class="serif-italic" style="font-size:1.25rem;color:#3B1117;" id="topbar-chapter">IALA Tonnensystem</h1>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;">
+        <span style="font-size:10px;letter-spacing:0.15em;font-weight:700;color:#6B5B4E;" id="topbar-progress">1 / 14</span>
+        <img src="seensucht-logo-dark.jpg" alt="Seensucht" style="width:32px;height:32px;border-radius:50%;object-fit:cover;">
+      </div>
+    </header>
+    <!-- Stitch Progress Bars -->
+    <div style="padding:72px 20px 0;display:flex;gap:4px;margin-bottom:20px;" id="dots"></div>
+    <!-- Stitch Card + Actions -->
+    <div style="padding:0 20px 120px;" id="card-container"></div>
     <div id="actions-container"></div>
   </div>
 
-  <!-- HORBUCH SCREEN -->
-  <div class="screen" id="screen-audiobook">
-    <div class="audiobook-header">
-      <div class="audiobook-title" id="ab-title">Hoerbuch</div>
-      <div class="audiobook-subtitle" id="ab-subtitle">Waehle ein Kapitel</div>
-    </div>
-    <div id="ab-chapter-list" class="chapter-list"></div>
-    <div id="ab-player-section" style="display:none;">
-    <div class="audiobook-progress-bar">
-      <div class="audiobook-progress-fill" id="ab-progress-fill" style="width:0%"></div>
-    </div>
-    <div class="audiobook-player">
-      <div class="audiobook-now-playing" id="ab-now-label">Abschnitt 1 von 25</div>
-      <div id="ab-speaker-badge"></div>
-      <div class="audiobook-segment-text" id="ab-segment-text"></div>
-      <div class="audiobook-timeline" id="ab-timeline" onclick="abSeek(event)">
-        <div class="audiobook-timeline-fill" id="ab-timeline-fill" style="width:0%"></div>
+  <!-- HORBUCH SCREEN (Stitch Seensucht) -->
+  <div class="screen" id="screen-audiobook" style="background:#F5F0E8;">
+    <!-- Stitch Header -->
+    <header style="position:fixed;top:0;width:100%;max-width:480px;z-index:40;background:rgba(245,240,232,0.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);display:flex;justify-content:space-between;align-items:center;padding:12px 20px;box-shadow:0 12px 40px rgba(39,24,20,0.06);">
+      <div style="display:flex;align-items:center;gap:12px;">
+        <span class="material-symbols-outlined" style="color:#3B1117;cursor:pointer;display:none;" id="ab-back-btn" onclick="abShowChapterList()">arrow_back</span>
+        <h1 class="serif-italic" style="font-size:1.25rem;color:#3B1117;" id="ab-title">Hörbuch</h1>
       </div>
-      <div class="audiobook-time">
-        <span id="ab-time-current">0:00</span>
-        <span id="ab-time-total">0:00</span>
+      <div style="display:flex;align-items:center;gap:12px;">
+        <span style="font-size:10px;letter-spacing:0.15em;font-weight:700;color:#6B5B4E;" id="ab-subtitle"></span>
+        <img src="seensucht-logo-dark.jpg" alt="Seensucht" style="width:32px;height:32px;border-radius:50%;object-fit:cover;">
       </div>
-      <div class="audiobook-controls">
-        <button class="skip-btn" onclick="abPrev()" title="Zurueck">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
+    </header>
+
+    <!-- Chapter List (Stitch Editorial) -->
+    <div style="padding:72px 20px 120px;" id="ab-chapter-list"></div>
+
+    <!-- Player Section -->
+    <div id="ab-player-section" style="display:none;padding:72px 20px 120px;">
+      <!-- Segment Text Card (Stitch style) -->
+      <div style="background:white;border-radius:2rem;padding:2.5rem;margin-bottom:2rem;box-shadow:0 20px 50px rgba(44,24,16,0.04);position:relative;">
+        <div style="position:absolute;top:-10px;left:2.5rem;"><span class="stitch-badge" id="ab-speaker-badge">EN</span></div>
+        <div class="serif-italic" style="font-size:1.5rem;color:#3B1117;line-height:1.6;text-align:center;" id="ab-segment-text"></div>
+      </div>
+      <!-- Now Playing Label -->
+      <div style="text-align:center;font-size:10px;font-weight:700;letter-spacing:0.2em;color:rgba(59,17,23,0.4);text-transform:uppercase;margin-bottom:1rem;" id="ab-now-label">Abschnitt 1 von 25</div>
+      <!-- Timeline (Stitch thick bar) -->
+      <div style="margin-bottom:0.75rem;">
+        <div style="position:relative;width:100%;height:8px;background:rgba(44,24,16,0.08);border-radius:9999px;overflow:hidden;cursor:pointer;" id="ab-timeline" onclick="abSeek(event)">
+          <div style="position:absolute;left:0;top:0;height:100%;background:#3B1117;border-radius:9999px;transition:width 0.3s;" id="ab-timeline-fill"></div>
+        </div>
+        <div style="display:flex;justify-content:space-between;font-size:12px;font-weight:700;color:rgba(59,17,23,0.5);margin-top:6px;">
+          <span id="ab-time-current">0:00</span>
+          <span id="ab-time-total">0:00</span>
+        </div>
+      </div>
+      <!-- Controls (Stitch style) -->
+      <div style="display:flex;align-items:center;justify-content:center;gap:2.5rem;margin:1.5rem 0;">
+        <button onclick="abPrev()" style="background:none;border:none;cursor:pointer;color:#3B1117;padding:8px;" title="Zurueck">
+          <span class="material-symbols-outlined" style="font-size:32px;">replay_10</span>
         </button>
-        <button class="play-btn" id="ab-play-btn" onclick="abTogglePlay()">
-          <svg id="ab-icon-play" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-          <svg id="ab-icon-pause" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M6 4h4v16H6zM14 4h4v16h-4z"/></svg>
+        <button id="ab-play-btn" onclick="abTogglePlay()" style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#3B1117,#5A1A24);color:white;border:none;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 8px 24px rgba(59,17,23,0.3);">
+          <span class="material-symbols-outlined" id="ab-icon-play" style="font-size:36px;font-variation-settings:'FILL' 1;">play_arrow</span>
+          <span class="material-symbols-outlined" id="ab-icon-pause" style="font-size:36px;font-variation-settings:'FILL' 1;display:none;">pause</span>
         </button>
-        <button class="skip-btn" onclick="abNext()" title="Weiter">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg>
+        <button onclick="abNext()" style="background:none;border:none;cursor:pointer;color:#3B1117;padding:8px;" title="Weiter">
+          <span class="material-symbols-outlined" style="font-size:32px;">forward_30</span>
         </button>
+      </div>
+      <!-- Segment List (Stitch style) -->
+      <div style="margin-top:2rem;">
+        <div style="font-size:10px;font-weight:700;letter-spacing:0.2em;color:rgba(59,17,23,0.4);text-transform:uppercase;margin-bottom:12px;padding:0 4px;">Kapitel Segmente</div>
+        <div id="ab-segment-list" style="display:flex;flex-direction:column;gap:6px;"></div>
+      </div>
+      <!-- Back to chapters button -->
+      <div style="margin-top:1.5rem;text-align:center;">
+        <button class="stitch-btn-de" style="width:100%;" onclick="abShowChapterList()">Anderes Kapitel wählen</button>
       </div>
     </div>
-    <div class="audiobook-segments">
-      <div class="audiobook-segments-title">Alle Abschnitte</div>
-      <div id="ab-segment-list"></div>
-    </div>
-    </div><!-- end ab-player-section -->
   </div>
 
-  <!-- EXAM SCREEN -->
-  <div class="screen" id="screen-exam">
+  <!-- EXAM SCREEN (Stitch Seensucht) -->
+  <div class="screen" id="screen-exam" style="background:#F5F0E8;">
     <!-- Config view -->
-    <div id="exam-config">
-      <div class="chapter-header">
-        <h1>Pruefungssimulator</h1>
-        <p>Simuliere die muendliche Bootsfuehrerschein-Pruefung</p>
+    <div id="exam-config" style="padding:20px;padding-top:24px;">
+      <div style="margin-bottom:2rem;">
+        <h1 class="serif-italic" style="font-size:2.5rem;color:#3B1117;margin-bottom:4px;">Prüfung</h1>
+        <p style="font-size:12px;font-weight:600;letter-spacing:0.15em;color:#6B5B4E;text-transform:uppercase;">Mündliche Bootsprüfung simulieren</p>
       </div>
-      <div class="exam-config">
-        <h2>Anzahl Fragen</h2>
-        <div class="exam-option selected" onclick="examSetCount(10)" id="exam-count-10">
-          <div class="exam-option-icon">10</div>
-          <div class="exam-option-info">
-            <div class="exam-option-title">Schnelltest</div>
-            <div class="exam-option-sub">10 zufaellige Fragen -- ca. 5 Minuten</div>
+      <div style="margin-bottom:1.5rem;">
+        <div class="stitch-label" style="margin-bottom:12px;">Anzahl Fragen</div>
+        <div class="exam-option selected" onclick="examSetCount(10)" id="exam-count-10" style="background:white;border-radius:1.5rem;padding:1.25rem;margin-bottom:10px;cursor:pointer;display:flex;align-items:center;gap:16px;box-shadow:0 8px 30px rgba(44,24,16,0.04);border:2px solid transparent;">
+          <div style="width:48px;height:48px;border-radius:50%;background:rgba(59,17,23,0.06);color:#3B1117;display:flex;align-items:center;justify-content:center;font-size:1.2rem;font-weight:700;">10</div>
+          <div style="flex:1;">
+            <div style="font-weight:700;color:#2C1810;">Schnelltest</div>
+            <div style="font-size:12px;color:#6B5B4E;">10 zufällige Fragen — ca. 5 Minuten</div>
           </div>
         </div>
-        <div class="exam-option" onclick="examSetCount(20)" id="exam-count-20">
-          <div class="exam-option-icon">20</div>
-          <div class="exam-option-info">
-            <div class="exam-option-title">Pruefungssimulation</div>
-            <div class="exam-option-sub">20 Fragen wie in der echten Pruefung</div>
+        <div class="exam-option" onclick="examSetCount(20)" id="exam-count-20" style="background:white;border-radius:1.5rem;padding:1.25rem;margin-bottom:10px;cursor:pointer;display:flex;align-items:center;gap:16px;box-shadow:0 8px 30px rgba(44,24,16,0.04);border:2px solid transparent;">
+          <div style="width:48px;height:48px;border-radius:50%;background:rgba(59,17,23,0.06);color:#3B1117;display:flex;align-items:center;justify-content:center;font-size:1.2rem;font-weight:700;">20</div>
+          <div style="flex:1;">
+            <div style="font-weight:700;color:#2C1810;">Prüfungssimulation</div>
+            <div style="font-size:12px;color:#6B5B4E;">20 Fragen wie in der echten Prüfung</div>
           </div>
         </div>
-        <div class="exam-option" onclick="examSetCount(0)" id="exam-count-0">
-          <div class="exam-option-icon">*</div>
-          <div class="exam-option-info">
-            <div class="exam-option-title">Alle Fragen</div>
-            <div class="exam-option-sub" id="exam-all-label">Alle 72 Pruefungsfragen</div>
+        <div class="exam-option" onclick="examSetCount(0)" id="exam-count-0" style="background:white;border-radius:1.5rem;padding:1.25rem;margin-bottom:10px;cursor:pointer;display:flex;align-items:center;gap:16px;box-shadow:0 8px 30px rgba(44,24,16,0.04);border:2px solid transparent;">
+          <div style="width:48px;height:48px;border-radius:50%;background:rgba(59,17,23,0.06);color:#3B1117;display:flex;align-items:center;justify-content:center;font-size:1.2rem;font-weight:700;">*</div>
+          <div style="flex:1;">
+            <div style="font-weight:700;color:#2C1810;">Alle Fragen</div>
+            <div style="font-size:12px;color:#6B5B4E;" id="exam-all-label">Alle 72 Prüfungsfragen</div>
           </div>
         </div>
-        <button class="exam-start-btn" onclick="startExam()">Pruefung starten</button>
+        <button class="stitch-btn-next" style="width:100%;margin-top:1rem;" onclick="startExam()">Prüfung starten</button>
       </div>
     </div>
     <!-- Question view -->
-    <div id="exam-run" style="display:none;">
-      <div class="exam-counter" id="exam-counter">Frage 1 von 10</div>
-      <div class="exam-progress-bar"><div class="exam-progress-fill" id="exam-progress-fill"></div></div>
-      <div id="exam-card-container" style="padding:0 20px;"></div>
-      <div id="exam-actions" style="padding:0 20px;"></div>
+    <div id="exam-run" style="display:none;padding:20px;padding-top:12px;">
+      <div style="font-size:10px;font-weight:700;letter-spacing:0.2em;color:rgba(59,17,23,0.4);text-transform:uppercase;text-align:center;margin-bottom:8px;" id="exam-counter">Frage 1 von 10</div>
+      <div style="height:4px;background:rgba(44,24,16,0.06);border-radius:9999px;overflow:hidden;margin-bottom:20px;"><div style="height:100%;background:#3B1117;border-radius:9999px;transition:width 0.3s;" id="exam-progress-fill"></div></div>
+      <div id="exam-card-container"></div>
+      <div id="exam-actions"></div>
     </div>
     <!-- Result view -->
-    <div id="exam-result" style="display:none;">
-      <div style="padding-top:30px;">
-        <div class="result-card" id="exam-result-card">
-          <div class="exam-result-badge" id="exam-badge">BESTANDEN</div>
-          <div class="result-score" id="exam-score">0/0</div>
-          <div class="result-label">Richtige Antworten</div>
-          <div id="exam-result-msg" style="font-size:1rem; margin:16px 0;"></div>
-          <div id="exam-detail" style="text-align:left; margin-top:16px; padding-top:16px; border-top:1px solid rgba(219,192,193,0.2);"></div>
-        </div>
-        <div style="padding:20px;">
-          <button class="btn btn-next" style="width:100%;" onclick="startExam()">Nochmal pruefen</button>
-          <button class="btn btn-de" style="width:100%; margin-top:10px;" onclick="switchTab('pruefung')">Zurueck zur Konfiguration</button>
-        </div>
+    <div id="exam-result" style="display:none;padding:20px;padding-top:30px;">
+      <div class="stitch-card" style="padding:2.5rem;text-align:center;" id="exam-result-card">
+        <div style="display:inline-block;padding:8px 24px;border-radius:9999px;font-weight:700;font-size:14px;letter-spacing:0.1em;margin-bottom:16px;" id="exam-badge">BESTANDEN</div>
+        <div class="stitch-term" style="font-size:3.5rem;margin-bottom:8px;" id="exam-score">0/0</div>
+        <div style="color:#6B5B4E;font-size:0.85rem;margin-bottom:24px;">Richtige Antworten</div>
+        <div id="exam-result-msg" style="font-size:1rem;margin:16px 0;color:#2C1810;"></div>
+        <div id="exam-detail" style="text-align:left;margin-top:16px;padding-top:16px;border-top:1px solid rgba(44,24,16,0.08);"></div>
+      </div>
+      <div style="margin-top:16px;">
+        <button class="stitch-btn-next" style="width:100%;" onclick="startExam()">Nochmal prüfen</button>
+        <button class="stitch-btn-de" style="width:100%;margin-top:10px;" onclick="switchTab('pruefung')">Zurück zur Konfiguration</button>
       </div>
     </div>
   </div>
 
-  <!-- ANRUFEN SCREEN — Telefon mit Kapitaen Beusti -->
-  <div class="screen" id="screen-tutor">
-    <div class="flex flex-col items-center justify-center min-h-[80vh] px-6 text-center">
-      <img src="beusti.jpg" alt="Kapitän Beusti" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-white shadow-xl" id="tutor-avatar">
-      <h2 class="text-2xl font-headline italic text-primary mb-1">Kapitän Beusti</h2>
-      <p class="text-secondary font-body text-sm mb-2">Dein persönlicher Bootslehrer</p>
-      <p class="font-body text-sm font-semibold mb-6" id="tutor-call-status"></p>
+  <!-- ANRUFEN SCREEN (Stitch Seensucht) -->
+  <div class="screen" id="screen-tutor" style="background:#F5F0E8;">
+    <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:80vh;padding:24px;text-align:center;">
+      <!-- Logo -->
+      <img src="seensucht-logo-dark.jpg" alt="Seensucht" style="width:64px;height:64px;border-radius:50%;object-fit:cover;margin-bottom:1.5rem;box-shadow:0 8px 24px rgba(59,17,23,0.15);">
+      <!-- Avatar -->
+      <img src="beusti.jpg" alt="Kapitän Beusti" style="width:140px;height:140px;border-radius:50%;object-fit:cover;margin-bottom:1rem;border:4px solid white;box-shadow:0 12px 40px rgba(44,24,16,0.12);" id="tutor-avatar">
+      <h2 class="serif-italic" style="font-size:1.75rem;color:#3B1117;margin-bottom:4px;">Kapitän Beusti</h2>
+      <p style="color:#6B5B4E;font-size:0.9rem;margin-bottom:4px;">Dein persönlicher Bootslehrer</p>
+      <p style="font-size:0.9rem;font-weight:600;color:#3B1117;margin-bottom:2rem;" id="tutor-call-status"></p>
 
       <!-- Anrufen Button -->
-      <button id="tutor-btn-call" onclick="tutorStartCall()" class="w-20 h-20 rounded-full bg-[#22c55e] flex items-center justify-center shadow-xl shadow-green-500/30 active:scale-90 transition-transform">
-        <span class="material-symbols-outlined text-white text-4xl" style="font-variation-settings:'FILL' 1;">call</span>
+      <button id="tutor-btn-call" onclick="tutorStartCall()" style="width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,#16a34a,#15803d);color:white;border:none;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 8px 32px rgba(22,163,74,0.35);">
+        <span class="material-symbols-outlined" style="font-size:36px;font-variation-settings:'FILL' 1;">call</span>
       </button>
-      <p id="tutor-btn-label" class="text-outline text-sm font-body mt-3">Anrufen</p>
+      <p id="tutor-btn-label" style="color:#6B5B4E;font-size:0.85rem;margin-top:12px;">Anrufen</p>
 
       <!-- Auflegen Button (versteckt) -->
-      <button id="tutor-btn-hangup" onclick="tutorEndCall()" class="w-20 h-20 rounded-full bg-[#ef4444] items-center justify-center shadow-xl shadow-red-500/30 active:scale-90 transition-transform" style="display:none;">
-        <span class="material-symbols-outlined text-white text-4xl" style="font-variation-settings:'FILL' 1;">call_end</span>
+      <button id="tutor-btn-hangup" onclick="tutorEndCall()" style="width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,#dc2626,#b91c1c);color:white;border:none;display:none;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 8px 32px rgba(220,38,38,0.35);">
+        <span class="material-symbols-outlined" style="font-size:36px;font-variation-settings:'FILL' 1;">call_end</span>
       </button>
     </div>
   </div>
@@ -1502,7 +1548,8 @@ function renderDots() {
   el.innerHTML = '';
   CARDS.forEach((_, i) => {
     const d = document.createElement('div');
-    d.className = 'dot' + (i < currentIndex ? ' done' : '') + (i === currentIndex ? ' current' : '');
+    d.style.cssText = 'height:3px;flex:1;border-radius:9999px;';
+    d.style.background = i <= currentIndex ? '#3B1117' : 'rgba(44,24,16,0.1)';
     el.appendChild(d);
   });
 }
@@ -1520,53 +1567,59 @@ function renderCard() {
   const actions = document.getElementById('actions-container');
 
   if (card.type === 'vocab') {
-    const img = card.image ? `<img class="card-image" src="${IMAGES[card.image] || ''}" alt="">` : '';
+    const img = card.image ? `<div style="position:relative;width:100%;aspect-ratio:4/3;background:#F5F0E8;overflow:hidden;"><img src="${IMAGES[card.image] || ''}" alt="" style="width:100%;height:100%;object-fit:contain;"><div style="position:absolute;top:16px;right:16px;"><span class="stitch-badge">EN</span></div></div>` : '';
     container.innerHTML = `
-      <div class="card">
-        <div class="card-label">Fachbegriff</div>
+      <div class="stitch-card">
         ${img}
-        <div class="lang-badge lang-en">EN</div>
-        <div class="card-term">${card.term_en}</div>
-        <div class="card-content">${card.definition_en}</div>
-        <div class="card-de" id="card-de">
-          <div class="lang-badge lang-de">DE</div>
-          <div class="card-term" style="color:var(--warning)">${card.term_de}</div>
-          <div class="card-content">${card.definition_de}</div>
+        <div style="padding:2.5rem;display:flex;flex-direction:column;gap:12px;">
+          <span class="stitch-label">Fachbegriff</span>
+          <h2 class="stitch-term">${card.term_en}</h2>
+          <div class="stitch-def" style="margin-top:8px;">${card.definition_en}</div>
+          <div class="card-de" id="card-de">
+            <div style="margin-top:20px;padding-top:20px;border-top:1px solid rgba(44,24,16,0.08);">
+              <span style="display:inline-block;background:rgba(212,70,122,0.1);color:#D4467A;font-size:10px;font-weight:700;padding:3px 10px;border-radius:4px;letter-spacing:0.1em;margin-bottom:10px;">DE</span>
+              <h2 class="stitch-term" style="color:#D4467A;font-size:1.8rem;">${card.term_de}</h2>
+              <div class="stitch-def" style="border-color:rgba(212,70,122,0.2);margin-top:8px;">${card.definition_de}</div>
+            </div>
+          </div>
         </div>
-      </div>`;
-    actions.innerHTML = `
-      <div class="actions">
-        <button class="btn btn-speak" onclick="speak('${card.term_en}. ${card.definition_en.replace(/'/g, "\\'")}')">🔊</button>
-        <button class="btn btn-de" id="btn-de" onclick="toggleDE()">🇩🇪 Deutsch</button>
       </div>
-      <div class="nav-row">
-        <button class="btn btn-prev" onclick="prev()">◀</button>
-        <button class="btn btn-next" style="flex:1" onclick="next()">Weiter ▶</button>
+      <div style="margin-top:1.5rem;display:flex;align-items:center;gap:12px;">
+        <button class="stitch-btn-speak" onclick="speak('${card.term_en}. ${card.definition_en.replace(/'/g, "\\'")}')"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">volume_up</span></button>
+        <button class="stitch-btn-de" id="btn-de" onclick="toggleDE()">Deutsch</button>
+        <button class="stitch-btn-next" onclick="next()">Weiter <span class="material-symbols-outlined" style="font-size:18px;">play_arrow</span></button>
+      </div>
+      <div style="margin-top:10px;display:flex;justify-content:center;">
+        <button class="stitch-btn-prev" onclick="prev()"><span class="material-symbols-outlined">chevron_left</span></button>
       </div>`;
+    actions.innerHTML = '';
 
   } else if (card.type === 'learn') {
-    const img = card.image ? `<img class="card-image" src="${IMAGES[card.image] || ''}" alt="">` : '';
-    container.innerHTML = `
-      <div class="card">
-        <div class="card-label">Lerninhalt</div>
-        ${img}
-        <div class="lang-badge lang-en">EN</div>
-        <div class="card-content">${card.content_en}</div>
-        <div class="card-de" id="card-de">
-          <div class="lang-badge lang-de">DE</div>
-          <div class="card-content">${card.content_de}</div>
-        </div>
-      </div>`;
+    const img = card.image ? `<div style="position:relative;width:100%;aspect-ratio:4/3;background:#F5F0E8;overflow:hidden;"><img src="${IMAGES[card.image] || ''}" alt="" style="width:100%;height:100%;object-fit:contain;"><div style="position:absolute;top:16px;right:16px;"><span class="stitch-badge">EN</span></div></div>` : '';
     const speakText = (card.title_en + '. ' + card.content_en.substring(0, 300)).replace(/'/g, "\\'").replace(/\n/g, ' ');
-    actions.innerHTML = `
-      <div class="actions">
-        <button class="btn btn-speak" onclick="speak(\`${speakText}\`)">🔊</button>
-        <button class="btn btn-de" id="btn-de" onclick="toggleDE()">🇩🇪 Deutsch</button>
+    container.innerHTML = `
+      <div class="stitch-card">
+        ${img}
+        <div style="padding:2.5rem;display:flex;flex-direction:column;gap:12px;">
+          <span class="stitch-label">Lerninhalt</span>
+          <div style="color:#2C1810;font-size:1.1rem;line-height:1.7;white-space:pre-line;">${card.content_en}</div>
+          <div class="card-de" id="card-de">
+            <div style="margin-top:20px;padding-top:20px;border-top:1px solid rgba(44,24,16,0.08);">
+              <span style="display:inline-block;background:rgba(212,70,122,0.1);color:#D4467A;font-size:10px;font-weight:700;padding:3px 10px;border-radius:4px;letter-spacing:0.1em;margin-bottom:10px;">DE</span>
+              <div style="color:#6B5B4E;font-size:1.05rem;line-height:1.7;white-space:pre-line;">${card.content_de}</div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="nav-row">
-        <button class="btn btn-prev" onclick="prev()">◀</button>
-        <button class="btn btn-next" style="flex:1" onclick="next()">Weiter ▶</button>
+      <div style="margin-top:1.5rem;display:flex;align-items:center;gap:12px;">
+        <button class="stitch-btn-speak" onclick="speak(\`${speakText}\`)"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">volume_up</span></button>
+        <button class="stitch-btn-de" id="btn-de" onclick="toggleDE()">Deutsch</button>
+        <button class="stitch-btn-next" onclick="next()">Weiter <span class="material-symbols-outlined" style="font-size:18px;">play_arrow</span></button>
+      </div>
+      <div style="margin-top:10px;display:flex;justify-content:center;">
+        <button class="stitch-btn-prev" onclick="prev()"><span class="material-symbols-outlined">chevron_left</span></button>
       </div>`;
+    actions.innerHTML = '';
 
   } else if (card.type === 'quiz') {
     totalQuiz++;
@@ -1580,17 +1633,20 @@ function renderCard() {
     });
 
     container.innerHTML = `
-      <div class="card" style="min-height:auto; padding-bottom:16px;">
-        <div class="card-label">Prüfungsfrage</div>
-        <div class="lang-badge lang-en">EN</div>
-        <div class="card-content" style="font-size:1.1rem; font-weight:600; margin-bottom:8px;">${card.question_en}</div>
-        <button class="btn btn-speak" style="width:auto; padding:8px 14px; font-size:0.75rem;" onclick="speak('${card.question_en.replace(/'/g, "\\'")}')">🔊 Vorlesen</button>
-        <div class="card-de" id="card-de" style="margin-top:12px; padding-top:12px;">
-          <div class="lang-badge lang-de">DE</div>
-          <div class="card-content" style="color:var(--warning)">${card.question_de}</div>
+      <div class="stitch-card" style="margin-bottom:12px;">
+        <div style="padding:2.5rem;display:flex;flex-direction:column;gap:12px;">
+          <span class="stitch-label">Prüfungsfrage</span>
+          <span class="stitch-badge" style="align-self:flex-start;">EN</span>
+          <div style="font-size:1.15rem;font-weight:600;color:#2C1810;line-height:1.5;">${card.question_en}</div>
+          <button class="stitch-btn-speak" style="width:auto;height:auto;padding:8px 16px;border-radius:12px;font-size:0.8rem;display:inline-flex;gap:6px;align-self:flex-start;" onclick="speak('${card.question_en.replace(/'/g, "\\'")}')"><span class="material-symbols-outlined" style="font-size:16px;font-variation-settings:'FILL' 1;">volume_up</span> Vorlesen</button>
+          <div class="card-de" id="card-de">
+            <div style="margin-top:16px;padding-top:16px;border-top:1px solid rgba(44,24,16,0.08);">
+              <span style="display:inline-block;background:rgba(212,70,122,0.1);color:#D4467A;font-size:10px;font-weight:700;padding:3px 10px;border-radius:4px;letter-spacing:0.1em;margin-bottom:8px;">DE</span>
+              <div style="color:#6B5B4E;font-size:1.05rem;">${card.question_de}</div>
+            </div>
+          </div>
         </div>
       </div>
-      <div style="height:12px;"></div>
       ${optionsHtml}
       <div class="quiz-explanation" id="quiz-expl">
         <div class="quiz-explanation-label">Erklärung</div>
@@ -1603,36 +1659,39 @@ function renderCard() {
       </div>`;
 
     actions.innerHTML = `
-      <div class="actions">
-        <button class="btn btn-de" id="btn-de" onclick="toggleDE()">🇩🇪 Frage auf Deutsch</button>
+      <div style="padding:12px 0;">
+        <button class="stitch-btn-de" id="btn-de" onclick="toggleDE()" style="width:100%;">🇩🇪 Frage auf Deutsch</button>
       </div>
-      <div class="nav-row" id="quiz-nav" style="display:none;">
-        <button class="btn btn-prev" onclick="prev()">◀</button>
-        <button class="btn btn-next" style="flex:1" onclick="next()">Weiter ▶</button>
+      <div id="quiz-nav" style="display:none;gap:10px;margin-top:8px;">
+        <button class="stitch-btn-prev" onclick="prev()"><span class="material-symbols-outlined">chevron_left</span></button>
+        <button class="stitch-btn-next" onclick="next()">Weiter <span class="material-symbols-outlined" style="font-size:18px;">play_arrow</span></button>
       </div>`;
 
   } else if (card.type === 'quiz_free') {
     container.innerHTML = `
-      <div class="card" style="min-height:auto; padding-bottom:16px;">
-        <div class="card-label">Mündliche Prüfungsfrage</div>
-        <div class="lang-badge lang-en">EN</div>
-        <div class="card-content" style="font-size:1.1rem; font-weight:600; margin-bottom:8px;">${card.question_en}</div>
-        <button class="btn btn-speak" style="width:auto; padding:8px 14px; font-size:0.75rem;" onclick="speak('${card.question_en.replace(/'/g, "\\'")}')">🔊 Vorlesen</button>
-        <div class="card-de" id="card-de" style="margin-top:12px; padding-top:12px;">
-          <div class="lang-badge lang-de">DE</div>
-          <div class="card-content" style="color:var(--warning)">${card.question_de}</div>
+      <div class="stitch-card" style="margin-bottom:12px;">
+        <div style="padding:2.5rem;display:flex;flex-direction:column;gap:12px;">
+          <span class="stitch-label">Mündliche Prüfungsfrage</span>
+          <span class="stitch-badge" style="align-self:flex-start;">EN</span>
+          <div style="font-size:1.15rem;font-weight:600;color:#2C1810;line-height:1.5;">${card.question_en}</div>
+          <button class="stitch-btn-speak" style="width:auto;height:auto;padding:8px 16px;border-radius:12px;font-size:0.8rem;display:inline-flex;gap:6px;align-self:flex-start;" onclick="speak('${card.question_en.replace(/'/g, "\\'")}')"><span class="material-symbols-outlined" style="font-size:16px;font-variation-settings:'FILL' 1;">volume_up</span> Vorlesen</button>
+          <div class="card-de" id="card-de">
+            <div style="margin-top:16px;padding-top:16px;border-top:1px solid rgba(44,24,16,0.08);">
+              <span style="display:inline-block;background:rgba(212,70,122,0.1);color:#D4467A;font-size:10px;font-weight:700;padding:3px 10px;border-radius:4px;letter-spacing:0.1em;margin-bottom:8px;">DE</span>
+              <div style="color:#6B5B4E;font-size:1.05rem;">${card.question_de}</div>
+            </div>
+          </div>
         </div>
       </div>
-      <div style="height:8px;"></div>
       <div class="free-answer-box">
-        <div class="card-label">Deine Antwort (auf Englisch)</div>
+        <div class="stitch-label" style="margin-bottom:8px;">Deine Antwort (auf Englisch)</div>
         <textarea placeholder="Type your answer in English..."></textarea>
       </div>
-      <div style="padding:12px 20px;">
-        <button class="btn btn-next" style="width:100%;" id="btn-show-answer" onclick="showModelAnswer()">Musterantwort zeigen</button>
+      <div style="padding:12px 0;">
+        <button class="stitch-btn-next" style="width:100%;" id="btn-show-answer" onclick="showModelAnswer()">Musterantwort zeigen</button>
       </div>
       <div class="model-answer" id="model-answer">
-        <div class="card-label" style="color:var(--success);">Musterantwort</div>
+        <div class="stitch-label" style="color:#004124;margin-bottom:8px;">Musterantwort</div>
         <div class="lang-badge lang-en">EN</div>
         <div class="card-content">${card.model_answer_en}</div>
         <div style="margin-top:14px;">
@@ -1647,8 +1706,8 @@ function renderCard() {
       </div>`;
 
     actions.innerHTML = `
-      <div class="actions">
-        <button class="btn btn-de" id="btn-de" onclick="toggleDE()">🇩🇪 Frage auf Deutsch</button>
+      <div style="padding:12px 0;">
+        <button class="stitch-btn-de" id="btn-de" onclick="toggleDE()" style="width:100%;">🇩🇪 Frage auf Deutsch</button>
       </div>`;
   }
 
@@ -1900,26 +1959,31 @@ function abShowChapterList() {
   document.getElementById('ab-player-section').style.display = 'none';
   document.getElementById('ab-chapter-list').style.display = 'block';
   document.getElementById('ab-title').textContent = 'Hörbuch';
-  document.getElementById('ab-subtitle').textContent = 'Wähle ein Kapitel';
-  document.getElementById('ab-progress-fill').style.width = '0%';
+  document.getElementById('ab-subtitle').textContent = '';
+  const backBtn = document.getElementById('ab-back-btn');
+  if (backBtn) backBtn.style.display = 'none';
 
   const list = document.getElementById('ab-chapter-list');
-  let html = '';
+  let html = '<div style="margin-bottom:2rem;"><h1 class="serif-italic" style="font-size:2.5rem;color:#3B1117;margin-bottom:4px;">Hörbuch</h1><p style="font-size:12px;font-weight:600;letter-spacing:0.15em;color:#6B5B4E;text-transform:uppercase;">Amtlicher Sportbootführerschein</p></div>';
+  html += '<div style="display:flex;flex-direction:column;gap:12px;">';
   AUDIOBOOKS.forEach((book, i) => {
     const listened = JSON.parse(localStorage.getItem('ab_listened_' + book.id) || '{}');
     const done = Object.keys(listened).length;
     const total = book.segments.length;
     const pct = total > 0 ? Math.round(done / total * 100) : 0;
-    const status = pct === 100 ? '✓' : (pct > 0 ? `${pct}%` : '');
-    html += `<div class="chapter-card" onclick="abSelectBook(${i})">
-      <div class="chapter-num">${i + 1}</div>
-      <div class="chapter-info">
-        <div class="chapter-info-title">${book.title_de}</div>
-        <div class="chapter-info-sub">${book.title_en} — ${total} Abschnitte</div>
+    const num = String(i + 1).padStart(2, '0');
+    const progressBar = pct > 0 ? `<div style="display:flex;align-items:center;gap:8px;margin-top:8px;"><div style="flex:1;height:4px;background:rgba(44,24,16,0.06);border-radius:9999px;overflow:hidden;"><div style="height:100%;background:#3B1117;width:${pct}%;border-radius:9999px;"></div></div><span style="font-size:11px;font-weight:600;color:#6B5B4E;">${pct}% gehört</span></div>` : `<div style="font-size:11px;color:#6B5B4E;margin-top:6px;">${total} Abschnitte</div>`;
+    html += `<div onclick="abSelectBook(${i})" style="background:white;border-radius:1.5rem;padding:1.25rem 1.5rem;box-shadow:0 8px 30px rgba(44,24,16,0.04);display:flex;align-items:center;gap:1.25rem;cursor:pointer;transition:transform 0.2s;" onmousedown="this.style.transform='translateY(-2px)'" onmouseup="this.style.transform=''">
+      <div class="serif-italic" style="font-size:2rem;color:rgba(44,24,16,0.2);width:3rem;text-align:center;">${num}</div>
+      <div style="flex:1;">
+        <div style="font-weight:700;color:#2C1810;font-size:1rem;line-height:1.3;">${book.title_de}</div>
+        <div style="font-size:12px;color:#6B5B4E;margin-top:2px;">${book.title_en}</div>
+        ${progressBar}
       </div>
-      <div class="chapter-card-count">${status}</div>
+      <span class="material-symbols-outlined" style="color:#3B1117;opacity:0.3;">chevron_right</span>
     </div>`;
   });
+  html += '</div>';
   list.innerHTML = html;
 }
 
@@ -1931,6 +1995,8 @@ function abSelectBook(idx) {
   document.getElementById('ab-chapter-list').style.display = 'none';
   document.getElementById('ab-player-section').style.display = 'block';
   document.getElementById('ab-title').textContent = abCurrentBook.title_de;
+  const backBtn = document.getElementById('ab-back-btn');
+  if (backBtn) backBtn.style.display = 'inline-block';
 
   abLoadSegment(0);
   abUpdateOverallProgress();
@@ -1977,10 +2043,7 @@ function abLoadSegment(idx) {
 
   document.getElementById('ab-now-label').textContent = `Abschnitt ${idx + 1} von ${abCurrentBook.segments.length}`;
 
-  const badge = seg.lang === 'de'
-    ? '<div class="audiobook-speaker speaker-de">DE — Deutsch</div>'
-    : '<div class="audiobook-speaker speaker-en">EN — English</div>';
-  document.getElementById('ab-speaker-badge').innerHTML = badge;
+  document.getElementById('ab-speaker-badge').textContent = seg.lang === 'de' ? 'DE' : 'EN';
   document.getElementById('ab-segment-text').textContent = seg.text;
 
   abAudio.src = `${abCurrentBook.audio_dir}/seg_${String(idx).padStart(2, '0')}.mp3`;
@@ -1998,7 +2061,6 @@ function abUpdateOverallProgress() {
   const listened = Object.keys(abListened).length;
   const total = abCurrentBook.segments.length;
   const pct = Math.round((listened / total) * 100);
-  document.getElementById('ab-progress-fill').style.width = pct + '%';
   document.getElementById('ab-subtitle').textContent =
     `${listened} von ${total} gehört (${pct}%)`;
 }
@@ -2010,21 +2072,21 @@ function abRenderSegmentList() {
   abCurrentBook.segments.forEach((seg, i) => {
     const isActive = i === abCurrentSeg;
     const isListened = abListened[i];
-    let cls = 'segment-item';
-    if (isActive) cls += ' active';
-    if (isListened) cls += ' listened';
+    const num = String(i + 1).padStart(2, '0');
+    const preview = seg.text.length > 60 ? seg.text.substring(0, 60) + '…' : seg.text;
+    const langIcon = seg.lang === 'de' ? 'DE' : 'EN';
 
-    const preview = seg.text.length > 80 ? seg.text.substring(0, 80) + '…' : seg.text;
-    const dateStr = isListened
-      ? new Date(abListened[i]).toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' })
-      : '';
-    const langIcon = seg.lang === 'de' ? '🇩🇪' : '🇬🇧';
-
-    html += `<div class="${cls}" onclick="abJumpTo(${i})">
-      <div class="segment-num">${isListened && !isActive ? '✓' : (i + 1)}</div>
-      <div class="segment-text">${langIcon} ${preview}</div>
-      ${dateStr ? `<div class="segment-listened-date">${dateStr}</div>` : ''}
-    </div>`;
+    if (isActive) {
+      html += `<div style="display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:rgba(59,17,23,0.04);border:1px solid rgba(59,17,23,0.08);border-radius:1rem;cursor:default;">
+        <div style="display:flex;align-items:center;gap:12px;"><span style="font-size:11px;font-weight:700;color:#3B1117;">${num}</span><span style="font-weight:600;color:#3B1117;font-size:0.9rem;">${langIcon} ${preview}</span></div>
+        <div style="display:flex;gap:2px;"><div style="width:3px;height:12px;background:#3B1117;border-radius:9999px;"></div><div style="width:3px;height:18px;background:#3B1117;border-radius:9999px;"></div><div style="width:3px;height:14px;background:#3B1117;border-radius:9999px;"></div></div>
+      </div>`;
+    } else {
+      html += `<div onclick="abJumpTo(${i})" style="display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:rgba(245,240,232,0.5);border-radius:1rem;cursor:pointer;${isListened ? 'opacity:0.7;' : ''}">
+        <div style="display:flex;align-items:center;gap:12px;"><span style="font-size:11px;font-weight:700;color:rgba(59,17,23,0.3);">${num}</span><span style="color:#2C1810;font-size:0.9rem;">${langIcon} ${preview}</span></div>
+        <span class="material-symbols-outlined" style="color:rgba(59,17,23,0.15);font-size:20px;">${isListened ? 'check_circle' : 'play_circle'}</span>
+      </div>`;
+    }
   });
   html += `<div style="padding:12px 0;"><div class="chapter-card" onclick="abShowChapterList()" style="justify-content:center; color:var(--accent-light);">← Anderes Kapitel wählen</div></div>`;
   list.innerHTML = html;
