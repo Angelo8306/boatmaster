@@ -6,7 +6,7 @@
 <title>BoatMaster — Bootsführerschein Lernsoftware</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
 
@@ -491,7 +491,8 @@ body {
 /* === HERO SECTION === */
 .hero-section {
   padding: 40px 20px 28px;
-  background: linear-gradient(135deg, #1B2A3D 0%, #2C3E50 50%, #1B2A3D 100%);
+  background: linear-gradient(180deg, rgba(27,42,61,0.92) 0%, rgba(44,62,80,0.88) 100%),
+              url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80') center/cover;
   color: var(--text-on-dark);
   text-align: center;
   position: relative;
@@ -499,13 +500,23 @@ body {
 .hero-section::after {
   content: '';
   position: absolute;
-  bottom: -20px;
-  left: 0;
-  right: 0;
-  height: 24px;
+  bottom: -1px;
+  left: -5%;
+  right: -5%;
+  height: 30px;
   background: var(--bg);
-  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  clip-path: polygon(0% 60%, 3% 45%, 6% 65%, 9% 40%, 12% 55%, 16% 35%, 20% 50%, 24% 30%, 28% 55%, 32% 40%, 36% 60%, 40% 35%, 44% 50%, 48% 30%, 52% 55%, 56% 40%, 60% 60%, 64% 35%, 68% 50%, 72% 30%, 76% 55%, 80% 40%, 84% 60%, 88% 35%, 92% 50%, 96% 40%, 100% 55%, 100% 100%, 0% 100%);
   z-index: 1;
+}
+.hero-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 8px;
+  border: 2px solid rgba(255,255,255,0.4);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .hero-overline {
   font-family: var(--font-sans);
@@ -514,20 +525,23 @@ body {
   letter-spacing: 2.5px;
   text-transform: uppercase;
   color: var(--accent-light);
-  margin-bottom: 6px;
+  margin-bottom: 2px;
 }
 .hero-title {
-  font-family: var(--font-serif);
-  font-size: 2.8rem;
+  font-family: 'Dancing Script', cursive;
+  font-size: 3.2rem;
   font-weight: 700;
-  font-style: italic;
-  letter-spacing: -0.02em;
-  margin-bottom: 6px;
+  letter-spacing: 0.02em;
+  margin-bottom: 2px;
   color: #FFFFFF;
 }
 .hero-subtitle {
-  font-size: 0.8rem;
-  color: rgba(255,255,255,0.6);
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
   margin-bottom: 24px;
 }
 .hero-stats {
@@ -1117,10 +1131,34 @@ body {
 }
 .btn-ask-kai:active { opacity: 0.9; transform: scale(0.98); }
 
-/* Script Logo */
-.hero-title {
-  font-family: 'Newsreader', Georgia, serif;
-  font-style: italic;
+/* Seensucht-style icon nav */
+.icon-nav {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  padding: 20px 10px 8px;
+  position: relative;
+  z-index: 2;
+}
+.icon-nav-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  border-radius: 12px;
+}
+.icon-nav-item:active { background: var(--bg-surface-low); }
+.icon-nav-item svg { color: var(--pink); }
+.icon-nav-label {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text);
 }
 
 /* Tutor end session */
@@ -1143,9 +1181,11 @@ body {
   <!-- CHAPTER SELECT SCREEN -->
   <div class="screen active" id="screen-chapters">
     <div class="hero-section">
-      <div class="hero-overline">KROATISCHER BOOTSFÜHRERSCHEIN — KATEGORIE C</div>
-      <h1 class="hero-title" style="font-size:3.2rem; letter-spacing:-0.03em;">BoatMaster</h1>
-      <div style="font-family:var(--font-serif); font-size:0.9rem; font-style:italic; color:rgba(255,255,255,0.5); margin-top:-4px; margin-bottom:8px;">dein Weg zum Bootsführerschein</div>
+      <div class="hero-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M2 20l2-2 2 2"/><path d="M6 20l2-2 2 2"/><path d="M10 20l2-2 2 2"/><path d="M14 20l2-2 2 2"/><path d="M18 20l2-2 2 2"/><path d="M12 4v12"/><path d="M12 4l7 12H5l7-12z" fill="rgba(212,70,122,0.5)"/></svg>
+      </div>
+      <h1 class="hero-title">BoatMaster</h1>
+      <div class="hero-subtitle">Bootsführerschein Kroatien — Kategorie C</div>
       <div class="hero-stats">
         <div class="hero-stat">
           <div class="hero-stat-value" id="hero-chapters">25</div>
@@ -1163,6 +1203,26 @@ body {
         </div>
       </div>
     </div>
+    <!-- SEENSUCHT-STYLE ICON NAV -->
+    <div class="icon-nav">
+      <div class="icon-nav-item" onclick="switchTab('learn'); if(!CARDS||!CARDS.length) selectChapter(0);">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+        <div class="icon-nav-label">Lernen</div>
+      </div>
+      <div class="icon-nav-item" onclick="switchTab('tutor')">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0112 0v2"/></svg>
+        <div class="icon-nav-label">Tutor</div>
+      </div>
+      <div class="icon-nav-item" onclick="switchTab('audiobook')">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 18v-6a9 9 0 0118 0v6"/><path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z"/></svg>
+        <div class="icon-nav-label">Hörbuch</div>
+      </div>
+      <div class="icon-nav-item" onclick="switchTab('pruefung')">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        <div class="icon-nav-label">Prüfung</div>
+      </div>
+    </div>
+
     <!-- KAPITÄN KAI AVATAR -->
     <div class="kai-section" onclick="switchTab('tutor')">
       <div class="kai-avatar">
