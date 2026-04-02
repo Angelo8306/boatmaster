@@ -1474,12 +1474,27 @@ let freeAnswerRevealed = false;
 let correctCount = 0;
 let totalQuiz = 0;
 
-function speak(text) {
+let speakAudio = null;
+async function speak(text) {
+  if (speakAudio) { speakAudio.pause(); speakAudio = null; }
   speechSynthesis.cancel();
-  const u = new SpeechSynthesisUtterance(text);
-  u.lang = 'en-US';
-  u.rate = 0.8;
-  speechSynthesis.speak(u);
+  try {
+    const r = await fetch('https://api.elevenlabs.io/v1/text-to-speech/HzBCRGsOskP44taMg2CT', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'xi-api-key': ELEVENLABS_KEY },
+      body: JSON.stringify({ text: text.substring(0, 500), model_id: 'eleven_turbo_v2_5' })
+    });
+    if (!r.ok) throw new Error('TTS failed');
+    const blob = await r.blob();
+    speakAudio = new Audio(URL.createObjectURL(blob));
+    speakAudio.play();
+  } catch(e) {
+    // Fallback auf Browser-TTS
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = 'en-US';
+    u.rate = 0.8;
+    speechSynthesis.speak(u);
+  }
 }
 
 function renderDots() {
