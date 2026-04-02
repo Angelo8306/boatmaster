@@ -1402,8 +1402,22 @@ body {
     <div class="flex flex-col items-center justify-center min-h-[80vh] px-6 text-center">
       <img src="beusti.jpg" alt="Kapitän Beusti" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-white shadow-xl">
       <h2 class="text-2xl font-headline italic text-primary mb-1">Kapitän Beusti</h2>
-      <p class="text-secondary font-body text-sm mb-8">Dein persönlicher Bootslehrer</p>
-      <elevenlabs-convai agent-id="agent_5201kn7rttx4estb9481qa9vw60w"></elevenlabs-convai>
+      <p class="text-secondary font-body text-sm mb-2">Dein persönlicher Bootslehrer</p>
+      <p class="text-[#22c55e] font-body text-sm font-semibold mb-6" id="tutor-call-status"></p>
+
+      <!-- Anrufen Button (vor dem Anruf) -->
+      <button id="tutor-btn-call" onclick="tutorStartCall()" class="w-20 h-20 rounded-full bg-[#22c55e] flex items-center justify-center shadow-xl shadow-green-500/30 active:scale-90 transition-transform">
+        <span class="material-symbols-outlined text-white text-4xl" style="font-variation-settings:'FILL' 1;">call</span>
+      </button>
+      <p id="tutor-btn-label" class="text-outline text-sm font-body mt-3">Anrufen</p>
+
+      <!-- Auflegen Button (waehrend Anruf, versteckt) -->
+      <button id="tutor-btn-hangup" onclick="tutorEndCall()" class="w-20 h-20 rounded-full bg-[#ef4444] items-center justify-center shadow-xl shadow-red-500/30 active:scale-90 transition-transform" style="display:none;">
+        <span class="material-symbols-outlined text-white text-4xl" style="font-variation-settings:'FILL' 1;">call_end</span>
+      </button>
+
+      <!-- ElevenLabs Widget: klein und direkt unter den Buttons, wird bei Anruf sichtbar -->
+      <div id="tutor-widget-slot" style="margin-top:16px; width:100%; display:flex; justify-content:center;"></div>
     </div>
   </div>
 
@@ -2377,8 +2391,97 @@ let tutorExamCorrect = 0;
 // API Key wird aus config.js geladen (nicht im Repo)
 // Falls config.js fehlt, wird der Key aus localStorage genommen
 
+let tutorCallActive = false;
+let tutorCallInterval = null;
+let tutorCallSeconds = 0;
+
 function tutorInit() {
-  // Widget ist direkt im Idle-Screen — nichts zu tun
+  // Reset UI
+  if (!tutorCallActive) {
+    document.getElementById('tutor-btn-call').style.display = 'flex';
+    document.getElementById('tutor-btn-hangup').style.display = 'none';
+    document.getElementById('tutor-call-status').textContent = '';
+    document.getElementById('tutor-btn-label').textContent = 'Anrufen';
+  }
+}
+
+function tutorStartCall() {
+  // Widget erstellen
+  const slot = document.getElementById('tutor-widget-slot');
+  slot.innerHTML = '<elevenlabs-convai agent-id="agent_5201kn7rttx4estb9481qa9vw60w"></elevenlabs-convai>';
+
+  // UI: Anrufen → Verbinde...
+  document.getElementById('tutor-call-status').textContent = 'Verbinde...';
+  document.getElementById('tutor-call-status').style.color = '#94455a';
+  document.getElementById('tutor-btn-call').style.display = 'none';
+  document.getElementById('tutor-btn-hangup').style.display = 'flex';
+  document.getElementById('tutor-btn-label').textContent = 'Auflegen';
+  tutorCallActive = true;
+
+  // Warte auf Widget und klicke "Start a call"
+  function tryClick(attempts) {
+    if (attempts <= 0 || !tutorCallActive) return;
+    const widget = document.querySelector('#tutor-widget-slot elevenlabs-convai');
+    if (widget && widget.shadowRoot) {
+      const btns = widget.shadowRoot.querySelectorAll('button');
+      for (const btn of btns) {
+        if (btn.textContent.trim().toLowerCase().includes('start') || btn.getBoundingClientRect().width > 100) {
+          btn.click();
+          // Timer + Status nach kurzer Verzoegerung
+          setTimeout(() => {
+            if (tutorCallActive) {
+              document.getElementById('tutor-call-status').textContent = 'Verbunden';
+              document.getElementById('tutor-call-status').style.color = '#22c55e';
+              tutorCallSeconds = 0;
+              tutorCallInterval = setInterval(() => {
+                tutorCallSeconds++;
+                const m = Math.floor(tutorCallSeconds / 60);
+                const s = tutorCallSeconds % 60;
+                document.getElementById('tutor-call-status').textContent =
+                  'Verbunden · ' + String(m).padStart(2,'0') + ':' + String(s).padStart(2,'0');
+              }, 1000);
+            }
+          }, 2000);
+          return;
+        }
+      }
+    }
+    setTimeout(() => tryClick(attempts - 1), 500);
+  }
+  tryClick(20);
+}
+
+function tutorEndCall() {
+  tutorCallActive = false;
+  if (tutorCallInterval) { clearInterval(tutorCallInterval); tutorCallInterval = null; }
+
+  // Widget-Endcall-Button klicken falls vorhanden
+  const widget = document.querySelector('#tutor-widget-slot elevenlabs-convai');
+  if (widget && widget.shadowRoot) {
+    const btns = widget.shadowRoot.querySelectorAll('button');
+    for (const btn of btns) {
+      if (btn.getBoundingClientRect().width > 0) { btn.click(); break; }
+    }
+  }
+
+  // Widget entfernen
+  setTimeout(() => {
+    document.getElementById('tutor-widget-slot').innerHTML = '';
+  }, 500);
+
+  // UI zuruecksetzen
+  document.getElementById('tutor-btn-call').style.display = 'flex';
+  document.getElementById('tutor-btn-hangup').style.display = 'none';
+  document.getElementById('tutor-call-status').textContent = 'Anruf beendet';
+  document.getElementById('tutor-call-status').style.color = '#94455a';
+  document.getElementById('tutor-btn-label').textContent = 'Erneut anrufen';
+
+  setTimeout(() => {
+    if (!tutorCallActive) {
+      document.getElementById('tutor-call-status').textContent = '';
+      document.getElementById('tutor-btn-label').textContent = 'Anrufen';
+    }
+  }, 3000);
 }
 
 function tutorSaveKey() {
