@@ -2475,9 +2475,12 @@ Beziehe dich auf seinen Lernstand! Wenn er Schwächen hat, sprich sie an.`;
     });
   } catch(e) {
     console.error('Start call failed:', e);
-    document.getElementById('tutor-call-status').textContent = 'Fehler: ' + e.message;
+    const errMsg = e.name === 'NotAllowedError'
+      ? 'Bitte erlaube den Mikrofon-Zugriff in deinem Browser'
+      : (e.message || String(e));
+    document.getElementById('tutor-call-status').textContent = errMsg;
     document.getElementById('tutor-call-status').style.color = '#ef4444';
-    setTimeout(() => tutorEndCallUI(), 3000);
+    setTimeout(() => tutorEndCallUI(), 5000);
   }
 }
 
