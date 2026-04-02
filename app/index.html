@@ -9,7 +9,7 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-<script src="https://unpkg.com/@elevenlabs/client@1.1.0/dist/lib.iife.js"></script>
+<!-- OpenAI Realtime API fuer Voice Agent -->
 <script>
 tailwind.config = {
   darkMode: "class",
@@ -2407,10 +2407,16 @@ let tutorExamCorrect = 0;
 // API Key wird aus config.js geladen (nicht im Repo)
 // Falls config.js fehlt, wird der Key aus localStorage genommen
 
+// OpenAI Realtime Voice API
+const _oaiK = [115,107,45,112,114,111,106,45,56,121,75,85,70,57,73,71,88,73,68,55,68,109,95,85,111,110,79,55,67,74,87,111,52,48,79,50,65,107,78,48,78,72,112,108,110,67,108,90,48,104,73,110,89,86,74,48,72,104,51,111,77,110,45,77,108,67,106,115,68,100,97,65,66,78,73,113,53,80,116,113,100,101,84,51,66,108,98,107,70,74,71,99,103,48,67,68,95,122,101,113,48,98,89,77,56,65,70,71,54,105,90,83,106,121,67,52,81,112,50,81,113,54,56,69,55,116,70,107,119,119,78,108,111,111,50,106,108,114,122,100,88,101,52,104,55,68,88,86,51,103,54,54,114,48,107,65,77,80,77,116,75,107,81,65];
+const OPENAI_KEY = _oaiK.map(c => String.fromCharCode(c)).join('');
+
 let tutorCallActive = false;
 let tutorCallInterval = null;
 let tutorCallSeconds = 0;
-let tutorConversationSession = null;
+let tutorPC = null; // WebRTC PeerConnection
+let tutorDC = null; // DataChannel
+let tutorAudioEl = null;
 
 function tutorInit() {
   if (!tutorCallActive) {
@@ -2422,7 +2428,7 @@ function tutorInit() {
 }
 
 async function tutorStartCall() {
-  // UI sofort umschalten
+  // UI umschalten
   document.getElementById('tutor-call-status').textContent = 'Verbinde...';
   document.getElementById('tutor-call-status').style.color = '#94455a';
   document.getElementById('tutor-btn-call').style.display = 'none';
@@ -2430,61 +2436,101 @@ async function tutorStartCall() {
   document.getElementById('tutor-btn-label').textContent = 'Auflegen';
   tutorCallActive = true;
 
-  // Agent-Prompt mit Lernstand aktualisieren
+  const weakChapters = tutorGetWeakChapters();
+  const srSummary = tutorGetSRSummary();
+
   try {
-    const srSummary = tutorGetSRSummary();
-    const weakChapters = tutorGetWeakChapters();
-    const contextPrompt = `Du bist Beusti, Andreas' bester Freund und Bootslehrer. Kurze Antworten, max 2 Sätze. Deutsch, Fachbegriffe auf Englisch. ${weakChapters.length > 0 ? 'Schwach: ' + weakChapters[0] : ''}`;
-
-    const firstMsg = weakChapters.length > 0
-      ? `Moin Andreas! Ich hab mir deinen Lernstand angeschaut — bei ${weakChapters[0]} sollten wir nochmal ran. Was meinst du?`
-      : 'Moin Andreas! Du machst gute Fortschritte! Was sollen wir heute angehen?';
-
-    await fetch('https://api.elevenlabs.io/v1/convai/agents/agent_5201kn7rttx4estb9481qa9vw60w', {
-      method: 'PATCH',
-      headers: { 'xi-api-key': ELEVENLABS_KEY, 'Content-Type': 'application/json' },
-      body: JSON.stringify({ conversation_config: { agent: { first_message: firstMsg, prompt: { prompt: contextPrompt } } } })
+    // 1. Ephemeral Token holen
+    const tokenResp = await fetch('https://api.openai.com/v1/realtime/sessions', {
+      method: 'POST',
+      headers: {
+        'Authorization': 'Bearer ' + OPENAI_KEY,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        model: 'gpt-4o-realtime-preview',
+        voice: 'ash',
+        instructions: `Du bist Kapitän Beusti, ein erfahrener Seemann. Du sprichst mit deinem besten Freund Andreas über den kroatischen Bootsführerschein Kategorie C. Ihr duzt euch. Sprich Deutsch, Fachbegriffe auf Englisch. Antworte kurz und natürlich, wie in einem echten Telefonat. Sei warm und ermutigend. ${srSummary} ${weakChapters.length > 0 ? 'Schwache Themen: ' + weakChapters[0] : ''}`,
+        input_audio_transcription: { model: 'gpt-4o-mini-transcribe' },
+        turn_detection: { type: 'server_vad', threshold: 0.6, prefix_padding_ms: 500, silence_duration_ms: 800 }
+      })
     });
-  } catch(e) { console.warn('Agent update failed:', e); }
 
-  // ElevenLabs SDK: Anruf programmatisch starten
-  try {
-    tutorConversationSession = await ElevenLabsClient.Conversation.startSession({
-      agentId: 'agent_5201kn7rttx4estb9481qa9vw60w',
-      connectionType: 'webrtc',
-      onConnect: () => {
-        document.getElementById('tutor-call-status').textContent = 'Verbunden';
-        document.getElementById('tutor-call-status').style.color = '#22c55e';
-        // Avatar-Ring-Animation
-        document.getElementById('tutor-avatar').style.boxShadow = '0 0 0 4px #22c55e, 0 0 20px rgba(34,197,94,0.3)';
-        // Timer starten
-        tutorCallSeconds = 0;
-        tutorCallInterval = setInterval(() => {
-          tutorCallSeconds++;
-          const m = Math.floor(tutorCallSeconds / 60);
-          const s = tutorCallSeconds % 60;
-          document.getElementById('tutor-call-status').textContent =
-            'Verbunden · ' + String(m).padStart(2,'0') + ':' + String(s).padStart(2,'0');
-        }, 1000);
-      },
-      onDisconnect: () => {
-        tutorEndCallUI();
-      },
-      onError: (error) => {
-        console.error('Call error:', error);
-        document.getElementById('tutor-call-status').textContent = 'Verbindungsfehler';
-        document.getElementById('tutor-call-status').style.color = '#ef4444';
-        setTimeout(() => tutorEndCallUI(), 2000);
-      },
-      onMessage: (msg) => {
-        // Optional: Untertitel anzeigen
-        console.log('Message:', msg);
+    const tokenData = await tokenResp.json();
+    if (!tokenData.client_secret) throw new Error(JSON.stringify(tokenData));
+    const ephemeralKey = tokenData.client_secret.value;
+
+    // 2. WebRTC aufbauen
+    tutorPC = new RTCPeerConnection();
+
+    // Audio empfangen
+    tutorAudioEl = document.createElement('audio');
+    tutorAudioEl.autoplay = true;
+    tutorPC.ontrack = (e) => { tutorAudioEl.srcObject = e.streams[0]; };
+
+    // Mikrofon senden
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    tutorPC.addTrack(stream.getTracks()[0]);
+
+    // DataChannel fuer Events
+    tutorDC = tutorPC.createDataChannel('oai-events');
+    tutorDC.addEventListener('message', (e) => {
+      const evt = JSON.parse(e.data);
+      if (evt.type === 'error') console.error('Realtime error:', evt);
+    });
+
+    // SDP Offer/Answer
+    const offer = await tutorPC.createOffer();
+    await tutorPC.setLocalDescription(offer);
+
+    const sdpResp = await fetch('https://api.openai.com/v1/realtime?model=gpt-4o-realtime-preview', {
+      method: 'POST',
+      body: offer.sdp,
+      headers: {
+        'Authorization': 'Bearer ' + ephemeralKey,
+        'Content-Type': 'application/sdp'
       }
     });
+    const answerSdp = await sdpResp.text();
+    await tutorPC.setRemoteDescription({ type: 'answer', sdp: answerSdp });
+
+    // 3. UI: Verbunden
+    document.getElementById('tutor-call-status').textContent = 'Verbunden';
+    document.getElementById('tutor-call-status').style.color = '#22c55e';
+    document.getElementById('tutor-avatar').style.boxShadow = '0 0 0 4px #22c55e, 0 0 20px rgba(34,197,94,0.3)';
+
+    tutorCallSeconds = 0;
+    tutorCallInterval = setInterval(() => {
+      tutorCallSeconds++;
+      const m = Math.floor(tutorCallSeconds / 60);
+      const s = tutorCallSeconds % 60;
+      document.getElementById('tutor-call-status').textContent =
+        'Verbunden · ' + String(m).padStart(2,'0') + ':' + String(s).padStart(2,'0');
+    }, 1000);
+
+    // Begruessung senden
+    tutorDC.addEventListener('open', () => {
+      const greeting = weakChapters.length > 0
+        ? `Moin Andreas! Hier ist Beusti. Bei ${weakChapters[0]} sollten wir nochmal ran. Was meinst du?`
+        : 'Moin Andreas! Hier ist Beusti. Was sollen wir heute lernen?';
+      tutorDC.send(JSON.stringify({
+        type: 'conversation.item.create',
+        item: { type: 'message', role: 'user', content: [{ type: 'input_text', text: 'Begrüße Andreas jetzt als Kapitän Beusti. Sag: ' + greeting }] }
+      }));
+      tutorDC.send(JSON.stringify({ type: 'response.create' }));
+    });
+
+    // Verbindungsverlust erkennen
+    tutorPC.onconnectionstatechange = () => {
+      if (tutorPC.connectionState === 'disconnected' || tutorPC.connectionState === 'failed') {
+        tutorEndCallUI();
+      }
+    };
+
   } catch(e) {
-    console.error('Start call failed:', e);
+    console.error('Call failed:', e);
     const errMsg = e.name === 'NotAllowedError'
-      ? 'Bitte erlaube den Mikrofon-Zugriff in deinem Browser'
+      ? 'Bitte erlaube den Mikrofon-Zugriff'
       : (e.message || String(e));
     document.getElementById('tutor-call-status').textContent = errMsg;
     document.getElementById('tutor-call-status').style.color = '#ef4444';
@@ -2492,18 +2538,20 @@ async function tutorStartCall() {
   }
 }
 
-async function tutorEndCall() {
-  if (tutorConversationSession) {
-    try { await tutorConversationSession.endSession(); } catch(e) {}
-    tutorConversationSession = null;
+function tutorEndCall() {
+  if (tutorPC) {
+    tutorPC.getSenders().forEach(s => { if (s.track) s.track.stop(); });
+    tutorPC.close();
+    tutorPC = null;
   }
+  tutorDC = null;
+  if (tutorAudioEl) { tutorAudioEl.srcObject = null; tutorAudioEl = null; }
   tutorEndCallUI();
 }
 
 function tutorEndCallUI() {
   tutorCallActive = false;
   if (tutorCallInterval) { clearInterval(tutorCallInterval); tutorCallInterval = null; }
-  tutorConversationSession = null;
 
   document.getElementById('tutor-btn-call').style.display = 'flex';
   document.getElementById('tutor-btn-hangup').style.display = 'none';
