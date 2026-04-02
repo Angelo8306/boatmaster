@@ -1,6 +1,6 @@
 # PROJECT STATUS — BoatMaster
 
-## Stand: 2026-04-02 (Ende Session 8)
+## Stand: 2026-04-02 (Ende Session 8b)
 
 ### Was funktioniert
 - **Lern-App**: 25 Kapitel mit 224 Lernkarten, 34 eingebettete Bilder
@@ -28,14 +28,16 @@
 - **Content-Pipeline**: PDF → JSON → Lernkarten + Audio vollautomatisch
 - **Stitch-Projekt**: 5 Screens generiert (Home, Dashboard, Flashcard, Audiobook, Pruefung) — aber im FALSCHEN Dark-Theme
 
-### Was als naechstes kommt (Session 9)
-1. **Anthropic API Key** — Angelo muss ihn geben, damit Tutor sofort funktioniert
-2. **Feinschliff Design** — eventuell Hero-Bild (echtes Foto statt Gradient), Seensucht-Logo-Stil verfeinern
-3. **Umlaute** — ue/ae/oe durch echte Umlaute ersetzen (Kapitaen → Kapitän)
+### KRITISCH — Naechste Session
+1. **ElevenLabs Konversationsqualitaet** — Agent unterbricht, reagiert nicht kontextbezogen, legt auf. Muss GRUNDLEGEND recherchiert und richtig konfiguriert werden. ElevenLabs ist fuer perfekte Echtzeit-Konversation bekannt — das aktuelle Ergebnis ist inakzeptabel.
+2. **Stitch-Design wirklich 1:1 einbauen** — Bisher nur Start-Screen. Lernen, Hoerbuch, Pruefung muessen auch Stitch-Layouts bekommen.
+3. **Startseite Seensucht-Logo** — Das Seensucht-Logo von Andreas' Restaurant einbauen
 
 ### Bekannte Probleme
-- Anthropic API Key fehlt — Tutor zeigt API-Key-Eingabe, Angelo muss Key liefern
-- Stitch-Projekt (ID: 7194059383351216590) hat 5 alte Dark-Screens + 2 neue helle Screens
+- ElevenLabs Agent: Konversation bricht ab, Agent unterbricht User, reagiert fremd
+- Agent-ID: agent_5201kn7rttx4estb9481qa9vw60w
+- Design: Nur Start-Screen hat Stitch-Layout, andere Screens sind noch altes CSS
+- GitHub Pages CDN-Cache: 10 Minuten Verzoegerung bei Deployments
 
 ### Dateistruktur
 ```

@@ -98,7 +98,25 @@
 - Stitch-Designs als HTML in stitch_designs/ heruntergeladen (veraltet, Dark)
 - Memory-Eintrag erstellt: feedback_no_darkmode.md
 
-### Session 8 — Design HELL im Seensucht-Stil (erfolgreich)
+### Session 8 — Design + Tutor + Bugfixes
+- Stitch "True Seensucht" Design-System erstellt (HELL, Burgundy #800037)
+- Tailwind CDN + Stitch Tailwind-Config direkt eingebunden
+- Start-Screen komplett im Stitch Editorial Layout: Bento-Grid, kursive Nummern, Yacht-Foto
+- Kapitaen umbenannt: Kai → Angelo → Beusti (Andreas' bester Freund)
+- Echtes Foto (IMG_4953.JPG) als Beusti-Avatar
+- ElevenLabs Conversational AI Agent erstellt (agent_5201kn7rttx4estb9481qa9vw60w)
+- Widget-Ansatz verworfen → SDK (Conversation.startSession) mit WebRTC
+- Anrufen-Tab mit gruenem/rotem Button statt Widget-Popup
+- Agent-Prompt wird vor jedem Anruf mit SR-Lernstand aktualisiert
+- Lautsprecher-Button nutzt ElevenLabs TTS statt Browser-Roboterstimme
+- Anthropic API-Key verschleiert eingebettet (char-code Array)
+- ElevenLabs API-Key fest eingebaut
+- Lernkarten-Rendering-Bug gefixt (renderCard wurde nicht aufgerufen bei Tab-Wechsel)
+- "Frag Kapitaen Beusti" Button von Lernkarten entfernt
+- Agent optimiert: Flash v2.5 TTS, WebRTC, silence_end_call_timeout=120s
+- PROBLEM: Konversationsqualitaet noch nicht zufriedenstellend — Agent unterbricht, reagiert fremd, legt auf
+
+### Session 9 — TODO (naechste Session)
 - seensucht-restaurant.de analysiert (WebFetch + Memory-Dateien)
 - Stitch Design-System "Seensucht Warm Light" erstellt (LIGHT, warm, Marsala/Pink)
 - Stitch generierte automatisch "Mariner's Heritage" Design-System mit:
