@@ -1397,9 +1397,34 @@ body {
     </div>
   </div>
 
-  <!-- TUTOR SCREEN — ElevenLabs Conversational AI -->
+  <!-- TUTOR SCREEN — Telefon-Anruf mit Kapitaen Angelo -->
   <div class="screen" id="screen-tutor">
-    <elevenlabs-convai agent-id="agent_5201kn7rttx4estb9481qa9vw60w" variant="expanded"></elevenlabs-convai>
+    <!-- Anruf-Screen (vor dem Anruf) -->
+    <div id="tutor-call-idle" class="flex flex-col items-center justify-center min-h-[80vh] px-6 text-center">
+      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6kQuMiT3Cshsu97FdBDlUI7WNDfe8X7Jua1zTQE93J9WNi2NL4MtYsMkNmejp7Y2NtxjxNxOyVmpJsz5Nib0SS6ZSlASgAcaLx3-ChK6NdiB7Px_TcvDqviZ2P59cZN-jCZgD6BfN1wtnI7wIzH-LWPr0y0xdMBSS9vBPVLi5Al7TK6wj2Cg-ugYaPqconawFZeMqPJ4RuPCnEYBGnyBhpNgE_MCM-ePZAzHVgLGHQIspkU7HmoOtJHHPBhkXAqS1ymCKL11lFMc" alt="Kapitän Angelo" class="w-28 h-28 rounded-full object-cover mb-4 border-4 border-white shadow-lg">
+      <h2 class="text-2xl font-headline italic text-primary mb-1">Kapitän Angelo</h2>
+      <p class="text-secondary font-body text-sm mb-8">Dein persönlicher Bootslehrer</p>
+      <button onclick="tutorStartCall()" class="w-20 h-20 rounded-full bg-[#22c55e] flex items-center justify-center shadow-xl shadow-green-500/30 active:scale-90 transition-transform mx-auto">
+        <span class="material-symbols-outlined text-white text-4xl" style="font-variation-settings:'FILL' 1;">call</span>
+      </button>
+      <p class="text-outline text-sm font-body mt-4">Antippen zum Anrufen</p>
+    </div>
+
+    <!-- Aktiver Anruf (waehrend des Gespraechs) -->
+    <div id="tutor-call-active" class="flex flex-col items-center justify-center min-h-[80vh] px-6 text-center" style="display:none;">
+      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6kQuMiT3Cshsu97FdBDlUI7WNDfe8X7Jua1zTQE93J9WNi2NL4MtYsMkNmejp7Y2NtxjxNxOyVmpJsz5Nib0SS6ZSlASgAcaLx3-ChK6NdiB7Px_TcvDqviZ2P59cZN-jCZgD6BfN1wtnI7wIzH-LWPr0y0xdMBSS9vBPVLi5Al7TK6wj2Cg-ugYaPqconawFZeMqPJ4RuPCnEYBGnyBhpNgE_MCM-ePZAzHVgLGHQIspkU7HmoOtJHHPBhkXAqS1ymCKL11lFMc" alt="Kapitän Angelo" class="w-24 h-24 rounded-full object-cover mb-3 border-4 border-white shadow-lg">
+      <h2 class="text-xl font-headline italic text-primary mb-1">Kapitän Angelo</h2>
+      <p class="text-[#22c55e] font-body text-sm font-semibold mb-2" id="tutor-call-status">Verbinde...</p>
+      <p class="text-outline text-xs font-body mb-6" id="tutor-call-timer">00:00</p>
+
+      <!-- ElevenLabs Widget (unsichtbar, nur Audio) -->
+      <div id="tutor-widget-slot" style="position:absolute; width:1px; height:1px; overflow:hidden; opacity:0;"></div>
+
+      <button onclick="tutorEndCall()" class="w-16 h-16 rounded-full bg-[#ef4444] flex items-center justify-center shadow-xl shadow-red-500/30 active:scale-90 transition-transform mx-auto mt-6">
+        <span class="material-symbols-outlined text-white text-3xl" style="font-variation-settings:'FILL' 1;">call_end</span>
+      </button>
+      <p class="text-outline text-xs font-body mt-2">Auflegen</p>
+    </div>
   </div>
 
   <!-- RESULT SCREEN -->
@@ -1430,8 +1455,8 @@ body {
     <span class="text-[11px] font-body uppercase tracking-tighter mt-1">Lernen</span>
   </a>
   <a class="nav-item flex flex-col items-center justify-center cursor-pointer" onclick="switchTab('tutor')">
-    <span class="material-symbols-outlined">mic</span>
-    <span class="text-[11px] font-body uppercase tracking-tighter mt-1">Tutor</span>
+    <span class="material-symbols-outlined">call</span>
+    <span class="text-[11px] font-body uppercase tracking-tighter mt-1">Anrufen</span>
   </a>
   <a class="nav-item flex flex-col items-center justify-center cursor-pointer" onclick="switchTab('audiobook')">
     <span class="material-symbols-outlined">headset</span>
@@ -2372,9 +2397,60 @@ let tutorExamCorrect = 0;
 // API Key wird aus config.js geladen (nicht im Repo)
 // Falls config.js fehlt, wird der Key aus localStorage genommen
 
+let tutorCallInterval = null;
+let tutorCallSeconds = 0;
+
 function tutorInit() {
-  // ElevenLabs Conversational AI Widget laedt automatisch
-  // Keine manuelle Initialisierung noetig
+  // Zeige den Idle-Screen (Anrufen-Button)
+  document.getElementById('tutor-call-idle').style.display = 'flex';
+  document.getElementById('tutor-call-active').style.display = 'none';
+}
+
+function tutorStartCall() {
+  // UI umschalten: Idle → Active
+  document.getElementById('tutor-call-idle').style.display = 'none';
+  document.getElementById('tutor-call-active').style.display = 'flex';
+  document.getElementById('tutor-call-status').textContent = 'Verbinde...';
+  document.getElementById('tutor-call-timer').textContent = '00:00';
+
+  // ElevenLabs Widget dynamisch erstellen
+  const slot = document.getElementById('tutor-widget-slot');
+  slot.innerHTML = '<elevenlabs-convai agent-id="agent_5201kn7rttx4estb9481qa9vw60w"></elevenlabs-convai>';
+
+  // Nach kurzer Verzoegerung Status auf "Verbunden" setzen
+  setTimeout(() => {
+    document.getElementById('tutor-call-status').textContent = 'Verbunden';
+    // Timer starten
+    tutorCallSeconds = 0;
+    tutorCallInterval = setInterval(() => {
+      tutorCallSeconds++;
+      const m = Math.floor(tutorCallSeconds / 60);
+      const s = tutorCallSeconds % 60;
+      document.getElementById('tutor-call-timer').textContent =
+        String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
+    }, 1000);
+  }, 2000);
+
+  // Widget-Button automatisch klicken nach dem Laden
+  setTimeout(() => {
+    const widget = document.querySelector('#tutor-widget-slot elevenlabs-convai');
+    if (widget && widget.shadowRoot) {
+      const btn = widget.shadowRoot.querySelector('button');
+      if (btn) btn.click();
+    }
+  }, 3000);
+}
+
+function tutorEndCall() {
+  // Timer stoppen
+  if (tutorCallInterval) { clearInterval(tutorCallInterval); tutorCallInterval = null; }
+
+  // Widget entfernen
+  document.getElementById('tutor-widget-slot').innerHTML = '';
+
+  // UI zurueck auf Idle
+  document.getElementById('tutor-call-active').style.display = 'none';
+  document.getElementById('tutor-call-idle').style.display = 'flex';
 }
 
 function tutorSaveKey() {
