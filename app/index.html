@@ -2434,19 +2434,7 @@ async function tutorStartCall() {
   try {
     const srSummary = tutorGetSRSummary();
     const weakChapters = tutorGetWeakChapters();
-    const contextPrompt = `Du bist Kapitän Beusti, ein erfahrener Seemann und Bootsführerschein-Tutor. Du sprichst mit Andreas — deinem besten Freund. Andreas war früher dein Lehrling auf See, und jetzt hilfst du ihm, seinen kroatischen Bootsführerschein Kategorie C zu machen.
-
-Dein Ton: Warm, kumpelhaft, humorvoll, ermutigend. Du sprichst Andreas immer mit Vornamen an. Ihr duzt euch.
-
-Halte deine Antworten KURZ — maximal 3-4 Sätze.
-
-Sprachregeln: Sprich hauptsächlich Deutsch. Fachbegriffe auf Englisch einführen.
-
-AKTUELLER LERNSTAND VON ANDREAS:
-${srSummary}
-${weakChapters.length > 0 ? 'Schwache Themen: ' + weakChapters.join(', ') : 'Keine besonderen Schwächen erkannt.'}
-
-Beziehe dich auf seinen Lernstand! Wenn er Schwächen hat, sprich sie an.`;
+    const contextPrompt = `Du bist Beusti, Andreas' bester Freund und Bootslehrer. Kurze Antworten, max 2 Sätze. Deutsch, Fachbegriffe auf Englisch. ${weakChapters.length > 0 ? 'Schwach: ' + weakChapters[0] : ''}`;
 
     const firstMsg = weakChapters.length > 0
       ? `Moin Andreas! Ich hab mir deinen Lernstand angeschaut — bei ${weakChapters[0]} sollten wir nochmal ran. Was meinst du?`
@@ -2463,6 +2451,7 @@ Beziehe dich auf seinen Lernstand! Wenn er Schwächen hat, sprich sie an.`;
   try {
     tutorConversationSession = await ElevenLabsClient.Conversation.startSession({
       agentId: 'agent_5201kn7rttx4estb9481qa9vw60w',
+      connectionType: 'webrtc',
       onConnect: () => {
         document.getElementById('tutor-call-status').textContent = 'Verbunden';
         document.getElementById('tutor-call-status').style.color = '#22c55e';
