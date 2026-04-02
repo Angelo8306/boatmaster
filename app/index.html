@@ -1237,7 +1237,7 @@ body {
     <!-- Stitch "True Seensucht" Start Screen -->
     <div class="px-6 pt-6 pb-4">
       <h1 class="text-4xl font-headline italic leading-tight tracking-tight text-primary">
-        Guten Morgen, Kapitän
+        Guten Morgen, Andreas
       </h1>
       <p class="text-secondary mt-3 font-body tracking-wide opacity-80">
         Der Wind steht günstig für eine Lerneinheit.
@@ -1262,7 +1262,7 @@ body {
         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
         <div class="absolute bottom-3 left-3 right-3">
           <button class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary py-3 rounded-lg font-body font-semibold text-sm flex items-center justify-center gap-1 active:scale-95 transition-transform">
-            Kai fragen
+            Angelo fragen
             <span class="material-symbols-outlined text-sm">mic</span>
           </button>
         </div>
@@ -1399,8 +1399,8 @@ body {
     <!-- API Key Setup (shown if no key) -->
     <div id="tutor-setup" class="tutor-setup">
       <div style="font-size:4rem; margin-bottom:16px;"><span class="material-symbols-outlined" style="font-size:4rem; color:#8B2E3D;">anchor</span></div>
-      <h2>Kapitan Kai einrichten</h2>
-      <p>Um mit Kapitan Kai zu sprechen, brauchst du einen Claude API-Key. Den bekommst du auf console.anthropic.com</p>
+      <h2>Kapitän Angelo einrichten</h2>
+      <p>Um mit Kapitän Angelo zu sprechen, brauchst du einen Claude API-Key. Den bekommst du auf console.anthropic.com</p>
       <input type="password" class="tutor-api-input" id="tutor-api-key-input" placeholder="sk-ant-... (dein API Key)">
       <button class="tutor-api-save" onclick="tutorSaveKey()">Verbindung herstellen</button>
       <p style="margin-top:16px; font-size:0.75rem; color:var(--text-muted);">Dein Key wird nur lokal auf deinem Geraet gespeichert.</p>
@@ -1455,12 +1455,12 @@ body {
           </div>
         </div>
 
-        <div style="font-family:var(--font-serif); font-size:1.2rem; font-weight:700; color:#8B2E3D; margin-bottom:4px;">Kapitan Kai</div>
+        <div style="font-family:var(--font-serif); font-size:1.2rem; font-weight:700; color:#8B2E3D; margin-bottom:4px;">Kapitän Angelo</div>
 
         <!-- Speech Bubble -->
         <div class="tutor-speech" id="tutor-speech">
           <div class="tutor-speech-text" id="tutor-speech-text">
-            Ahoi! Ich bin Kapitan Kai, dein persoenlicher Bootslehrer. Drueck auf das Mikrofon und sprich mit mir!
+            Moin Andreas! Ich bin's, Angelo. Tippe hier und wir quatschen über deinen Bootsführerschein!
           </div>
           <div class="tutor-speech-hint" id="tutor-speech-hint"></div>
         </div>
@@ -1585,7 +1585,7 @@ function renderCard() {
         <button class="btn btn-de" id="btn-de" onclick="toggleDE()">🇩🇪 Deutsch</button>
       </div>
       <div style="padding:0 20px;">
-        <button class="btn-ask-kai" onclick="askKaiAboutCard()">⚓ Frag Kapitän Kai zu dieser Karte</button>
+        <button class="btn-ask-kai" onclick="askKaiAboutCard()">⚓ Frag Kapitän Angelo</button>
       </div>
       <div class="nav-row">
         <button class="btn btn-prev" onclick="prev()">◀</button>
@@ -1612,7 +1612,7 @@ function renderCard() {
         <button class="btn btn-de" id="btn-de" onclick="toggleDE()">🇩🇪 Deutsch</button>
       </div>
       <div style="padding:0 20px;">
-        <button class="btn-ask-kai" onclick="askKaiAboutCard()">⚓ Frag Kapitän Kai zu dieser Karte</button>
+        <button class="btn-ask-kai" onclick="askKaiAboutCard()">⚓ Frag Kapitän Angelo</button>
       </div>
       <div class="nav-row">
         <button class="btn btn-prev" onclick="prev()">◀</button>
@@ -2485,14 +2485,14 @@ function tutorGreet() {
   if (tutorMode === 'lernen') {
     const weakChapters = tutorGetWeakChapters();
     if (weakChapters.length > 0) {
-      greeting = `Ahoi Kapitän! Lass uns heute an deinen Schwächen arbeiten. Ich sehe, dass du bei "${weakChapters[0]}" noch Hilfe brauchst. Sollen wir damit anfangen?`;
+      greeting = `Moin Andreas! Ich hab mir deinen Lernstand angeschaut. Bei "${weakChapters[0]}" hakt es noch ein bisschen. Lass uns das zusammen durchgehen, dann sitzt das!`;
     } else {
-      greeting = 'Ahoi Kapitän! Ich bin bereit, dich durch den Stoff zu führen. Welches Thema sollen wir heute lernen? Sag einfach ein Kapitel oder Thema!';
+      greeting = 'Moin Andreas! Schön dass du da bist. Welches Thema sollen wir heute angehen? Sag einfach was dich interessiert!';
     }
   } else if (tutorMode === 'gespraech') {
-    greeting = 'Ahoi! Frag mich alles was du über die Bootsführerschein-Prüfung wissen willst. Ich bin ganz Ohr!';
+    greeting = 'Hey Andreas! Frag mich was du willst — egal ob Seemannschaft, Navigation oder Prüfungstipps. Ich bin ganz Ohr!';
   } else if (tutorMode === 'pruefung') {
-    greeting = 'Ahoi Kapitän! Bereit für eine mündliche Prüfungssimulation? Ich stelle dir 10 Fragen wie in der echten Prüfung. Sag "Los geht\'s" wenn du bereit bist!';
+    greeting = 'So Andreas, bereit für eine Prüfungssimulation? Ich stelle dir 10 Fragen wie in der echten mündlichen Prüfung. Sag einfach los wenn du soweit bist!';
   }
   tutorSetSpeech(greeting);
   tutorSpeak(greeting);
@@ -2555,9 +2555,11 @@ function tutorBuildSystemPrompt() {
     contextInfo = `\n\nDer User hat gerade diese Lernkarte angesehen und fragt dazu:\n${JSON.stringify(tutorCardContext)}`;
   }
 
-  return `Du bist Kapitän Kai, ein erfahrener Seemann und Bootsführerschein-Tutor. Du bist warm, geduldig, humorvoll und ermutigend. Du sprichst den User mit "Kapitän" an.
+  return `Du bist Kapitän Angelo, ein erfahrener Seemann und Bootsführerschein-Tutor. Du sprichst mit Andreas — deinem besten Freund. Andreas war früher dein Lehrling auf See, und jetzt hilfst du ihm, seinen kroatischen Bootsführerschein zu machen.
 
-WICHTIG: Deine Antworten werden per Text-to-Speech vorgelesen. Halte sie daher KURZ (max 3-4 Sätze). Keine Aufzählungen, keine Markdown-Formatierung, keine Sonderzeichen. Sprich natürlich wie in einem Gespräch.
+Dein Ton: Warm, kumpelhaft, humorvoll, ermutigend. Du sprichst Andreas immer mit Vornamen an. Ihr duzt euch. Du erzählst manchmal kurze Anekdoten von euren gemeinsamen Zeiten auf See. Du bist stolz auf Andreas und willst, dass er die Prüfung besteht.
+
+WICHTIG: Deine Antworten werden per Text-to-Speech vorgelesen. Halte sie daher KURZ (max 3-4 Sätze). Keine Aufzählungen, keine Markdown-Formatierung, keine Sonderzeichen. Sprich natürlich wie in einem Gespräch unter Freunden.
 
 Modus: ${modeInstructions[tutorMode]}
 
@@ -2641,7 +2643,7 @@ function tutorSetAvatarState(state) {
   if (state === 'speaking') {
     wrap.classList.add('speaking');
     badge.className = 'tutor-status speaking-badge';
-    badge.textContent = 'Kai spricht...';
+    badge.textContent = 'Angelo spricht...';
   } else if (state === 'listening') {
     wrap.classList.add('listening');
     badge.className = 'tutor-status listening-badge';
@@ -2649,7 +2651,7 @@ function tutorSetAvatarState(state) {
   } else if (state === 'thinking') {
     wrap.classList.add('thinking');
     badge.className = 'tutor-status thinking-badge';
-    badge.textContent = 'Kai denkt nach...';
+    badge.textContent = 'Angelo denkt nach...';
   } else {
     badge.className = 'tutor-status';
     badge.textContent = '';
