@@ -1759,13 +1759,13 @@ function switchTab(tab) {
     document.querySelectorAll('.nav-item')[0].classList.add('active');
     renderChapterList();
   } else if (tab === 'learn') {
-    // Wenn kein Kapitel gewaehlt → erstes Kapitel laden
     if (!CARDS || !CARDS.length) {
       selectChapter(0);
       return;
     }
     document.getElementById('screen-learn').classList.add('active');
     document.querySelectorAll('.nav-item')[1].classList.add('active');
+    renderCard();
   } else if (tab === 'tutor') {
     document.getElementById('screen-tutor').classList.add('active');
     document.querySelectorAll('.nav-item')[2].classList.add('active');
