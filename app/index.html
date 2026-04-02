@@ -2450,7 +2450,27 @@ async function tutorStartCall() {
       body: JSON.stringify({
         model: 'gpt-4o-realtime-preview',
         voice: 'ash',
-        instructions: `Du bist Kapitän Beusti, ein erfahrener Seemann. Du sprichst mit deinem besten Freund Andreas über den kroatischen Bootsführerschein Kategorie C. Ihr duzt euch. Sprich Deutsch, Fachbegriffe auf Englisch. Antworte kurz und natürlich, wie in einem echten Telefonat. Sei warm und ermutigend. ${srSummary} ${weakChapters.length > 0 ? 'Schwache Themen: ' + weakChapters[0] : ''}`,
+        instructions: `Du bist Kapitän Beusti, ein erfahrener Seemann und Bootsführerschein-Tutor. Du telefonierst gerade mit deinem besten Freund Andreas. Andreas war früher dein Lehrling auf See, und jetzt hilfst du ihm, seinen kroatischen Bootsführerschein Kategorie C zu machen.
+
+PERSOENLICHKEIT: Warm, kumpelhaft, humorvoll, ermutigend. Ihr duzt euch. Du nennst ihn Andreas. Sprich Deutsch, Fachbegriffe der Seefahrt auf Englisch einfuehren und erklaeren.
+
+WICHTIG: Antworte natuerlich wie in einem echten Telefonat. Nicht zu lang, 2-4 Saetze pro Antwort. Stelle Rueckfragen um das Gespraech am Laufen zu halten.
+
+ANDREAS' LERNSTAND:
+${srSummary}
+${weakChapters.length > 0 ? 'Seine schwachen Themen: ' + weakChapters.join(', ') + '. Sprich diese aktiv an und hilf ihm dabei.' : 'Er hat noch nicht viel gelernt. Fuehre ihn sanft in die Grundlagen ein.'}
+
+KAPITELTHEMEN die ihr besprechen koennt:
+1. IALA Tonnensystem (Lateralzeichen, Kardinalzeichen, Region A)
+2. Seekarten & Navigation (Koordinaten, Kompass, Peilung)
+3. Sicherheit (Rettungsmittel, Notsignale, Mann ueber Bord)
+4. Wetter & Meteorologie (Wind, Wolken, Gezeiten)
+5. Vorfahrtsregeln & Kollisionsverhuetung
+6. Motorenkunde & Wartung
+7. Seemannschaft (Knoten, Ankern, Anlegen)
+8. Rechtliche Grundlagen & Funkverkehr
+
+Beziehe dich IMMER auf seinen Lernstand. Wenn er Schwaechen hat, sprich sie an. Wenn er etwas gut kann, lob ihn.`,
         input_audio_transcription: { model: 'gpt-4o-mini-transcribe' },
         turn_detection: { type: 'server_vad', threshold: 0.6, prefix_padding_ms: 500, silence_duration_ms: 800 }
       })
@@ -2623,29 +2643,24 @@ function tutorGetWeakChapters() {
 function tutorGetSRSummary() {
   const srData = srGetData();
   const today = new Date().toISOString().split('T')[0];
-  let totalSeen = 0, totalDue = 0, weakTopics = [];
-  const chapterStats = {};
+  let lines = [];
 
-  for (const [key, val] of Object.entries(srData)) {
-    totalSeen++;
-    if (val.due && val.due <= today) totalDue++;
-    const parts = key.split('_');
-    parts.pop();
-    const chId = parts.join('_');
-    if (!chapterStats[chId]) chapterStats[chId] = { seen: 0, weak: 0, due: 0 };
-    chapterStats[chId].seen++;
-    if (val.ease < 2.0) chapterStats[chId].weak++;
-    if (val.due && val.due <= today) chapterStats[chId].due++;
-  }
+  // Pro Kapitel den echten Stand berechnen
+  CHAPTERS_DATA.forEach((ch, i) => {
+    const total = ch.cards.length;
+    const progress = srGetChapterProgress(ch.id, total, srData);
+    const pct = Math.round((progress.learned / total) * 100);
 
-  for (const [chId, stats] of Object.entries(chapterStats)) {
-    const ch = CHAPTERS_DATA.find(c => c.id === chId);
-    if (ch && stats.weak > 0) {
-      weakTopics.push(`${ch.title_de} (${stats.weak} schwache Karten, ${stats.due} fällig)`);
+    if (pct === 100) {
+      lines.push(`Kapitel ${i+1} "${ch.title_de}": ABGESCHLOSSEN (${total}/${total})`);
+    } else if (pct > 0) {
+      lines.push(`Kapitel ${i+1} "${ch.title_de}": ${pct}% gelernt (${progress.learned}/${total} Karten${progress.due > 0 ? ', ' + progress.due + ' fällig' : ''})`);
+    } else {
+      lines.push(`Kapitel ${i+1} "${ch.title_de}": NICHT BEGONNEN`);
     }
-  }
+  });
 
-  return `Lernstand: ${totalSeen} Karten gesehen, ${totalDue} fällig zur Wiederholung.\nSchwache Themen: ${weakTopics.length > 0 ? weakTopics.join(', ') : 'Keine besonderen Schwächen erkannt.'}`;
+  return lines.join('\n');
 }
 
 function tutorBuildSystemPrompt() {
