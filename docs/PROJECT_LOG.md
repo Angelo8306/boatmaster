@@ -86,3 +86,38 @@
 - Kapitaen Kai Card auf Startseite oeffnet jetzt den Tutor-Tab
 - Git-Repo neu initialisiert und auf GitHub gepusht
 - Deployed auf GitHub Pages: https://angelo8306.github.io/boatmaster/
+
+### Session 7 — Design-Versuch (fehlgeschlagen)
+- Stitch-Projekt wiederverwendet (ID: 7194059383351216590)
+- Design System "Seensucht Nautical Warm" in Stitch erstellt
+- 5 Screens generiert: Home, Dashboard, Flashcard, Audiobook, Pruefung
+- FEHLER: Alle Screens im Dark-Mode erstellt, obwohl Angelo HELLES Design wie seensucht-restaurant.de wollte
+- app/index.html wurde auf Dark-Theme umgestellt (FALSCH)
+- Angelo hat korrigiert: KEIN Dark Mode, HELLER Seensucht-Stil
+- Session beendet, Design muss in Session 8 komplett neu gemacht werden
+- Stitch-Designs als HTML in stitch_designs/ heruntergeladen (veraltet, Dark)
+- Memory-Eintrag erstellt: feedback_no_darkmode.md
+
+### Session 8 — Design HELL im Seensucht-Stil (erfolgreich)
+- seensucht-restaurant.de analysiert (WebFetch + Memory-Dateien)
+- Stitch Design-System "Seensucht Warm Light" erstellt (LIGHT, warm, Marsala/Pink)
+- Stitch generierte automatisch "Mariner's Heritage" Design-System mit:
+  - Background: #FBF9F5 (warmes Elfenbein)
+  - Primary: #6C1628 (Marsala/Weinrot)
+  - Secondary: #835055
+  - Tertiary: #004124 (Waldgruen)
+  - Surface: Weiss (#FFFFFF) auf Creme (#F5F3EF)
+- 2 Stitch-Screens generiert: Home + Tutor (beide HELL)
+- Kompletter CSS-Farbumbau in app/index.html:
+  - Alle ~40 CSS-Variablen von Dark auf Light umgestellt
+  - Alle ~30 hardcodierten rgba()-Werte aktualisiert
+  - Bottom-Nav: weiss mit Marsala-Highlight
+  - Hero-Section: bleibt dunkel (Navy) fuer Kontrast
+  - Tutor-Avatar: Marsala-Kreis statt Navy
+  - Buttons: Marsala-Gradient
+  - SVG-Akzente: Marsala/Pink statt Blau
+- KI-Tutor JavaScript geprueft — komplett funktional:
+  - Claude API (Haiku), Speech Recognition, TTS
+  - 3 Modi, SR-Integration, "Frag Kapitaen Kai"
+  - Braucht nur Anthropic API-Key von Angelo
+- Deployed auf GitHub Pages

@@ -1,6 +1,6 @@
 # PROJECT STATUS — BoatMaster
 
-## Stand: 2026-04-02 (Ende Session 6)
+## Stand: 2026-04-02 (Ende Session 8)
 
 ### Was funktioniert
 - **Lern-App**: 25 Kapitel mit 224 Lernkarten, 34 eingebettete Bilder
@@ -18,7 +18,7 @@
 - **Pruefungssimulator**: 72 Fragen, 3 Modi (10/20/alle), Ergebnis + Historie
 - **Spaced Repetition**: SM-2 Algorithmus, Fortschrittsbalken pro Kapitel, Wiederholung-faellig Box
 - **KI-Tutor "Kapitaen Kai"**: Sprachbasierter Tutor mit Claude API
-  - Animierter Avatar (Idle, Sprechend, Zuhoerend, Denkend)
+  - Animierter Avatar mit 4 Zustaenden (Idle, Sprechend, Zuhoerend, Denkend)
   - Spracheingabe per Mikrofon (Web Speech Recognition)
   - Sprachausgabe per TTS (Deutsch)
   - 3 Modi: Gefuehrtes Lernen | Freies Gespraech | Pruefungssimulation
@@ -26,19 +26,21 @@
   - "Frag Kapitaen Kai" Button auf Lernkarten
 - **Tab-Navigation**: Start | Lernen | Tutor | Hoerbuch | Pruefung
 - **Content-Pipeline**: PDF → JSON → Lernkarten + Audio vollautomatisch
+- **Stitch-Projekt**: 5 Screens generiert (Home, Dashboard, Flashcard, Audiobook, Pruefung) — aber im FALSCHEN Dark-Theme
 
-### Was als naechstes kommt
-1. **Design weiter verbessern** — Seensucht-Stil noch authentischer machen
-2. **ElevenLabs TTS fuer Tutor** — Bessere Stimme statt Web Speech API
-3. **Deployment auf eigenem Server** — Coolify/Docker statt GitHub Pages
+### Was als naechstes kommt (Session 9)
+1. **Anthropic API Key** — Angelo muss ihn geben, damit Tutor sofort funktioniert
+2. **Feinschliff Design** — eventuell Hero-Bild (echtes Foto statt Gradient), Seensucht-Logo-Stil verfeinern
+3. **Umlaute** — ue/ae/oe durch echte Umlaute ersetzen (Kapitaen → Kapitän)
 
 ### Bekannte Probleme
-- Keine bekannten Probleme
+- Anthropic API Key fehlt — Tutor zeigt API-Key-Eingabe, Angelo muss Key liefern
+- Stitch-Projekt (ID: 7194059383351216590) hat 5 alte Dark-Screens + 2 neue helle Screens
 
 ### Dateistruktur
 ```
 app/
-  index.html              — Haupt-App (~1700 Zeilen, alle Features)
+  index.html              — Haupt-App (aktuell Dark-Theme, muss auf hell umgebaut werden)
   data.js                 — 25 Kapitel, 224 Karten, 34 Base64-Bilder (1.9 MB)
   audiobook_data.js       — 25 Hoerbuecher, 375 Segmente
   audio/                  — 25 Unterordner, 375 MP3s (57.6 MB)
@@ -48,6 +50,7 @@ content/
   build_app_data.py       — Baut data.js aus Units
   build_audiobook_data.py — Baut audiobook_data.js aus Scripts
   generate_all_audio.py   — Generiert Audio via ElevenLabs
+stitch_designs/           — 5 heruntergeladene Stitch-Screens (Dark, veraltet)
 docs/
   MASTER_BRIEF.md, CHECKLIST.md, PROJECT_STATUS.md, PROJECT_LOG.md, DECISIONS.md
   superpowers/specs/2026-04-02-ki-tutor-design.md — KI-Tutor Design-Spec
