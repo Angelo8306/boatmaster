@@ -7,32 +7,44 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
 <style>
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
 * { margin:0; padding:0; box-sizing:border-box; }
 
 :root {
-  --bg: #F5F0E8;
+  --bg: #FBF9F5;
   --bg-card: #FFFFFF;
-  --bg-card-hover: #F0EAE0;
-  --bg-surface-low: #EDE8DF;
-  --bg-surface-container: #FAF7F2;
-  --bg-hero: #1B2A3D;
-  --accent: #C0724A;
-  --accent-light: #D4956A;
-  --accent-dark: #8B4513;
+  --bg-card-hover: #F5F3EF;
+  --bg-surface-low: #F5F3EF;
+  --bg-surface-container: #EFEEEA;
+  --bg-surface-high: #EAE8E4;
+  --bg-surface-highest: #E4E2DE;
+  --accent: #6C1628;
+  --accent-light: #8B2E3D;
+  --accent-dark: #40000F;
+  --primary-container: #8B2E3D;
   --pink: #D4467A;
-  --success: #4A7C59;
-  --warning: #D4883E;
-  --danger: #C0392B;
-  --text: #2C1810;
-  --text-dim: #6B5B4E;
-  --text-muted: #9B8B7E;
-  --text-on-dark: #F5F0E8;
+  --secondary: #835055;
+  --secondary-container: #FFBEC3;
+  --success: #004124;
+  --success-container: #005B35;
+  --warning: #C0724A;
+  --danger: #BA1A1A;
+  --danger-container: #FFDAD6;
+  --text: #1B1C1A;
+  --text-dim: #554243;
+  --text-muted: #887273;
+  --text-on-dark: #FFFFFF;
+  --outline: #887273;
   --radius: 16px;
   --font-serif: 'Newsreader', Georgia, serif;
   --font-sans: 'Work Sans', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-  --shadow-card: 0 2px 12px rgba(44,24,16,0.08);
-  --shadow-hover: 0 4px 20px rgba(44,24,16,0.12);
+  --shadow-card: 0 2px 16px rgba(27,28,26,0.06);
+  --shadow-hover: 0 8px 32px rgba(27,28,26,0.1);
 }
 
 html { font-size: 18px; }
@@ -58,8 +70,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: var(--bg-card);
-  border-bottom: 1px solid var(--bg-surface-low);
+  background: var(--bg-surface-low);
+  border-bottom: 1px solid rgba(219,192,193,0.2);
 }
 .topbar-chapter { font-family: var(--font-serif); font-size: 0.8rem; color: var(--text); font-weight: 600; }
 .topbar-progress { font-size: 0.75rem; color: var(--text-muted); font-weight: 600; }
@@ -75,7 +87,7 @@ body {
 .dot {
   width: 10px; height: 10px;
   border-radius: 50%;
-  background: var(--bg-surface-low);
+  background: var(--bg-surface-highest);
   transition: all 0.3s;
 }
 .dot.done { background: var(--success); }
@@ -90,6 +102,7 @@ body {
   min-height: 300px;
   position: relative;
   box-shadow: var(--shadow-card);
+  border: none;
 }
 
 .card-label {
@@ -115,19 +128,21 @@ body {
   font-size: 1.8rem;
   font-weight: 700;
   margin-bottom: 6px;
+  color: var(--text);
 }
 
 .card-content {
   font-size: 1rem;
   line-height: 1.7;
   white-space: pre-line;
+  color: var(--text-dim);
 }
 
 .card-de {
   display: none;
   margin-top: 18px;
   padding-top: 18px;
-  border-top: 1px solid var(--bg-surface-low);
+  border-top: 1px solid rgba(219,192,193,0.15);
 }
 
 .card-de.visible { display: block; }
@@ -141,8 +156,8 @@ body {
   border-radius: 5px;
   margin-bottom: 8px;
 }
-.lang-en { background: rgba(192,114,74,0.15); color: var(--accent); }
-.lang-de { background: rgba(212,70,122,0.12); color: var(--pink); }
+.lang-en { background: rgba(139,46,61,0.08); color: var(--accent); }
+.lang-de { background: rgba(192,114,74,0.1); color: var(--secondary); }
 
 /* === BUTTONS === */
 .actions {
@@ -165,29 +180,30 @@ body {
   gap: 8px;
   transition: all 0.15s;
   min-height: 54px;
+  color: var(--text);
 }
 .btn:active { transform: scale(0.97); }
 
 .btn-speak {
-  background: var(--bg-surface-low);
+  background: var(--bg-surface-highest);
   color: var(--text);
   flex: 0 0 58px;
 }
 .btn-de {
-  background: rgba(212,70,122,0.08);
-  color: var(--pink);
-  border: 1px solid rgba(212,70,122,0.25);
+  background: rgba(192,114,74,0.08);
+  color: var(--secondary);
+  border: 1px solid rgba(192,114,74,0.2);
 }
 .btn-de.active {
-  background: rgba(212,70,122,0.18);
+  background: rgba(192,114,74,0.15);
 }
 .btn-next {
-  background: var(--accent);
-  color: #fff;
+  background: var(--primary-container);
+  color: var(--accent);
   font-weight: 700;
 }
 .btn-prev {
-  background: var(--bg-surface-low);
+  background: var(--bg-surface-highest);
   color: var(--text);
   flex: 0 0 58px;
 }
@@ -202,7 +218,7 @@ body {
 .quiz-option {
   margin: 0 20px 10px;
   background: var(--bg-card);
-  border: 2px solid var(--bg-surface-low);
+  border: 2px solid rgba(219,192,193,0.2);
   border-radius: var(--radius);
   padding: 18px 20px;
   cursor: pointer;
@@ -212,13 +228,14 @@ body {
   gap: 14px;
   transition: all 0.15s;
   box-shadow: var(--shadow-card);
+  color: var(--text);
 }
 .quiz-option:active { transform: scale(0.98); }
 
 .quiz-letter {
   width: 42px; height: 42px;
   border-radius: 50%;
-  background: var(--bg-surface-low);
+  background: var(--bg-surface-highest);
   color: var(--text);
   display: flex;
   align-items: center;
@@ -230,19 +247,19 @@ body {
 
 .quiz-option.correct {
   border-color: var(--success);
-  background: rgba(61,165,93,0.1);
+  background: rgba(0,65,36,0.08);
 }
-.quiz-option.correct .quiz-letter { background: var(--success); color: #fff; }
+.quiz-option.correct .quiz-letter { background: var(--success-container); color: var(--success); }
 
 .quiz-option.wrong {
   border-color: var(--danger);
-  background: rgba(224,64,64,0.1);
+  background: rgba(186,26,26,0.06);
 }
 
 .quiz-explanation {
   margin: 16px 20px;
-  background: rgba(74,124,89,0.08);
-  border: 1px solid rgba(74,124,89,0.3);
+  background: rgba(0,65,36,0.06);
+  border: 1px solid rgba(0,65,36,0.15);
   border-radius: var(--radius);
   padding: 18px 20px;
   display: none;
@@ -262,7 +279,7 @@ body {
 .free-answer-box {
   margin: 0 20px;
   background: var(--bg-card);
-  border: 1px solid var(--bg-surface-low);
+  border: 1px solid rgba(219,192,193,0.2);
   border-radius: var(--radius);
   padding: 16px;
   box-shadow: var(--shadow-card);
@@ -288,6 +305,7 @@ body {
   padding: 18px 20px;
   display: none;
   box-shadow: var(--shadow-card);
+  border: none;
 }
 .model-answer.visible { display: block; }
 
@@ -297,9 +315,9 @@ body {
   padding: 12px 20px;
 }
 .self-rate .btn { font-size: 0.8rem; padding: 14px 8px; }
-.btn-knew { background: rgba(74,124,89,0.1); color: var(--success); border: 1px solid rgba(74,124,89,0.3); }
-.btn-partial { background: rgba(212,136,62,0.1); color: var(--warning); border: 1px solid rgba(212,136,62,0.3); }
-.btn-didnt { background: rgba(192,57,43,0.1); color: var(--danger); border: 1px solid rgba(192,57,43,0.3); }
+.btn-knew { background: rgba(0,65,36,0.08); color: var(--success); border: 1px solid rgba(0,65,36,0.2); }
+.btn-partial { background: rgba(192,114,74,0.1); color: var(--warning); border: 1px solid rgba(192,114,74,0.2); }
+.btn-didnt { background: rgba(186,26,26,0.08); color: var(--danger); border: 1px solid rgba(186,26,26,0.15); }
 
 /* === BOTTOM NAV === */
 .bottom-nav {
@@ -308,7 +326,9 @@ body {
   left: 0;
   right: 0;
   background: #FFFFFF;
-  box-shadow: 0 -2px 16px rgba(44,24,16,0.08);
+  border-top: 1px solid rgba(219,192,193,0.3);
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 -4px 24px rgba(27,28,26,0.06);
   display: flex;
   justify-content: space-around;
   padding: 8px 0 max(8px, env(safe-area-inset-bottom));
@@ -320,16 +340,17 @@ body {
   align-items: center;
   gap: 4px;
   padding: 10px 18px;
-  color: var(--text-muted);
+  color: rgba(136,114,115,0.7);
   font-size: 0.6rem;
   font-weight: 600;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   cursor: pointer;
-  border-radius: 10px;
+  border-radius: 16px;
+  transition: all 0.2s;
 }
-.nav-item.active { color: var(--pink); background: rgba(212,70,122,0.08); }
-.nav-item svg { width: 26px; height: 26px; }
+.nav-item.active { color: #FFFFFF; background: #8B2E3D; }
+.nav-item .material-symbols-outlined { font-size: 26px; }
 
 /* === RESULT SCREEN === */
 .result-card {
@@ -339,30 +360,31 @@ body {
   padding: 30px 24px;
   text-align: center;
   box-shadow: var(--shadow-card);
+  border: none;
 }
 .result-score {
   font-family: var(--font-serif);
   font-size: 3.5rem;
   font-weight: 700;
-  color: var(--accent-light);
+  color: var(--accent);
   margin-bottom: 8px;
 }
 .result-label { color: var(--text-dim); font-size: 0.85rem; margin-bottom: 24px; }
-.result-detail { text-align: left; font-size: 0.9rem; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--bg-surface-low); }
+.result-detail { text-align: left; font-size: 0.9rem; margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(219,192,193,0.15); }
 .result-detail p { margin-bottom: 8px; }
 
 /* === SPACED REPETITION === */
 .sr-review-box {
   margin: 0 20px 16px;
   padding: 20px 22px;
-  background: var(--accent);
+  background: var(--primary-container);
   border: none;
   border-radius: var(--radius);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 4px 16px rgba(192,114,74,0.3);
+  box-shadow: 0 4px 16px rgba(139,46,61,0.25);
 }
 .sr-review-box:active { opacity: 0.9; transform: scale(0.98); }
 .sr-review-title { font-family: var(--font-serif); font-weight: 700; font-size: 1.1rem; margin-bottom: 4px; color: #FFFFFF; }
@@ -371,8 +393,8 @@ body {
 .sr-no-review {
   margin: 0 20px 16px;
   padding: 14px 20px;
-  background: rgba(74,124,89,0.08);
-  border: 1px solid rgba(74,124,89,0.2);
+  background: rgba(0,65,36,0.06);
+  border: 1px solid rgba(0,65,36,0.12);
   border-radius: var(--radius);
   font-size: 0.8rem;
   color: var(--success);
@@ -380,7 +402,7 @@ body {
 }
 .chapter-progress {
   height: 6px;
-  background: var(--bg-surface-low);
+  background: var(--bg-surface-highest);
   border-radius: 3px;
   margin-top: 10px;
   overflow: hidden;
@@ -398,7 +420,7 @@ body {
 
 /* === EXAM MODE === */
 .exam-config { padding: 20px; }
-.exam-config h2 { font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 16px; }
+.exam-config h2 { font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 16px; color: var(--text); }
 .exam-option {
   background: var(--bg-card);
   border-radius: var(--radius);
@@ -410,23 +432,24 @@ body {
   gap: 14px;
   transition: all 0.15s;
   box-shadow: var(--shadow-card);
+  border: 2px solid transparent;
 }
 .exam-option:active { transform: scale(0.98); }
-.exam-option.selected { border: 2px solid var(--accent); background: rgba(192,114,74,0.06); }
+.exam-option.selected { border: 2px solid var(--accent); background: rgba(139,46,61,0.06); }
 .exam-option-icon {
   width: 48px; height: 48px;
   border-radius: 50%;
-  background: rgba(192,114,74,0.12);
+  background: rgba(139,46,61,0.08);
   color: var(--accent);
   display: flex; align-items: center; justify-content: center;
   font-size: 1.2rem; font-weight: 700; flex-shrink: 0;
 }
 .exam-option-info { flex: 1; }
-.exam-option-title { font-weight: 600; font-size: 0.95rem; margin-bottom: 2px; }
+.exam-option-title { font-weight: 600; font-size: 0.95rem; margin-bottom: 2px; color: var(--text); }
 .exam-option-sub { font-size: 0.7rem; color: var(--text-dim); }
 .exam-progress-bar {
   height: 8px;
-  background: var(--bg-surface-low);
+  background: var(--bg-surface-highest);
   border-radius: 4px;
   margin: 0 20px 16px;
 }
@@ -446,11 +469,11 @@ body {
   margin-bottom: 8px;
 }
 .exam-result-pass {
-  background: rgba(74,124,89,0.06);
+  background: rgba(0,65,36,0.06);
   border: 2px solid var(--success);
 }
 .exam-result-fail {
-  background: rgba(192,57,43,0.06);
+  background: rgba(186,26,26,0.05);
   border: 2px solid var(--danger);
 }
 .exam-result-badge {
@@ -461,13 +484,13 @@ body {
   display: inline-block;
   margin-bottom: 16px;
 }
-.exam-result-badge.pass { background: var(--success); color: #fff; }
-.exam-result-badge.fail { background: var(--danger); color: #fff; }
+.exam-result-badge.pass { background: var(--success-container); color: var(--success); }
+.exam-result-badge.fail { background: var(--danger-container); color: var(--danger); }
 .exam-detail-item {
   display: flex;
   gap: 10px;
   padding: 10px 0;
-  border-bottom: 1px solid var(--bg-surface-low);
+  border-bottom: 1px solid rgba(219,192,193,0.2);
   font-size: 0.85rem;
 }
 .exam-detail-icon { flex-shrink: 0; font-size: 1rem; }
@@ -478,41 +501,29 @@ body {
   margin-top: 20px;
   font-size: 1.1rem;
   font-weight: 700;
-  background: var(--accent);
-  color: #FFFFFF;
+  background: var(--primary-container);
+  color: var(--accent);
   border: none;
   border-radius: var(--radius);
   cursor: pointer;
   min-height: 56px;
-  box-shadow: 0 4px 16px rgba(192,114,74,0.3);
+  box-shadow: 0 4px 16px rgba(139,46,61,0.25);
 }
 .exam-start-btn:active { opacity: 0.9; transform: scale(0.98); }
 
 /* === HERO SECTION === */
 .hero-section {
   padding: 40px 20px 28px;
-  background: linear-gradient(180deg, rgba(27,42,61,0.92) 0%, rgba(44,62,80,0.88) 100%),
-              url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80') center/cover;
+  background: linear-gradient(180deg, #1B2A3D 0%, #2C3E50 100%);
   color: var(--text-on-dark);
   text-align: center;
   position: relative;
-}
-.hero-section::after {
-  content: '';
-  position: absolute;
-  bottom: -1px;
-  left: -5%;
-  right: -5%;
-  height: 30px;
-  background: var(--bg);
-  clip-path: polygon(0% 60%, 3% 45%, 6% 65%, 9% 40%, 12% 55%, 16% 35%, 20% 50%, 24% 30%, 28% 55%, 32% 40%, 36% 60%, 40% 35%, 44% 50%, 48% 30%, 52% 55%, 56% 40%, 60% 60%, 64% 35%, 68% 50%, 72% 30%, 76% 55%, 80% 40%, 84% 60%, 88% 35%, 92% 50%, 96% 40%, 100% 55%, 100% 100%, 0% 100%);
-  z-index: 1;
 }
 .hero-icon {
   width: 56px;
   height: 56px;
   margin: 0 auto 8px;
-  border: 2px solid rgba(255,255,255,0.4);
+  border: 2px solid rgba(255,255,255,0.3);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -524,11 +535,12 @@ body {
   font-weight: 600;
   letter-spacing: 2.5px;
   text-transform: uppercase;
-  color: var(--accent-light);
+  color: rgba(255,255,255,0.7);
   margin-bottom: 2px;
 }
 .hero-title {
-  font-family: 'Dancing Script', cursive;
+  font-family: var(--font-serif);
+  font-style: italic;
   font-size: 3.2rem;
   font-weight: 700;
   letter-spacing: 0.02em;
@@ -541,17 +553,25 @@ body {
   font-weight: 400;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 8px;
+}
+.hero-greeting {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  color: rgba(255,255,255,0.8);
   margin-bottom: 24px;
+  font-style: italic;
 }
 .hero-stats {
   display: flex;
   align-items: center;
   gap: 0;
-  background: rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.15);
   backdrop-filter: blur(8px);
   border-radius: var(--radius);
   padding: 18px 0;
+  border: 1px solid rgba(255,255,255,0.2);
 }
 .hero-stat {
   flex: 1;
@@ -569,17 +589,17 @@ body {
   font-weight: 600;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.6);
 }
 .hero-stat-divider {
   width: 1px;
   height: 32px;
-  background: rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.2);
 }
 
-/* === KAPITÄN KAI AVATAR === */
+/* === KAPITAN KAI AVATAR === */
 .kai-section {
-  margin: 8px 20px 16px;
+  margin: 16px 20px 16px;
   padding: 18px 20px;
   background: var(--bg-card);
   border-radius: var(--radius);
@@ -591,6 +611,7 @@ body {
   transition: all 0.2s;
   position: relative;
   z-index: 2;
+  border: none;
 }
 .kai-section:active { transform: scale(0.98); box-shadow: var(--shadow-hover); }
 .kai-avatar { flex-shrink: 0; }
@@ -599,7 +620,7 @@ body {
   font-family: var(--font-serif);
   font-weight: 700;
   font-size: 1rem;
-  color: var(--accent-dark);
+  color: var(--accent);
   margin-bottom: 2px;
 }
 .kai-greeting {
@@ -616,7 +637,7 @@ body {
 .chapter-header {
   padding: 32px 20px 12px;
 }
-.chapter-header h1 { font-family: var(--font-serif); font-size: 1.75rem; font-weight: 700; margin-bottom: 6px; letter-spacing: -0.01em; }
+.chapter-header h1 { font-family: var(--font-serif); font-size: 1.75rem; font-weight: 700; margin-bottom: 6px; letter-spacing: -0.01em; color: var(--text); }
 .chapter-header p { font-size: 0.8rem; color: var(--text-dim); letter-spacing: 0.03em; }
 .chapter-list { padding: 12px 20px; }
 .chapter-card {
@@ -630,13 +651,14 @@ body {
   gap: 16px;
   transition: all 0.2s;
   box-shadow: var(--shadow-card);
+  border: none;
 }
 .chapter-card:active { transform: scale(0.98); box-shadow: var(--shadow-hover); }
 .chapter-num {
   width: 52px; height: 52px;
   border-radius: 50%;
-  background: var(--accent);
-  color: #FFFFFF;
+  background: var(--primary-container);
+  color: var(--accent);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -657,7 +679,7 @@ body {
   font-weight: 600;
 }
 
-/* === HÖRBUCH SCREEN === */
+/* === HORBUCH SCREEN === */
 .audiobook-header {
   padding: 24px 20px 12px;
 }
@@ -666,6 +688,7 @@ body {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 4px;
+  color: var(--text);
 }
 .audiobook-subtitle {
   font-size: 0.8rem;
@@ -674,13 +697,13 @@ body {
 .audiobook-progress-bar {
   margin: 0 20px 20px;
   height: 8px;
-  background: var(--bg-surface-low);
+  background: var(--bg-surface-highest);
   border-radius: 4px;
   overflow: hidden;
 }
 .audiobook-progress-fill {
   height: 100%;
-  background: var(--accent);
+  background: var(--secondary);
   border-radius: 3px;
   transition: width 0.3s;
 }
@@ -690,6 +713,7 @@ body {
   border-radius: var(--radius);
   padding: 24px;
   box-shadow: var(--shadow-card);
+  border: none;
 }
 .audiobook-now-playing {
   font-size: 0.65rem;
@@ -704,6 +728,7 @@ body {
   line-height: 1.7;
   margin-bottom: 16px;
   min-height: 60px;
+  color: var(--text-dim);
 }
 .audiobook-speaker {
   display: inline-block;
@@ -714,12 +739,12 @@ body {
   border-radius: 5px;
   margin-bottom: 8px;
 }
-.speaker-de { background: rgba(212,70,122,0.1); color: var(--pink); }
-.speaker-en { background: rgba(192,114,74,0.1); color: var(--accent); }
+.speaker-de { background: rgba(192,114,74,0.1); color: var(--secondary); }
+.speaker-en { background: rgba(255,255,255,0.2); color: var(--accent); }
 
 .audiobook-timeline {
   height: 6px;
-  background: var(--bg-surface-low);
+  background: var(--bg-surface-highest);
   border-radius: 3px;
   margin-bottom: 8px;
   cursor: pointer;
@@ -759,15 +784,15 @@ body {
 .audiobook-controls .play-btn {
   width: 72px;
   height: 72px;
-  background: var(--accent);
-  color: #fff;
+  background: var(--primary-container);
+  color: var(--accent);
   border-radius: 50%;
-  box-shadow: 0 4px 16px rgba(192,114,74,0.3);
+  box-shadow: 0 4px 16px rgba(139,46,61,0.25);
 }
 .audiobook-controls .skip-btn {
   width: 52px;
   height: 52px;
-  background: var(--bg-surface-low);
+  background: var(--bg-surface-highest);
 }
 
 .audiobook-segments {
@@ -791,6 +816,8 @@ body {
   margin-bottom: 6px;
   cursor: pointer;
   transition: background 0.15s;
+  box-shadow: var(--shadow-card);
+  border: 1px solid rgba(219,192,193,0.08);
 }
 .segment-item:active { background: var(--bg-card-hover); }
 .segment-item.active { border-left: 3px solid var(--accent); }
@@ -799,18 +826,17 @@ body {
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  background: var(--bg-surface-low);
+  background: var(--bg-surface-highest);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 0.7rem;
   font-weight: 700;
   flex-shrink: 0;
+  color: var(--text);
 }
-.segment-item.listened .segment-num { background: var(--success); color: #fff; }
-.segment-item.active .segment-num { background: var(--accent); color: #fff; }
-.segment-item { background: var(--bg-card); box-shadow: var(--shadow-card); }
-.segment-item:active { background: var(--bg-card-hover); }
+.segment-item.listened .segment-num { background: var(--success-container); color: var(--success); }
+.segment-item.active .segment-num { background: var(--primary-container); color: var(--accent); }
 .segment-text {
   flex: 1;
   font-size: 0.8rem;
@@ -819,6 +845,7 @@ body {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  color: var(--text-dim);
 }
 .segment-listened-date {
   font-size: 0.6rem;
@@ -835,6 +862,7 @@ body {
   font-family: var(--font-serif);
   font-size: 1.5rem;
   margin-bottom: 12px;
+  color: var(--text);
 }
 .tutor-setup p {
   color: var(--text-dim);
@@ -845,7 +873,7 @@ body {
 .tutor-api-input {
   width: 100%;
   padding: 16px 18px;
-  border: 2px solid var(--bg-surface-low);
+  border: 2px solid rgba(219,192,193,0.2);
   border-radius: 12px;
   font-size: 1rem;
   font-family: var(--font-sans);
@@ -858,8 +886,8 @@ body {
 .tutor-api-save {
   width: 100%;
   padding: 16px;
-  background: var(--accent);
-  color: #fff;
+  background: var(--primary-container);
+  color: var(--accent);
   border: none;
   border-radius: 12px;
   font-size: 1rem;
@@ -891,9 +919,9 @@ body {
   transition: all 0.2s;
 }
 .tutor-mode-tab.active {
-  background: var(--bg-card);
+  background: var(--primary-container);
   color: var(--accent);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(139,46,61,0.15);
 }
 
 .tutor-container {
@@ -915,13 +943,13 @@ body {
   width: 160px;
   height: 160px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #1B2A3D, #2C3E50);
+  background: linear-gradient(135deg, #6C1628, #8B2E3D);
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   z-index: 2;
-  box-shadow: 0 8px 32px rgba(27,42,61,0.3);
+  box-shadow: 0 8px 32px rgba(27,28,26,0.12);
   transition: transform 0.3s;
 }
 
@@ -935,7 +963,7 @@ body {
 }
 .tutor-wave {
   position: absolute;
-  border: 2px solid var(--accent);
+  border: 2px solid #D4467A;
   border-radius: 50%;
   opacity: 0;
   top: 50%;
@@ -956,7 +984,7 @@ body {
 
 /* Listening state */
 .tutor-avatar-wrap.listening .tutor-avatar-circle {
-  box-shadow: 0 0 0 4px var(--success), 0 8px 32px rgba(74,124,89,0.3);
+  box-shadow: 0 0 0 4px var(--success), 0 8px 32px rgba(0,65,36,0.15);
 }
 
 /* Thinking state */
@@ -984,6 +1012,7 @@ body {
   box-shadow: var(--shadow-card);
   position: relative;
   min-height: 80px;
+  border: none;
 }
 .tutor-speech::before {
   content: '';
@@ -1041,13 +1070,14 @@ body {
   gap: 14px;
   box-shadow: var(--shadow-card);
   margin-top: auto;
+  border: none;
 }
 .tutor-mic-btn {
   width: 64px;
   height: 64px;
   border-radius: 50%;
   border: none;
-  background: var(--bg-surface-low);
+  background: var(--bg-surface-highest);
   color: var(--text-muted);
   cursor: pointer;
   display: flex;
@@ -1057,13 +1087,13 @@ body {
   transition: all 0.2s;
 }
 .tutor-mic-btn.recording {
-  background: var(--danger);
-  color: #fff;
+  background: var(--danger-container);
+  color: var(--danger);
   animation: micPulse 1.5s ease-in-out infinite;
 }
 @keyframes micPulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(192,57,43,0.4); }
-  50% { box-shadow: 0 0 0 12px rgba(192,57,43,0); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(186,26,26,0.4); }
+  50% { box-shadow: 0 0 0 12px rgba(186,26,26,0); }
 }
 .tutor-mic-btn:active { transform: scale(0.92); }
 .tutor-transcript {
@@ -1107,14 +1137,14 @@ body {
   border-radius: 20px;
   margin-bottom: 8px;
 }
-.tutor-status.listening-badge { background: rgba(74,124,89,0.12); color: var(--success); }
-.tutor-status.speaking-badge { background: rgba(192,114,74,0.12); color: var(--accent); }
-.tutor-status.thinking-badge { background: rgba(212,70,122,0.12); color: var(--pink); }
+.tutor-status.listening-badge { background: rgba(136,217,130,0.12); color: var(--success); }
+.tutor-status.speaking-badge { background: rgba(139,46,61,0.08); color: var(--accent); }
+.tutor-status.thinking-badge { background: rgba(192,114,74,0.1); color: var(--secondary); }
 
 /* Frag den Kapitaen button on learn cards */
 .btn-ask-kai {
-  background: linear-gradient(135deg, #1B2A3D, #2C3E50);
-  color: var(--text-on-dark);
+  background: linear-gradient(135deg, #6C1628, #8B2E3D);
+  color: #FFFFFF;
   border: none;
   padding: 12px 18px;
   border-radius: 12px;
@@ -1151,8 +1181,8 @@ body {
   transition: all 0.2s;
   border-radius: 12px;
 }
-.icon-nav-item:active { background: var(--bg-surface-low); }
-.icon-nav-item svg { color: var(--pink); }
+.icon-nav-item:active { background: var(--bg-surface-highest); }
+.icon-nav-item .material-symbols-outlined { color: var(--accent); font-size: 28px; }
 .icon-nav-label {
   font-size: 0.6rem;
   font-weight: 700;
@@ -1164,7 +1194,7 @@ body {
 /* Tutor end session */
 .tutor-end-btn {
   background: none;
-  border: 1px solid var(--bg-surface-low);
+  border: 1px solid rgba(219,192,193,0.2);
   color: var(--text-muted);
   padding: 10px 20px;
   border-radius: 10px;
@@ -1172,7 +1202,7 @@ body {
   cursor: pointer;
   margin-top: 12px;
 }
-.tutor-end-btn:active { background: var(--bg-surface-low); }
+.tutor-end-btn:active { background: var(--bg-surface-highest); }
 </style>
 </head>
 <body>
@@ -1182,10 +1212,11 @@ body {
   <div class="screen active" id="screen-chapters">
     <div class="hero-section">
       <div class="hero-icon">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M2 20l2-2 2 2"/><path d="M6 20l2-2 2 2"/><path d="M10 20l2-2 2 2"/><path d="M14 20l2-2 2 2"/><path d="M18 20l2-2 2 2"/><path d="M12 4v12"/><path d="M12 4l7 12H5l7-12z" fill="rgba(212,70,122,0.5)"/></svg>
+        <span class="material-symbols-outlined" style="color:#FFFFFF; font-size:28px;">anchor</span>
       </div>
       <h1 class="hero-title">BoatMaster</h1>
-      <div class="hero-subtitle">Bootsführerschein Kroatien — Kategorie C</div>
+      <div class="hero-subtitle">Bootsfuehrerschein Kroatien -- Kategorie C</div>
+      <div class="hero-greeting">Guten Morgen, Kapitan</div>
       <div class="hero-stats">
         <div class="hero-stat">
           <div class="hero-stat-value" id="hero-chapters">25</div>
@@ -1206,47 +1237,49 @@ body {
     <!-- SEENSUCHT-STYLE ICON NAV -->
     <div class="icon-nav">
       <div class="icon-nav-item" onclick="switchTab('learn'); if(!CARDS||!CARDS.length) selectChapter(0);">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+        <span class="material-symbols-outlined">menu_book</span>
         <div class="icon-nav-label">Lernen</div>
       </div>
       <div class="icon-nav-item" onclick="switchTab('tutor')">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0112 0v2"/></svg>
+        <span class="material-symbols-outlined">person</span>
         <div class="icon-nav-label">Tutor</div>
       </div>
       <div class="icon-nav-item" onclick="switchTab('audiobook')">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 18v-6a9 9 0 0118 0v6"/><path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z"/></svg>
-        <div class="icon-nav-label">Hörbuch</div>
+        <span class="material-symbols-outlined">headphones</span>
+        <div class="icon-nav-label">Hoerbuch</div>
       </div>
       <div class="icon-nav-item" onclick="switchTab('pruefung')">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-        <div class="icon-nav-label">Prüfung</div>
+        <span class="material-symbols-outlined">assignment_turned_in</span>
+        <div class="icon-nav-label">Pruefung</div>
       </div>
     </div>
 
-    <!-- KAPITÄN KAI AVATAR -->
+    <!-- KAPITAN KAI AVATAR -->
     <div class="kai-section" onclick="switchTab('tutor')">
       <div class="kai-avatar">
         <svg viewBox="0 0 80 80" width="80" height="80">
-          <circle cx="40" cy="40" r="38" fill="#1B2A3D"/>
+          <circle cx="40" cy="40" r="38" fill="#0d1c32"/>
           <!-- Hat -->
           <ellipse cx="40" cy="22" rx="22" ry="8" fill="#1a1a2e"/>
           <rect x="24" y="16" width="32" height="8" rx="2" fill="#1a1a2e"/>
-          <circle cx="40" cy="16" r="3" fill="#C0724A"/>
+          <circle cx="40" cy="16" r="3" fill="#FFBEC3"/>
           <!-- Face -->
           <circle cx="40" cy="38" r="14" fill="#D4956A"/>
-          <circle cx="36" cy="36" r="2" fill="#1B2A3D"/>
-          <circle cx="44" cy="36" r="2" fill="#1B2A3D"/>
-          <path d="M36 42 Q40 46 44 42" stroke="#1B2A3D" stroke-width="1.5" fill="none"/>
+          <circle cx="36" cy="36" r="2" fill="#0d1c32"/>
+          <circle cx="44" cy="36" r="2" fill="#0d1c32"/>
+          <path d="M36 42 Q40 46 44 42" stroke="#0d1c32" stroke-width="1.5" fill="none"/>
           <!-- Body -->
-          <path d="M26 52 Q40 58 54 52 L56 68 Q40 72 24 68 Z" fill="#2C3E50"/>
+          <path d="M26 52 Q40 58 54 52 L56 68 Q40 72 24 68 Z" fill="#1c2a41"/>
           <path d="M38 52 L40 60 L42 52" fill="#FFFFFF" opacity="0.8"/>
         </svg>
       </div>
       <div class="kai-text">
-        <div class="kai-name">Kapitän Kai — KI-Tutor</div>
-        <div class="kai-greeting">Ahoi! Tippe hier um mit mir zu sprechen — per Stimme!</div>
+        <div class="kai-name">Kapitan Kai -- KI-Tutor</div>
+        <div class="kai-greeting">Ahoi! Tippe hier um mit mir zu sprechen -- per Stimme!</div>
       </div>
-      <div class="kai-speak-icon">🎙️</div>
+      <div class="kai-speak-icon">
+        <span class="material-symbols-outlined" style="color:#D4467A;">mic</span>
+      </div>
     </div>
 
     <div id="sr-review-container"></div>
@@ -1264,11 +1297,11 @@ body {
     <div id="actions-container"></div>
   </div>
 
-  <!-- HÖRBUCH SCREEN -->
+  <!-- HORBUCH SCREEN -->
   <div class="screen" id="screen-audiobook">
     <div class="audiobook-header">
-      <div class="audiobook-title" id="ab-title">Hörbuch</div>
-      <div class="audiobook-subtitle" id="ab-subtitle">Wähle ein Kapitel</div>
+      <div class="audiobook-title" id="ab-title">Hoerbuch</div>
+      <div class="audiobook-subtitle" id="ab-subtitle">Waehle ein Kapitel</div>
     </div>
     <div id="ab-chapter-list" class="chapter-list"></div>
     <div id="ab-player-section" style="display:none;">
@@ -1287,7 +1320,7 @@ body {
         <span id="ab-time-total">0:00</span>
       </div>
       <div class="audiobook-controls">
-        <button class="skip-btn" onclick="abPrev()" title="Zurück">
+        <button class="skip-btn" onclick="abPrev()" title="Zurueck">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
         </button>
         <button class="play-btn" id="ab-play-btn" onclick="abTogglePlay()">
@@ -1311,8 +1344,8 @@ body {
     <!-- Config view -->
     <div id="exam-config">
       <div class="chapter-header">
-        <h1>Prüfungssimulator</h1>
-        <p>Simuliere die mündliche Bootsführerschein-Prüfung</p>
+        <h1>Pruefungssimulator</h1>
+        <p>Simuliere die muendliche Bootsfuehrerschein-Pruefung</p>
       </div>
       <div class="exam-config">
         <h2>Anzahl Fragen</h2>
@@ -1320,24 +1353,24 @@ body {
           <div class="exam-option-icon">10</div>
           <div class="exam-option-info">
             <div class="exam-option-title">Schnelltest</div>
-            <div class="exam-option-sub">10 zufällige Fragen — ca. 5 Minuten</div>
+            <div class="exam-option-sub">10 zufaellige Fragen -- ca. 5 Minuten</div>
           </div>
         </div>
         <div class="exam-option" onclick="examSetCount(20)" id="exam-count-20">
           <div class="exam-option-icon">20</div>
           <div class="exam-option-info">
-            <div class="exam-option-title">Prüfungssimulation</div>
-            <div class="exam-option-sub">20 Fragen wie in der echten Prüfung</div>
+            <div class="exam-option-title">Pruefungssimulation</div>
+            <div class="exam-option-sub">20 Fragen wie in der echten Pruefung</div>
           </div>
         </div>
         <div class="exam-option" onclick="examSetCount(0)" id="exam-count-0">
           <div class="exam-option-icon">*</div>
           <div class="exam-option-info">
             <div class="exam-option-title">Alle Fragen</div>
-            <div class="exam-option-sub" id="exam-all-label">Alle 72 Prüfungsfragen</div>
+            <div class="exam-option-sub" id="exam-all-label">Alle 72 Pruefungsfragen</div>
           </div>
         </div>
-        <button class="exam-start-btn" onclick="startExam()">Prüfung starten</button>
+        <button class="exam-start-btn" onclick="startExam()">Pruefung starten</button>
       </div>
     </div>
     <!-- Question view -->
@@ -1355,11 +1388,11 @@ body {
           <div class="result-score" id="exam-score">0/0</div>
           <div class="result-label">Richtige Antworten</div>
           <div id="exam-result-msg" style="font-size:1rem; margin:16px 0;"></div>
-          <div id="exam-detail" style="text-align:left; margin-top:16px; padding-top:16px; border-top:1px solid #1e3350;"></div>
+          <div id="exam-detail" style="text-align:left; margin-top:16px; padding-top:16px; border-top:1px solid rgba(219,192,193,0.2);"></div>
         </div>
         <div style="padding:20px;">
-          <button class="btn btn-next" style="width:100%;" onclick="startExam()">Nochmal prüfen</button>
-          <button class="btn btn-de" style="width:100%; margin-top:10px;" onclick="switchTab('pruefung')">Zurück zur Konfiguration</button>
+          <button class="btn btn-next" style="width:100%;" onclick="startExam()">Nochmal pruefen</button>
+          <button class="btn btn-de" style="width:100%; margin-top:10px;" onclick="switchTab('pruefung')">Zurueck zur Konfiguration</button>
         </div>
       </div>
     </div>
@@ -1369,20 +1402,20 @@ body {
   <div class="screen" id="screen-tutor">
     <!-- API Key Setup (shown if no key) -->
     <div id="tutor-setup" class="tutor-setup">
-      <div style="font-size:4rem; margin-bottom:16px;">⚓</div>
-      <h2>Kapitän Kai einrichten</h2>
-      <p>Um mit Kapitän Kai zu sprechen, brauchst du einen Claude API-Key. Den bekommst du auf console.anthropic.com</p>
+      <div style="font-size:4rem; margin-bottom:16px;"><span class="material-symbols-outlined" style="font-size:4rem; color:#8B2E3D;">anchor</span></div>
+      <h2>Kapitan Kai einrichten</h2>
+      <p>Um mit Kapitan Kai zu sprechen, brauchst du einen Claude API-Key. Den bekommst du auf console.anthropic.com</p>
       <input type="password" class="tutor-api-input" id="tutor-api-key-input" placeholder="sk-ant-... (dein API Key)">
       <button class="tutor-api-save" onclick="tutorSaveKey()">Verbindung herstellen</button>
-      <p style="margin-top:16px; font-size:0.75rem; color:var(--text-muted);">Dein Key wird nur lokal auf deinem Gerät gespeichert.</p>
+      <p style="margin-top:16px; font-size:0.75rem; color:var(--text-muted);">Dein Key wird nur lokal auf deinem Geraet gespeichert.</p>
     </div>
 
     <!-- Tutor Main (shown when key exists) -->
     <div id="tutor-main" style="display:none;">
       <div class="tutor-mode-tabs">
-        <div class="tutor-mode-tab active" onclick="tutorSetMode('lernen')" id="tutor-tab-lernen">Geführt Lernen</div>
-        <div class="tutor-mode-tab" onclick="tutorSetMode('gespraech')" id="tutor-tab-gespraech">Freies Gespräch</div>
-        <div class="tutor-mode-tab" onclick="tutorSetMode('pruefung')" id="tutor-tab-pruefung">Prüfung</div>
+        <div class="tutor-mode-tab active" onclick="tutorSetMode('lernen')" id="tutor-tab-lernen">Gefuehrt Lernen</div>
+        <div class="tutor-mode-tab" onclick="tutorSetMode('gespraech')" id="tutor-tab-gespraech">Freies Gespraech</div>
+        <div class="tutor-mode-tab" onclick="tutorSetMode('pruefung')" id="tutor-tab-pruefung">Pruefung</div>
       </div>
 
       <div class="tutor-container">
@@ -1395,28 +1428,28 @@ body {
               <!-- Captain hat -->
               <ellipse cx="60" cy="28" rx="38" ry="12" fill="#1a1a2e"/>
               <rect x="30" y="18" width="60" height="14" rx="3" fill="#1a1a2e"/>
-              <rect x="38" y="14" width="44" height="8" rx="2" fill="#2C3E50"/>
-              <circle cx="60" cy="18" r="5" fill="#C0724A"/>
+              <rect x="38" y="14" width="44" height="8" rx="2" fill="#27354c"/>
+              <circle cx="60" cy="18" r="5" fill="#FFBEC3"/>
               <!-- Face -->
               <circle cx="60" cy="55" r="24" fill="#D4956A"/>
               <!-- Eyes -->
-              <ellipse cx="52" cy="52" rx="3" ry="3.5" fill="#1B2A3D" id="tutor-eye-l"/>
-              <ellipse cx="68" cy="52" rx="3" ry="3.5" fill="#1B2A3D" id="tutor-eye-r"/>
+              <ellipse cx="52" cy="52" rx="3" ry="3.5" fill="#0d1c32" id="tutor-eye-l"/>
+              <ellipse cx="68" cy="52" rx="3" ry="3.5" fill="#0d1c32" id="tutor-eye-r"/>
               <!-- Eyebrows -->
               <path d="M46 46 Q52 42 56 46" stroke="#8B4513" stroke-width="2" fill="none"/>
               <path d="M64 46 Q68 42 74 46" stroke="#8B4513" stroke-width="2" fill="none"/>
               <!-- Nose -->
               <path d="M58 56 Q60 60 62 56" stroke="#B07848" stroke-width="1.5" fill="none"/>
               <!-- Mouth - changes with state -->
-              <path d="M52 64 Q60 72 68 64" stroke="#1B2A3D" stroke-width="2" fill="none" id="tutor-mouth"/>
+              <path d="M52 64 Q60 72 68 64" stroke="#0d1c32" stroke-width="2" fill="none" id="tutor-mouth"/>
               <!-- Beard stubble -->
-              <path d="M42 68 Q60 82 78 68" stroke="#9B8B7E" stroke-width="0.5" fill="none" opacity="0.4"/>
+              <path d="M42 68 Q60 82 78 68" stroke="#8c919d" stroke-width="0.5" fill="none" opacity="0.4"/>
               <!-- Body/Collar -->
-              <path d="M36 78 Q60 88 84 78 L88 100 Q60 108 32 100 Z" fill="#2C3E50"/>
+              <path d="M36 78 Q60 88 84 78 L88 100 Q60 108 32 100 Z" fill="#1c2a41"/>
               <path d="M54 78 L60 90 L66 78" fill="#FFFFFF" opacity="0.9"/>
               <!-- Anchor badge -->
-              <circle cx="60" cy="96" r="6" fill="#C0724A" opacity="0.8"/>
-              <text x="60" y="99" text-anchor="middle" fill="white" font-size="8" font-weight="bold">⚓</text>
+              <circle cx="60" cy="96" r="6" fill="#8B2E3D" opacity="0.8"/>
+              <text x="60" y="99" text-anchor="middle" fill="#FFBEC3" font-size="8" font-weight="bold">&#9875;</text>
             </svg>
           </div>
           <div class="tutor-waves">
@@ -1426,12 +1459,12 @@ body {
           </div>
         </div>
 
-        <div style="font-family:var(--font-serif); font-size:1.2rem; font-weight:700; color:var(--accent-dark); margin-bottom:4px;">Kapitän Kai</div>
+        <div style="font-family:var(--font-serif); font-size:1.2rem; font-weight:700; color:#8B2E3D; margin-bottom:4px;">Kapitan Kai</div>
 
         <!-- Speech Bubble -->
         <div class="tutor-speech" id="tutor-speech">
           <div class="tutor-speech-text" id="tutor-speech-text">
-            Ahoi! Ich bin Kapitän Kai, dein persönlicher Bootslehrer. Drück auf das Mikrofon und sprich mit mir!
+            Ahoi! Ich bin Kapitan Kai, dein persoenlicher Bootslehrer. Drueck auf das Mikrofon und sprich mit mir!
           </div>
           <div class="tutor-speech-hint" id="tutor-speech-hint"></div>
         </div>
@@ -1444,7 +1477,7 @@ body {
           <div class="tutor-transcript" id="tutor-transcript">Tippe auf das Mikrofon um zu sprechen...</div>
         </div>
 
-        <button class="tutor-end-btn" id="tutor-end-btn" onclick="tutorEndSession()" style="display:none;">Gespräch beenden</button>
+        <button class="tutor-end-btn" id="tutor-end-btn" onclick="tutorEndSession()" style="display:none;">Gespraech beenden</button>
       </div>
     </div>
   </div>
@@ -1460,7 +1493,7 @@ body {
       </div>
       <div style="padding:20px;">
         <button class="btn btn-next" style="width:100%;" onclick="restart()">Nochmal lernen</button>
-        <button class="btn btn-de" style="width:100%; margin-top:10px;" onclick="switchTab('chapters')">Anderes Kapitel wählen</button>
+        <button class="btn btn-de" style="width:100%; margin-top:10px;" onclick="switchTab('chapters')">Anderes Kapitel waehlen</button>
       </div>
     </div>
   </div>
@@ -1469,24 +1502,24 @@ body {
 <!-- BOTTOM NAV -->
 <div class="bottom-nav">
   <div class="nav-item active" onclick="switchTab('chapters')">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+    <span class="material-symbols-outlined">home</span>
     Start
   </div>
   <div class="nav-item" onclick="switchTab('learn')">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+    <span class="material-symbols-outlined">school</span>
     Lernen
   </div>
   <div class="nav-item" onclick="switchTab('tutor')">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0112 0v2"/><path d="M16 4l2-2m0 0l2 2m-2-2v4"/></svg>
+    <span class="material-symbols-outlined">mic</span>
     Tutor
   </div>
   <div class="nav-item" onclick="switchTab('audiobook')">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18v-6a9 9 0 0118 0v6"/><path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z"/></svg>
-    Hörbuch
+    <span class="material-symbols-outlined">headphones</span>
+    Hoerbuch
   </div>
   <div class="nav-item" onclick="switchTab('pruefung')">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-    Prüfung
+    <span class="material-symbols-outlined">assignment_turned_in</span>
+    Pruefung
   </div>
 </div>
 
