@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="de"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BoatMaster - Kapitän's Ledger</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,600;0,700;1,400;1,700&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "tertiary-fixed-dim": "#88d982",
+                        "tertiary-container": "#25752b",
+                        "on-tertiary-fixed": "#002204",
+                        "error": "#ffb4ab",
+                        "on-primary-container": "#dae5ff",
+                        "background": "#041329",
+                        "surface-container-low": "#0d1c32",
+                        "outline": "#8c919d",
+                        "surface-dim": "#041329",
+                        "on-surface-variant": "#c2c6d4",
+                        "surface": "#041329",
+                        "primary-fixed-dim": "#a9c7ff",
+                        "on-background": "#d6e3ff",
+                        "inverse-surface": "#d6e3ff",
+                        "secondary-fixed-dim": "#ffb77a",
+                        "inverse-primary": "#005db7",
+                        "on-tertiary-container": "#a5f99e",
+                        "secondary-fixed": "#ffdcc2",
+                        "on-primary-fixed-variant": "#00468c",
+                        "on-error": "#690005",
+                        "surface-container-lowest": "#010e24",
+                        "on-primary": "#003063",
+                        "surface-container-highest": "#27354c",
+                        "surface-bright": "#2c3951",
+                        "inverse-on-surface": "#233148",
+                        "primary-container": "#1565c0",
+                        "surface-container-high": "#1c2a41",
+                        "surface-container": "#112036",
+                        "tertiary-fixed": "#a3f69c",
+                        "on-tertiary-fixed-variant": "#005312",
+                        "on-secondary-container": "#623400",
+                        "on-secondary": "#4c2700",
+                        "primary-fixed": "#d6e3ff",
+                        "primary": "#a9c7ff",
+                        "surface-tint": "#a9c7ff",
+                        "error-container": "#93000a",
+                        "tertiary": "#88d982",
+                        "on-primary-fixed": "#001b3d",
+                        "surface-variant": "#27354c",
+                        "secondary-container": "#ff8f00",
+                        "on-tertiary": "#003909",
+                        "on-secondary-fixed": "#2e1500",
+                        "secondary": "#ffb77a",
+                        "outline-variant": "#424752",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-fixed-variant": "#6d3a00",
+                        "on-surface": "#d6e3ff"
+                    },
+                    fontFamily: {
+                        "headline": ["Newsreader", "serif"],
+                        "body": ["Work Sans", "sans-serif"],
+                        "label": ["Work Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #041329;
+            color: #d6e3ff;
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Shell -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-[#041329]/90 backdrop-blur-xl flex justify-between items-center w-full px-6 py-4 pt-safe shadow-[0_20px_40px_rgba(0,0,0,0.4)] bg-gradient-to-b from-[#041329] to-transparent">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#a9c7ff]" data-icon="anchor">anchor</span>
+<span class="text-[#a9c7ff] font-['Newsreader'] italic font-bold text-2xl tracking-tight">BoatMaster</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="hover:opacity-80 transition-opacity active:scale-95 duration-200">
+<span class="material-symbols-outlined text-[#a9c7ff] text-2xl" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-4xl mx-auto">
+<!-- Hero Section -->
+<section class="mb-12">
+<h1 class="font-headline text-5xl md:text-6xl font-bold text-on-surface leading-tight tracking-tight mb-4 italic">
+                Guten Morgen, Kapitän
+            </h1>
+<p class="font-body text-on-surface-variant text-lg max-w-md">
+                Bereit für die nächste Etappe? Die See ist heute ruhig und perfekt für eine Lernsession.
+            </p>
+</section>
+<!-- Progress Summary Bento Item -->
+<div class="mb-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="md:col-span-2 relative overflow-hidden p-8 rounded-xl bg-gradient-to-br from-primary-container to-[#041329] shadow-lg flex flex-col justify-between min-h-[180px]">
+<div class="z-10">
+<span class="font-label text-xs uppercase tracking-widest text-primary mb-2 block">Aktueller Kurs</span>
+<h2 class="font-headline text-3xl font-bold text-white">Küstenpatent B</h2>
+</div>
+<div class="z-10 flex items-center justify-between mt-6">
+<div class="flex-1 mr-8">
+<div class="flex justify-between text-xs font-label text-primary mb-2">
+<span>FORTSCHRITT</span>
+<span>64%</span>
+</div>
+<div class="h-3 w-full bg-surface-container-highest rounded-full">
+<div class="h-full bg-secondary rounded-full" style="width: 64%"></div>
+</div>
+</div>
+<button class="bg-primary text-on-primary font-label font-semibold px-6 py-4 rounded-xl shadow-lg active:scale-95 duration-200">
+                        WEITER
+                    </button>
+</div>
+<!-- Abstract Nautical Graphic -->
+<div class="absolute -right-12 -top-12 opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-[240px]" data-icon="explore">explore</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-8 rounded-xl flex flex-col items-center justify-center text-center border-b-2 border-secondary-container/20">
+<span class="material-symbols-outlined text-secondary-container text-5xl mb-4" data-icon="hourglass_empty">hourglass_empty</span>
+<h3 class="font-headline text-2xl font-bold text-on-surface mb-1">3 Wiederholungen</h3>
+<p class="font-body text-sm text-on-surface-variant">Jetzt fällig für den Langzeitspeicher</p>
+</div>
+</div>
+<!-- Chapters List -->
+<section>
+<div class="flex items-baseline justify-between mb-8">
+<h2 class="font-headline text-3xl font-bold">Kapitelübersicht</h2>
+<span class="font-label text-xs text-on-surface-variant uppercase tracking-widest">11 Module</span>
+</div>
+<div class="space-y-4">
+<!-- Chapter 1 -->
+<div class="group bg-surface-container p-6 rounded-xl flex items-center gap-6 hover:bg-surface-container-high transition-all cursor-pointer">
+<div class="font-headline italic text-4xl text-primary/30 w-12 shrink-0 group-hover:text-primary/60 transition-colors">01</div>
+<div class="flex-1">
+<h4 class="font-headline text-xl font-bold text-on-surface">Navigation</h4>
+<p class="font-body text-sm text-on-surface-variant">Kartenkunde &amp; Besteckung</p>
+</div>
+<div class="flex flex-col items-end gap-1">
+<span class="bg-surface-container-highest px-3 py-1 rounded-full text-[10px] font-label font-bold uppercase tracking-tighter text-on-primary-container">120 KARTEN</span>
+<div class="flex gap-1">
+<div class="h-1 w-3 bg-tertiary rounded-full"></div>
+<div class="h-1 w-3 bg-tertiary rounded-full"></div>
+<div class="h-1 w-3 bg-surface-container-highest rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- Chapter 2 -->
+<div class="group bg-surface-container p-6 rounded-xl flex items-center gap-6 hover:bg-surface-container-high transition-all cursor-pointer">
+<div class="font-headline italic text-4xl text-primary/30 w-12 shrink-0 group-hover:text-primary/60 transition-colors">02</div>
+<div class="flex-1">
+<h4 class="font-headline text-xl font-bold text-on-surface">Seerecht &amp; Vorschriften</h4>
+<p class="font-body text-sm text-on-surface-variant">KVR, SeeSchStrO &amp; Signale</p>
+</div>
+<div class="flex flex-col items-end gap-1">
+<span class="bg-surface-container-highest px-3 py-1 rounded-full text-[10px] font-label font-bold uppercase tracking-tighter text-on-primary-container">95 KARTEN</span>
+<div class="flex gap-1">
+<div class="h-1 w-3 bg-tertiary rounded-full"></div>
+<div class="h-1 w-3 bg-surface-container-highest rounded-full"></div>
+<div class="h-1 w-3 bg-surface-container-highest rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- Chapter 3 -->
+<div class="group bg-surface-container p-6 rounded-xl flex items-center gap-6 hover:bg-surface-container-high transition-all cursor-pointer">
+<div class="font-headline italic text-4xl text-primary/30 w-12 shrink-0 group-hover:text-primary/60 transition-colors">03</div>
+<div class="flex-1">
+<h4 class="font-headline text-xl font-bold text-on-surface">Motorenkunde</h4>
+<p class="font-body text-sm text-on-surface-variant">Wartung &amp; Funktionsweise</p>
+</div>
+<div class="flex flex-col items-end gap-1">
+<span class="bg-surface-container-highest px-3 py-1 rounded-full text-[10px] font-label font-bold uppercase tracking-tighter text-on-primary-container">45 KARTEN</span>
+<span class="text-secondary font-label text-[10px] flex items-center gap-1">NEU <span class="w-1 h-1 bg-secondary rounded-full"></span></span>
+</div>
+</div>
+<!-- Chapter 4 -->
+<div class="group bg-surface-container p-6 rounded-xl flex items-center gap-6 hover:bg-surface-container-high transition-all cursor-pointer">
+<div class="font-headline italic text-4xl text-primary/30 w-12 shrink-0 group-hover:text-primary/60 transition-colors">04</div>
+<div class="flex-1">
+<h4 class="font-headline text-xl font-bold text-on-surface">Meteorologie</h4>
+<p class="font-body text-sm text-on-surface-variant">Wetterkunde &amp; Vorhersage</p>
+</div>
+<div class="flex flex-col items-end gap-1">
+<span class="bg-surface-container-highest px-3 py-1 rounded-full text-[10px] font-label font-bold uppercase tracking-tighter text-on-primary-container">30 KARTEN</span>
+</div>
+</div>
+<!-- Chapter 5 -->
+<div class="group bg-surface-container p-6 rounded-xl flex items-center gap-6 hover:bg-surface-container-high transition-all cursor-pointer">
+<div class="font-headline italic text-4xl text-primary/30 w-12 shrink-0 group-hover:text-primary/60 transition-colors">05</div>
+<div class="flex-1">
+<h4 class="font-headline text-xl font-bold text-on-surface">Ausrüstung &amp; Seemannschaft</h4>
+<p class="font-body text-sm text-on-surface-variant">Equipment &amp; Handling</p>
+</div>
+<div class="flex flex-col items-end gap-1">
+<span class="bg-surface-container-highest px-3 py-1 rounded-full text-[10px] font-label font-bold uppercase tracking-tighter text-on-primary-container">50 KARTEN</span>
+</div>
+</div>
+<!-- Featured Chapter with Image Overlay -->
+<div class="relative overflow-hidden group bg-surface-container h-48 rounded-xl flex items-center cursor-pointer shadow-xl">
+<img alt="Ocean at night" class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-105 transition-transform duration-700" data-alt="dramatic wide shot of deep blue ocean waves at dusk with moonlight reflecting on the surface, moody maritime aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3ZVNkZzOkPZOaRSlAll5CnTxpZyK8MdGVNDVZxtEFntUuMnJnTiD46NDXO0685PMzLBrmt0RRFBC9httEf0YDZI7w3DqzlKRArVHffUZ_Nlob0m23aB0P0qCJVuxVBa_A--csasY7mqrwVbooZJHgJz30KA8IMrW3GW95kKLV7zNG59seQH6rv6NgmSYvOwrUb_Y-wd1qIC245Oxo0gFYYdfAsxUe29woMCsTmvVHs4tqcM2baChmtwN_W_sQEWkh3GlK1MJzRq0"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/80 to-transparent"></div>
+<div class="relative z-10 p-8 flex items-center gap-6 w-full">
+<div class="font-headline italic text-4xl text-primary w-12 shrink-0">11</div>
+<div class="flex-1">
+<h4 class="font-headline text-2xl font-bold text-white">Prüfungsfragen</h4>
+<p class="font-body text-md text-primary-fixed">Simulation &amp; Generalprobe</p>
+</div>
+<div class="flex flex-col items-end">
+<span class="bg-secondary text-on-secondary-container px-4 py-1.5 rounded-full text-xs font-label font-bold uppercase tracking-widest">200 KARTEN</span>
+</div>
+</div>
+</div>
+<!-- More Chapters as simpler list items to show hierarchy -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="bg-surface-container-low p-4 rounded-xl flex items-center gap-4 hover:bg-surface-container transition-colors cursor-pointer">
+<span class="font-headline italic text-xl text-primary/30">06</span>
+<div class="flex-1"><h5 class="font-headline font-bold">Manöver &amp; Praxis</h5></div>
+<span class="text-[10px] font-label text-on-surface-variant">40 K</span>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl flex items-center gap-4 hover:bg-surface-container transition-colors cursor-pointer">
+<span class="font-headline italic text-xl text-primary/30">07</span>
+<div class="flex-1"><h5 class="font-headline font-bold">Funkkommunikation</h5></div>
+<span class="text-[10px] font-label text-on-surface-variant">65 K</span>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl flex items-center gap-4 hover:bg-surface-container transition-colors cursor-pointer">
+<span class="font-headline italic text-xl text-primary/30">08</span>
+<div class="flex-1"><h5 class="font-headline font-bold">Sicherheit &amp; Notfälle</h5></div>
+<span class="text-[10px] font-label text-on-surface-variant">35 K</span>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl flex items-center gap-4 hover:bg-surface-container transition-colors cursor-pointer">
+<span class="font-headline italic text-xl text-primary/30">09</span>
+<div class="flex-1"><h5 class="font-headline font-bold">Umweltschutz</h5></div>
+<span class="text-[10px] font-label text-on-surface-variant">20 K</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Navigation Shell (Bottom) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-safe h-20 bg-[#041329] border-t border-[#d6e3ff]/15 shadow-[0_-10px_30px_rgba(0,0,0,0.3)] rounded-t-xl">
+<a class="flex flex-col items-center justify-center bg-[#1565C0] text-[#a9c7ff] rounded-2xl px-5 py-2 active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined mb-0.5" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-['Work_Sans'] font-medium uppercase tracking-[0.05rem] text-[10px]">START</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#d6e3ff]/60 px-5 py-2 hover:text-[#a9c7ff] transition-colors active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined mb-0.5" data-icon="menu_book">menu_book</span>
+<span class="font-['Work_Sans'] font-medium uppercase tracking-[0.05rem] text-[10px]">LERNEN</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#d6e3ff]/60 px-5 py-2 hover:text-[#a9c7ff] transition-colors active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined mb-0.5" data-icon="headphones">headphones</span>
+<span class="font-['Work_Sans'] font-medium uppercase tracking-[0.05rem] text-[10px]">HÖRBUCH</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#d6e3ff]/60 px-5 py-2 hover:text-[#a9c7ff] transition-colors active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined mb-0.5" data-icon="assignment_turned_in">assignment_turned_in</span>
+<span class="font-['Work_Sans'] font-medium uppercase tracking-[0.05rem] text-[10px]">PRÜFUNG</span>
+</a>
+</nav>
+<!-- FAB Suppression: On home screen, let's add a primary action FAB for learning -->
+<button class="fixed bottom-24 right-6 w-16 h-16 rounded-full bg-secondary text-on-secondary shadow-2xl flex items-center justify-center hover:scale-105 active:scale-95 transition-transform z-40 border-4 border-surface">
+<span class="material-symbols-outlined text-3xl" data-icon="play_arrow" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</body></html>

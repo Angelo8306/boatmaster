@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html class="light" lang="de"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..800;1,6..72,400..800&amp;family=Work+Sans:wght@300;400;500;600;700&amp;family=Dancing_Script:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary": "#835055",
+              "inverse-on-surface": "#f2f0ed",
+              "on-primary": "#ffffff",
+              "surface-container-low": "#f5f3ef",
+              "inverse-primary": "#ffb2b9",
+              "secondary-fixed": "#ffdadb",
+              "surface-bright": "#fbf9f5",
+              "primary-container": "#8b2e3d",
+              "on-tertiary-fixed": "#002110",
+              "error": "#ba1a1a",
+              "on-primary-fixed": "#40000f",
+              "on-error-container": "#93000a",
+              "on-secondary": "#ffffff",
+              "on-secondary-fixed": "#340f15",
+              "surface-container": "#efeeea",
+              "inverse-surface": "#30312e",
+              "outline": "#887273",
+              "on-primary-container": "#ffaab1",
+              "surface-variant": "#e4e2de",
+              "on-tertiary": "#ffffff",
+              "surface": "#fbf9f5",
+              "secondary-fixed-dim": "#f6b6bb",
+              "primary": "#6c1628",
+              "on-primary-fixed-variant": "#802635",
+              "surface-dim": "#dbdad6",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-fixed-variant": "#68393e",
+              "on-secondary-container": "#7b4a4f",
+              "error-container": "#ffdad6",
+              "on-surface-variant": "#554243",
+              "surface-container-high": "#eae8e4",
+              "outline-variant": "#dbc0c1",
+              "tertiary-fixed": "#a6f3c1",
+              "surface-container-highest": "#e4e2de",
+              "on-background": "#1b1c1a",
+              "on-error": "#ffffff",
+              "on-surface": "#1b1c1a",
+              "surface-tint": "#9f3d4c",
+              "tertiary": "#004124",
+              "primary-fixed": "#ffdadb",
+              "on-tertiary-container": "#85d1a0",
+              "background": "#fbf9f5",
+              "secondary-container": "#ffbec3",
+              "primary-fixed-dim": "#ffb2b9",
+              "on-tertiary-fixed-variant": "#00522f",
+              "tertiary-fixed-dim": "#8ad7a6",
+              "tertiary-container": "#005b35"
+            },
+            fontFamily: {
+              "headline": ["Newsreader"],
+              "body": ["Work Sans"],
+              "label": ["Work Sans"],
+              "brand": ["Dancing Script"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        background-color: #FBF9F5;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body text-on-background selection:bg-primary-container selection:text-white">
+<!-- Top Navigation Anchor (Manual implementation of TopAppBar logic) -->
+<header class="flex justify-between items-center px-6 py-4 w-full z-50 absolute top-0 docked full-width">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#8B2E3D] hover:opacity-80 transition-opacity">menu</span>
+</div>
+<h1 class="font-['Dancing_Script'] italic text-white text-3xl">BoatMaster</h1>
+<div class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center overflow-hidden border-2 border-white/20">
+<img alt="User Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBR4SFGWPwAmjMOSJ0M7h_WaDoqkYFxl2lnAUmqzQg6Ikng_I3kiXTtyVgnFON9H2XeMOfc702tOjjAyDAsmZK-5D_e3lIRXdLDHrDPZIP5XIh6tk7p9ZJ5_DttrplBUTK08UYnlliiJwi5kUxE951niY9H35TISUqOHOF7MFMz1PRDzsZwTfrPHkxZA0RS4NzAP3CCc18Rc1Vi3MRO5ImI6CvsDGdrawaTfewRRE2y9okm2X5DSdIqYyA6ndGQeoPLOwID-QcQJUU"/>
+</div>
+</header>
+<main class="pb-32">
+<!-- Hero Section -->
+<section class="relative h-[574px] w-full flex flex-col items-center justify-center text-center px-6">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="Luxurious white yacht floating on calm crystal blue mediterranean waters at sunset with golden warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuZyne7PJQDYlLpo9Y7LCuqLfWDloGkRmF4TfTKDKpG0gq37LCr2TNkSPARJ6RiqzWV2CZtQq2rlhxJtCNSGJKdBpMF-ZLGz2tnJ7H8RASTvQ0LrDlFzeK3J2BY16SX5IfVm5AbOQDW02gpGfzNdsWNqDTiQRjm1mDMpc32S-rgauB4TQ2RR8GOSK7fXlXRPB1khoOanCbKH5orz21c_d-ANq9pPaAjq3so1ytpsEnc1Zqc3wFd-hqb34neAwwnQQ5v3u9H9uL7BU"/>
+<div class="absolute inset-0 bg-gradient-to-b from-primary/30 via-transparent to-background"></div>
+</div>
+<div class="relative z-10 space-y-4">
+<p class="font-brand text-6xl text-white drop-shadow-lg">BoatMaster</p>
+<p class="font-headline italic text-2xl text-white/95 max-w-[280px] leading-snug">
+                    dein Weg zum Bootsführerschein
+                </p>
+</div>
+</section>
+<!-- Captain Kai Card -->
+<section class="px-6 -mt-16 relative z-20">
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_24px_48px_rgba(0,0,0,0.08)] p-6 flex items-center gap-5 border border-outline-variant/10">
+<div class="relative">
+<div class="w-20 h-20 rounded-full overflow-hidden bg-surface-container-high border-4 border-white shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Friendly senior captain with a groomed white beard and classic navy blue sailor cap smiling at the camera" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6kQuMiT3Cshsu97FdBDlUI7WNDfe8X7Jua1zTQE93J9WNi2NL4MtYsMkNmejp7Y2NtxjxNxOyVmpJsz5Nib0SS6ZSlASgAcaLx3-ChK6NdiB7Px_TcvDqviZ2P59cZN-jCZgD6BfN1wtnI7wIzH-LWPr0y0xdMBSS9vBPVLi5Al7TK6wj2Cg-ugYaPqconawFZeMqPJ4RuPCnEYBGnyBhpNgE_MCM-ePZAzHVgLGHQIspkU7HmoOtJHHPBhkXAqS1ymCKL11lFMc"/>
+</div>
+<div class="absolute -bottom-1 -right-1 w-6 h-6 bg-tertiary rounded-full border-2 border-white"></div>
+</div>
+<div class="flex-1">
+<h2 class="font-headline text-xl font-bold text-primary leading-tight">Kapitän Kai</h2>
+<p class="text-on-surface-variant text-lg leading-snug mt-1">Ahoi Andreas! Tippe hier um mit mir zu sprechen.</p>
+</div>
+<div class="bg-primary-container p-4 rounded-full shadow-lg active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="mic" style="font-variation-settings: 'FILL' 1;">mic</span>
+</div>
+</div>
+</section>
+<!-- Learning Modules / Chapter List -->
+<section class="mt-12 px-6">
+<div class="flex justify-between items-baseline mb-8">
+<h3 class="font-headline text-3xl font-extrabold tracking-tight text-on-surface">Deine Reise</h3>
+<span class="text-primary font-bold text-sm tracking-widest uppercase">3/25 Abgeschlossen</span>
+</div>
+<div class="grid gap-6">
+<!-- Chapter 1 (Active/Current) -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm flex flex-col gap-5 border border-primary/5">
+<div class="flex items-start gap-4">
+<div class="w-14 h-14 rounded-full bg-primary flex items-center justify-center flex-shrink-0 shadow-md">
+<span class="font-headline text-2xl font-bold text-white">01</span>
+</div>
+<div class="flex-1">
+<h4 class="font-headline text-2xl font-bold text-on-surface leading-tight">Grundlagen der Seefahrt</h4>
+<p class="text-on-surface-variant font-medium mt-1">Sicherheit &amp; Begriffe</p>
+</div>
+<span class="material-symbols-outlined text-tertiary">check_circle</span>
+</div>
+<!-- Progress Bar -->
+<div class="w-full bg-surface-container-high h-2.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[100%] rounded-full shadow-[0_0_8px_rgba(108,22,40,0.3)]"></div>
+</div>
+</div>
+<!-- Chapter 2 (Next Up) -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm flex flex-col gap-5">
+<div class="flex items-start gap-4">
+<div class="w-14 h-14 rounded-full bg-primary-fixed-dim flex items-center justify-center flex-shrink-0">
+<span class="font-headline text-2xl font-bold text-on-primary-fixed-variant">02</span>
+</div>
+<div class="flex-1">
+<h4 class="font-headline text-2xl font-bold text-on-surface leading-tight">Navigation &amp; Kurs</h4>
+<p class="text-on-surface-variant font-medium mt-1">Kartenkunde &amp; Kompass</p>
+</div>
+<span class="material-symbols-outlined text-outline">play_circle</span>
+</div>
+<!-- Progress Bar -->
+<div class="w-full bg-surface-container-high h-2.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[45%] rounded-full"></div>
+</div>
+</div>
+<!-- Chapter 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm flex flex-col gap-5 opacity-90">
+<div class="flex items-start gap-4">
+<div class="w-14 h-14 rounded-full bg-surface-container-highest flex items-center justify-center flex-shrink-0">
+<span class="font-headline text-2xl font-bold text-outline">03</span>
+</div>
+<div class="flex-1">
+<h4 class="font-headline text-2xl font-bold text-on-surface leading-tight">Wetterkunde</h4>
+<p class="text-on-surface-variant font-medium mt-1">Wind &amp; Wolken</p>
+</div>
+<span class="material-symbols-outlined text-outline">lock</span>
+</div>
+<div class="w-full bg-surface-container-high h-2.5 rounded-full overflow-hidden">
+<div class="bg-outline-variant h-full w-0 rounded-full"></div>
+</div>
+</div>
+<!-- Chapter 4 -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm flex flex-col gap-5 opacity-80">
+<div class="flex items-start gap-4">
+<div class="w-14 h-14 rounded-full bg-surface-container-highest flex items-center justify-center flex-shrink-0">
+<span class="font-headline text-2xl font-bold text-outline">04</span>
+</div>
+<div class="flex-1">
+<h4 class="font-headline text-2xl font-bold text-on-surface leading-tight">Vorfahrtsregeln</h4>
+<p class="text-on-surface-variant font-medium mt-1">KVR Basics</p>
+</div>
+<span class="material-symbols-outlined text-outline">lock</span>
+</div>
+<div class="w-full bg-surface-container-high h-2.5 rounded-full overflow-hidden">
+<div class="bg-outline-variant h-full w-0 rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- More Button -->
+<button class="w-full mt-10 py-5 bg-surface-container-low rounded-xl border-2 border-dashed border-outline-variant text-primary font-bold text-lg flex items-center justify-center gap-2">
+<span>Alle 25 Kapitel anzeigen</span>
+<span class="material-symbols-outlined">expand_more</span>
+</button>
+</section>
+</main>
+<!-- Bottom Navigation Bar (Execution of JSON and Shell rules) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-8 pt-4 bg-[#FBF9F5]/90 dark:bg-[#1A1A1A]/90 backdrop-blur-xl shadow-[0_-4px_40px_rgba(0,0,0,0.06)] rounded-t-[3rem]">
+<!-- START tab (ACTIVE) -->
+<a class="flex flex-col items-center justify-center bg-[#8B2E3D] text-white rounded-full px-5 py-2.5 transition-all" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-['Work_Sans'] font-medium text-[12px] uppercase tracking-wide">START</span>
+</a>
+<!-- LERNEN -->
+<a class="flex flex-col items-center justify-center text-[#2C2C2C] dark:text-[#E4E2DE] opacity-60 px-5 py-2.5 hover:bg-[#E4E2DE] dark:hover:bg-gray-800 rounded-full transition-opacity" href="#">
+<span class="material-symbols-outlined">school</span>
+<span class="font-['Work_Sans'] font-medium text-[12px] uppercase tracking-wide">LERNEN</span>
+</a>
+<!-- TUTOR -->
+<a class="flex flex-col items-center justify-center text-[#2C2C2C] dark:text-[#E4E2DE] opacity-60 px-5 py-2.5 hover:bg-[#E4E2DE] dark:hover:bg-gray-800 rounded-full transition-opacity" href="#">
+<span class="material-symbols-outlined">mic</span>
+<span class="font-['Work_Sans'] font-medium text-[12px] uppercase tracking-wide">TUTOR</span>
+</a>
+<!-- HÖRBUCH -->
+<a class="flex flex-col items-center justify-center text-[#2C2C2C] dark:text-[#E4E2DE] opacity-60 px-5 py-2.5 hover:bg-[#E4E2DE] dark:hover:bg-gray-800 rounded-full transition-opacity" href="#">
+<span class="material-symbols-outlined">headphones</span>
+<span class="font-['Work_Sans'] font-medium text-[12px] uppercase tracking-wide">HÖRBUCH</span>
+</a>
+<!-- PRÜFUNG -->
+<a class="flex flex-col items-center justify-center text-[#2C2C2C] dark:text-[#E4E2DE] opacity-60 px-5 py-2.5 hover:bg-[#E4E2DE] dark:hover:bg-gray-800 rounded-full transition-opacity" href="#">
+<span class="material-symbols-outlined">quiz</span>
+<span class="font-['Work_Sans'] font-medium text-[12px] uppercase tracking-wide">PRÜFUNG</span>
+</a>
+</nav>
+</body></html>

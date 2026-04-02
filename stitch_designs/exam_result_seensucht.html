@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html class="light" lang="de"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Work+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-background": "#1b1c1a",
+              "secondary": "#835055",
+              "on-tertiary-container": "#85d1a0",
+              "on-surface": "#1b1c1a",
+              "tertiary": "#004124",
+              "secondary-fixed-dim": "#f6b6bb",
+              "on-surface-variant": "#554243",
+              "surface-container-highest": "#e4e2de",
+              "on-primary-fixed": "#40000f",
+              "surface-variant": "#e4e2de",
+              "surface-container-lowest": "#ffffff",
+              "surface-bright": "#fbf9f5",
+              "on-primary-fixed-variant": "#802635",
+              "on-secondary-fixed-variant": "#68393e",
+              "surface-container": "#efeeea",
+              "on-secondary": "#ffffff",
+              "primary": "#6c1628",
+              "on-tertiary-fixed": "#002110",
+              "on-tertiary": "#ffffff",
+              "error": "#ba1a1a",
+              "on-secondary-fixed": "#340f15",
+              "tertiary-container": "#005b35",
+              "primary-container": "#8b2e3d",
+              "outline-variant": "#dbc0c1",
+              "surface-tint": "#9f3d4c",
+              "surface-container-low": "#f5f3ef",
+              "surface-container-high": "#eae8e4",
+              "on-secondary-container": "#7b4a4f",
+              "on-primary": "#ffffff",
+              "on-error": "#ffffff",
+              "error-container": "#ffdad6",
+              "surface": "#fbf9f5",
+              "outline": "#887273",
+              "tertiary-fixed-dim": "#8ad7a6",
+              "secondary-fixed": "#ffdadb",
+              "on-error-container": "#93000a",
+              "primary-fixed": "#ffdadb",
+              "on-primary-container": "#ffaab1",
+              "inverse-surface": "#30312e",
+              "inverse-on-surface": "#f2f0ed",
+              "background": "#fbf9f5",
+              "surface-dim": "#dbdad6",
+              "primary-fixed-dim": "#ffb2b9",
+              "on-tertiary-fixed-variant": "#00522f",
+              "inverse-primary": "#ffb2b9",
+              "secondary-container": "#ffbec3",
+              "tertiary-fixed": "#a6f3c1"
+            },
+            fontFamily: {
+              "headline": ["Newsreader"],
+              "body": ["Work Sans"],
+              "label": ["Work Sans"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Work Sans', sans-serif; }
+        h1, h2, h3 { font-family: 'Newsreader', serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .sc-active { font-variation-settings: 'FILL' 1; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[#FBF9F5] text-on-background min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="bg-[#FBF9F5] dark:bg-stone-950/80 backdrop-blur-xl flex justify-between items-center px-6 py-4 w-full docked full-width top-0 z-50">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#8B2E3D] dark:text-[#A64D5D]" data-icon="menu">menu</span>
+</div>
+<div class="flex items-center">
+<img alt="Seensucht Logo" class="h-8" data-alt="Sophisticated brand logo for Seensucht featuring elegant serif typography and a nautical compass motif in deep burgundy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfBso1rw9CLRWi9v_2e-H_x1uL3AsfbTLLbgvJN4oBp87fGZlvi6r9zquKxJcFBxfEu72nSmB4GqbBsgPdYM-2G7C6b3L34MBXATALxlb4_uz6moQpF1KZdaYjqY5aT1FQp6-apmhQA-t2E7YAdTTnQpe5Qt1wUXGuHcvKzyxHqdEVdTmD8wZR8jMs_ugs3mo2aKEU0iilRuOlLfMA0iXD15rSbLTjx1M3fZOtgwVBux55qDcVaLWJAanOilL_F4WFPmXJUgAjroM"/>
+</div>
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container">
+<img alt="User avatar" data-alt="Professional headshot of a mature smiling man with grey hair, warm lighting, editorial style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD21D2dyZl-SSnmAsLrYBWm-YeFZw5ZX3rI91aCBsXY9JD6Z72n5MSMGdURmDaqGpDMciHx7UeGXoETrfy45QlXPGGZihDRgHaYnkPOS0Zv0DW3ZxSCUOE3a5ajGNpvG2GT8XllzudYbVrlA0X8UpffFyMBEbvyeWHvbPjBiEpQ8tja3P37_2eW6GJU2_ieSKGhXffM-yAtJ3jG7G1VpEngcf6_5lt1WwOK3WjpL2md6mAPL9X4HZh94u6wgCKmCDz-HGt2dOYLzok"/>
+</div>
+</header>
+<main class="px-6 pt-8 max-w-md mx-auto">
+<!-- Title Section -->
+<div class="text-center mb-10">
+<h1 class="text-4xl italic font-bold tracking-tight text-primary leading-tight">Prüfungsergebnis</h1>
+<p class="text-on-surface-variant font-medium mt-2">Herzlichen Glückwunsch!</p>
+</div>
+<!-- Score Display (Editorial Floating Card) -->
+<div class="relative mb-12">
+<div class="bg-surface-container-lowest rounded-xl p-10 flex flex-col items-center justify-center shadow-[0_8px_40px_rgba(0,0,0,0.04)] border border-white/40">
+<div class="relative">
+<!-- Progress Compass Style -->
+<svg class="w-48 h-48 -rotate-90">
+<circle class="text-surface-container-low" cx="96" cy="96" fill="transparent" r="88" stroke="currentColor" stroke-width="8"></circle>
+<circle class="text-tertiary" cx="96" cy="96" fill="transparent" r="88" stroke="currentColor" stroke-dasharray="552.92" stroke-dashoffset="82.93" stroke-width="8"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="text-6xl font-bold font-headline text-[#800037]">85%</span>
+<span class="text-xs font-label tracking-widest text-on-surface-variant uppercase mt-1">Punkte</span>
+</div>
+</div>
+<div class="mt-8 flex items-center gap-2 bg-tertiary/10 text-tertiary px-6 py-2 rounded-full font-bold tracking-wide">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm font-label uppercase">BESTANDEN</span>
+</div>
+</div>
+<!-- Asymmetric Floating Element -->
+<div class="absolute -bottom-4 -right-2 bg-primary text-on-primary p-4 rounded-lg shadow-xl rotate-3">
+<span class="material-symbols-outlined" data-icon="anchor">anchor</span>
+</div>
+</div>
+<!-- Chapter Breakdown -->
+<section class="mb-10">
+<h2 class="text-2xl font-bold mb-6 text-on-background">Kapitel-Auswertung</h2>
+<div class="space-y-4">
+<!-- Navigation -->
+<div class="bg-surface-container-lowest rounded-lg p-5 flex items-center justify-between border border-white/20">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">Navigation</p>
+<p class="text-sm text-on-surface-variant">Grundlagen &amp; Kartenarbeit</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-lg font-bold text-tertiary">6/6</p>
+</div>
+</div>
+<!-- Seerecht -->
+<div class="bg-surface-container-lowest rounded-lg p-5 flex items-center justify-between border border-white/20">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="gavel">gavel</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">Seerecht</p>
+<p class="text-sm text-on-surface-variant">Regeln &amp; Verordnungen</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-lg font-bold text-tertiary">7/8</p>
+</div>
+</div>
+<!-- Funk -->
+<div class="bg-surface-container-lowest rounded-lg p-5 flex items-center justify-between border border-white/20">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="settings_input_antenna">settings_input_antenna</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">Funk</p>
+<p class="text-sm text-on-surface-variant">Kommunikation auf See</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-lg font-bold text-primary">4/6</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Action -->
+<button class="w-full h-14 bg-[#800037] text-on-primary rounded-xl font-bold text-lg shadow-lg hover:opacity-90 transition-all active:scale-95 flex items-center justify-center gap-2 mb-8">
+<span class="material-symbols-outlined" data-icon="refresh">refresh</span>
+            Nochmal prüfen
+        </button>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-8 pt-4 bg-[#FBF9F5]/90 dark:bg-stone-900/90 backdrop-blur-2xl z-50 rounded-t-[3rem] shadow-[0_-8px_40px_rgba(0,0,0,0.06)] border-t border-white/10">
+<!-- HOME -->
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 p-2 hover:text-[#8B2E3D] transition-colors active:scale-90 tap-highlight-transparent" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Work_Sans'] text-[10px] font-medium tracking-widest uppercase mt-1">HOME</span>
+</a>
+<!-- LERNEN -->
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 p-2 hover:text-[#8B2E3D] transition-colors active:scale-90 tap-highlight-transparent" href="#">
+<span class="material-symbols-outlined" data-icon="school">school</span>
+<span class="font-['Work_Sans'] text-[10px] font-medium tracking-widest uppercase mt-1">LERNEN</span>
+</a>
+<!-- ANRUFEN -->
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 p-2 hover:text-[#8B2E3D] transition-colors active:scale-90 tap-highlight-transparent" href="#">
+<span class="material-symbols-outlined" data-icon="call">call</span>
+<span class="font-['Work_Sans'] text-[10px] font-medium tracking-widest uppercase mt-1">ANRUFEN</span>
+</a>
+<!-- AUDIO -->
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 p-2 hover:text-[#8B2E3D] transition-colors active:scale-90 tap-highlight-transparent" href="#">
+<span class="material-symbols-outlined" data-icon="headset">headset</span>
+<span class="font-['Work_Sans'] text-[10px] font-medium tracking-widest uppercase mt-1">AUDIO</span>
+</a>
+<!-- PRÜFUNG (ACTIVE) -->
+<a class="flex flex-col items-center justify-center text-[#8B2E3D] dark:text-[#FBF9F5] bg-[#8B2E3D]/5 rounded-full p-2 active:scale-90 tap-highlight-transparent" href="#">
+<span class="material-symbols-outlined sc-active" data-icon="assignment">assignment</span>
+<span class="font-['Work_Sans'] text-[10px] font-medium tracking-widest uppercase mt-1">PRÜFUNG</span>
+</a>
+</nav>
+</body></html>

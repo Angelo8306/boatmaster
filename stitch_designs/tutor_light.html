@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html class="light" lang="de"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SeensuchT - KI-Tutor</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Work+Sans:wght@300;400;500;600;700&amp;family=Dancing+Script:wght@700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        background: "#F5F0E8",
+                        card: "#FFFFFF",
+                        primary: "#C0724A",
+                        accent: "#D4467A",
+                        navy: "#1B2A3D",
+                        success: "#4A7C59",
+                        text: "#2C1810",
+                        muted: "#6B5B4E"
+                    },
+                    fontFamily: {
+                        "headline": ["Newsreader", "serif"],
+                        "body": ["Work Sans", "sans-serif"],
+                        "label": ["Work Sans", "sans-serif"],
+                        "logo": ["Dancing Script", "cursive"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+        }
+        .speech-bubble-tail {
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 12px solid transparent;
+            border-right: 12px solid transparent;
+            border-top: 12px solid #FFFFFF;
+        }
+        .wave-ring {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 2px solid #D4467A;
+            border-radius: 50%;
+            opacity: 0.3;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[#F5F0E8] text-[#2C1810] font-body flex flex-col min-h-screen items-center overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="bg-[#1B2A3D] dark:bg-[#0D151F] docked full-width top-0 shadow-lg flex justify-between items-center w-full px-6 h-20 fixed z-50">
+<button class="text-white/80 hover:opacity-80 transition-opacity active:scale-95 duration-150">
+<span class="material-symbols-outlined text-3xl" data-icon="menu">menu</span>
+</button>
+<div class="flex items-center gap-3">
+<img alt="Logo" class="h-10 w-auto" data-alt="Handwritten calligraphy style logo of Seensucht in elegant white script against a dark professional background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDjwIf-jz4HOerhjhkuUZR1WCKkWo4NLgJn-be6pTCpQmK4hg5ONZO0pkkeFhCru1mqY8s4N603kBNCd95NiqfEyaVop33pLl64--MpgsRYcRkmLJtVo7QGgdFyCq1mYa-6yurRyNry06It5frHOz2x7y7Dp8-448B88VshD82_p-EbrfDXtMckvBJTObDpPzngF1g4H-E4RLjQQ8iAgSv7nWmRGLHR1jwEMmJaDI7IvDvTxij2uqaar_GWxXzgXBzZq0D5kng2I0"/>
+<h1 class="font-serif italic text-4xl text-white tracking-tight">SeensuchT</h1>
+</div>
+<div class="h-10 w-10 rounded-full bg-accent border-2 border-white overflow-hidden shadow-md">
+<img alt="User Profile" class="h-full w-full object-cover" data-alt="Close up portrait of an older gentleman with a friendly smile, outdoor lighting on a boat deck" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBz56mJ_bDGrkxwRltf4Hg_a-D-MeSQW-V9wf_T_iuZBNtyR-Mn_Nq8p7yg2BxZhz3XXZw0tsm8EkxkxE8sOrF_oiNces8-f64Rn_UDsCyySOk_uDIwY5PAj3Gj_26D6SypmmqvBbUD7TEn8aSKZtwDMpORNkQXNnIdvtNLH-TYw0qxC_tK_wwiIV5IqFxX7mIdR5kt1OWA24kiMq6Cj-MlvakCKRaluaikxdZbSWoJRXtG0Pc2eU8laoOnSZTjJe9n8CXAoQJSOkw"/>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-[480px] pt-32 pb-32 px-6 flex flex-col items-center">
+<!-- Status Indicator -->
+<div class="mb-6 bg-accent px-4 py-1.5 rounded-full flex items-center gap-2 shadow-sm animate-pulse">
+<span class="w-2 h-2 bg-white rounded-full"></span>
+<span class="font-label text-xs font-bold uppercase tracking-widest text-white">KAI SPRICHT...</span>
+</div>
+<!-- Avatar Area with Wave Rings -->
+<div class="relative w-64 h-64 mb-12 flex items-center justify-center">
+<!-- Simulated Wave Rings (Static in this environment, but styled as requested) -->
+<div class="wave-ring w-[110%] h-[110%] border-accent/20"></div>
+<div class="wave-ring w-[130%] h-[130%] border-accent/10"></div>
+<div class="relative w-56 h-56 rounded-full border-8 border-white shadow-2xl overflow-hidden z-10">
+<img alt="Kapitän Kai" class="w-full h-full object-cover" data-alt="Close-up of a weathered, friendly sea captain with a white beard wearing a traditional dark blue captain's hat with gold nautical insignia" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbEPfanasfnHWiwlFkn4VAXqjN0oRLgJ6mG1B4dwKgfIF1UK1KVeSa4cEMs_aWjfigcNheolmCCIYaGMYaM7-SqVqiojjojXheC4uMkfXo_GapVKxmUdU2vWPB8lQV8OAcsvPqZ8aXYwTH0SlD31m521ZQ5F5ruQyh9KdFfKMX5J_yhHOqcfJsflHIwHCuIXVglqlRFs5jrZYva8sWH2cge76M1un3funntwY3lowrTYKt_n8Lp86aE1eVVQmKdVUHHvWMkhUrxbw"/>
+</div>
+</div>
+<!-- Speech Bubble -->
+<div class="relative w-full bg-white p-8 rounded-3xl shadow-xl mb-12">
+<p class="font-headline text-2xl leading-snug text-center italic text-[#2C1810]">
+                "Ahoi Andreas! Bereit für eine Lerneinheit zum IALA-Bojensystem? Ich stelle dir eine Frage, und du antwortest einfach per Sprache."
+            </p>
+<div class="speech-bubble-tail"></div>
+</div>
+<!-- Mode Tabs -->
+<div class="w-full bg-[#E8E1D5] p-1.5 rounded-2xl flex items-center mb-16 shadow-inner">
+<button class="flex-1 py-3 px-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-200 bg-primary text-white shadow-md">
+                Geführtes Lernen
+            </button>
+<button class="flex-1 py-3 px-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-200 text-[#6B5B4E] hover:text-primary">
+                Freies Gespräch
+            </button>
+<button class="flex-1 py-3 px-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-200 text-[#6B5B4E] hover:text-primary">
+                Prüfung
+            </button>
+</div>
+<!-- Voice Button Area -->
+<div class="flex flex-col items-center">
+<div class="relative group">
+<!-- Pulse Glow -->
+<div class="absolute inset-0 bg-accent rounded-full blur-xl opacity-20 group-hover:opacity-40 transition-opacity"></div>
+<button class="relative bg-accent w-24 h-24 rounded-full flex items-center justify-center text-white shadow-[0_8px_30px_rgb(212,70,122,0.4)] active:scale-90 transition-transform duration-150">
+<span class="material-symbols-outlined text-5xl" data-icon="mic" style="font-variation-settings: 'FILL' 1;">mic</span>
+</button>
+</div>
+<span class="mt-4 font-label text-[10px] font-bold uppercase tracking-[0.2em] text-muted">ZUM SPRECHEN HALTEN</span>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-2 pb-6 pt-3 h-24 bg-[#F5F0E8] dark:bg-[#1B2A3D] shadow-[0_-4px_10px_rgba(44,24,16,0.05)] border-t border-[#6B5B4E]/10">
+<button class="flex flex-col items-center justify-center text-[#6B5B4E] dark:text-[#F5F0E8]/60 hover:text-[#C0724A] transition-colors active:scale-90 duration-200">
+<span class="material-symbols-outlined mb-1" data-icon="anchor">anchor</span>
+<span class="font-sans text-[10px] font-bold uppercase tracking-widest">START</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#6B5B4E] dark:text-[#F5F0E8]/60 hover:text-[#C0724A] transition-colors active:scale-90 duration-200">
+<span class="material-symbols-outlined mb-1" data-icon="menu_book">menu_book</span>
+<span class="font-sans text-[10px] font-bold uppercase tracking-widest">LERNEN</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#D4467A] scale-110 active:scale-90 duration-200">
+<span class="material-symbols-outlined mb-1" data-icon="mic" style="font-variation-settings: 'FILL' 1;">mic</span>
+<span class="font-sans text-[10px] font-bold uppercase tracking-widest">TUTOR</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#6B5B4E] dark:text-[#F5F0E8]/60 hover:text-[#C0724A] transition-colors active:scale-90 duration-200">
+<span class="material-symbols-outlined mb-1" data-icon="headset">headset</span>
+<span class="font-sans text-[10px] font-bold uppercase tracking-widest">HÖRBUCH</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#6B5B4E] dark:text-[#F5F0E8]/60 hover:text-[#C0724A] transition-colors active:scale-90 duration-200">
+<span class="material-symbols-outlined mb-1" data-icon="assignment">assignment</span>
+<span class="font-sans text-[10px] font-bold uppercase tracking-widest">PRÜFUNG</span>
+</button>
+</nav>
+</body></html>

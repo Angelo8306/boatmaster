@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<html class="light" lang="de"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-bright": "#fff8f7",
+              "error": "#ba1a1a",
+              "surface-container": "#ffe8eb",
+              "on-surface": "#25181b",
+              "tertiary-fixed-dim": "#85d999",
+              "primary-container": "#a6144d",
+              "on-surface-variant": "#584145",
+              "secondary-fixed-dim": "#ffb1c2",
+              "inverse-on-surface": "#ffecee",
+              "on-primary-fixed": "#3f0018",
+              "surface": "#fff8f7",
+              "inverse-surface": "#3b2c2f",
+              "primary-fixed": "#ffd9df",
+              "primary-fixed-dim": "#ffb1c2",
+              "on-primary-container": "#ffb7c6",
+              "on-error-container": "#93000a",
+              "secondary": "#94455a",
+              "on-secondary-container": "#7a3045",
+              "surface-variant": "#f5dde0",
+              "on-primary": "#ffffff",
+              "background": "#fff8f7",
+              "on-background": "#25181b",
+              "surface-container-low": "#fff0f1",
+              "error-container": "#ffdad6",
+              "on-tertiary-fixed-variant": "#005227",
+              "secondary-container": "#ff9cb3",
+              "inverse-primary": "#ffb1c2",
+              "secondary-fixed": "#ffd9df",
+              "outline-variant": "#dfbec4",
+              "surface-tint": "#b32056",
+              "surface-container-high": "#fbe2e6",
+              "outline": "#8c7075",
+              "tertiary-fixed": "#a1f5b3",
+              "tertiary-container": "#006330",
+              "on-tertiary-fixed": "#00210c",
+              "tertiary": "#004922",
+              "surface-container-highest": "#f5dde0",
+              "on-tertiary": "#ffffff",
+              "on-tertiary-container": "#89dd9d",
+              "on-secondary-fixed-variant": "#772e42",
+              "on-primary-fixed-variant": "#8f003f",
+              "surface-dim": "#ecd4d8",
+              "on-error": "#ffffff",
+              "primary": "#800037",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-fixed": "#3e0118",
+              "on-secondary": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Newsreader"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .perspective-card {
+        perspective: 1000px;
+      }
+      .glass-effect {
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface-bright text-on-surface font-body min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="fixed top-0 z-50 w-full bg-[#FFF8F7] dark:bg-stone-950/80 backdrop-blur-md flex justify-between items-center px-6 py-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#800037] dark:text-[#A6144D] cursor-pointer hover:opacity-70 transition-opacity active:scale-95 duration-150" data-icon="arrow_back">arrow_back</span>
+<div class="flex flex-col">
+<h1 class="font-['Newsreader'] italic text-2xl tracking-tight text-[#800037] dark:text-[#A6144D]">IALA Tonnensystem</h1>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<img alt="Seensucht Logo" class="h-8 w-8 object-contain" data-alt="Stylized nautical logo featuring a tent or sail symbol in a heritage burgundy color on a transparent background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnCnOp3cydd_KpafdB87Wdbx4Qc-q5xJVbRODmx0omKAijyhuOsGE4C5CsJd_yyCm4EQSV8xJXGIu-48ItnJBnxBb08H8_Udp6-MRCi74oT4ehnQrZa72RQpkqvI7pAV9R7VGizS8BtylXZ4OaQmUu_MLLbOlbglXj5MaPg2wwc_Em7at5q839fiCz3Ie9PX3bgX7Q-x1SpsJKYiPtZploPgfA2keh_58FOm8gm6c4X6_WfC79zqlUEnRknFQYQwQrA7VvahrcRGg"/>
+<span class="font-['Manrope'] font-semibold text-[#800037] dark:text-[#A6144D]">3/14</span>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 mt-20 mb-24 px-6 max-w-2xl mx-auto w-full flex flex-col items-center">
+<!-- Progress Indicators -->
+<div class="flex gap-1.5 mb-10 w-full justify-center">
+<div class="h-1 w-8 rounded-full bg-primary-container"></div>
+<div class="h-1 w-8 rounded-full bg-primary-container"></div>
+<div class="h-1 w-8 rounded-full bg-primary-container"></div>
+<div class="h-1 w-2 rounded-full bg-outline-variant"></div>
+<div class="h-1 w-2 rounded-full bg-outline-variant"></div>
+<div class="h-1 w-2 rounded-full bg-outline-variant"></div>
+<div class="h-1 w-2 rounded-full bg-outline-variant"></div>
+<div class="h-1 w-2 rounded-full bg-outline-variant"></div>
+</div>
+<!-- Flashcard Content -->
+<div class="w-full perspective-card">
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_20px_50px_rgba(37,24,27,0.08)] overflow-hidden border border-outline-variant/10 flex flex-col transition-transform hover:-translate-y-1 duration-500">
+<!-- Image Container with Nautical Asymmetry -->
+<div class="p-4">
+<div class="relative w-full aspect-[4/3] rounded-lg overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="A bright red cylindrical lateral buoy floating on calm deep blue sea water under a soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNqxu-RRsrlvU2UuOfTPOdjMDlCqm-I_7VJXDEYm9vViVTj7kZwGOJ1xrnPZJ5PZ2Yozm5rf2qEvtdzY4iUkKS_6WWN8NOE_V3MYEYqSD2cQTw89vzWEvINcpSnZYciF7fk3Za96PAhhGDSOObJJp4JZR6mwqV9zUIwSoCuVg4DJFt2X55nxWSCmipmbkgKVeg3maZTBWcvtJy3Dn1_CSo9dsebjcPRllxiRHZ5rs_fVLhqGPTOGCVLEfhRDtx-QZyDcnntu7KMCA"/>
+<div class="absolute top-4 left-4">
+<span class="bg-primary/90 text-on-primary text-[10px] font-bold px-2.5 py-1 rounded-sm tracking-[0.15em]">EN</span>
+</div>
+</div>
+</div>
+<!-- Text Content -->
+<div class="px-8 pt-4 pb-12">
+<p class="font-label text-[10px] tracking-[0.2em] font-extrabold text-secondary opacity-60 mb-3">FACHBEGRIFF</p>
+<h2 class="font-headline text-4xl md:text-5xl text-on-surface leading-tight mb-6">Port-Hand Lateral Mark</h2>
+<div class="relative pl-6 before:absolute before:left-0 before:top-2 before:bottom-2 before:w-[1px] before:bg-outline-variant">
+<p class="font-body text-lg text-on-surface-variant leading-relaxed">
+                            The port-hand mark is red, can be in the shape of a cylinder, and shows a red light.
+                        </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Interaction Area -->
+<div class="mt-12 w-full flex items-center justify-between gap-4 px-2">
+<button class="w-14 h-14 rounded-full flex items-center justify-center bg-surface-container-high text-primary hover:bg-primary-container hover:text-on-primary transition-all active:scale-90 duration-200 shadow-sm">
+<span class="material-symbols-outlined text-3xl" data-icon="volume_up">volume_up</span>
+</button>
+<div class="flex-1 flex gap-3">
+<button class="flex-1 py-4 px-6 rounded-full border border-outline-variant text-secondary font-bold font-label tracking-wider hover:bg-surface-container-low transition-colors active:scale-95 duration-150">
+                    Deutsch
+                </button>
+<button class="flex-[2] py-4 px-8 rounded-full bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold font-label tracking-[0.1em] shadow-lg shadow-primary/20 flex items-center justify-center gap-2 hover:opacity-90 active:scale-95 duration-150">
+<span>WEITER</span>
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full flex justify-around items-center px-4 pt-3 pb-6 bg-[#FFF8F7] dark:bg-stone-950/90 backdrop-blur-xl border-t border-[#800037]/10 shadow-[0_-4px_20px_rgba(37,24,27,0.06)] z-50 rounded-t-xl">
+<div class="flex flex-col items-center justify-center text-[#94455A] dark:text-stone-500 opacity-60 hover:opacity-100 transition-all cursor-pointer">
+<span class="material-symbols-outlined text-2xl" data-icon="home">home</span>
+<span class="font-['Manrope'] uppercase tracking-widest text-[10px] font-semibold mt-1">HOME</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#800037] dark:text-[#A6144D] relative after:content-[''] after:absolute after:-bottom-1 after:w-1 after:h-1 after:bg-[#800037] after:rounded-full cursor-pointer">
+<span class="material-symbols-outlined text-2xl" data-icon="school" style="font-variation-settings: 'FILL' 1;">school</span>
+<span class="font-['Manrope'] uppercase tracking-widest text-[10px] font-semibold mt-1">LERNEN</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#94455A] dark:text-stone-500 opacity-60 hover:opacity-100 transition-all cursor-pointer">
+<span class="material-symbols-outlined text-2xl" data-icon="phone_in_talk">phone_in_talk</span>
+<span class="font-['Manrope'] uppercase tracking-widest text-[10px] font-semibold mt-1">ANRUFEN</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#94455A] dark:text-stone-500 opacity-60 hover:opacity-100 transition-all cursor-pointer">
+<span class="material-symbols-outlined text-2xl" data-icon="headphones">headphones</span>
+<span class="font-['Manrope'] uppercase tracking-widest text-[10px] font-semibold mt-1">AUDIO</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#94455A] dark:text-stone-500 opacity-60 hover:opacity-100 transition-all cursor-pointer">
+<span class="material-symbols-outlined text-2xl" data-icon="assignment_turned_in">assignment_turned_in</span>
+<span class="font-['Manrope'] uppercase tracking-widest text-[10px] font-semibold mt-1">PRÜFUNG</span>
+</div>
+</nav>
+</body></html>

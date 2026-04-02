@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html class="light" lang="de"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BoatMaster - Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-high": "#fbe2e6",
+              "on-surface-variant": "#584145",
+              "outline-variant": "#dfbec4",
+              "tertiary-fixed": "#a1f5b3",
+              "on-background": "#25181b",
+              "surface-container-highest": "#f5dde0",
+              "on-error": "#ffffff",
+              "on-surface": "#25181b",
+              "surface-tint": "#b32056",
+              "tertiary": "#004922",
+              "primary-fixed": "#ffd9df",
+              "background": "#fff8f7",
+              "on-tertiary-container": "#89dd9d",
+              "tertiary-fixed-dim": "#85d999",
+              "on-tertiary-fixed-variant": "#005227",
+              "primary-fixed-dim": "#ffb1c2",
+              "secondary-container": "#ff9cb3",
+              "tertiary-container": "#006330",
+              "surface-container-low": "#fff0f1",
+              "inverse-primary": "#ffb1c2",
+              "inverse-on-surface": "#ffecee",
+              "on-primary": "#ffffff",
+              "secondary": "#94455a",
+              "secondary-fixed": "#ffd9df",
+              "surface-bright": "#fff8f7",
+              "primary-container": "#a6144d",
+              "error": "#ba1a1a",
+              "on-primary-fixed": "#3f0018",
+              "on-tertiary-fixed": "#00210c",
+              "on-secondary": "#ffffff",
+              "on-error-container": "#93000a",
+              "surface-container": "#ffe8eb",
+              "on-secondary-fixed": "#3e0118",
+              "on-primary-container": "#ffb7c6",
+              "outline": "#8c7075",
+              "inverse-surface": "#3b2c2f",
+              "on-tertiary": "#ffffff",
+              "surface-variant": "#f5dde0",
+              "surface": "#fff8f7",
+              "on-primary-fixed-variant": "#8f003f",
+              "primary": "#800037",
+              "secondary-fixed-dim": "#ffb1c2",
+              "surface-dim": "#ecd4d8",
+              "on-secondary-container": "#7a3045",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-fixed-variant": "#772e42",
+              "error-container": "#ffdad6"
+            },
+            fontFamily: {
+              "headline": ["Newsreader", "serif"],
+              "body": ["Manrope", "sans-serif"],
+              "label": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        font-family: 'Manrope', sans-serif;
+        background-color: #fff8f7;
+        color: #25181b;
+      }
+      .serif-italic {
+        font-family: 'Newsreader', serif;
+        font-style: italic;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface">
+<!-- TopAppBar -->
+<header class="bg-[#FFF8F7] dark:bg-[#1A0D10] flex justify-between items-center w-full px-6 py-4 h-20 docked full-width top-0 z-40 fixed">
+<div class="flex items-center">
+<span class="material-symbols-outlined text-[#800037] dark:text-[#E0A5B5] hover:opacity-80 transition-opacity cursor-pointer">menu</span>
+</div>
+<div class="flex flex-col items-center">
+<img alt="SEENSUCHT Logo" class="h-8 mb-0.5" data-alt="Minimalist nautical logo for SEENSUCHT brand, featuring clean lines and elegant geometric shapes in deep burgundy color" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXZ4C4lUjQaB7hSqYYyjliWN0ESHgLFUTHwafDInIvUfV-aavegUA8lNUb69FGzQZRXC39UaOdfUnQsV_WChmmHgInvfROt4ut34_dPciCjRkGh-N3or8alTVmX4klGwmHM79UeOzc2lyYQE_osK0aZJIgarY6zKj_js-3_pEqtPURsQzroS7JnmbhHCRPtQiB0a42ADMsmRfd1AGuAtSyuRBSaLUJM4zmHWGsUbm4a_teMSuORM1AycZmAYqfPJD-GIXzHkRYgpc"/>
+<span class="text-2xl font-serif tracking-widest text-[#800037] dark:text-[#E0A5B5]">SEENSUCHT</span>
+</div>
+<div class="flex items-center">
+<div class="w-10 h-10 rounded-full overflow-hidden border border-outline-variant/30 hover:opacity-80 transition-opacity cursor-pointer">
+<img alt="User profile avatar" class="w-full h-full object-cover" data-alt="Portrait of a sophisticated man with a beard wearing a linen shirt, soft natural lighting, high-end editorial style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaSn0mpi7MX9AAB7IJI0T028YieOHefyO2_HUGik_MQvupdxmBOJK3Hdm138LBO9rlUd8DNtYIbkTA6cPP93DlWR8fb3S8S8cYGv7-kiddCiyLbB0iXRH5FwWF-aCNfL1kHfCNJylUWczWcUgs66mcm-5loWxSef9stBrDyQzWyXMb4SdbZyGwWhz-oVqaDq3H3m0GPeDgSUC8EhFxZq7peA4QVeNqfoaSuXXb3bl8FVuhmCxfSaJpA_5cZgQ405u_ZMYvW-ViZJQ"/>
+</div>
+</div>
+</header>
+<main class="pt-28 pb-32 px-6 max-w-4xl mx-auto min-h-screen">
+<!-- Welcome Section -->
+<section class="mb-12">
+<h1 class="text-5xl md:text-6xl font-headline serif-italic leading-tight tracking-tight text-primary">
+                Guten Morgen, Kapitän
+            </h1>
+<p class="text-secondary mt-4 font-body tracking-wide opacity-80">
+                Der Wind steht günstig für eine Lerneinheit.
+            </p>
+</section>
+<!-- Course Progress Card (Bento Style) -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch mb-16">
+<div class="md:col-span-7 bg-surface-container-low rounded-xl p-8 relative overflow-hidden group">
+<div class="relative z-10">
+<span class="text-label uppercase tracking-widest text-secondary text-xs font-bold mb-4 block">Aktueller Kurs</span>
+<h2 class="text-3xl font-headline serif-italic text-on-surface mb-8">Küstenpatent B</h2>
+<div class="flex items-end justify-between mb-2">
+<span class="text-4xl font-headline font-light">64<span class="text-xl">%</span></span>
+<span class="text-secondary text-sm font-body mb-1">22 von 34 Lektionen</span>
+</div>
+<!-- Premium Progress Bar -->
+<div class="h-1.5 w-full bg-outline-variant/30 rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-primary-container transition-all duration-1000 ease-out" style="width: 64%"></div>
+</div>
+</div>
+<!-- Subtle Decorative Element -->
+<div class="absolute -bottom-10 -right-10 opacity-5 group-hover:opacity-10 transition-opacity duration-700">
+<span class="material-symbols-outlined text-[200px]" style="font-variation-settings: 'wght' 100;">explore</span>
+</div>
+</div>
+<div class="md:col-span-5 bg-surface-container rounded-xl overflow-hidden relative min-h-[240px]">
+<img alt="Maritime navigation context" class="absolute inset-0 w-full h-full object-cover brightness-90 contrast-110" data-alt="Atmospheric aerial shot of a luxury yacht cutting through deep turquoise waters, leaving a soft white wake, elegant lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBTK_zrG-4lunX64IsP05Zg43lJliLPJE2weZ1hvv3v8TjakmlLZlWMKjhVB6uPJvjxIlv5am1YQHSkzXJNikommMOwHpPmFUeYE-ZOAMz7iDOYP5w3TTB77h--B1HXKyjRBY6qi7tZDdDb7cv3aX9foEhpW-qHrSMf7U0j4ckEJ1oUe8_3oXN7Q3M1SZ9VmjWjQjasGVgh5Mza3c1hm5rzRvGMVqVUbplzmQTjtv6bQr3vMeoI2_BddckJGvw3xuEF15Q3ZnSuow"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<button class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary py-4 rounded-xl font-body font-semibold tracking-wide flex items-center justify-center gap-2 active:scale-95 transition-transform">
+<span>Kurs fortsetzen</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Chapter List (Editorial Style) -->
+<section class="mb-20">
+<div class="flex justify-between items-baseline mb-10">
+<h3 class="text-2xl font-headline serif-italic text-on-surface">Lehrplan</h3>
+<span class="text-sm font-body text-secondary border-b border-secondary/20 pb-1 cursor-pointer hover:text-primary transition-colors">Alle Module ansehen</span>
+</div>
+<div class="space-y-4">
+<!-- Chapter 1 -->
+<div class="group flex items-center justify-between p-6 bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-300 rounded-xl cursor-pointer">
+<div class="flex items-center gap-6">
+<span class="text-outline-variant font-headline text-2xl italic w-8">01</span>
+<div>
+<h4 class="font-headline text-xl text-on-surface group-hover:text-primary transition-colors">Navigation</h4>
+<p class="text-sm text-secondary font-body opacity-70">Seekarten, Standorte &amp; Kurse</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-1 bg-tertiary-fixed text-on-tertiary-fixed-variant px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-tighter">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>Abgeschlossen</span>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-1 transition-transform">chevron_right</span>
+</div>
+</div>
+<!-- Chapter 2 -->
+<div class="group flex items-center justify-between p-6 bg-surface-container-low border-l-4 border-primary rounded-xl cursor-pointer">
+<div class="flex items-center gap-6">
+<span class="text-primary font-headline text-2xl italic w-8">02</span>
+<div>
+<h4 class="font-headline text-xl text-primary">Seerecht</h4>
+<p class="text-sm text-secondary font-body opacity-70">KVR, SeeSchStrO &amp; Vorschriften</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-xs font-body text-primary font-bold">JETZT LERNEN</span>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">play_circle</span>
+</div>
+</div>
+<!-- Chapter 3 -->
+<div class="group flex items-center justify-between p-6 bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-300 rounded-xl cursor-pointer">
+<div class="flex items-center gap-6">
+<span class="text-outline-variant font-headline text-2xl italic w-8">03</span>
+<div>
+<h4 class="font-headline text-xl text-on-surface group-hover:text-primary transition-colors">Wetterkunde</h4>
+<p class="text-sm text-secondary font-body opacity-70">Wolkenbilder, Winde &amp; Fronten</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-xs font-body text-secondary opacity-50">Gesperrt</span>
+<span class="material-symbols-outlined text-outline opacity-40">lock</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Signature Component: The "Atelier Gauge" -->
+<section class="bg-primary text-on-primary rounded-xl p-8 mb-12 flex flex-col md:flex-row items-center gap-8 shadow-xl shadow-primary/20">
+<div class="relative flex items-center justify-center w-32 h-32">
+<svg class="w-full h-full transform -rotate-90">
+<circle cx="64" cy="64" fill="transparent" r="56" stroke="rgba(255,255,255,0.1)" stroke-width="8"></circle>
+<circle cx="64" cy="64" fill="transparent" r="56" stroke="white" stroke-dasharray="351.8" stroke-dashoffset="126.6" stroke-linecap="round" stroke-width="8"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="text-2xl font-bold">14</span>
+<span class="text-[8px] uppercase tracking-widest opacity-70">Tage Streak</span>
+</div>
+</div>
+<div class="flex-1 text-center md:text-left">
+<h4 class="font-headline text-2xl mb-2 italic">Exzellenz wird zur Gewohnheit</h4>
+<p class="font-body text-on-primary-container text-sm leading-relaxed max-w-sm">
+                    Du hast in dieser Woche bereits 8 Stunden Navigation studiert. Du bist auf dem besten Weg zum Diplom.
+                </p>
+</div>
+<button class="bg-surface text-primary px-8 py-3 rounded-full font-body font-bold text-sm hover:bg-surface-container-low transition-colors active:scale-95 duration-200">
+                Statistik
+            </button>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 bg-[#FFF8F7] dark:bg-[#1A0D10] rounded-t-xl shadow-[0_-4px_20px_rgba(37,24,27,0.06)]">
+<!-- Home (Active) -->
+<a class="flex flex-col items-center justify-center text-[#A6144D] dark:text-[#F8BBD0] bg-[#800037]/5 rounded-xl px-3 py-1 scale-95 duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-[11px] font-sans Manrope uppercase tracking-tighter mt-1">Home</span>
+</a>
+<!-- Learn -->
+<a class="flex flex-col items-center justify-center text-[#94455A] dark:text-[#94455A] hover:text-[#800037] dark:hover:text-[#F8BBD0] transition-colors" href="#">
+<span class="material-symbols-outlined">school</span>
+<span class="text-[11px] font-sans Manrope uppercase tracking-tighter mt-1">Learn</span>
+</a>
+<!-- Tutor -->
+<a class="flex flex-col items-center justify-center text-[#94455A] dark:text-[#94455A] hover:text-[#800037] dark:hover:text-[#F8BBD0] transition-colors" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="text-[11px] font-sans Manrope uppercase tracking-tighter mt-1">Tutor</span>
+</a>
+<!-- Audio -->
+<a class="flex flex-col items-center justify-center text-[#94455A] dark:text-[#94455A] hover:text-[#800037] dark:hover:text-[#F8BBD0] transition-colors" href="#">
+<span class="material-symbols-outlined">headset</span>
+<span class="text-[11px] font-sans Manrope uppercase tracking-tighter mt-1">Audio</span>
+</a>
+<!-- Exam -->
+<a class="flex flex-col items-center justify-center text-[#94455A] dark:text-[#94455A] hover:text-[#800037] dark:hover:text-[#F8BBD0] transition-colors" href="#">
+<span class="material-symbols-outlined">assignment</span>
+<span class="text-[11px] font-sans Manrope uppercase tracking-tighter mt-1">Exam</span>
+</a>
+</nav>
+</body></html>
