@@ -1870,8 +1870,12 @@ function selectChapter(idx) {
   correctCount = 0;
   totalQuiz = 0;
   document.getElementById('topbar-chapter').textContent = CHAPTERS_DATA[idx].title_de;
+  // WICHTIG: Erst Screen anzeigen, DANN Karte rendern
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById('screen-learn').classList.add('active');
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+  document.querySelectorAll('.nav-item')[1].classList.add('active');
   renderCard();
-  switchTab('learn');
 }
 
 // === HÖRBUCH / AUDIOBOOK (multi-chapter) ===
