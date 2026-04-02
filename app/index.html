@@ -2431,14 +2431,23 @@ function tutorStartCall() {
     }, 1000);
   }, 2000);
 
-  // Widget-Button automatisch klicken nach dem Laden
-  setTimeout(() => {
+  // Widget "Start a call" Button automatisch klicken
+  function tryClickStartCall(attempts) {
+    if (attempts <= 0) return;
     const widget = document.querySelector('#tutor-widget-slot elevenlabs-convai');
     if (widget && widget.shadowRoot) {
-      const btn = widget.shadowRoot.querySelector('button');
-      if (btn) btn.click();
+      const btns = widget.shadowRoot.querySelectorAll('button');
+      for (const btn of btns) {
+        if (btn.textContent.trim().toLowerCase().includes('start') || btn.getBoundingClientRect().width > 100) {
+          btn.click();
+          document.getElementById('tutor-call-status').textContent = 'Verbunden';
+          return;
+        }
+      }
     }
-  }, 3000);
+    setTimeout(() => tryClickStartCall(attempts - 1), 1000);
+  }
+  tryClickStartCall(10);
 }
 
 function tutorEndCall() {
