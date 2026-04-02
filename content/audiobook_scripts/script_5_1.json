@@ -1,0 +1,14 @@
+[
+  {"speaker": "dieter", "lang": "de", "text": "Stabilität — warum kippt ein Boot nicht um? Das ist Physik, aber keine Sorge, es ist logisch."},
+  {"speaker": "dieter", "lang": "de", "text": "Zuerst: Ein Körper schwimmt, weil er Wasser verdrängt. Das Gewicht des verdrängten Wassers ist gleich dem Gewicht des Bootes. Das ist das Archimedische Prinzip."},
+  {"speaker": "george", "lang": "en", "text": "Archimedes' principle. The force of buoyancy is equal to the weight of the displaced fluid. Displacement equals volume times water density."},
+  {"speaker": "dieter", "lang": "de", "text": "Jetzt wird es wichtig. Drei Punkte bestimmen, ob ein Boot stabil ist oder kentert."},
+  {"speaker": "george", "lang": "en", "text": "B, the center of buoyancy. G, the center of gravity. And M, the metacenter."},
+  {"speaker": "dieter", "lang": "de", "text": "B ist der Schwerpunkt des Unterwasservolumens. G ist der Gewichtsschwerpunkt — also wo all das Gewicht im Durchschnitt sitzt. Und M ist der Drehpunkt, um den das Boot kippt."},
+  {"speaker": "dieter", "lang": "de", "text": "Die goldene Regel: Das Metazentrum M muss ÜBER dem Schwerpunkt G liegen. Dann ist das Boot stabil. Wenn M unter G fällt, kentert das Boot!"},
+  {"speaker": "george", "lang": "en", "text": "Stable: M is above G. The vessel returns upright. Unstable: M is below G. The vessel capsizes."},
+  {"speaker": "dieter", "lang": "de", "text": "Was heißt das praktisch? Schwere Sachen TIEF lagern. Das senkt den Schwerpunkt G und macht das Boot stabiler. Das Deck nicht überladen — das hebt G und macht es instabil."},
+  {"speaker": "dieter", "lang": "de", "text": "Noch ein wichtiger Wert für die Prüfung: Jede Person an Bord zählt als fünfundsiebzig Kilogramm. Und zwei Kinder unter zehn Jahren zählen als ein Erwachsener."},
+  {"speaker": "george", "lang": "en", "text": "Every person counts as seventy-five kilograms. Two children under ten years count as one adult."},
+  {"speaker": "dieter", "lang": "de", "text": "Zusammengefasst: M über G gleich stabil. Schweres nach unten. Nicht überladen. Fünfundsiebzig Kilo pro Person."}
+]

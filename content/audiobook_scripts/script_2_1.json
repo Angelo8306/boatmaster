@@ -1,0 +1,17 @@
+[
+  {"speaker": "dieter", "lang": "de", "text": "Jetzt reden wir über Bootsmotoren. Das musst du für die Prüfung wissen — welche Typen es gibt und wie du den Motor vor der Fahrt prüfst."},
+  {"speaker": "dieter", "lang": "de", "text": "Die meisten Bootsmotoren sind Verbrennungsmotoren. Es gibt zwei Haupttypen: Benzinmotoren und Dieselmotoren. Auf Englisch:"},
+  {"speaker": "george", "lang": "en", "text": "Gasoline engine, also called Otto engine. And diesel engine. Both are internal combustion engines."},
+  {"speaker": "dieter", "lang": "de", "text": "Der Hauptunterschied: Ein Benzinmotor saugt ein Gemisch aus Kraftstoff und Luft an und zündet es mit einer Zündkerze. Auf Englisch:"},
+  {"speaker": "george", "lang": "en", "text": "Spark plug ignition. The gasoline engine sucks in a fuel-air mixture and ignites it with a spark plug."},
+  {"speaker": "dieter", "lang": "de", "text": "Ein Dieselmotor dagegen saugt nur Luft an, verdichtet sie so stark, dass sie extrem heiß wird, und spritzt dann Kraftstoff ein, der sich von selbst entzündet."},
+  {"speaker": "george", "lang": "en", "text": "Compression ignition. The diesel engine sucks in air only, compresses it, and the injected fuel self-ignites from the heat."},
+  {"speaker": "dieter", "lang": "de", "text": "Diesel verdichtet viel stärker — Verhältnis vierzehn zu eins bis fünfundzwanzig zu eins. Benzin nur acht zu eins bis zwölf zu eins. Höhere Verdichtung bedeutet besserer Wirkungsgrad."},
+  {"speaker": "dieter", "lang": "de", "text": "Dann gibt es noch Zweitakter und Viertakter. Auf Englisch:"},
+  {"speaker": "george", "lang": "en", "text": "Two-stroke and four-stroke engines. A four-stroke engine completes one cycle in four strokes: intake, compression, power, and exhaust."},
+  {"speaker": "dieter", "lang": "de", "text": "Jetzt zum Wichtigsten für die Praxis: Was musst du VOR dem Motorstart prüfen? Auf Englisch heißt das:"},
+  {"speaker": "george", "lang": "en", "text": "Pre-start checklist. Check coolant level, engine oil level, battery voltage, fuel level, and gear unit oil level. Visually inspect for leaks."},
+  {"speaker": "dieter", "lang": "de", "text": "Und NACH dem Start prüfst du: Öldruck, ob die Lichtmaschine lädt — die Spannung muss über dreizehn Volt sein bei einem Zwölf-Volt-System — und ob Kühlwasser aus dem Auspuff kommt."},
+  {"speaker": "george", "lang": "en", "text": "After starting: check oil pressure, alternator charging, listen for unusual sounds, and verify cooling water flow at the exhaust."},
+  {"speaker": "dieter", "lang": "de", "text": "Merke dir: Vor dem Start alles prüfen. Nach dem Start auf Öldruck, Ladung und Kühlwasser achten. Und natürlich: bevor du losfährst, prüfe ob Leinen oder Hindernisse am Propeller sind!"}
+]

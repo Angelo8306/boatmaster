@@ -1,0 +1,18 @@
+[
+  {"speaker": "dieter", "lang": "de", "text": "Wetter und Winde — in der Adria ist das überlebenswichtig. Die Winde dort haben eigene Namen und eigene Gefahren."},
+  {"speaker": "dieter", "lang": "de", "text": "Der gefährlichste Wind ist die Bora — ein kalter, böiger Nordostwind, der von den Bergen herabfällt."},
+  {"speaker": "george", "lang": "en", "text": "Bora. A strong, cold, dry northeasterly wind. Falls from the mountains to the sea. Can reach gale force. Most dangerous in winter."},
+  {"speaker": "dieter", "lang": "de", "text": "Die Bora kann plötzlich kommen und extrem heftige Böen bringen. Besonders im Winter. Wenn sie angekündigt ist, bleibst du besser im Hafen."},
+  {"speaker": "dieter", "lang": "de", "text": "Der zweite wichtige Wind ist der Jugo — auch Schirokko genannt. Ein warmer, feuchter Südostwind."},
+  {"speaker": "george", "lang": "en", "text": "Jugo, also called Scirocco. A warm, humid southeasterly wind. Brings rain, reduced visibility, and heavy swell. Can last several days."},
+  {"speaker": "dieter", "lang": "de", "text": "Der Jugo bringt Regen, schlechte Sicht und hohe Wellen. Er kann tagelang anhalten. Unangenehm, aber vorhersehbarer als die Bora."},
+  {"speaker": "dieter", "lang": "de", "text": "Und dann gibt es den Maestral — den Freund jedes Seglers."},
+  {"speaker": "george", "lang": "en", "text": "Maestral. A pleasant northwesterly sea breeze in summer. Starts late morning, peaks in the afternoon at three to five Beaufort, dies at sunset."},
+  {"speaker": "dieter", "lang": "de", "text": "Der Maestral ist die typische Sommer-Seebrise. Kommt vormittags, ist nachmittags am stärksten und hört abends auf. Perfekt zum Segeln."},
+  {"speaker": "dieter", "lang": "de", "text": "Die Windstärke wird in Beaufort gemessen. Null ist Windstille, drei ist eine leichte Brise mit sieben bis zehn Knoten, sechs ist starker Wind, acht ist Sturm, zwölf ist Orkan."},
+  {"speaker": "george", "lang": "en", "text": "Beaufort scale. Zero is calm. Three is gentle breeze, seven to ten knots. Six is strong breeze, twenty-two to twenty-seven knots. Eight is gale. Twelve is hurricane, over sixty-four knots."},
+  {"speaker": "dieter", "lang": "de", "text": "Zeichen für schlechtes Wetter: Barometer fällt schnell, Wolken bauen sich aus Westen auf, Dünung nimmt zu ohne lokalen Wind, und Morgenrot ist eine Warnung."},
+  {"speaker": "george", "lang": "en", "text": "Red sky in the morning, sailors take warning. Red sky at night, sailors delight."},
+  {"speaker": "dieter", "lang": "de", "text": "Vor jeder Fahrt den Wetterbericht prüfen! In Kroatien auf UKW Kanal siebenundsechzig und dreiundsiebzig."},
+  {"speaker": "dieter", "lang": "de", "text": "Merke: Bora aus Nordost ist gefährlich, Jugo aus Südost bringt Regen, Maestral aus Nordwest ist der Sommerwind. Und immer den Wetterbericht checken!"}
+]

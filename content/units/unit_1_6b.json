@@ -1,0 +1,69 @@
+[
+  {
+    "type": "vocab",
+    "term_en": "GPS (Global Positioning System)",
+    "definition_en": "Satellite navigation system providing position, speed, and time worldwide. Uses signals from at least 4 satellites. Accuracy about 10-15 meters.",
+    "term_de": "GPS (Globales Positionierungssystem)",
+    "definition_de": "Satellitennavigationssystem fuer Position, Geschwindigkeit und Zeit weltweit. Nutzt Signale von mindestens 4 Satelliten. Genauigkeit ca. 10-15 Meter.",
+    "image": "p056_img00.jpeg"
+  },
+  {
+    "type": "vocab",
+    "term_en": "Echo Sounder / Depth Sounder",
+    "definition_en": "Electronic device that measures water depth by sending sound pulses to the seabed and measuring the return time. Essential for safe navigation in shallow waters.",
+    "term_de": "Echolot / Tiefenmesser",
+    "definition_de": "Elektronisches Geraet zur Messung der Wassertiefe durch Senden von Schallimpulsen zum Meeresboden und Messen der Ruecklaufzeit.",
+    "image": "p056_img02.jpeg"
+  },
+  {
+    "type": "vocab",
+    "term_en": "Autopilot",
+    "definition_en": "Electronic system that automatically steers the vessel on a set course. Connected to compass/GPS. The helmsman can set a heading and the autopilot maintains it.",
+    "term_de": "Autopilot",
+    "definition_de": "Elektronisches System das das Boot automatisch auf einem eingestellten Kurs steuert. Verbunden mit Kompass/GPS. Der Steuermann stellt den Kurs ein."
+  },
+  {
+    "type": "learn",
+    "title_en": "GPS Navigation",
+    "content_en": "GPS provides:\n• Position (latitude/longitude) — accuracy ~10-15m\n• Speed over ground (SOG)\n• Course over ground (COG)\n• Time (UTC)\n\nWaypoint navigation: enter waypoints (positions), GPS calculates:\n• Bearing to waypoint\n• Distance to waypoint\n• Cross Track Error (XTE) — how far off course\n• Estimated Time of Arrival (ETA)\n\nIMPORTANT: GPS shows position over GROUND. Wind and current can make your course through water different from your track over ground!",
+    "content_de": "GPS liefert:\n• Position (Breite/Laenge) — Genauigkeit ~10-15m\n• Geschwindigkeit ueber Grund (SOG)\n• Kurs ueber Grund (COG)\n• Zeit (UTC)\n\nWegpunkt-Navigation: Wegpunkte eingeben, GPS berechnet Peilung, Entfernung, Kursabweichung (XTE), Ankunftszeit (ETA).\n\nWICHTIG: GPS zeigt Position ueber GRUND. Wind und Stroemung koennen den Kurs durchs Wasser vom Kurs ueber Grund abweichen lassen!"
+  },
+  {
+    "type": "learn",
+    "title_en": "Speed Measurement at Sea",
+    "content_en": "Two types of speed:\n\n1. Speed Through Water (STW) — measured by log/speedometer, shows boat speed relative to water\n2. Speed Over Ground (SOG) — measured by GPS, shows actual speed over the seabed\n\nDifference is caused by current:\n• With current: SOG > STW\n• Against current: SOG < STW\n\nSpeedometer types:\n• Paddle wheel — mechanical, measures STW\n• Pitot tube — measures water pressure = speed\n• GPS — calculates SOG from position changes\n• Doppler log — uses sound waves, very accurate",
+    "content_de": "Zwei Geschwindigkeitsarten:\n\n1. Fahrt durchs Wasser (STW) — vom Log/Speedometer gemessen\n2. Fahrt ueber Grund (SOG) — vom GPS gemessen\n\nDer Unterschied entsteht durch Stroemung:\n• Mit Stroemung: SOG > STW\n• Gegen Stroemung: SOG < STW"
+  },
+  {
+    "type": "quiz",
+    "question_en": "What is the difference between SOG and STW?",
+    "question_de": "Was ist der Unterschied zwischen SOG und STW?",
+    "options": [
+      {
+        "text": "SOG is speed over ground (GPS), STW is speed through water (log)",
+        "correct": true
+      },
+      {
+        "text": "SOG is measured by the speedometer, STW by GPS",
+        "correct": false
+      },
+      {
+        "text": "They are the same measurement in different units",
+        "correct": false
+      },
+      {
+        "text": "SOG includes wind speed, STW does not",
+        "correct": false
+      }
+    ],
+    "explanation_en": "SOG (Speed Over Ground) is measured by GPS and shows actual movement over the seabed. STW (Speed Through Water) is measured by a log/speedometer and shows speed relative to the water. The difference is caused by current.",
+    "explanation_de": "SOG (Fahrt ueber Grund) wird vom GPS gemessen. STW (Fahrt durchs Wasser) wird vom Log gemessen. Der Unterschied entsteht durch Stroemung."
+  },
+  {
+    "type": "quiz_free",
+    "question_en": "Why should you not rely solely on GPS for navigation? What are its limitations?",
+    "question_de": "Warum sollte man sich nicht allein auf GPS verlassen? Was sind seine Grenzen?",
+    "model_answer_en": "GPS limitations include: signal loss or degradation near cliffs or under bridges, possible satellite failures, position accuracy of only 10-15 meters which is insufficient near dangers, and GPS shows position over ground but not hazards ahead. Chart data may be inaccurate. Electronics can fail due to power loss or water damage. Always use GPS in combination with visual observations, depth sounder, radar, and paper charts as backup.",
+    "model_answer_de": "GPS-Einschraenkungen: Signalverlust an Klippen oder unter Bruecken, moegliche Satellitenausfaelle, Genauigkeit nur 10-15m was nahe an Gefahren nicht reicht, zeigt nur Position ueber Grund aber keine Gefahren voraus. Kartendaten koennen ungenau sein. Elektronik kann durch Stromausfall oder Wasser ausfallen. Immer GPS mit visuellen Beobachtungen, Echolot, Radar und Papierkarten kombinieren."
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {"speaker": "dieter", "lang": "de", "text": "In dieser Lektion geht es um Koordinaten und Navigation. Jeder Punkt auf der Erde hat eine genaue Adresse — seine Koordinaten. Die bestehen aus zwei Werten."},
+  {"speaker": "george", "lang": "en", "text": "Latitude and longitude. Together they define any position on Earth."},
+  {"speaker": "dieter", "lang": "de", "text": "Breitengrad — auf Englisch latitude — ist der Abstand vom Äquator. Er geht von null bis neunzig Grad, entweder nach Norden oder Süden."},
+  {"speaker": "george", "lang": "en", "text": "Latitude. Angular distance north or south of the equator. Zero to ninety degrees. N for north, S for south."},
+  {"speaker": "dieter", "lang": "de", "text": "Längengrad — auf Englisch longitude — ist der Abstand vom Nullmeridian in Greenwich. Er geht von null bis hundertachtzig Grad, nach Osten oder Westen."},
+  {"speaker": "george", "lang": "en", "text": "Longitude. Angular distance east or west of the Greenwich meridian. Zero to one hundred eighty degrees."},
+  {"speaker": "dieter", "lang": "de", "text": "Ein Beispiel: Split in Kroatien liegt bei dreiundvierzig Grad dreißig Minuten Nord, sechzehn Grad sechsundzwanzig Minuten Ost. Das Format ist Grad, Minuten, Sekunden."},
+  {"speaker": "dieter", "lang": "de", "text": "Jetzt zur Geschwindigkeit auf See. Die wird in Knoten gemessen. Auf Englisch:"},
+  {"speaker": "george", "lang": "en", "text": "Knot. One knot equals one nautical mile per hour. Speed equals distance divided by time."},
+  {"speaker": "dieter", "lang": "de", "text": "Also wenn du fünfzehn Seemeilen in drei Stunden fährst, bist du mit fünf Knoten unterwegs. Einfache Division."},
+  {"speaker": "dieter", "lang": "de", "text": "Dann gibt es noch den Kurs — die Richtung in die du fährst. Auf Englisch:"},
+  {"speaker": "george", "lang": "en", "text": "Course. The intended direction of travel, measured as an angle from north, clockwise, from zero to three hundred sixty degrees."},
+  {"speaker": "dieter", "lang": "de", "text": "Und die Peilung — damit bestimmst du die Richtung zu einem Objekt, zum Beispiel einem Leuchtturm. Auf Englisch:"},
+  {"speaker": "george", "lang": "en", "text": "Bearing or azimuth. The direction of an object from the observer, measured clockwise from north."},
+  {"speaker": "dieter", "lang": "de", "text": "Nochmal zusammengefasst: Breite ist Nord-Süd, Länge ist Ost-West. Eine Breitenminute gleich eine Seemeile. Geschwindigkeit in Knoten. Kurs und Peilung im Uhrzeigersinn von Nord."}
+]

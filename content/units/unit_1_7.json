@@ -1,0 +1,60 @@
+[
+  {
+    "type": "vocab",
+    "term_en": "Passage Plan",
+    "definition_en": "A detailed plan for a voyage including route, waypoints, weather forecast, tides, fuel requirements, and emergency procedures. Must be prepared before departure.",
+    "term_de": "Toernplanung / Reiseplan",
+    "definition_de": "Ein detaillierter Plan fuer eine Seereise mit Route, Wegpunkten, Wetterbericht, Gezeiten, Treibstoffbedarf und Notfallverfahren. Muss vor Abfahrt erstellt werden."
+  },
+  {
+    "type": "vocab",
+    "term_en": "Waypoint",
+    "definition_en": "A specific geographic position (latitude/longitude) along a planned route. Used for GPS navigation and course changes.",
+    "term_de": "Wegpunkt",
+    "definition_de": "Eine bestimmte geographische Position (Breite/Laenge) entlang einer geplanten Route. Fuer GPS-Navigation und Kurswechsel."
+  },
+  {
+    "type": "learn",
+    "title_en": "Voyage Preparation Steps",
+    "content_en": "Before departure, prepare:\n\n1. CHARTS — select correct charts, check they are up-to-date (Notices to Mariners)\n2. ROUTE — plot on chart, mark waypoints, note distances and courses for each leg\n3. WEATHER — check forecast for entire voyage period, know wind and sea conditions\n4. TIDES & CURRENTS — check tidal information for departure, arrival, and any narrow passages\n5. FUEL — calculate fuel consumption, ensure enough fuel plus reserve (minimum 1/3 extra)\n6. SAFETY — check all safety equipment, brief crew on emergency procedures\n7. COMMUNICATIONS — test VHF radio, inform someone ashore of your plans\n8. DOCUMENTS — boat registration, insurance, crew list, passports (international waters)",
+    "content_de": "Vor der Abfahrt vorbereiten:\n\n1. KARTEN — richtige Karten waehlen, Aktualitaet pruefen\n2. ROUTE — auf der Karte einzeichnen, Wegpunkte markieren\n3. WETTER — Vorhersage fuer die gesamte Reisedauer pruefen\n4. GEZEITEN & STROEMUNGEN — Gezeiteninformationen pruefen\n5. TREIBSTOFF — Verbrauch berechnen, Reserve einplanen (min. 1/3 extra)\n6. SICHERHEIT — alle Sicherheitsausruestung pruefen, Crew einweisen\n7. FUNK — VHF-Radio testen, Person an Land informieren\n8. DOKUMENTE — Registrierung, Versicherung, Crewliste, Paesse"
+  },
+  {
+    "type": "learn",
+    "title_en": "Route Selection Criteria",
+    "content_en": "When choosing your route, consider:\n\n• SAFETY — avoid dangers (rocks, shallows, traffic separation schemes)\n• WEATHER — choose lee side of islands in strong winds, avoid open crossings in bad conditions\n• DISTANCE — shortest safe route saves fuel and time\n• SHELTER — plan alternative harbors/anchorages along the route in case conditions change\n• TRAFFIC — avoid busy shipping lanes where possible\n• CURRENT — use favorable currents, avoid adverse ones\n• DAYLIGHT — plan to arrive before dark if unfamiliar with the harbor",
+    "content_de": "Bei der Routenwahl beachten:\n\n• SICHERHEIT — Gefahren meiden (Felsen, Untiefen, Verkehrstrennungsgebiete)\n• WETTER — bei starkem Wind die Leeseite von Inseln waehlen\n• ENTFERNUNG — kuerzeste sichere Route spart Treibstoff und Zeit\n• SCHUTZ — Alternative Haefen/Ankerplaetze entlang der Route planen\n• VERKEHR — Stark befahrene Schifffahrtswege meiden\n• STROEMUNG — guenstige Stroemungen nutzen\n• TAGESLICHT — bei unbekanntem Hafen vor Dunkelheit ankommen"
+  },
+  {
+    "type": "quiz",
+    "question_en": "What is the recommended minimum fuel reserve for a maritime voyage?",
+    "question_de": "Wie viel Treibstoffreserve wird mindestens fuer eine Seereise empfohlen?",
+    "options": [
+      {
+        "text": "10% extra",
+        "correct": false
+      },
+      {
+        "text": "20% extra",
+        "correct": false
+      },
+      {
+        "text": "33% extra (one-third)",
+        "correct": true
+      },
+      {
+        "text": "50% extra",
+        "correct": false
+      }
+    ],
+    "explanation_en": "The rule of thirds: 1/3 for the outward journey, 1/3 for the return, 1/3 reserve. So you should carry at least 33% more fuel than calculated for the planned voyage.",
+    "explanation_de": "Die Drittel-Regel: 1/3 fuer die Hinfahrt, 1/3 fuer die Rueckfahrt, 1/3 Reserve. Mindestens 33% mehr Treibstoff als berechnet mitnehmen."
+  },
+  {
+    "type": "quiz_free",
+    "question_en": "List the essential steps for planning a safe maritime voyage.",
+    "question_de": "Nenne die wesentlichen Schritte fuer die Planung einer sicheren Seereise.",
+    "model_answer_en": "Essential voyage planning steps: 1) Select and check up-to-date charts for the area. 2) Plot the route with waypoints, noting courses and distances for each leg. 3) Check weather forecasts for the entire voyage period. 4) Verify tidal information for departure, arrival and narrow passages. 5) Calculate fuel requirements with a minimum one-third reserve. 6) Inspect all safety equipment and brief the crew on emergency procedures. 7) Test VHF radio and inform someone ashore of your plans. 8) Prepare required documents: registration, insurance, crew list.",
+    "model_answer_de": "Wesentliche Schritte: 1) Aktuelle Karten waehlen und pruefen. 2) Route mit Wegpunkten einzeichnen, Kurse und Entfernungen notieren. 3) Wetter fuer die gesamte Reisedauer pruefen. 4) Gezeiten pruefen. 5) Treibstoffbedarf mit mindestens 1/3 Reserve berechnen. 6) Sicherheitsausruestung pruefen, Crew einweisen. 7) VHF-Radio testen, Person an Land informieren. 8) Dokumente vorbereiten."
+  }
+]

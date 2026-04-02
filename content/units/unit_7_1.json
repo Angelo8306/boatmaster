@@ -1,0 +1,77 @@
+[
+  {
+    "type": "vocab",
+    "term_en": "Beaufort Scale",
+    "definition_en": "Scale from 0-12 measuring wind force. 0 = calm, 3 = gentle breeze (7-10 kn), 6 = strong breeze (22-27 kn), 8 = gale (34-40 kn), 12 = hurricane (>64 kn).",
+    "term_de": "Beaufort-Skala",
+    "definition_de": "Skala von 0-12 für Windstärke. 0 = Windstille, 3 = schwache Brise (7-10 kn), 6 = starker Wind (22-27 kn), 8 = Sturm (34-40 kn), 12 = Orkan (>64 kn)."
+  },
+  {
+    "type": "vocab",
+    "term_en": "Bora",
+    "definition_en": "A strong, cold, dry northeasterly wind common on the Croatian coast. Can reach gale force. Falls from the mountains to the sea. Most dangerous in winter.",
+    "term_de": "Bora",
+    "definition_de": "Ein starker, kalter, trockener Nordostwind an der kroatischen Küste. Kann Sturmstärke erreichen. Fällt von den Bergen zum Meer. Am gefährlichsten im Winter."
+  },
+  {
+    "type": "vocab",
+    "term_en": "Jugo (Scirocco)",
+    "definition_en": "A warm, humid southeasterly wind in the Adriatic. Brings rain, reduced visibility, and heavy swell. Can last several days. Warning signs: rising barometer, hazy sky.",
+    "term_de": "Jugo (Schirokko)",
+    "definition_de": "Ein warmer, feuchter Südostwind in der Adria. Bringt Regen, schlechte Sicht und Dünung. Kann tagelang dauern."
+  },
+  {
+    "type": "vocab",
+    "term_en": "Maestral",
+    "definition_en": "A pleasant northwesterly sea breeze in the Adriatic during summer. Starts late morning, peaks afternoon, dies at sunset. Good sailing wind, 3-5 Beaufort.",
+    "term_de": "Maestral",
+    "definition_de": "Angenehmer Nordwestwind (Seebrise) in der Adria im Sommer. Beginnt am späten Vormittag, Höhepunkt nachmittags, endet bei Sonnenuntergang. 3-5 Beaufort."
+  },
+  {
+    "type": "learn",
+    "title_en": "Adriatic Winds",
+    "content_en": "The most important Adriatic winds:\n\n• BORA (NE) — cold, gusty, falls from mountains. Dangerous! Can come suddenly. Winter wind.\n• JUGO/SCIROCCO (SE) — warm, humid, brings rain and swell. Can last days.\n• MAESTRAL (NW) — summer sea breeze, pleasant, predictable. Best for sailing.\n• TRAMONTANA (N) — cold north wind, usually short.\n• LEVANTE (E) — east wind, relatively rare.\n• LIBECCIO (SW) — can bring storms.\n• PONENTE (W) — west wind.\n\nWind rose: N=Tramontana, NE=Bora, E=Levante, SE=Jugo, S=Ostro, SW=Libeccio, W=Ponente, NW=Maestral",
+    "content_de": "Die wichtigsten Adriawinde:\n\n• BORA (NO) — kalt, böig, fällt von Bergen. Gefährlich! Kann plötzlich kommen. Winterwind.\n• JUGO/SCHIROKKO (SO) — warm, feucht, bringt Regen und Dünung.\n• MAESTRAL (NW) — Sommer-Seebrise, angenehm, vorhersagbar.\n• TRAMONTANA (N) — kalter Nordwind, meist kurz.\n• LEVANTE (O) — Ostwind, relativ selten.\n• LIBECCIO (SW) — kann Stürme bringen.\n• PONENTE (W) — Westwind.",
+    "image": "p095_img00.jpeg"
+  },
+  {
+    "type": "learn",
+    "title_en": "Weather Forecasting for Sailors",
+    "content_en": "Signs of approaching bad weather:\n• Barometer dropping rapidly\n• Clouds building from west/southwest\n• Wind direction changing (backing)\n• Increasing swell with no local wind\n• Halo around sun or moon\n• Red sky in the morning (warning!)\n\nSigns of good weather:\n• Barometer rising steadily\n• Red sky at night (sailors' delight)\n• Clear, stable conditions\n• Regular sea breeze pattern (maestral)\n\nAlways check weather forecast before departure!\nCroatian coast: VHF broadcasts on Channel 67 and 73",
+    "content_de": "Zeichen für schlechtes Wetter:\n• Barometer fällt schnell\n• Wolken bauen sich aus W/SW auf\n• Windrichtung dreht (rückdrehend)\n• Zunehmende Dünung ohne lokalen Wind\n• Halo um Sonne oder Mond\n• Morgenrot = Warnung!\n\nZeichen für gutes Wetter:\n• Barometer steigt stetig\n• Abendrot = gutes Wetter\n• Klare, stabile Verhältnisse\n• Regelmäßiges Maestral-Muster\n\nVor Abfahrt IMMER Wetterbericht prüfen!\nKroatische Küste: UKW Kanal 67 und 73",
+    "image": "p101_img00.jpeg"
+  },
+  {
+    "type": "quiz",
+    "question_en": "Which wind is the most dangerous on the Croatian coast?",
+    "question_de": "Welcher Wind ist an der kroatischen Küste am gefährlichsten?",
+    "options": [
+      { "text": "Maestral (NW)", "correct": false },
+      { "text": "Bora (NE)", "correct": true },
+      { "text": "Ponente (W)", "correct": false },
+      { "text": "Tramontana (N)", "correct": false }
+    ],
+    "explanation_en": "The Bora is the most dangerous Adriatic wind. It's a strong, cold northeasterly that falls from the mountains with violent gusts. It can come suddenly and reach gale force, especially in winter.",
+    "explanation_de": "Die Bora ist der gefährlichste Adriawind. Ein starker, kalter Nordostwind, der mit heftigen Böen von den Bergen fällt. Kann plötzlich kommen und Sturmstärke erreichen."
+  },
+  {
+    "type": "quiz",
+    "question_en": "The Maestral is a...",
+    "question_de": "Der Maestral ist ein...",
+    "options": [
+      { "text": "Cold winter storm from the northeast", "correct": false },
+      { "text": "Pleasant summer sea breeze from the northwest", "correct": true },
+      { "text": "Warm humid wind from the southeast", "correct": false },
+      { "text": "Dangerous east wind", "correct": false }
+    ],
+    "explanation_en": "The Maestral is a pleasant northwesterly sea breeze typical in Adriatic summers. It starts late morning, peaks in the afternoon (3-5 Beaufort), and dies at sunset. It's the ideal sailing wind.",
+    "explanation_de": "Der Maestral ist eine angenehme nordwestliche Seebrise im Adria-Sommer. Beginnt am späten Vormittag, Höhepunkt nachmittags (3-5 Beaufort), endet bei Sonnenuntergang. Idealer Segelwind."
+  },
+  {
+    "type": "quiz_free",
+    "question_en": "Name the three most important Adriatic winds and describe their characteristics.",
+    "question_de": "Nenne die drei wichtigsten Adriawinde und beschreibe ihre Eigenschaften.",
+    "model_answer_en": "The three most important Adriatic winds are: 1) Bora (NE) — a cold, dry, gusty wind that falls from the mountains. It's the most dangerous wind, can come suddenly and reach gale force, especially in winter. 2) Jugo/Scirocco (SE) — a warm, humid wind that brings rain, reduced visibility, and heavy swell. It can last several days. 3) Maestral (NW) — a pleasant summer sea breeze, starts late morning, peaks in the afternoon at 3-5 Beaufort, and dies at sunset. It's the ideal sailing wind.",
+    "model_answer_de": "Die drei wichtigsten Adriawinde sind: 1) Bora (NO) — kalter, trockener, böiger Wind von den Bergen. Gefährlichster Wind, kann plötzlich kommen, besonders im Winter Sturmstärke. 2) Jugo/Schirokko (SO) — warmer, feuchter Wind, bringt Regen, schlechte Sicht und Dünung. Kann tagelang dauern. 3) Maestral (NW) — angenehme Sommer-Seebrise, beginnt vormittags, Höhepunkt nachmittags bei 3-5 Beaufort, endet bei Sonnenuntergang."
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Törnplanung — bevor du den Hafen verlässt, musst du deine Reise gründlich planen. Das ist Pflicht und kann in der Prüfung abgefragt werden."
+  },
+  {
+    "speaker": "george",
+    "lang": "en",
+    "text": "Passage planning. A detailed plan for a voyage including route, waypoints, weather, tides, fuel, and safety. Must be prepared before departure."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Die wichtigsten Schritte: Erstens, wähle die richtigen Seekarten und prüfe, ob sie aktuell sind. Zweitens, zeichne die Route ein und markiere Wegpunkte."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Drittens, prüfe den Wetterbericht für die gesamte Reisedauer. Viertens, berechne den Treibstoffbedarf. Und hier gilt die Drittel-Regel:"
+  },
+  {
+    "speaker": "george",
+    "lang": "en",
+    "text": "The rule of thirds for fuel: one-third for the outward journey, one-third for the return, one-third as reserve. Always carry at least thirty-three percent more fuel than calculated."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Ein Drittel hin, ein Drittel zurück, ein Drittel Reserve. Also mindestens dreiunddreißig Prozent mehr Treibstoff als berechnet."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Fünftens, prüfe die Sicherheitsausrüstung und weise die Crew in Notfallverfahren ein. Sechstens, teste den Funk und informiere jemanden an Land über deine Pläne."
+  },
+  {
+    "speaker": "george",
+    "lang": "en",
+    "text": "Before departure: check charts, plot route, check weather, calculate fuel, inspect safety equipment, test VHF radio, inform someone ashore."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Bei der Routenwahl: Wähle die sicherste Route, nicht nur die kürzeste. Plane Alternative-Häfen entlang der Strecke ein, falls das Wetter umschlägt. Und bei unbekanntem Hafen: vor Einbruch der Dunkelheit ankommen!"
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Zusammenfassung: Karten prüfen, Route planen, Wetter checken, Treibstoff nach Drittel-Regel, Sicherheitsausrüstung kontrollieren, Funk testen, Plan an Land mitteilen."
+  }
+]

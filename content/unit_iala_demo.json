@@ -1,0 +1,164 @@
+[
+  {
+    "type": "vocab",
+    "term_en": "Fairway",
+    "term_de": "Fahrrinne",
+    "definition_en": "A sea belt sufficiently deep and wide for safe navigation, marked with proper markings.",
+    "definition_de": "Ein fuer die sichere Schifffahrt ausreichend tiefer und breiter Meeresstreifen, der mit entsprechenden Markierungen gekennzeichnet ist.",
+    "image": null
+  },
+  {
+    "type": "vocab",
+    "term_en": "Buoy",
+    "term_de": "Boje / Tonne",
+    "definition_en": "A floating mark anchored to the seabed, used to indicate navigable channels, hazards, or other features.",
+    "definition_de": "Eine im Meeresboden verankerte schwimmende Markierung zur Kennzeichnung von Fahrwassern, Gefahren oder anderen Merkmalen.",
+    "image": "p021_img00.jpeg"
+  },
+  {
+    "type": "vocab",
+    "term_en": "Port (left side)",
+    "term_de": "Backbord (linke Seite)",
+    "definition_en": "The left side of a vessel when facing forward. Marked with RED buoys and RED light.",
+    "definition_de": "Die linke Seite eines Schiffes in Fahrtrichtung. Gekennzeichnet mit ROTEN Bojen und ROTEM Licht.",
+    "image": "p021_img01.png"
+  },
+  {
+    "type": "vocab",
+    "term_en": "Starboard (right side)",
+    "term_de": "Steuerbord (rechte Seite)",
+    "definition_en": "The right side of a vessel when facing forward. Marked with GREEN buoys and GREEN light.",
+    "definition_de": "Die rechte Seite eines Schiffes in Fahrtrichtung. Gekennzeichnet mit GRUENEN Bojen und GRUENEM Licht.",
+    "image": "p021_img01.png"
+  },
+  {
+    "type": "learn",
+    "title_en": "IALA Buoyage System - Region A",
+    "title_de": "IALA Tonnensystem - Region A",
+    "content_en": "The IALA (International Association of Marine Aids to Navigation and Lighthouse Authorities) buoyage system defines how waterways are marked worldwide.\n\nIn Region A (Europe, including Croatia), the lateral marks follow this rule:\n• RED buoys mark the PORT (left) side when entering a harbor\n• GREEN buoys mark the STARBOARD (right) side when entering a harbor\n\nMemory aid: 'Red to port, green to starboard when returning from sea.'",
+    "content_de": "Das IALA-Tonnensystem definiert, wie Wasserstrassen weltweit markiert werden.\n\nIn Region A (Europa, einschliesslich Kroatien) gelten folgende Lateralzeichen:\n• ROTE Bojen markieren die BACKBORD-Seite (links) bei Einfahrt in den Hafen\n• GRUENE Bojen markieren die STEUERBORD-Seite (rechts) bei Einfahrt in den Hafen\n\nMerksatz: 'Rot an Backbord, Gruen an Steuerbord bei Einfahrt von See.'",
+    "image": "p021_img01.png"
+  },
+  {
+    "type": "learn",
+    "title_en": "Lateral Marks - Port Side",
+    "title_de": "Lateralzeichen - Backbordseite",
+    "content_en": "Port side lateral marks (IALA Region A):\n\n• Color: RED\n• Shape: Cylindrical (can shape), pillar or spar\n• Top mark: Single red cylinder\n• Light: RED, any rhythm\n• Chart symbol: Can shape\n\nWhen entering a harbor from the sea, keep these marks on your LEFT (port) side.",
+    "content_de": "Backbord-Lateralzeichen (IALA Region A):\n\n• Farbe: ROT\n• Form: Zylindrisch (Dosenform), Saeule oder Spiere\n• Toppzeichen: Einzelner roter Zylinder\n• Licht: ROT, beliebiger Rhythmus\n• Kartensymbol: Dosenform\n\nBei Einfahrt in den Hafen von See her diese Zeichen an der LINKEN (Backbord) Seite halten.",
+    "image": "p021_img00.jpeg"
+  },
+  {
+    "type": "learn",
+    "title_en": "Preferred Channel Buoys",
+    "title_de": "Bevorzugte Fahrwasser-Bojen",
+    "content_en": "Where a channel divides, preferred channel buoys show which way is the main channel:\n\n• Preferred Channel to Starboard: RED buoy with GREEN horizontal band\n• Preferred Channel to Port: GREEN buoy with RED horizontal band\n\nThe MAJOR color tells you which side the buoy represents.",
+    "content_de": "Wo sich ein Fahrwasser teilt, zeigen Bevorzugte-Fahrwasser-Bojen den Hauptkanal:\n\n• Bevorzugtes Fahrwasser nach Steuerbord: ROTE Boje mit GRUENEM Querstreifen\n• Bevorzugtes Fahrwasser nach Backbord: GRUENE Boje mit ROTEM Querstreifen\n\nDie HAUPTFARBE zeigt, welche Seite die Boje repraesentiert.",
+    "image": "p022_img00.png"
+  },
+  {
+    "type": "learn",
+    "title_en": "Isolated Danger Marks",
+    "title_de": "Einzelgefahrenzeichen",
+    "content_en": "Isolated danger marks are placed directly on or above a danger with navigable water all around.\n\n• Color: BLACK with RED horizontal band(s)\n• Top mark: Two black spheres (one above the other)\n• Light: WHITE, group flashing (2)\n• Shape: Pillar or spar\n\nYou can pass these marks on ANY side - the danger is directly underneath!",
+    "content_de": "Einzelgefahrenzeichen stehen direkt auf oder ueber einer Gefahrenstelle mit befahrbarem Wasser rundherum.\n\n• Farbe: SCHWARZ mit ROTEM Querstreifen\n• Toppzeichen: Zwei schwarze Baelle (uebereinander)\n• Licht: WEISS, Gruppenblitz (2)\n• Form: Saeule oder Spiere\n\nDiese Zeichen koennen auf JEDER Seite passiert werden - die Gefahr ist direkt darunter!",
+    "image": "p023_img02.png"
+  },
+  {
+    "type": "learn",
+    "title_en": "Cardinal Marks",
+    "title_de": "Kardinalzeichen",
+    "content_en": "Cardinal marks show where the safe water is relative to a danger. They are named after compass directions:\n\n• NORTH cardinal: Pass to the NORTH of this mark\n• SOUTH cardinal: Pass to the SOUTH of this mark\n• EAST cardinal: Pass to the EAST of this mark\n• WEST cardinal: Pass to the WEST of this mark\n\nColors: Black and yellow bands. The position of the black bands shows the direction:\n• North: Black on top → points UP\n• South: Black on bottom → points DOWN\n• East: Black on top and bottom → points both ways\n• West: Black in middle → waist band",
+    "content_de": "Kardinalzeichen zeigen, wo sich das sichere Wasser relativ zur Gefahr befindet. Sie sind nach Himmelsrichtungen benannt:\n\n• NORD: Noerdlich dieses Zeichens passieren\n• SUED: Suedlich dieses Zeichens passieren\n• OST: Oestlich dieses Zeichens passieren\n• WEST: Westlich dieses Zeichens passieren\n\nFarben: Schwarze und gelbe Streifen. Die Position der schwarzen Streifen zeigt die Richtung:\n• Nord: Schwarz oben → zeigt NACH OBEN\n• Sued: Schwarz unten → zeigt NACH UNTEN\n• Ost: Schwarz oben und unten → zeigt in beide Richtungen\n• West: Schwarz in der Mitte → Guertelband",
+    "image": "p025_img02.png"
+  },
+  {
+    "type": "learn",
+    "title_en": "Chart Symbols for Navigation",
+    "title_de": "Kartensymbole fuer Navigation",
+    "content_en": "On Croatian nautical charts you will find depth markings, anchorage areas, and navigational aids marked with standard symbols. The numbers on the chart indicate water depth in meters.\n\nKey symbols to know:\n• Anchor symbol: Anchorage area\n• Depth numbers: Water depth in meters\n• Dotted lines: Recommended routes\n• Small circles with dots: Rocks/dangers",
+    "content_de": "Auf kroatischen Seekarten finden Sie Tiefenangaben, Ankerplaetze und Navigationshilfen mit Standardsymbolen. Die Zahlen auf der Karte geben die Wassertiefe in Metern an.\n\nWichtige Symbole:\n• Ankersymbol: Ankerplatz\n• Tiefenzahlen: Wassertiefe in Metern\n• Gepunktete Linien: Empfohlene Routen\n• Kleine Kreise mit Punkt: Felsen/Gefahren",
+    "image": "p019_img00.jpeg"
+  },
+  {
+    "type": "quiz",
+    "question_en": "In IALA Region A (Europe), what color are PORT side buoys?",
+    "question_de": "Welche Farbe haben Backbord-Bojen in IALA Region A (Europa)?",
+    "options": [
+      {
+        "text": "Red",
+        "correct": true
+      },
+      {
+        "text": "Green",
+        "correct": false
+      },
+      {
+        "text": "Yellow",
+        "correct": false
+      },
+      {
+        "text": "Black",
+        "correct": false
+      }
+    ],
+    "explanation_en": "In IALA Region A, port side buoys are RED. Remember: 'Red to port when returning from sea.'",
+    "explanation_de": "In IALA Region A sind Backbord-Bojen ROT. Merksatz: 'Rot an Backbord bei Einfahrt von See.'"
+  },
+  {
+    "type": "quiz",
+    "question_en": "What does an Isolated Danger Mark look like?",
+    "question_de": "Wie sieht ein Einzelgefahrenzeichen aus?",
+    "options": [
+      {
+        "text": "Black with red horizontal band, two black spheres on top",
+        "correct": true
+      },
+      {
+        "text": "Red with white stripes, single red cylinder on top",
+        "correct": false
+      },
+      {
+        "text": "Yellow with black bands, two cones on top",
+        "correct": false
+      },
+      {
+        "text": "Green with a triangle on top",
+        "correct": false
+      }
+    ],
+    "explanation_en": "Isolated Danger Marks are BLACK with RED horizontal bands and have TWO BLACK SPHERES as top marks. The light is white, group flashing (2).",
+    "explanation_de": "Einzelgefahrenzeichen sind SCHWARZ mit ROTEN Querstreifen und haben ZWEI SCHWARZE BAELLE als Toppzeichen. Das Licht ist weiss, Gruppenblitz (2)."
+  },
+  {
+    "type": "quiz",
+    "question_en": "You see a cardinal mark with black on top and yellow on the bottom. Which direction should you pass?",
+    "question_de": "Sie sehen ein Kardinalzeichen mit Schwarz oben und Gelb unten. In welche Richtung sollen Sie passieren?",
+    "options": [
+      {
+        "text": "Pass to the North of the mark",
+        "correct": true
+      },
+      {
+        "text": "Pass to the South of the mark",
+        "correct": false
+      },
+      {
+        "text": "Pass to the East of the mark",
+        "correct": false
+      },
+      {
+        "text": "Pass on any side",
+        "correct": false
+      }
+    ],
+    "explanation_en": "Black on top = NORTH cardinal mark. The black part 'points up' = north. Pass to the NORTH of this mark, the danger is to the south.",
+    "explanation_de": "Schwarz oben = NORD-Kardinalzeichen. Der schwarze Teil 'zeigt nach oben' = Norden. Noerdlich des Zeichens passieren, die Gefahr liegt im Sueden."
+  },
+  {
+    "type": "quiz_free",
+    "question_en": "Explain the difference between lateral marks and cardinal marks in the IALA buoyage system.",
+    "question_de": "Erklaeren Sie den Unterschied zwischen Lateralzeichen und Kardinalzeichen im IALA-Tonnensystem.",
+    "model_answer_en": "Lateral marks show the sides of a navigable channel. In IALA Region A, red buoys mark the port (left) side and green buoys mark the starboard (right) side when entering from sea. Cardinal marks show the direction of safe water relative to a danger, using compass directions (North, South, East, West). They use black and yellow colors, and the position of the black bands indicates which direction to pass.",
+    "model_answer_de": "Lateralzeichen markieren die Seiten eines befahrbaren Fahrwassers. In IALA Region A markieren rote Bojen die Backbord- (linke) Seite und gruene Bojen die Steuerbord- (rechte) Seite bei Einfahrt von See. Kardinalzeichen zeigen die Richtung des sicheren Wassers relativ zu einer Gefahr an, unter Verwendung von Himmelsrichtungen (Nord, Sued, Ost, West). Sie verwenden schwarze und gelbe Farben, und die Position der schwarzen Streifen zeigt die Passierrichtung an."
+  }
+]

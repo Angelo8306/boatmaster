@@ -1,0 +1,68 @@
+[
+  {
+    "type": "vocab",
+    "term_en": "Registration Certificate",
+    "definition_en": "Official document proving the nationality and ownership of a vessel. Must be carried on board at all times. Issued by the harbor master's office.",
+    "term_de": "Registrierungsbescheinigung",
+    "definition_de": "Offizielles Dokument das Nationalitaet und Eigentum eines Bootes beweist. Muss immer an Bord sein. Ausgestellt vom Hafenkapitanat."
+  },
+  {
+    "type": "vocab",
+    "term_en": "Boat License (Voditelj Brodice)",
+    "definition_en": "Croatian boating license, Category C. Required for operating boats up to 30 GT in coastal waters. Oral exam in English covering navigation, safety, rules, and seamanship.",
+    "term_de": "Bootsfuehrerschein (Voditelj Brodice)",
+    "definition_de": "Kroatischer Bootsfuehrerschein, Kategorie C. Erforderlich fuer Boote bis 30 GT in Kuestengewaessern. Muendliche Pruefung auf Englisch."
+  },
+  {
+    "type": "vocab",
+    "term_en": "Vignette (Cruising Permit)",
+    "definition_en": "Annual permit for foreign boats cruising in Croatian waters. Must be purchased within 48 hours of arrival. Proves tourist tax and navigation fees are paid.",
+    "term_de": "Vignette (Fahrerlaubnis)",
+    "definition_de": "Jaehrliche Genehmigung fuer auslaendische Boote in kroatischen Gewaessern. Muss innerhalb von 48 Stunden nach Ankunft gekauft werden."
+  },
+  {
+    "type": "learn",
+    "title_en": "Required Documents on Board",
+    "content_en": "Every boat in Croatian waters must carry:\n\n1. REGISTRATION CERTIFICATE — boat's official document\n2. BOAT LICENSE — skipper's competence certificate (Voditelj Brodice Cat. C or equivalent)\n3. CREW LIST — names, passport numbers of all persons on board\n4. VIGNETTE — cruising permit for foreign vessels\n5. INSURANCE — third-party liability insurance\n6. VHF RADIO LICENSE — if radio equipment installed\n\nFor Croatian boats also: certificate of seaworthiness, engine certificate.\n\nInspection by harbor police can happen anytime — keep documents accessible!",
+    "content_de": "Jedes Boot in kroatischen Gewaessern muss mitfuehren:\n\n1. REGISTRIERUNGSBESCHEINIGUNG\n2. BOOTSFUEHRERSCHEIN (Voditelj Brodice Kat. C oder gleichwertig)\n3. CREWLISTE — Namen, Passnummern aller Personen\n4. VIGNETTE — Fahrerlaubnis fuer auslaendische Boote\n5. VERSICHERUNG — Haftpflichtversicherung\n6. FUNKLIZENZ — wenn Funkgeraet installiert\n\nKontrolle durch Hafenpolizei jederzeit moeglich!"
+  },
+  {
+    "type": "learn",
+    "title_en": "Boat Inspections in Croatia",
+    "content_en": "Boats must undergo regular inspections:\n\n• Boats up to 20 years old: inspection every 5 years\n• Boats over 20 years old: inspection every 2 years\n• After major repairs or modifications: special inspection required\n\nInspection checks:\n• Hull condition and watertightness\n• Engine and mechanical systems\n• Safety equipment (life jackets, flares, fire extinguisher)\n• Navigation lights and signals\n• Electrical installation\n• Fuel system (no leaks)\n\nThe inspection is recorded in the Registration Certificate.",
+    "content_de": "Boote muessen regelmaessig inspiziert werden:\n\n• Boote bis 20 Jahre: alle 5 Jahre\n• Boote ueber 20 Jahre: alle 2 Jahre\n• Nach groesseren Reparaturen: Sonderinspektion\n\nPruefung umfasst: Rumpfzustand, Motor, Sicherheitsausruestung, Navigationslichter, Elektrik, Kraftstoffsystem.",
+    "image": "p074_img01.jpeg"
+  },
+  {
+    "type": "quiz",
+    "question_en": "Within how many hours must a foreign vessel purchase a vignette (cruising permit) after arriving in Croatian waters?",
+    "question_de": "Innerhalb wie vieler Stunden muss ein auslaendisches Boot nach Ankunft in Kroatien eine Vignette kaufen?",
+    "options": [
+      {
+        "text": "12 hours",
+        "correct": false
+      },
+      {
+        "text": "24 hours",
+        "correct": false
+      },
+      {
+        "text": "48 hours",
+        "correct": true
+      },
+      {
+        "text": "72 hours",
+        "correct": false
+      }
+    ],
+    "explanation_en": "Foreign vessels must purchase a cruising permit (vignette) within 48 hours of entering Croatian waters. It covers tourist tax and navigation fees for the year.",
+    "explanation_de": "Auslaendische Boote muessen innerhalb von 48 Stunden nach Einfahrt in kroatische Gewaesser eine Vignette kaufen."
+  },
+  {
+    "type": "quiz_free",
+    "question_en": "What documents must be carried on board when sailing in Croatian waters?",
+    "question_de": "Welche Dokumente muessen beim Segeln in kroatischen Gewaessern an Bord sein?",
+    "model_answer_en": "Required documents on board in Croatia: 1) Registration certificate proving boat nationality and ownership. 2) Valid boat license — Voditelj Brodice Category C or recognized equivalent. 3) Crew list with names and passport numbers of all persons on board. 4) Vignette or cruising permit for foreign vessels, purchased within 48 hours of arrival. 5) Third-party liability insurance. 6) VHF radio license if radio equipment is installed. All documents must be easily accessible as harbor police can inspect at any time.",
+    "model_answer_de": "Erforderliche Dokumente: 1) Registrierungsbescheinigung. 2) Gueltiger Bootsfuehrerschein — Voditelj Brodice Kat. C oder anerkannt. 3) Crewliste mit Namen und Passnummern. 4) Vignette fuer auslaendische Boote, innerhalb 48 Stunden kaufen. 5) Haftpflichtversicherung. 6) Funklizenz wenn Funkgeraet vorhanden. Hafenpolizei kann jederzeit kontrollieren."
+  }
+]

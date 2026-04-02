@@ -1,0 +1,72 @@
+[
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Motorsysteme und Wartung. Der Motor ist das Herz deines Bootes — wenn er ausfällt, hast du ein ernstes Problem. Deshalb ist die richtige Wartung so wichtig."
+  },
+  {
+    "speaker": "george",
+    "lang": "en",
+    "text": "Engine systems and maintenance. Cooling system, fuel system, and pre-departure checks."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Fangen wir mit dem Kühlsystem an. Bootsmotoren werden mit Seewasser gekühlt. Es gibt zwei Systeme:"
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Erstens, direkte Kühlung: Seewasser wird direkt durch den Motor gepumpt. Einfach, aber Salzablagerungen und Korrosion sind ein Problem."
+  },
+  {
+    "speaker": "george",
+    "lang": "en",
+    "text": "Direct cooling: seawater pumped directly through the engine. Simple but risk of salt deposits and corrosion."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Zweitens, indirekte Kühlung: Ein geschlossener Süßwasserkreislauf kühlt den Motor, und Seewasser kühlt das Süßwasser über einen Wärmetauscher. Besser für den Motor."
+  },
+  {
+    "speaker": "george",
+    "lang": "en",
+    "text": "Indirect cooling: closed freshwater circuit cools the engine. Seawater cools the freshwater through a heat exchanger. Less corrosion, better for the engine."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Das wichtigste Verschleißteil ist der Impeller — das Gummi-Pumpenrad in der Seekühlwasserpumpe. Wenn der kaputt geht, überhitzt der Motor sofort. Deshalb: jährlich wechseln!"
+  },
+  {
+    "speaker": "george",
+    "lang": "en",
+    "text": "Impeller. The rubber pump wheel in the seawater cooling pump. Most common cause of overheating. Replace annually. Always carry a spare."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Ein einfacher Test: Kommt Wasser aus dem Auspuff? Wenn ja, die Kühlung funktioniert. Wenn nicht, sofort Motor abstellen und Ursache suchen!"
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Jetzt die Checkliste vor jeder Abfahrt: Motoröl am Peilstab prüfen. Kühlmittel kontrollieren. Treibstoff ausreichend? Keilriemen gespannt und ohne Risse?"
+  },
+  {
+    "speaker": "george",
+    "lang": "en",
+    "text": "Pre-departure checks: oil level, coolant level, fuel quantity, drive belts, seawater intake valve open, strainer clean. After starting: check water exhaust, oil pressure, temperature."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Seekühlwasser-Ventil offen? Seiher sauber? Bilge auf Lecks prüfen. Propeller auf Leinen oder Müll kontrollieren. Und nach dem Starten: Wasserfluss am Auspuff, Öldruck und Temperatur."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Zusammenfassung: Impeller jährlich wechseln, Wasserfluss am Auspuff kontrollieren, vor jeder Fahrt die Checkliste durchgehen. Ein gut gewarteter Motor ist ein zuverlässiger Motor."
+  }
+]

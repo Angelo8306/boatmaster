@@ -1,0 +1,77 @@
+[
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Wolken, Gezeiten und Wettervorhersage. Wer die Wolken lesen kann, wird vom Wetter nicht überrascht."
+  },
+  {
+    "speaker": "george",
+    "lang": "en",
+    "text": "Clouds, tides, and weather forecasting. The Beaufort scale. Cloud types and what they tell you about coming weather."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Die Beaufort-Skala kennt jeder Seemann. Sie reicht von null — Windstille — bis zwölf — Orkan. Für die Prüfung solltest du die wichtigsten Stufen kennen:"
+  },
+  {
+    "speaker": "george",
+    "lang": "en",
+    "text": "Beaufort scale: zero is calm. Four is moderate breeze, eleven to sixteen knots. Seven is near gale, twenty-eight to thirty-three knots. Ten is storm, forty-eight to fifty-five knots."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Jetzt zu den Wolken. Cirrus — hoch, dünn, federartig. Sieht nach schönem Wetter aus, kann aber eine Warmfront ankündigen, also Regen in ein bis zwei Tagen."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Cumulus — die weißen Schäfchenwolken. Wenn sie klein und vereinzelt sind: schönes Wetter. Wenn sie wachsen und sich auftürmen: Vorsicht!"
+  },
+  {
+    "speaker": "george",
+    "lang": "en",
+    "text": "Cumulonimbus. The thunderstorm cloud. Towering vertical development. DANGER: strong gusts, lightning, heavy rain, and waterspouts."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Cumulonimbus ist die Gewitterwolke — riesig, türmt sich auf wie ein Amboss. Wenn du die siehst: Sofort Schutz suchen! Sturmböen, Blitz, Starkregen, möglicherweise Wasserhosen."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Stratus — tief, grau, flach wie eine Decke. Bringt Nieselregen und schlechte Sicht. Nimbostratus — dick und dunkel, bringt Dauerregen."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Jetzt zu den Gezeiten in der Adria. Die sind relativ gering — durchschnittlich nur dreißig bis fünfzig Zentimeter Tidenhub."
+  },
+  {
+    "speaker": "george",
+    "lang": "en",
+    "text": "Tides in the Adriatic: average range zero point three to zero point five meters. Spring tides during full and new moon: up to one meter. Semi-diurnal: two high and two low tides per day."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Springtide bei Voll- und Neumond — da ist der Tidenhub am größten. Nipptide bei Halbmond — da ist er am kleinsten. Das hat nichts mit der Jahreszeit zu tun!"
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Wetterinformationen bekommst du über VHF Kanal siebenundsechzig und dreiundsiebzig von der kroatischen Küstenwache, über NAVTEX, oder online über Windy und andere Apps."
+  },
+  {
+    "speaker": "george",
+    "lang": "en",
+    "text": "Weather sources: VHF Channel sixty-seven and seventy-three, NAVTEX, internet forecasts. A falling barometer means bad weather approaching."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Zusammenfassung: Beaufort-Skala lernen, Cumulonimbus bedeutet Gefahr, Gezeiten in der Adria sind gering aber beachten, und immer den Wetterbericht prüfen!"
+  }
+]

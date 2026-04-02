@@ -1,0 +1,57 @@
+[
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Terrestrische Navigation — wie du deine Position auf See bestimmst, ohne GPS. Das klingt altmodisch, ist aber Pflichtprüfungsstoff und kann dir das Leben retten wenn die Elektronik ausfällt."
+  },
+  {
+    "speaker": "george",
+    "lang": "en",
+    "text": "Terrestrial navigation. Five basic factors: course, speed, time, distance, and depth."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Die einfachste Methode ist die Koppelnavigation. Du weißt wo du warst, du kennst deinen Kurs und deine Geschwindigkeit, und berechnest daraus wo du jetzt sein müsstest."
+  },
+  {
+    "speaker": "george",
+    "lang": "en",
+    "text": "Dead reckoning. Estimating position from a known previous position using course, speed, and elapsed time. Abbreviated D R."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Das Problem: Wind und Strömung schieben dich vom Kurs ab. Deshalb wird die Koppelnavigation mit der Zeit immer ungenauer. Du brauchst regelmäßig eine echte Standortbestimmung."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Die beste Methode ist die Kreuzpeilung — du peilst zwei oder drei bekannte Objekte an Land, zum Beispiel Leuchttürme oder Kirchturmspitzen."
+  },
+  {
+    "speaker": "george",
+    "lang": "en",
+    "text": "Cross bearings. Take bearings on two or three known objects. Plot the bearing lines on the chart. Your position is where they cross. Three bearings are preferred."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Ideal sind drei Peilungen mit etwa sechzig Grad Abstand. Die drei Linien bilden ein kleines Dreieck — deine Position ist in der Mitte davon."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Noch eine Methode: Peilung plus Entfernung. Du peilst ein Objekt und misst gleichzeitig die Entfernung — zum Beispiel per Radar."
+  },
+  {
+    "speaker": "george",
+    "lang": "en",
+    "text": "Bearing plus distance. One bearing to a known object combined with a distance measurement gives you a position fix."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Zusammenfassung: Koppelnavigation als Grundlage, aber regelmäßig mit Kreuzpeilungen oder Radar korrigieren. Immer mindestens zwei Standlinien für eine Positionsbestimmung."
+  }
+]

@@ -1,0 +1,69 @@
+[
+  {
+    "type": "vocab",
+    "term_en": "Dead Reckoning (DR)",
+    "definition_en": "Estimating current position based on a known previous position, using course steered, speed, and time elapsed. The most basic form of navigation.",
+    "term_de": "Koppelnavigation",
+    "definition_de": "Schaetzung der aktuellen Position basierend auf einer bekannten frueheren Position, unter Verwendung von Kurs, Geschwindigkeit und verstrichener Zeit."
+  },
+  {
+    "type": "vocab",
+    "term_en": "Fix / Position Fix",
+    "definition_en": "A precise determination of a vessel's position using two or more lines of position (bearings, ranges, or other observations). More accurate than dead reckoning.",
+    "term_de": "Standort / Standortbestimmung",
+    "definition_de": "Eine genaue Bestimmung der Schiffsposition mit zwei oder mehr Standlinien (Peilungen, Entfernungen oder andere Beobachtungen)."
+  },
+  {
+    "type": "vocab",
+    "term_en": "Line of Position (LOP)",
+    "definition_en": "A line on a chart along which a vessel's position must lie, determined by a single observation such as a bearing or distance measurement.",
+    "term_de": "Standlinie",
+    "definition_de": "Eine Linie auf der Karte, auf der sich die Schiffsposition befinden muss, bestimmt durch eine einzelne Beobachtung wie Peilung oder Entfernungsmessung."
+  },
+  {
+    "type": "learn",
+    "title_en": "Five Factors of Navigation",
+    "content_en": "Navigation relies on five basic factors:\n\n1. COURSE — direction of travel (in degrees from north)\n2. SPEED — how fast (in knots)\n3. TIME — duration of travel\n4. DISTANCE — how far (in nautical miles)\n5. DEPTH — water depth below the keel\n\nInstruments needed:\n• Compass — for course\n• Speedometer/log — for speed and distance\n• Depth sounder — for depth\n• Watch/chronometer — for time\n• Radar / GPS — electronic aids",
+    "content_de": "Navigation beruht auf fuenf Grundfaktoren:\n\n1. KURS — Fahrtrichtung (in Grad von Nord)\n2. GESCHWINDIGKEIT — wie schnell (in Knoten)\n3. ZEIT — Fahrtdauer\n4. STRECKE — wie weit (in Seemeilen)\n5. TIEFE — Wassertiefe unter dem Kiel\n\nBeoetigte Instrumente:\n• Kompass, Geschwindigkeitsmesser, Echolot, Uhr, Radar/GPS",
+    "image": "p044_img00.jpeg"
+  },
+  {
+    "type": "learn",
+    "title_en": "Position Fixing Methods",
+    "content_en": "Methods to determine your position:\n\n1. CROSS BEARINGS — take bearings on 2-3 known objects. Plot the bearing lines on the chart — your position is where they cross.\n\n2. BEARING + DISTANCE — one bearing to a known object plus a distance measurement (by radar or estimation).\n\n3. RUNNING FIX — two bearings on the SAME object taken at different times. Transfer the first bearing line forward using course and distance travelled.\n\n4. DEPTH CONTOUR — match echo sounder readings to chart depth contours.\n\nBest fixes use 3 bearings with objects roughly 60° apart.",
+    "content_de": "Methoden zur Standortbestimmung:\n\n1. KREUZPEILUNG — 2-3 bekannte Objekte peilen. Peillinien auf der Karte einzeichnen — Position ist der Schnittpunkt.\n\n2. PEILUNG + ENTFERNUNG — eine Peilung plus Entfernungsmessung (Radar oder Schaetzung).\n\n3. VERSETZTE STANDLINIE — zwei Peilungen desselben Objekts zu verschiedenen Zeiten.\n\n4. TIEFENLINIE — Echolot-Werte mit Tiefenlinien auf der Karte abgleichen.",
+    "image": "p044_img02.jpeg"
+  },
+  {
+    "type": "quiz",
+    "question_en": "What is the minimum number of bearings needed for a reliable position fix?",
+    "question_de": "Wie viele Peilungen braucht man mindestens fuer eine zuverlaessige Standortbestimmung?",
+    "options": [
+      {
+        "text": "1",
+        "correct": false
+      },
+      {
+        "text": "2",
+        "correct": true
+      },
+      {
+        "text": "4",
+        "correct": false
+      },
+      {
+        "text": "5",
+        "correct": false
+      }
+    ],
+    "explanation_en": "A minimum of 2 lines of position are needed for a fix (where they cross). 3 bearings are preferred as the triangle formed helps identify errors.",
+    "explanation_de": "Mindestens 2 Standlinien sind noetig (Schnittpunkt). 3 Peilungen sind bevorzugt, da das entstehende Dreieck Fehler erkennen laesst."
+  },
+  {
+    "type": "quiz_free",
+    "question_en": "Explain how dead reckoning works and why it becomes less accurate over time.",
+    "question_de": "Erklaere wie Koppelnavigation funktioniert und warum sie mit der Zeit ungenauer wird.",
+    "model_answer_en": "Dead reckoning starts from a known position and estimates the current position using course steered, speed, and elapsed time. You plot the course line on the chart and mark the estimated position based on distance travelled. It becomes less accurate over time because it cannot account for wind, current, steering errors, or speed variations. These small errors accumulate, causing the estimated position to drift from the actual position. Regular position fixes are needed to correct DR errors.",
+    "model_answer_de": "Koppelnavigation geht von einer bekannten Position aus und schaetzt die aktuelle Position anhand von Kurs, Geschwindigkeit und Zeit. Der Kurslinie wird auf der Karte eingezeichnet. Sie wird mit der Zeit ungenauer, weil Wind, Stroemung, Steuerfehler und Geschwindigkeitsschwankungen nicht beruecksichtigt werden. Diese kleinen Fehler summieren sich. Regelmaessige Standortbestimmungen sind noetig."
+  }
+]

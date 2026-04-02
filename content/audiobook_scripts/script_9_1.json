@@ -1,0 +1,21 @@
+[
+  {"speaker": "dieter", "lang": "de", "text": "Kollisionsverhütungsregeln — auf Englisch COLREGS. Das sind die Verkehrsregeln auf dem Wasser. Absolut prüfungsrelevant!"},
+  {"speaker": "george", "lang": "en", "text": "COLREGS. International Regulations for Preventing Collisions at Sea. Apply to all vessels on the high seas and connected waters."},
+  {"speaker": "dieter", "lang": "de", "text": "Zuerst die Grundbegriffe. Es gibt immer ein ausweichpflichtiges Fahrzeug und ein kurshaltendes Fahrzeug."},
+  {"speaker": "george", "lang": "en", "text": "Give-way vessel: must take action to avoid collision. Stand-on vessel: maintains course and speed."},
+  {"speaker": "dieter", "lang": "de", "text": "Wer hat Vorfahrt? Es gibt eine klare Rangordnung. Ganz oben steht ein manövrierunfähiges Fahrzeug — das kann nicht ausweichen. Ganz unten steht ein Motorboot."},
+  {"speaker": "george", "lang": "en", "text": "Priority from highest to lowest: vessel not under command, vessel restricted in maneuverability, fishing vessel, sailing vessel, power-driven vessel."},
+  {"speaker": "dieter", "lang": "de", "text": "Also: Ein Segelboot hat Vorfahrt vor einem Motorboot. Ein Fischerboot vor einem Segelboot. Und so weiter."},
+  {"speaker": "dieter", "lang": "de", "text": "Jetzt die drei wichtigsten Situationen zwischen zwei Motorbooten. Erstens: Entgegenkommen — ihr fahrt aufeinander zu."},
+  {"speaker": "george", "lang": "en", "text": "Head-on situation. Both vessels must alter course to starboard. They pass port to port — left side to left side."},
+  {"speaker": "dieter", "lang": "de", "text": "Also beide nach rechts ausweichen. Genau wie auf der Straße."},
+  {"speaker": "dieter", "lang": "de", "text": "Zweitens: Kreuzen — eure Kurse kreuzen sich. Hier gilt die Steuerbord-Regel."},
+  {"speaker": "george", "lang": "en", "text": "Crossing situation. The vessel that has the other on its starboard side must give way. If the other vessel is on your right, you must yield."},
+  {"speaker": "dieter", "lang": "de", "text": "Einfach gesagt: Wer den anderen RECHTS von sich hat, muss ausweichen. Wie rechts vor links, nur andersherum."},
+  {"speaker": "dieter", "lang": "de", "text": "Drittens: Überholen."},
+  {"speaker": "george", "lang": "en", "text": "Overtaking. The overtaking vessel always gives way. Must keep clear until well past."},
+  {"speaker": "dieter", "lang": "de", "text": "Der Überholer weicht IMMER aus — egal ob Segel oder Motor. Bis er sicher vorbei ist."},
+  {"speaker": "dieter", "lang": "de", "text": "Und die wichtigste Regel von allen: Im Zweifel — weiche aus! Lieber einmal zu viel ausgewichen als eine Kollision."},
+  {"speaker": "george", "lang": "en", "text": "When in doubt, assume you must give way."},
+  {"speaker": "dieter", "lang": "de", "text": "Zusammenfassung: Entgegenkommen — beide nach Steuerbord. Kreuzen — wer den anderen rechts hat, weicht aus. Überholen — Überholer weicht immer aus. Im Zweifel: ausweichen!"}
+]

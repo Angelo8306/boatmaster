@@ -1,0 +1,15 @@
+[
+  {"speaker": "dieter", "lang": "de", "text": "Erste Hilfe an Bord — auf See bist du oft weit weg von einem Krankenhaus. Deshalb muss jeder Skipper die Grundlagen kennen."},
+  {"speaker": "dieter", "lang": "de", "text": "Das ABC der Ersten Hilfe gilt auch auf dem Wasser:"},
+  {"speaker": "george", "lang": "en", "text": "A for airway — clear and open. B for breathing — check and assist. C for circulation — check pulse, start CPR if needed."},
+  {"speaker": "dieter", "lang": "de", "text": "Bei der Herz-Lungen-Wiederbelebung — auf Englisch CPR — gilt: dreißig Mal drücken, zwei Mal beatmen. Tempo: hundert bis hundertzwanzig Mal pro Minute."},
+  {"speaker": "george", "lang": "en", "text": "CPR: thirty chest compressions, two rescue breaths. Rate: one hundred to one hundred twenty compressions per minute. Continue until help arrives."},
+  {"speaker": "dieter", "lang": "de", "text": "Das häufigste Problem auf See ist Unterkühlung — auf Englisch hypothermia. Das passiert schnell, wenn jemand ins Wasser fällt."},
+  {"speaker": "george", "lang": "en", "text": "Hypothermia. A dangerous drop in body temperature below thirty-five degrees Celsius."},
+  {"speaker": "dieter", "lang": "de", "text": "Die Behandlung: Person aus dem Wasser holen, nasse Kleidung ausziehen, den Körperkern ZUERST wärmen — Brust, Hals, Kopf. Decken, Schlafsäcke oder Körperwärme nutzen."},
+  {"speaker": "dieter", "lang": "de", "text": "Und jetzt drei Sachen, die du bei Unterkühlung NIEMALS tun darfst:"},
+  {"speaker": "george", "lang": "en", "text": "Never give alcohol. Never rub the extremities. Never warm too quickly. All three can cause cardiac arrest."},
+  {"speaker": "dieter", "lang": "de", "text": "Kein Alkohol — der weitet die Gefäße und kühlt weiter aus. Nicht die Arme und Beine reiben — das treibt kaltes Blut zum Herzen. Und nicht zu schnell aufwärmen — Herzstillstand-Gefahr."},
+  {"speaker": "dieter", "lang": "de", "text": "Wenn die Person bei Bewusstsein ist, warme süße Getränke geben. Und immer vorsichtig behandeln — bei schwerer Unterkühlung kann schon eine ruckartige Bewegung zum Herzversagen führen."},
+  {"speaker": "dieter", "lang": "de", "text": "Zusammenfassung: ABC-Regel, CPR dreißig zu zwei, bei Unterkühlung Kern zuerst wärmen, kein Alkohol, nicht reiben, nicht zu schnell wärmen."}
+]

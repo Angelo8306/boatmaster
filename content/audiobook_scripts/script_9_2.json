@@ -1,0 +1,82 @@
+[
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Navigationslichter und Signale. Nachts auf See erkennst du andere Schiffe nur an ihren Lichtern — deshalb ist das ein zentrales Prüfungsthema."
+  },
+  {
+    "speaker": "george",
+    "lang": "en",
+    "text": "Navigation lights and sound signals. Required between sunset and sunrise and in reduced visibility. Defined by COLREGS."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Jedes Boot zeigt drei Grundlichter: Das Topplicht — weiß am Mast, sichtbar von vorn. Seitenlichter — rot an Backbord, grün an Steuerbord. Und das Hecklicht — weiß am Heck."
+  },
+  {
+    "speaker": "george",
+    "lang": "en",
+    "text": "Masthead light: white, forward, two hundred twenty-five degree arc. Sidelights: red on port, green on starboard, each one hundred twelve point five degrees. Stern light: white, aft, one hundred thirty-five degrees."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Und jetzt der wichtigste Teil: Was du SIEHST, sagt dir was passiert. Wenn du BEIDE Seitenlichter und das Topplicht siehst — rot und grün nebeneinander — dann kommt ein Schiff DIREKT auf dich zu!"
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Siehst du nur das ROTE Seitenlicht plus Topplicht — dann kreuzt ein Maschinenfahrzeug von rechts nach links."
+  },
+  {
+    "speaker": "george",
+    "lang": "en",
+    "text": "Red sidelight plus masthead light: vessel crossing from your right to left. Green sidelight plus masthead light: vessel crossing from left to right. Stern light only: vessel moving away."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Ein Segelboot unter Segeln zeigt KEIN Topplicht! Nur Seitenlichter und Hecklicht. Optional rot über grün am Mast. Merkspruch auf Englisch:"
+  },
+  {
+    "speaker": "george",
+    "lang": "en",
+    "text": "Red over green, sailing machine. A sailing vessel may show red over green all-round lights at the masthead. But NO masthead light — that would indicate engine power."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Vor Anker: nur ein weißes Rundumlicht. Manövrierunfähig: zwei rote Rundumlichter übereinander. Fischend: rot über weiß."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Jetzt zu den Schallsignalen. Ein kurzer Ton: Ich drehe nach Steuerbord. Zwei kurze Töne: Ich drehe nach Backbord. Drei kurze Töne: Meine Maschine geht rückwärts."
+  },
+  {
+    "speaker": "george",
+    "lang": "en",
+    "text": "One short blast: turning to starboard. Two short blasts: turning to port. Three short blasts: engines going astern. Five short blasts: danger signal — I doubt your intentions."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Fünf kurze Töne — das ist das Gefahrensignal. Das heißt: Ich verstehe deine Absichten nicht, oder du fährst in eine Gefahr!"
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Bei Nebel gibt es besondere Signale, alle zwei Minuten: Maschinenfahrzeug in Fahrt: ein langer Ton. Gestoppt: zwei lange Töne. Segler oder Fischer: ein langer und zwei kurze Töne."
+  },
+  {
+    "speaker": "george",
+    "lang": "en",
+    "text": "Fog signals every two minutes. Power vessel making way: one prolonged blast. Stopped: two prolonged blasts. Sailing vessel: one prolonged plus two short blasts."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Zusammenfassung: Topplicht zeigt Maschinenantrieb, Segler hat kein Topplicht. Rotes Seitenlicht heißt: die Backbordseite zeigt zu dir. Fünf kurze Töne bedeuten Gefahr!"
+  }
+]

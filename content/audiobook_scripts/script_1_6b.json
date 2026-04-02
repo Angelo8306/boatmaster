@@ -1,0 +1,57 @@
+[
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "GPS, Echolot und Autopilot — die drei elektronischen Helfer, die auf fast jedem Boot zu finden sind."
+  },
+  {
+    "speaker": "george",
+    "lang": "en",
+    "text": "GPS. Global Positioning System. Satellite navigation providing position, speed, and time. Accuracy about ten to fifteen meters."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "GPS empfängt Signale von mindestens vier Satelliten und berechnet daraus deine Position auf zehn bis fünfzehn Meter genau. Es zeigt dir auch Geschwindigkeit über Grund und Kurs über Grund."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Auf Englisch heißt Geschwindigkeit über Grund S O G — Speed Over Ground. Und Kurs über Grund C O G — Course Over Ground."
+  },
+  {
+    "speaker": "george",
+    "lang": "en",
+    "text": "SOG — speed over ground. COG — course over ground. Both measured by GPS from position changes. Important: these are ground-referenced, not water-referenced."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Das ist ein wichtiger Unterschied! GPS zeigt die Bewegung über GRUND. Aber Wind und Strömung können dein Boot vom Kurs durchs Wasser ablenken. Deshalb: GPS allein reicht nicht."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Das Echolot misst die Wassertiefe unter dem Boot. Es sendet Schallimpulse zum Meeresboden und misst die Rücklaufzeit. Auf Englisch:"
+  },
+  {
+    "speaker": "george",
+    "lang": "en",
+    "text": "Echo sounder or depth sounder. Sends sound pulses to the seabed, measures return time to calculate depth. Essential in shallow waters."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Und der Autopilot steuert das Boot automatisch auf einem eingestellten Kurs. Er ist mit dem Kompass oder GPS verbunden. Aber Achtung: auch mit Autopilot musst du immer Ausguck halten!"
+  },
+  {
+    "speaker": "george",
+    "lang": "en",
+    "text": "Autopilot. Automatically steers the vessel on a set course. Connected to compass or GPS. The skipper must still maintain lookout at all times."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Zusammenfassung: GPS für Position und Geschwindigkeit über Grund, Echolot für Wassertiefe, Autopilot für automatische Kurssteuerung. Aber nie blind auf Elektronik verlassen!"
+  }
+]

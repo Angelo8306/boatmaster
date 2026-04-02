@@ -1,0 +1,101 @@
+[
+  {
+    "type": "vocab",
+    "term_en": "Beaufort Scale",
+    "definition_en": "Scale from 0 to 12 for classifying wind speed by its effects on the sea. 0=calm, 4=moderate breeze (11-16 kn), 7=near gale (28-33 kn), 10=storm (48-55 kn), 12=hurricane.",
+    "term_de": "Beaufort-Skala",
+    "definition_de": "Skala von 0 bis 12 zur Klassifizierung der Windstaerke nach ihren Auswirkungen auf die See."
+  },
+  {
+    "type": "vocab",
+    "term_en": "Sea State",
+    "definition_en": "Description of wave height conditions. Calm (0m), Slight (0.5-1.25m), Moderate (1.25-2.5m), Rough (2.5-4m), Very rough (4-6m), High (6-9m), Phenomenal (>14m).",
+    "term_de": "Seegang",
+    "definition_de": "Beschreibung der Wellenhoehe. Ruhig (0m), Leicht (0.5-1.25m), Maessig (1.25-2.5m), Rauh (2.5-4m), Sehr rauh (4-6m), Hoch (6-9m).",
+    "image": "p103_img01.jpeg"
+  },
+  {
+    "type": "vocab",
+    "term_en": "Tide",
+    "definition_en": "Regular rise and fall of sea level caused by gravitational forces of the Moon and Sun. High tide (flood) and low tide (ebb) alternate approximately every 6 hours.",
+    "term_de": "Gezeiten / Tide",
+    "definition_de": "Regelmaessiges Steigen und Fallen des Meeresspiegels durch Gravitationskraefte von Mond und Sonne. Flut (Hochwasser) und Ebbe (Niedrigwasser) wechseln ca. alle 6 Stunden."
+  },
+  {
+    "type": "learn",
+    "title_en": "Cloud Types & Weather Prediction",
+    "content_en": "Reading clouds helps predict weather:\n\n• CIRRUS (Ci) — high, thin, wispy. Fair weather but can signal approaching warm front (rain in 24-48h)\n• CUMULUS (Cu) — puffy, white. Fair weather if small and separated\n• CUMULONIMBUS (Cb) — towering thunderstorm cloud. DANGER: strong winds, lightning, heavy rain, waterspouts\n• STRATUS (St) — low, gray, flat layer. Drizzle, poor visibility\n• NIMBOSTRATUS (Ns) — thick, dark. Continuous rain or snow\n\nDarkening sky + dropping barometer + increasing wind = deteriorating weather!",
+    "content_de": "Wolken helfen bei der Wettervorhersage:\n\n• CIRRUS — hoch, duenn, federartig. Schoenwetter, kann aber Warmfront ankuendigen\n• CUMULUS — aufgetuermte weisse Haufen. Schoenwetter wenn klein\n• CUMULONIMBUS — Gewitterwolke. GEFAHR: Sturmboeen, Blitz, Starkregen\n• STRATUS — tief, grau, flach. Nieselregen, schlechte Sicht\n• NIMBOSTRATUS — dick, dunkel. Dauerregen\n\nVerdunkelnder Himmel + fallender Barometer + zunehmender Wind = Wetterverschlechterung!",
+    "image": "p104_img01.jpeg"
+  },
+  {
+    "type": "learn",
+    "title_en": "Tides in the Adriatic",
+    "content_en": "Tides in the Adriatic Sea are relatively small:\n\n• Average tidal range: 0.3 to 0.5 meters\n• Maximum (spring tides): up to 1 meter in some areas\n• Tides are semi-diurnal: two high and two low tides per day\n\nSpring tides: largest range, during full and new moon (Sun + Moon aligned)\nNeap tides: smallest range, during quarter moons (Sun + Moon at 90°)\n\nTides are important for:\n• Entering shallow harbors or anchorages\n• Calculating under-keel clearance\n• Planning departure/arrival times\n• Tidal currents affect navigation",
+    "content_de": "Gezeiten in der Adria sind relativ gering:\n\n• Durchschnittlicher Tidenhub: 0,3 bis 0,5 Meter\n• Maximum (Springtide): bis 1 Meter\n• Halbtagsgezeiten: zweimal Hoch- und Niedrigwasser pro Tag\n\nSpringtide: groesster Hub, bei Voll- und Neumond\nNipptide: kleinster Hub, bei Halbmond\n\nWichtig fuer: flache Haefen, Kielfreiheit, Zeitplanung, Gezeitenstroemungen"
+  },
+  {
+    "type": "learn",
+    "title_en": "Weather Forecasts for Mariners",
+    "content_en": "Sources for weather information in Croatia:\n\n• VHF Channel 67 & 73 — Croatian coast guard weather broadcasts\n• NAVTEX — automated weather and navigation warnings\n• Internet/apps — GFS, ECMWF models, Windy, PredictWind\n• Barometer — falling pressure = bad weather approaching\n\nKey forecast terms:\n• Gale warning — wind force 8+ expected\n• Storm warning — wind force 10+ expected\n• Variable — wind direction changing\n• Veering — wind shifting clockwise\n• Backing — wind shifting counter-clockwise",
+    "content_de": "Wetterquellen in Kroatien:\n\n• VHF Kanal 67 & 73 — Kuestenwache Wetterbericht\n• NAVTEX — automatische Wetter- und Navigationswarnungen\n• Internet/Apps — GFS, ECMWF, Windy, PredictWind\n• Barometer — fallender Druck = Schlechtwetter naht\n\nFachbegriffe: Sturmwarnung, Variable (Richtung wechselnd), Veering (im Uhrzeigersinn), Backing (gegen Uhrzeigersinn)",
+    "image": "p105_img01.jpeg"
+  },
+  {
+    "type": "quiz",
+    "question_en": "What type of cloud indicates thunderstorm danger?",
+    "question_de": "Welcher Wolkentyp zeigt Gewittergefahr an?",
+    "options": [
+      {
+        "text": "Cirrus",
+        "correct": false
+      },
+      {
+        "text": "Stratus",
+        "correct": false
+      },
+      {
+        "text": "Cumulonimbus",
+        "correct": true
+      },
+      {
+        "text": "Cumulus",
+        "correct": false
+      }
+    ],
+    "explanation_en": "Cumulonimbus (Cb) is the thunderstorm cloud — towering vertical development with an anvil top. Dangers include strong gusts, lightning, heavy rain, hail, and waterspouts.",
+    "explanation_de": "Cumulonimbus (Cb) ist die Gewitterwolke — turmhohe vertikale Entwicklung mit Ambossform. Gefahren: Sturmboeen, Blitz, Starkregen, Hagel, Wasserhosen."
+  },
+  {
+    "type": "quiz",
+    "question_en": "When do spring tides occur?",
+    "question_de": "Wann treten Springtiden auf?",
+    "options": [
+      {
+        "text": "Only in spring season",
+        "correct": false
+      },
+      {
+        "text": "During quarter moon phases",
+        "correct": false
+      },
+      {
+        "text": "During full moon and new moon",
+        "correct": true
+      },
+      {
+        "text": "Only during storms",
+        "correct": false
+      }
+    ],
+    "explanation_en": "Spring tides have the largest tidal range and occur during full moon and new moon when Sun and Moon are aligned and their gravitational forces combine. They have nothing to do with the spring season.",
+    "explanation_de": "Springtiden haben den groessten Tidenhub und treten bei Voll- und Neumond auf, wenn Sonne und Mond in einer Linie stehen und ihre Gravitationskraefte sich addieren."
+  },
+  {
+    "type": "quiz_free",
+    "question_en": "How can you use clouds and a barometer to predict approaching bad weather?",
+    "question_de": "Wie kannst du Wolken und ein Barometer nutzen um schlechtes Wetter vorherzusagen?",
+    "model_answer_en": "Approaching bad weather shows several signs: cirrus clouds appearing from the west may indicate a warm front approaching, bringing rain within 24-48 hours. The barometer will start falling — a rapid drop of more than 3 hPa in 3 hours is a strong warning. Clouds lower and thicken from cirrus to cirrostratus to altostratus to nimbostratus. Wind increases and may shift direction. If you see towering cumulonimbus clouds, expect thunderstorms with strong gusts. A falling barometer combined with darkening skies and increasing wind means deteriorating conditions — prepare the boat and consider seeking shelter.",
+    "model_answer_de": "Schlechtwetter zeigt sich durch: Cirrus-Wolken aus Westen deuten auf eine Warmfront hin, Regen in 24-48 Stunden. Das Barometer faellt — schneller Abfall von mehr als 3 hPa in 3 Stunden ist eine starke Warnung. Wolken werden tiefer und dicker. Wind nimmt zu. Cumulonimbus bedeutet Gewitter mit Sturmboeen. Fallendes Barometer + verdunkelnder Himmel + zunehmender Wind = Wetterverschlechterung — Boot vorbereiten und Schutz suchen."
+  }
+]

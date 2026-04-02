@@ -1,0 +1,70 @@
+[
+  {
+    "type": "vocab",
+    "term_en": "Ahead / Astern",
+    "definition_en": "Ahead = forward movement. Astern = backward/reverse movement. These are the two basic engine commands for maneuvering.",
+    "term_de": "Voraus / Achteraus",
+    "definition_de": "Voraus = Vorwärtsbewegung. Achteraus = Rückwärtsbewegung. Die zwei grundlegenden Motorkommandos."
+  },
+  {
+    "type": "vocab",
+    "term_en": "Windward / Leeward",
+    "definition_en": "Windward (Luv) = the side the wind is coming FROM. Leeward (Lee) = the side SHELTERED from the wind. Always approach a MOB from leeward.",
+    "term_de": "Luv / Lee",
+    "definition_de": "Luv = die Seite, VON der der Wind kommt. Lee = die wind-GESCHÜTZTE Seite. Immer MOB von Lee anfahren."
+  },
+  {
+    "type": "vocab",
+    "term_en": "Propeller Walk (Paddle Wheel Effect)",
+    "definition_en": "The tendency of the stern to swing sideways due to propeller rotation. Right-hand propeller: stern moves to starboard going ahead, to port going astern.",
+    "term_de": "Radeffekt",
+    "definition_de": "Die Tendenz des Hecks, seitwärts zu schwingen durch Propellerdrehung. Rechtsdrehender Propeller: Heck nach Steuerbord voraus, nach Backbord rückwärts."
+  },
+  {
+    "type": "learn",
+    "title_en": "Basic Maneuvering",
+    "content_en": "Key maneuvering principles:\n• A boat steers from the STERN — the stern swings opposite to the bow\n• At slow speed, rudder effect is weak — use short bursts of power\n• Wind and current affect the boat — plan for drift\n• Propeller walk: in reverse, the stern kicks sideways\n\nApproaching a berth:\n1. Plan your approach — consider wind and current\n2. Come in slowly at shallow angle\n3. Prepare fenders and mooring lines\n4. Engine in neutral when close, use short bursts\n5. Get bow line ashore first, then stern line\n6. Add springs and breast lines",
+    "content_de": "Grundprinzipien:\n• Ein Boot steuert vom HECK — das Heck schwingt entgegengesetzt zum Bug\n• Bei niedriger Geschwindigkeit ist die Ruderwirkung schwach\n• Wind und Strömung beeinflussen das Boot — Abdrift einplanen\n• Radeffekt: Rückwärts kickt das Heck seitwärts\n\nAnlegen:\n1. Anfahrt planen — Wind und Strömung beachten\n2. Langsam in flachem Winkel kommen\n3. Fender und Leinen vorbereiten\n4. Motor in Leerlauf wenn nah, kurze Gasstöße\n5. Bugleine zuerst an Land, dann Heckleine\n6. Spring- und Querleinen hinzufügen",
+    "image": "p108_img00.jpeg"
+  },
+  {
+    "type": "learn",
+    "title_en": "Leaving and Entering a Port",
+    "content_en": "Entering port:\n• Reduce speed — obey port speed limits\n• Stay in the fairway/channel\n• Give way to vessels leaving port\n• Monitor VHF for port instructions\n• Prepare fenders on the correct side\n\nLeaving port:\n• Check weather and forecast\n• Check engine, fuel, equipment\n• Brief the crew on the plan\n• Cast off springs first, then bow/stern\n• Use engine to clear the berth\n• Watch for traffic in the fairway\n\nIn narrow channels: keep to STARBOARD (right side).",
+    "content_de": "Hafeneinfahrt:\n• Geschwindigkeit reduzieren\n• Im Fahrwasser bleiben\n• Ausfahrenden Schiffen Vorfahrt geben\n• UKW für Hafenanweisungen abhören\n• Fender auf der richtigen Seite\n\nAusfahrt:\n• Wetter und Vorhersage prüfen\n• Motor, Treibstoff, Ausrüstung prüfen\n• Besatzung einweisen\n• Springleinen zuerst lösen\n• Mit Motor vom Liegeplatz\n• Auf Verkehr im Fahrwasser achten\n\nIn engen Kanälen: STEUERBORD (rechte Seite) halten.",
+    "image": "p110_img00.jpeg"
+  },
+  {
+    "type": "quiz",
+    "question_en": "When entering a narrow channel, which side should you keep to?",
+    "question_de": "Auf welcher Seite fährst du in einem engen Kanal?",
+    "options": [
+      { "text": "Port (left) side", "correct": false },
+      { "text": "Starboard (right) side", "correct": true },
+      { "text": "The center", "correct": false },
+      { "text": "Whichever side has more room", "correct": false }
+    ],
+    "explanation_en": "In narrow channels, you must keep to the STARBOARD (right) side. This is the same rule as road traffic — keep right. This ensures vessels meet port-to-port (left to left).",
+    "explanation_de": "In engen Kanälen muss man die STEUERBORD-Seite (rechts) halten. Gleiche Regel wie im Straßenverkehr — rechts halten. So treffen sich Schiffe Backbord an Backbord."
+  },
+  {
+    "type": "quiz",
+    "question_en": "What is 'propeller walk'?",
+    "question_de": "Was ist der 'Radeffekt'?",
+    "options": [
+      { "text": "The sound a propeller makes underwater", "correct": false },
+      { "text": "The tendency of the stern to swing sideways due to propeller rotation", "correct": true },
+      { "text": "The forward thrust of the propeller", "correct": false },
+      { "text": "The wake behind the boat", "correct": false }
+    ],
+    "explanation_en": "Propeller walk (paddle wheel effect) is the tendency of the stern to swing sideways because the propeller pushes more on one side than the other. Most noticeable in reverse. Right-hand prop: stern kicks to port in reverse.",
+    "explanation_de": "Der Radeffekt ist die Tendenz des Hecks, seitwärts zu schwingen, weil der Propeller auf einer Seite mehr drückt. Am stärksten rückwärts. Rechtsdrehend: Heck nach Backbord rückwärts."
+  },
+  {
+    "type": "quiz_free",
+    "question_en": "Describe the steps for approaching and mooring at a dock.",
+    "question_de": "Beschreibe die Schritte zum Anlegen an einem Dock.",
+    "model_answer_en": "1) Plan the approach considering wind and current direction. 2) Come in slowly at a shallow angle. 3) Prepare fenders on the dock side and mooring lines ready. 4) Put engine in neutral when close to the dock, use short bursts of power for control. 5) Get the bow line ashore first, then the stern line. 6) Add spring lines to prevent forward/backward movement and breast lines to keep the boat close. Consider the propeller walk effect when maneuvering in reverse.",
+    "model_answer_de": "1) Anfahrt planen unter Berücksichtigung von Wind und Strömung. 2) Langsam in flachem Winkel anfahren. 3) Fender auf Dockseite und Leinen vorbereiten. 4) Motor in Leerlauf wenn nah, kurze Gasstöße zur Kontrolle. 5) Bugleine zuerst an Land, dann Heckleine. 6) Springleinen gegen Vor-/Rückwärtsbewegung und Querleinen zum Nah-Halten. Radeffekt beim Rückwärtsfahren beachten."
+  }
+]

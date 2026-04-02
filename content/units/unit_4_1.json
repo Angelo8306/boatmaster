@@ -1,0 +1,76 @@
+[
+  {
+    "type": "vocab",
+    "term_en": "Displacement Hull",
+    "definition_en": "A hull that moves through the water, pushing it aside. Used by sailboats and heavy motorboats. Speed limited by waterline length. More fuel-efficient at lower speeds.",
+    "term_de": "Verdraengungsrumpf",
+    "definition_de": "Ein Rumpf der sich durch das Wasser bewegt und es verdraengt. Bei Segelbooten und schweren Motorbooten. Geschwindigkeit durch Wasserlinie begrenzt."
+  },
+  {
+    "type": "vocab",
+    "term_en": "Planing Hull",
+    "definition_en": "A hull that lifts and glides on top of the water at higher speeds. Used by speedboats and small motorboats. Requires more power but can go much faster.",
+    "term_de": "Gleitrumpf",
+    "definition_de": "Ein Rumpf der bei hoeherer Geschwindigkeit auf dem Wasser gleitet. Bei Schnellbooten und kleinen Motorbooten. Braucht mehr Leistung, ist aber viel schneller."
+  },
+  {
+    "type": "vocab",
+    "term_en": "National Flag / Ensign",
+    "definition_en": "The flag showing the vessel's nationality. Must be flown from the stern when in foreign waters. In Croatia, display Croatian flag or your country's flag.",
+    "term_de": "Nationalflagge",
+    "definition_de": "Die Flagge die die Nationalitaet des Bootes zeigt. Muss am Heck gefuehrt werden wenn in fremden Gewaessern.",
+    "image": "p083_img00.jpeg"
+  },
+  {
+    "type": "learn",
+    "title_en": "Types of Maritime Vessels",
+    "content_en": "Vessels are classified by:\n\nBy PURPOSE:\n• Commercial: passenger transport, cargo, fishing\n• Non-commercial: recreation, sports, personal use\n\nBy PROPULSION:\n• Motor vessels — engine powered\n• Sailing vessels — wind powered (may have auxiliary engine)\n• Rowing boats — human powered\n\nBy SIZE (Croatian law):\n• Boat (brodica) — up to 12m length, up to 30 GT\n• Yacht (jahta) — over 12m length or over 30 GT\n• Ship (brod) — over 12m length, commercial use",
+    "content_de": "Schiffe werden klassifiziert nach:\n\nNach ZWECK:\n• Gewerblich: Passagiere, Fracht, Fischerei\n• Nicht-gewerblich: Freizeit, Sport, persoenlich\n\nNach ANTRIEB:\n• Motorboote, Segelboote, Ruderboote\n\nNach GROESSE (kroatisches Recht):\n• Boot (brodica) — bis 12m, bis 30 GT\n• Yacht (jahta) — ueber 12m oder ueber 30 GT\n• Schiff (brod) — ueber 12m, gewerblich"
+  },
+  {
+    "type": "learn",
+    "title_en": "Required Safety Equipment",
+    "content_en": "Minimum equipment for boats in Croatian waters:\n\n• Life jackets — for every person on board\n• Lifebuoy with line — at least one\n• Flares — 6 red hand flares (check expiry!)\n• Fire extinguisher — at least one, appropriate size\n• First aid kit\n• Sound signaling device (horn/whistle)\n• Flashlight / torch\n• Anchor with sufficient rope/chain\n• Bilge pump\n• Navigation lights\n• VHF radio (recommended, required for some categories)\n• Tool kit and spare parts\n\nAll equipment must be accessible and in working condition!",
+    "content_de": "Mindestausruestung fuer Boote in Kroatien:\n\n• Rettungswesten — fuer jede Person\n• Rettungsring mit Leine\n• 6 rote Handfackeln (Ablaufdatum pruefen!)\n• Feuerloescher\n• Erste-Hilfe-Kasten\n• Schallsignalgeraet\n• Taschenlampe\n• Anker mit Leine/Kette\n• Lenzpumpe\n• Navigationslichter\n• VHF-Funk (empfohlen/vorgeschrieben)\n• Werkzeug und Ersatzteile",
+    "image": "p083_img01.jpeg"
+  },
+  {
+    "type": "learn",
+    "title_en": "Flags on Board",
+    "content_en": "Important flags:\n\n• NATIONAL FLAG — at stern, shows vessel nationality. Must fly when in foreign waters.\n• COURTESY FLAG — flag of the country you're visiting, flown on starboard spreader\n• Q FLAG (yellow) — 'I request pratique' (health clearance) when entering a country\n• DIVE FLAG (red with white diagonal) — divers in water, keep 50m distance\n• N over C flags — international distress signal\n\nFlag etiquette:\n• Hoist at 0800, lower at sunset\n• Never fly a tattered flag\n• National flag should be largest",
+    "content_de": "Wichtige Flaggen:\n\n• NATIONALFLAGGE — am Heck, zeigt Bootsnationalitaet\n• GASTLANDFLAGGE — Flagge des besuchten Landes, an Steuerbord-Saling\n• Q-FLAGGE (gelb) — 'Gesundheitsfreigabe erbeten' bei Einlaufen\n• TAUCHFLAGGE (rot mit weissem Diagonal) — Taucher im Wasser, 50m Abstand\n\nFlaggen-Etikette: Hissen um 08:00, Einholen bei Sonnenuntergang.",
+    "image": "p083_img03.jpeg"
+  },
+  {
+    "type": "quiz",
+    "question_en": "What is the difference between a displacement hull and a planing hull?",
+    "question_de": "Was ist der Unterschied zwischen einem Verdraengungs- und einem Gleitrumpf?",
+    "options": [
+      {
+        "text": "Displacement hulls are faster",
+        "correct": false
+      },
+      {
+        "text": "Planing hulls glide on top of the water at speed",
+        "correct": true
+      },
+      {
+        "text": "Displacement hulls are only used for racing",
+        "correct": false
+      },
+      {
+        "text": "There is no practical difference",
+        "correct": false
+      }
+    ],
+    "explanation_en": "A displacement hull pushes through the water and is limited by its waterline length. A planing hull lifts up and glides on the water surface at higher speeds, allowing much greater speed but requiring more engine power.",
+    "explanation_de": "Ein Verdraengungsrumpf schiebt sich durchs Wasser, begrenzt durch die Wasserlinienlaenge. Ein Gleitrumpf hebt sich und gleitet bei hoeherer Geschwindigkeit auf der Wasseroberflaeche."
+  },
+  {
+    "type": "quiz_free",
+    "question_en": "What safety equipment must be carried on a boat in Croatian waters?",
+    "question_de": "Welche Sicherheitsausruestung muss auf einem Boot in kroatischen Gewaessern mitgefuehrt werden?",
+    "model_answer_en": "Required safety equipment includes: life jackets for every person on board, at least one lifebuoy with line, six red hand flares within their expiry date, at least one fire extinguisher of appropriate size, a first aid kit, a sound signaling device such as a horn or whistle, a flashlight, an anchor with sufficient rope or chain, a bilge pump, and working navigation lights. A VHF radio is recommended and required for certain vessel categories. All equipment must be accessible and in working order.",
+    "model_answer_de": "Erforderliche Sicherheitsausruestung: Rettungswesten fuer jede Person, mindestens ein Rettungsring mit Leine, sechs rote Handfackeln (Ablaufdatum!), Feuerloescher, Erste-Hilfe-Kasten, Schallsignalgeraet, Taschenlampe, Anker mit Leine/Kette, Lenzpumpe, funktionierende Navigationslichter. VHF-Funk empfohlen bzw. vorgeschrieben. Alles muss zugaenglich und funktionsfaehig sein."
+  }
+]

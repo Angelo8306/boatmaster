@@ -1,0 +1,57 @@
+[
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Radar — das Auge bei Nacht und Nebel. Radar steht für Radio Detection And Ranging, also Funkortung und Entfernungsmessung."
+  },
+  {
+    "speaker": "george",
+    "lang": "en",
+    "text": "Radar. Radio Detection And Ranging. Sends microwave pulses, measures reflected echoes. Works in darkness, fog, and rain."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "So funktioniert es: Der Sender schickt kurze Mikrowellenimpulse über eine drehende Antenne. Die Impulse treffen auf Objekte und werden reflektiert. Aus der Zeitverzögerung berechnet das Radar die Entfernung."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Auf dem Bildschirm ist dein Boot in der Mitte. Andere Schiffe, Land und Bojen erscheinen als helle Punkte. Das zeigt dir Entfernung und Richtung zu jedem Objekt."
+  },
+  {
+    "speaker": "george",
+    "lang": "en",
+    "text": "Range: distance to a target, from echo delay. Bearing: direction to a target, from antenna position. Display shows your vessel at center, targets as bright dots."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Moderne Radargeräte haben ARPA — das steht für Automatic Radar Plotting Aid. ARPA verfolgt andere Schiffe automatisch und berechnet, ob Kollisionsgefahr besteht."
+  },
+  {
+    "speaker": "george",
+    "lang": "en",
+    "text": "ARPA. Automatic Radar Plotting Aid. Tracks targets, calculates their course and speed. Shows CPA — closest point of approach — and TCPA — time to closest point of approach."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "CPA ist der nächste Passierabstand — also wie nah dir ein anderes Schiff kommen wird. TCPA ist die Zeit bis dahin. Beides entscheidend um Kollisionen zu vermeiden."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Aber Radar hat Grenzen. Schattenbereich hinter dem Mast, Falschechos von Wellen und Regen, und kleine Holz- oder GFK-Boote reflektieren schlecht."
+  },
+  {
+    "speaker": "george",
+    "lang": "en",
+    "text": "Radar limitations: shadow sectors behind the mast, sea clutter from waves, rain clutter, and small wooden or fiberglass boats may not appear. Never rely on radar alone."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Zusammenfassung: Radar zeigt Entfernung und Richtung zu Objekten. ARPA berechnet Kollisionsrisiko mit CPA und TCPA. Aber Radar hat Grenzen — immer auch visuellen Ausguck halten!"
+  }
+]

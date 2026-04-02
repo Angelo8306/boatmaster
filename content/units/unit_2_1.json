@@ -1,0 +1,77 @@
+[
+  {
+    "type": "vocab",
+    "term_en": "Internal Combustion Engine",
+    "definition_en": "A heat machine where fuel burns inside cylinders, converting thermal energy into mechanical energy via pistons and crankshaft.",
+    "term_de": "Verbrennungsmotor",
+    "definition_de": "Eine Wärmekraftmaschine, bei der Kraftstoff in Zylindern verbrennt und thermische Energie über Kolben und Kurbelwelle in mechanische Energie umwandelt."
+  },
+  {
+    "type": "vocab",
+    "term_en": "Otto Engine (Gasoline)",
+    "definition_en": "Sucks in a fuel-air mixture, compresses it (ratio 8:1 to 12:1), and ignites it with a spark plug. Lower compression than diesel.",
+    "term_de": "Ottomotor (Benzin)",
+    "definition_de": "Saugt Kraftstoff-Luft-Gemisch an, verdichtet es (Verhältnis 8:1 bis 12:1) und zündet es mit einer Zündkerze."
+  },
+  {
+    "type": "vocab",
+    "term_en": "Diesel Engine",
+    "definition_en": "Sucks in clean air only, compresses it (ratio 14:1 to 25:1), then injects fuel which ignites from the heat of compression. Higher efficiency than gasoline.",
+    "term_de": "Dieselmotor",
+    "definition_de": "Saugt nur saubere Luft an, verdichtet sie (Verhältnis 14:1 bis 25:1), spritzt dann Kraftstoff ein, der durch die Verdichtungshitze zündet."
+  },
+  {
+    "type": "vocab",
+    "term_en": "Four-Stroke Engine",
+    "definition_en": "An engine that completes one power cycle in four strokes: 1) Intake, 2) Compression, 3) Power (combustion), 4) Exhaust. Most common in marine engines.",
+    "term_de": "Viertaktmotor",
+    "definition_de": "Ein Motor mit vier Takten: 1) Ansaugen, 2) Verdichten, 3) Arbeiten (Verbrennung), 4) Ausstoßen."
+  },
+  {
+    "type": "learn",
+    "title_en": "Gasoline vs. Diesel — Key Differences",
+    "content_en": "Gasoline (Otto) engine:\n• Sucks in fuel + air mixture\n• Spark plug ignition\n• Compression ratio: 8:1 to 12:1\n• Uses carburetor or fuel injection\n\nDiesel engine:\n• Sucks in air only\n• Self-ignition by compression heat\n• Compression ratio: 14:1 to 25:1\n• Direct fuel injection into cylinder\n• Higher efficiency, more fuel-efficient\n• More common on larger boats",
+    "content_de": "Benzinmotor (Otto):\n• Saugt Kraftstoff-Luft-Gemisch an\n• Zündkerze\n• Verdichtung: 8:1 bis 12:1\n\nDieselmotor:\n• Saugt nur Luft an\n• Selbstzündung durch Verdichtungshitze\n• Verdichtung: 14:1 bis 25:1\n• Direkteinspritzung\n• Höherer Wirkungsgrad\n• Häufiger auf größeren Booten",
+    "image": "p063_img00.jpeg"
+  },
+  {
+    "type": "learn",
+    "title_en": "Engine Pre-Start Checklist",
+    "content_en": "Before starting the engine, always check:\n1. No foreign objects around engine and shaft\n2. Coolant level\n3. Engine oil level\n4. Battery voltage\n5. Fuel level\n6. Gear unit oil level\n7. Visual inspection for leaks (oil, coolant, fuel)\n\nAfter starting:\n• Check oil pressure (light/gauge)\n• Check alternator charging (>13V for 12V system)\n• Listen for unusual sounds\n• Check cooling water flow at exhaust\n• Check for obstacles around propeller before maneuvering",
+    "content_de": "Vor dem Motorstart immer prüfen:\n1. Keine Fremdkörper um Motor und Welle\n2. Kühlmittelstand\n3. Motorölstand\n4. Batteriespannung\n5. Kraftstoffstand\n6. Getriebeölstand\n7. Sichtprüfung auf Leckagen\n\nNach dem Start:\n• Öldruck prüfen\n• Ladung prüfen (>13V bei 12V-System)\n• Auf ungewöhnliche Geräusche achten\n• Kühlwasserfluss am Auspuff prüfen\n• Hindernisse um Propeller prüfen",
+    "image": "p065_img00.jpeg"
+  },
+  {
+    "type": "quiz",
+    "question_en": "What is the main difference between a gasoline engine and a diesel engine?",
+    "question_de": "Was ist der Hauptunterschied zwischen einem Benzin- und einem Dieselmotor?",
+    "options": [
+      { "text": "Gasoline uses spark plug ignition, diesel uses compression ignition", "correct": true },
+      { "text": "Diesel engines are always 2-stroke", "correct": false },
+      { "text": "Gasoline engines have higher compression ratios", "correct": false },
+      { "text": "Diesel engines use carburetors", "correct": false }
+    ],
+    "explanation_en": "The key difference: gasoline engines ignite fuel with an electric spark (spark plug), while diesel engines compress air so much that the injected fuel self-ignites from the heat. Diesel has higher compression ratios (14:1-25:1 vs 8:1-12:1).",
+    "explanation_de": "Der Hauptunterschied: Benzinmotoren zünden mit Zündkerze, Dieselmotoren verdichten Luft so stark, dass der eingespritzte Kraftstoff sich durch die Hitze selbst entzündet. Diesel hat höhere Verdichtung (14:1-25:1 vs 8:1-12:1)."
+  },
+  {
+    "type": "quiz",
+    "question_en": "What should you check AFTER starting the engine?",
+    "question_de": "Was musst du NACH dem Motorstart prüfen?",
+    "options": [
+      { "text": "Fuel level in the tank", "correct": false },
+      { "text": "Oil pressure and cooling water flow", "correct": true },
+      { "text": "Anchor position", "correct": false },
+      { "text": "Navigation lights", "correct": false }
+    ],
+    "explanation_en": "After starting: check oil pressure (gauge/light), alternator charging, listen for unusual sounds, and verify cooling water is flowing out of the exhaust. Fuel level should be checked BEFORE starting.",
+    "explanation_de": "Nach dem Start: Öldruck prüfen, Ladeanlage prüfen, auf ungewöhnliche Geräusche achten und Kühlwasserfluss am Auspuff prüfen. Kraftstoffstand wird VOR dem Start geprüft."
+  },
+  {
+    "type": "quiz_free",
+    "question_en": "Describe the steps you must take to prepare an engine before starting it.",
+    "question_de": "Beschreibe die Schritte, die du vor dem Motorstart durchführen musst.",
+    "model_answer_en": "Before starting the engine: Check that there are no foreign objects around the engine and shaft. Check the coolant level, engine oil level, battery voltage, fuel level, and gear unit oil level. Visually inspect the engine for any leaks of oil, coolant, or fuel. After starting, check oil pressure on the gauge, verify the alternator is charging, listen for any unusual sounds, and confirm cooling water is flowing from the exhaust.",
+    "model_answer_de": "Vor dem Motorstart: Prüfen, dass keine Fremdkörper um Motor und Welle sind. Kühlmittelstand, Motorölstand, Batteriespannung, Kraftstoffstand und Getriebeölstand kontrollieren. Motor visuell auf Leckagen prüfen. Nach dem Start: Öldruck prüfen, Ladung kontrollieren, auf Geräusche achten, Kühlwasserfluss am Auspuff bestätigen."
+  }
+]

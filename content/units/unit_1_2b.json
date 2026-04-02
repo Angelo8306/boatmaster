@@ -1,0 +1,101 @@
+[
+  {
+    "type": "vocab",
+    "term_en": "Cardinal Marks",
+    "definition_en": "Buoys placed around a danger showing where safe water lies, named after compass directions: North, South, East, West. Colors are black and yellow.",
+    "term_de": "Kardinalzeichen",
+    "definition_de": "Bojen um eine Gefahr herum, die zeigen wo sicheres Wasser ist. Benannt nach Himmelsrichtungen: Nord, Sued, Ost, West. Farben: Schwarz und Gelb.",
+    "image": "p022_img00.png"
+  },
+  {
+    "type": "vocab",
+    "term_en": "Isolated Danger Mark",
+    "definition_en": "A mark placed directly on or above a danger with navigable water all around. Black with red horizontal bands, top mark: two black spheres.",
+    "term_de": "Einzelgefahrenzeichen",
+    "definition_de": "Ein Zeichen direkt ueber einer Gefahr, mit befahrbarem Wasser rundherum. Schwarz mit roten Querstreifen, Toppzeichen: zwei schwarze Baelle.",
+    "image": "p022_img01.png"
+  },
+  {
+    "type": "vocab",
+    "term_en": "Safe Water Mark",
+    "definition_en": "Indicates navigable water around the mark (mid-channel or fairway). Red and white vertical stripes, spherical shape, top mark: single red sphere.",
+    "term_de": "Sicheres-Wasser-Zeichen",
+    "definition_de": "Zeigt befahrbares Wasser rundherum an (Fahrwassermitte). Rote und weisse Laengsstreifen, kugelfoermig, Toppzeichen: einzelne rote Kugel."
+  },
+  {
+    "type": "learn",
+    "title_en": "Cardinal Marks — How to Remember",
+    "content_en": "Cardinal marks use black and yellow — the position of BLACK tells you the direction:\n\n• NORTH: Black on TOP — points up (pass to the north)\n• SOUTH: Black on BOTTOM — points down (pass to the south)\n• EAST: Black on TOP and BOTTOM — (pass to the east)\n• WEST: Black in the MIDDLE — like a waistband (pass to the west)\n\nTop marks are two black cones:\n• North: both pointing UP\n• South: both pointing DOWN\n• East: base to base (diamond shape)\n• West: point to point (hourglass shape)",
+    "content_de": "Kardinalzeichen verwenden Schwarz und Gelb — die Position von SCHWARZ zeigt die Richtung:\n\n• NORD: Schwarz OBEN — zeigt nach oben\n• SUED: Schwarz UNTEN — zeigt nach unten\n• OST: Schwarz OBEN und UNTEN\n• WEST: Schwarz in der MITTE — wie ein Guertel\n\nToppzeichen sind zwei schwarze Kegel:\n• Nord: beide nach OBEN\n• Sued: beide nach UNTEN\n• Ost: Basis an Basis (Rautenform)\n• West: Spitze an Spitze (Sanduhrform)",
+    "image": "p022_img03.jpeg"
+  },
+  {
+    "type": "learn",
+    "title_en": "Cardinal Mark Lights",
+    "content_en": "Cardinal marks use white lights with quick (Q) or very quick (VQ) flashing:\n\n• North: Continuous quick flashing — Q or VQ (uninterrupted)\n• East: Groups of 3 — Q(3) or VQ(3) — think '3 o'clock = East'\n• South: Groups of 6 + long flash — Q(6)+LFl or VQ(6)+LFl — '6 o'clock = South'\n• West: Groups of 9 — Q(9) or VQ(9) — '9 o'clock = West'\n\nClock trick: East=3, South=6, West=9, North=continuous (12=all)",
+    "content_de": "Kardinalzeichen verwenden weisse Lichter mit schnellem (Q) oder sehr schnellem (VQ) Blinken:\n\n• Nord: Durchgehend schnell — Q oder VQ (ununterbrochen)\n• Ost: Gruppen von 3 — Q(3) oder VQ(3) — '3 Uhr = Ost'\n• Sued: Gruppen von 6 + Langblitz — Q(6)+LFl — '6 Uhr = Sued'\n• West: Gruppen von 9 — Q(9) oder VQ(9) — '9 Uhr = West'\n\nUhr-Trick: Ost=3, Sued=6, West=9, Nord=durchgehend"
+  },
+  {
+    "type": "learn",
+    "title_en": "Special Marks",
+    "content_en": "Yellow marks for special areas, not primarily for navigation:\n• Indicate special areas: military exercise zones, water ski areas, swimming zones, cable/pipeline areas, nature reserves\n• Color: Yellow\n• Shape: X-shaped top mark\n• Light: Yellow, any rhythm not used by other marks\n\nAlso: Emergency Wreck Marking Buoy — alternating blue and yellow vertical stripes, flashing alternating blue and yellow light.",
+    "content_de": "Gelbe Zeichen fuer Sondergebiete, nicht primaer zur Navigation:\n• Kennzeichnen: Militaerische Uebungsgebiete, Wasserskizonen, Schwimmzonen, Kabel-/Pipelinebereiche, Naturschutzgebiete\n• Farbe: Gelb\n• Form: X-foermiges Toppzeichen\n• Licht: Gelb, jeder Rhythmus der nicht von anderen Zeichen verwendet wird\n\nAuch: Notfall-Wrack-Markierung — abwechselnd blaue und gelbe Laengsstreifen."
+  },
+  {
+    "type": "quiz",
+    "question_en": "A cardinal mark has black on top and yellow on bottom. Which direction should you pass it?",
+    "question_de": "Ein Kardinalzeichen hat Schwarz oben und Gelb unten. In welche Richtung sollst du es passieren?",
+    "options": [
+      {
+        "text": "Pass to the South",
+        "correct": false
+      },
+      {
+        "text": "Pass to the North",
+        "correct": true
+      },
+      {
+        "text": "Pass to the East",
+        "correct": false
+      },
+      {
+        "text": "Pass to the West",
+        "correct": false
+      }
+    ],
+    "explanation_en": "Black on top = North cardinal mark. The safe water is to the NORTH of the mark. Remember: black points up = north.",
+    "explanation_de": "Schwarz oben = Nord-Kardinalzeichen. Das sichere Wasser liegt NOERDLICH des Zeichens. Merke: Schwarz zeigt nach oben = Nord."
+  },
+  {
+    "type": "quiz",
+    "question_en": "How many flashes does an East cardinal mark show?",
+    "question_de": "Wie viele Blitze zeigt ein Ost-Kardinalzeichen?",
+    "options": [
+      {
+        "text": "Continuous",
+        "correct": false
+      },
+      {
+        "text": "3 flashes",
+        "correct": true
+      },
+      {
+        "text": "6 flashes + long flash",
+        "correct": false
+      },
+      {
+        "text": "9 flashes",
+        "correct": false
+      }
+    ],
+    "explanation_en": "East = 3 flashes (clock trick: 3 o'clock = East). North = continuous, South = 6+long flash, West = 9.",
+    "explanation_de": "Ost = 3 Blitze (Uhr-Trick: 3 Uhr = Ost). Nord = durchgehend, Sued = 6+Langblitz, West = 9."
+  },
+  {
+    "type": "quiz_free",
+    "question_en": "Describe an isolated danger mark: its colors, top mark, and what it indicates.",
+    "question_de": "Beschreibe ein Einzelgefahrenzeichen: Farben, Toppzeichen und was es anzeigt.",
+    "model_answer_en": "An isolated danger mark is placed directly on or above a danger such as an underwater rock or wreck. It has navigable water all around it, so you can pass on any side. Colors: black with one or more red horizontal bands. Top mark: two black spheres, one above the other. Light: white, group flashing two — Fl(2).",
+    "model_answer_de": "Ein Einzelgefahrenzeichen steht direkt ueber einer Gefahr wie einem Unterwasserfelsen oder Wrack. Es hat befahrbares Wasser rundherum, man kann auf jeder Seite passieren. Farben: Schwarz mit roten Querstreifen. Toppzeichen: zwei schwarze Kugeln uebereinander. Licht: Weiss, Gruppen-Blinkfeuer zwei — Fl(2)."
+  }
+]

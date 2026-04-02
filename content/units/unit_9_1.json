@@ -1,0 +1,90 @@
+[
+  {
+    "type": "vocab",
+    "term_en": "COLREGS",
+    "definition_en": "International Regulations for Preventing Collisions at Sea. The rules every vessel must follow to avoid collisions. Apply to all vessels on the high seas and connected waters.",
+    "term_de": "KVR (Kollisionsverhütungsregeln)",
+    "definition_de": "Internationale Regeln zur Verhütung von Zusammenstößen auf See. Gelten für alle Schiffe."
+  },
+  {
+    "type": "vocab",
+    "term_en": "Give-Way Vessel",
+    "definition_en": "The vessel that must take action to avoid collision — alter course, slow down, or stop. Must act early and make clear, decisive maneuvers.",
+    "term_de": "Ausweichpflichtiges Fahrzeug",
+    "definition_de": "Das Fahrzeug, das ausweichen muss — Kurs ändern, verlangsamen oder stoppen."
+  },
+  {
+    "type": "vocab",
+    "term_en": "Stand-On Vessel",
+    "definition_en": "The vessel that must maintain its course and speed. Has the right of way. Must take action only if the give-way vessel fails to act.",
+    "term_de": "Kurshaltendes Fahrzeug",
+    "definition_de": "Das Fahrzeug, das Kurs und Geschwindigkeit beibehalten muss. Hat Vorfahrt."
+  },
+  {
+    "type": "vocab",
+    "term_en": "Starboard (Right of Way) Rule",
+    "definition_en": "When two power-driven vessels meet at crossing courses, the vessel that has the other on its STARBOARD (right) side must give way. The other vessel stands on.",
+    "term_de": "Steuerbord-Regel (Vorfahrtsregel)",
+    "definition_de": "Bei Kreuzungskursen muss das Fahrzeug ausweichen, das das andere an STEUERBORD (rechts) hat."
+  },
+  {
+    "type": "learn",
+    "title_en": "Right of Way — Who Gives Way?",
+    "content_en": "Priority hierarchy (top = most right of way):\n1. Vessel not under command\n2. Vessel restricted in ability to maneuver\n3. Vessel engaged in fishing\n4. Sailing vessel\n5. Power-driven vessel\n\nBetween two power vessels:\n• HEAD-ON: Both turn to starboard (right)\n• CROSSING: Vessel with other on starboard gives way\n• OVERTAKING: Overtaking vessel ALWAYS gives way\n\nRemember: When in doubt, assume you must give way!",
+    "content_de": "Vorrangordnung (oben = meiste Vorfahrt):\n1. Manövrierunfähiges Fahrzeug\n2. Manövrierbeschränktes Fahrzeug\n3. Fischendes Fahrzeug\n4. Segelfahrzeug\n5. Maschinenfahrzeug\n\nZwei Motorboote:\n• ENTGEGENKOMMEN: Beide nach Steuerbord (rechts)\n• KREUZEN: Wer den anderen rechts hat, weicht aus\n• ÜBERHOLEN: Überholer weicht IMMER aus\n\nIm Zweifel: Ausweichen!",
+    "image": "p115_img00.jpeg"
+  },
+  {
+    "type": "learn",
+    "title_en": "Head-On, Crossing, and Overtaking",
+    "content_en": "HEAD-ON situation:\n• Two vessels approaching nearly head-on\n• BOTH must alter course to STARBOARD (right)\n• Each passes on the other's port (left) side\n\nCROSSING situation:\n• Two vessels cross paths\n• Vessel with the other on its STARBOARD side must give way\n• Give-way vessel should avoid crossing in front\n\nOVERTAKING situation:\n• Any vessel coming from more than 22.5° abaft the beam\n• Overtaking vessel ALWAYS gives way\n• Must keep clear until well past and clear",
+    "content_de": "ENTGEGENKOMMEN:\n• Zwei Fahrzeuge fast frontal aufeinander zu\n• BEIDE nach STEUERBORD (rechts) ausweichen\n• Passieren an der Backbord-Seite (links)\n\nKREUZEN:\n• Zwei Fahrzeuge kreuzen sich\n• Wer den anderen an STEUERBORD hat, weicht aus\n• Nicht vor dem anderen kreuzen!\n\nÜBERHOLEN:\n• Jedes Fahrzeug von mehr als 22,5° achterlich querab\n• Überholer weicht IMMER aus\n• Frei halten bis sicher vorbei",
+    "image": "p117_img00.jpeg"
+  },
+  {
+    "type": "quiz",
+    "question_en": "Two power-driven vessels are approaching head-on. What should both do?",
+    "question_de": "Zwei Motorboote kommen sich frontal entgegen. Was müssen beide tun?",
+    "options": [
+      { "text": "The larger vessel has right of way", "correct": false },
+      { "text": "Both alter course to port (left)", "correct": false },
+      { "text": "Both alter course to starboard (right)", "correct": true },
+      { "text": "Both must stop", "correct": false }
+    ],
+    "explanation_en": "In a head-on situation, BOTH vessels must alter course to STARBOARD (right), so they pass port-to-port (left side to left side). This is one of the most important collision rules.",
+    "explanation_de": "Bei Entgegenkommen müssen BEIDE nach STEUERBORD (rechts) ausweichen, damit sie Backbord an Backbord (links an links) passieren."
+  },
+  {
+    "type": "quiz",
+    "question_en": "A power-driven vessel sees another power-driven vessel on its starboard (right) side on a crossing course. Who must give way?",
+    "question_de": "Ein Motorboot sieht ein anderes Motorboot an Steuerbord (rechts) auf Kreuzungskurs. Wer muss ausweichen?",
+    "options": [
+      { "text": "The vessel on the starboard side", "correct": false },
+      { "text": "The vessel that sees the other on its starboard side", "correct": true },
+      { "text": "Both must stop", "correct": false },
+      { "text": "The faster vessel", "correct": false }
+    ],
+    "explanation_en": "The vessel that has the other on its STARBOARD (right) side must give way. Remember: if the other vessel is on your right, YOU must yield. The other vessel stands on.",
+    "explanation_de": "Das Fahrzeug, das das andere an STEUERBORD (rechts) hat, muss ausweichen. Merke: Ist der andere rechts von dir, musst DU ausweichen."
+  },
+  {
+    "type": "quiz",
+    "question_en": "Which vessel has the MOST right of way?",
+    "question_de": "Welches Fahrzeug hat die MEISTE Vorfahrt?",
+    "options": [
+      { "text": "Sailing vessel", "correct": false },
+      { "text": "Power-driven vessel", "correct": false },
+      { "text": "Vessel not under command", "correct": true },
+      { "text": "Fishing vessel", "correct": false }
+    ],
+    "explanation_en": "Priority order: 1) Not under command, 2) Restricted in maneuverability, 3) Fishing, 4) Sailing, 5) Power-driven. A vessel not under command has the most right of way because it cannot maneuver.",
+    "explanation_de": "Vorrang: 1) Manövrierunfähig, 2) Manövrierbeschränkt, 3) Fischend, 4) Segelnd, 5) Motor. Ein manövrierunfähiges Fahrzeug hat die meiste Vorfahrt, weil es nicht ausweichen kann."
+  },
+  {
+    "type": "quiz_free",
+    "question_en": "Explain the three main situations where collision avoidance rules apply between power-driven vessels.",
+    "question_de": "Erkläre die drei Hauptsituationen, in denen Kollisionsverhütungsregeln zwischen Motorfahrzeugen gelten.",
+    "model_answer_en": "The three situations are: 1) Head-on — when two vessels approach nearly face to face, both must alter course to starboard and pass port-to-port. 2) Crossing — when courses cross, the vessel that has the other on its starboard side is the give-way vessel and must avoid crossing in front. 3) Overtaking — any vessel approaching from more than 22.5 degrees abaft the beam is overtaking and must keep clear of the vessel being overtaken, regardless of vessel type.",
+    "model_answer_de": "Die drei Situationen sind: 1) Entgegenkommen — bei fast frontalem Aufeinandertreffen weichen beide nach Steuerbord aus und passieren Backbord an Backbord. 2) Kreuzen — bei Kreuzungskursen muss das Fahrzeug ausweichen, das das andere an Steuerbord hat. 3) Überholen — jedes Fahrzeug das von mehr als 22,5° achterlich querab kommt, muss ausweichen und frei halten."
+  }
+]

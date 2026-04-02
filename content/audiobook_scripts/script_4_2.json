@@ -1,0 +1,19 @@
+[
+  {"speaker": "dieter", "lang": "de", "text": "Knoten und Ankern — das ist Handwerk. Jeder Skipper muss die wichtigsten Knoten blind beherrschen. Fangen wir an."},
+  {"speaker": "dieter", "lang": "de", "text": "Zuerst die Festmacherleinen. Du brauchst mindestens eine Bugleine, eine Heckleine und Springleinen. Auf Englisch:"},
+  {"speaker": "george", "lang": "en", "text": "Bow rope from the front. Stern rope from the back. Spring lines running at an angle to prevent forward and backward movement. And breast lines running perpendicular to keep the boat close."},
+  {"speaker": "dieter", "lang": "de", "text": "Die Bugleine hält den Bug, die Heckleine das Heck. Die Springleinen verhindern, dass das Boot vor- und zurückrutscht. Und die Querleinen halten es nah am Dock."},
+  {"speaker": "dieter", "lang": "de", "text": "Jetzt die Knoten. Der erste ist der Achtknoten — ein Stopperknoten, damit das Seil nicht durch eine Öse rutscht."},
+  {"speaker": "george", "lang": "en", "text": "Figure-eight knot. A stopper knot that prevents the rope from running through fittings."},
+  {"speaker": "dieter", "lang": "de", "text": "Der Kreuzknoten verbindet zwei gleich dicke Seile miteinander."},
+  {"speaker": "george", "lang": "en", "text": "Reef knot or square knot. Used to join two ropes of equal thickness."},
+  {"speaker": "dieter", "lang": "de", "text": "Aber Achtung: Wenn die Seile UNTERSCHIEDLICH dick sind, brauchst du einen anderen Knoten — den Schotstek."},
+  {"speaker": "george", "lang": "en", "text": "Sheet bend. Used to join two ropes of different thickness. Very important distinction from the reef knot."},
+  {"speaker": "dieter", "lang": "de", "text": "Der Ankerstich befestigt ein Seil am Ankerring oder an einem Poller."},
+  {"speaker": "george", "lang": "en", "text": "Anchor hitch. Used for attaching a rope to an anchor ring or bollard."},
+  {"speaker": "dieter", "lang": "de", "text": "Und der Festmacherknoten — ein schnell lösbarer Knoten. Hält unter Last, geht aber sofort auf wenn du am freien Ende ziehst."},
+  {"speaker": "george", "lang": "en", "text": "Mooring hitch. Holds fast under load, but comes apart instantly with a pull on the free end."},
+  {"speaker": "dieter", "lang": "de", "text": "Zum Ankern: Wähle einen geschützten Platz mit gutem Ankergrund. Fahre langsam gegen den Wind. Anker ABLASSEN, nicht werfen! Und dann genug Kette oder Seil fieren — mindestens drei zu eins, besser fünf zu eins."},
+  {"speaker": "george", "lang": "en", "text": "Anchoring scope: the ratio of rope length to water depth. Minimum three to one, better five to one or seven to one."},
+  {"speaker": "dieter", "lang": "de", "text": "Merke: Kreuzknoten für gleich dicke Seile, Schotstek für verschieden dicke. Achtknoten als Stopper. Ankerstich am Anker. Und beim Ankern genug Kette geben!"}
+]

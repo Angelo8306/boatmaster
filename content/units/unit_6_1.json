@@ -1,0 +1,70 @@
+[
+  {
+    "type": "vocab",
+    "term_en": "Hypothermia",
+    "definition_en": "Dangerous drop in body temperature below 35°C, caused by cold water or exposure. Main risk for man overboard. Symptoms: shivering, confusion, loss of consciousness.",
+    "term_de": "Unterkühlung",
+    "definition_de": "Gefährlicher Abfall der Körpertemperatur unter 35°C durch kaltes Wasser oder Kälte. Hauptrisiko bei Mann über Bord."
+  },
+  {
+    "type": "vocab",
+    "term_en": "CPR (Cardiopulmonary Resuscitation)",
+    "definition_en": "Emergency procedure: 30 chest compressions followed by 2 rescue breaths. Rate: 100-120 compressions per minute. Continue until help arrives.",
+    "term_de": "Herz-Lungen-Wiederbelebung (HLW)",
+    "definition_de": "Notfallmaßnahme: 30 Herzdruckmassagen, dann 2 Beatmungen. Tempo: 100-120 pro Minute. Fortsetzen bis Hilfe kommt."
+  },
+  {
+    "type": "vocab",
+    "term_en": "Tourniquet",
+    "definition_en": "A tight band applied above a severe bleeding wound on a limb to stop blood flow. Use only as a last resort when direct pressure fails.",
+    "term_de": "Abbindeband / Tourniquet",
+    "definition_de": "Ein strammes Band oberhalb einer stark blutenden Wunde an einer Gliedmaße. Nur als letztes Mittel."
+  },
+  {
+    "type": "learn",
+    "title_en": "First Aid Priorities at Sea",
+    "content_en": "At sea, follow the ABC approach:\n• A = Airway — clear and open the airway\n• B = Breathing — check breathing, give rescue breaths if needed\n• C = Circulation — check pulse, start CPR if no heartbeat\n\nCommon emergencies at sea:\n1. Drowning — remove from water, clear airway, CPR\n2. Hypothermia — remove wet clothes, warm slowly, warm drinks\n3. Bleeding — direct pressure, elevate limb\n4. Burns — cool with sea water, cover with sterile dressing\n5. Fractures — immobilize, don't move unnecessarily\n6. Seasickness — fresh air, look at horizon, medication\n7. Sunstroke — shade, cool water, rest",
+    "content_de": "Auf See nach ABC vorgehen:\n• A = Atemwege — frei machen und offen halten\n• B = Beatmung — Atmung prüfen, ggf. beatmen\n• C = Circulation — Puls prüfen, HLW bei Herzstillstand\n\nHäufige Notfälle auf See:\n1. Ertrinken — aus Wasser holen, Atemwege frei, HLW\n2. Unterkühlung — nasse Kleidung aus, langsam wärmen\n3. Blutung — Direkter Druck, Gliedmaße hochhalten\n4. Verbrennung — mit Meerwasser kühlen, steril abdecken\n5. Knochenbruch — ruhigstellen\n6. Seekrankheit — frische Luft, Horizont anschauen\n7. Sonnenstich — Schatten, kühles Wasser",
+    "image": "p089_img00.jpeg"
+  },
+  {
+    "type": "learn",
+    "title_en": "Treating Hypothermia",
+    "content_en": "Hypothermia stages:\n• Mild (35-32°C): Shivering, cold skin, confusion\n• Moderate (32-28°C): Severe shivering, drowsiness, muscle stiffness\n• Severe (<28°C): No shivering, unconsciousness, weak pulse\n\nTreatment:\n1. Get person out of water/wind\n2. Remove wet clothing\n3. Warm the core FIRST (chest, neck, head, groin)\n4. Use blankets, sleeping bags, body heat\n5. Give warm sweet drinks (if conscious)\n6. DO NOT rub extremities\n7. DO NOT give alcohol\n8. DO NOT warm too quickly (risk of cardiac arrest)\n9. Handle gently — rough movement can cause heart failure",
+    "content_de": "Unterkühlungsstadien:\n• Leicht (35-32°C): Zittern, kalte Haut, Verwirrung\n• Mittel (32-28°C): Starkes Zittern, Schläfrigkeit, steife Muskeln\n• Schwer (<28°C): Kein Zittern, Bewusstlosigkeit, schwacher Puls\n\nBehandlung:\n1. Aus Wasser/Wind holen\n2. Nasse Kleidung entfernen\n3. Körperkern ZUERST wärmen (Brust, Hals, Kopf)\n4. Decken, Schlafsäcke, Körperwärme\n5. Warme süße Getränke (wenn bei Bewusstsein)\n6. NICHT Gliedmaßen reiben\n7. KEINEN Alkohol geben\n8. NICHT zu schnell wärmen (Herzstillstand-Risiko)",
+    "image": "p092_img00.jpeg"
+  },
+  {
+    "type": "quiz",
+    "question_en": "What is the correct CPR ratio for adults?",
+    "question_de": "Wie ist das korrekte HLW-Verhältnis bei Erwachsenen?",
+    "options": [
+      { "text": "15 compressions, 1 breath", "correct": false },
+      { "text": "30 compressions, 2 breaths", "correct": true },
+      { "text": "10 compressions, 3 breaths", "correct": false },
+      { "text": "5 compressions, 1 breath", "correct": false }
+    ],
+    "explanation_en": "CPR for adults: 30 chest compressions followed by 2 rescue breaths. Compression rate: 100-120 per minute. Continue until professional help arrives or the person recovers.",
+    "explanation_de": "HLW für Erwachsene: 30 Herzdruckmassagen, dann 2 Beatmungen. Tempo: 100-120 pro Minute. Fortsetzen bis professionelle Hilfe kommt."
+  },
+  {
+    "type": "quiz",
+    "question_en": "What should you NOT do when treating hypothermia?",
+    "question_de": "Was darfst du bei Unterkühlung NICHT tun?",
+    "options": [
+      { "text": "Remove wet clothing", "correct": false },
+      { "text": "Give warm sweet drinks", "correct": false },
+      { "text": "Give alcohol and rub the extremities", "correct": true },
+      { "text": "Wrap in blankets", "correct": false }
+    ],
+    "explanation_en": "NEVER give alcohol (it causes further heat loss) and NEVER rub extremities (it pushes cold blood to the core and can cause cardiac arrest). Warm the core first — chest, neck, head, groin.",
+    "explanation_de": "NIEMALS Alkohol geben (verursacht weiteren Wärmeverlust) und NIEMALS Gliedmaßen reiben (treibt kaltes Blut zum Kern). Körperkern zuerst wärmen — Brust, Hals, Kopf."
+  },
+  {
+    "type": "quiz_free",
+    "question_en": "A person has been pulled from cold water and shows signs of hypothermia. What do you do?",
+    "question_de": "Eine Person wurde aus kaltem Wasser gezogen und zeigt Zeichen von Unterkühlung. Was tust du?",
+    "model_answer_en": "First, get the person out of the wind. Remove all wet clothing. Warm the body core first — chest, neck, head, and groin — using blankets, sleeping bags, or body heat. If the person is conscious, give warm sweet drinks. Do NOT rub the extremities, do NOT give alcohol, and do NOT warm too quickly, as this can cause cardiac arrest. Handle the person gently, as rough movement can trigger heart failure in severely hypothermic patients.",
+    "model_answer_de": "Person aus dem Wind bringen. Nasse Kleidung entfernen. Körperkern zuerst wärmen — Brust, Hals, Kopf — mit Decken, Schlafsäcken oder Körperwärme. Bei Bewusstsein: warme süße Getränke. NICHT Gliedmaßen reiben, KEINEN Alkohol, NICHT zu schnell wärmen. Vorsichtig behandeln, da plötzliche Bewegungen bei schwerer Unterkühlung Herzversagen auslösen können."
+  }
+]

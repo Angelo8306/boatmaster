@@ -1,0 +1,101 @@
+[
+  {
+    "type": "vocab",
+    "term_en": "Fairway",
+    "definition_en": "A sea belt sufficiently deep and wide for safe navigation, marked with proper markings. In Croatia, maintained by Plovput company in Split.",
+    "term_de": "Fahrrinne / Fahrwasser",
+    "definition_de": "Ein ausreichend tiefer und breiter Meeresstreifen fuer sichere Schifffahrt, mit entsprechenden Markierungen. In Kroatien von der Firma Plovput in Split betreut."
+  },
+  {
+    "type": "vocab",
+    "term_en": "Lateral Marks",
+    "definition_en": "Buoys marking the sides of a navigable channel. In IALA Region A (Europe/Croatia): red marks on port (left) side, green marks on starboard (right) side when entering from sea.",
+    "term_de": "Lateralzeichen / Seitenmarkierungen",
+    "definition_de": "Bojen, die die Seiten einer Fahrrinne markieren. In IALA Region A (Europa/Kroatien): rote Zeichen an Backbord (links), gruene an Steuerbord (rechts) bei Einfahrt von See.",
+    "image": "p019_img00.jpeg"
+  },
+  {
+    "type": "vocab",
+    "term_en": "Light Characteristics",
+    "definition_en": "The pattern of a navigation light: Fixed (F), Flashing (Fl), Quick flashing (Q), Occulting (Oc), Isophase (Iso), Group flashing (e.g. Fl(2)). Each buoy has a unique rhythm for identification at night.",
+    "term_de": "Lichtkennung",
+    "definition_de": "Das Muster eines Navigationslichts: Festfeuer (F), Blinkfeuer (Fl), Schnelles Blinkfeuer (Q), Unterbrochenes Feuer (Oc), Gleichtaktfeuer (Iso), Gruppen-Blinkfeuer (z.B. Fl(2))."
+  },
+  {
+    "type": "learn",
+    "title_en": "IALA Region A — The Basic Rule",
+    "content_en": "In IALA Region A (Europe, Africa, Asia, Australia — including Croatia):\n\n• RED buoys on PORT (left) side when entering from sea\n• GREEN buoys on STARBOARD (right) side when entering from sea\n\nRemember: 'Red to port when returning from sea'\n\nPort-hand marks: red color, can-shaped (cylindrical), red light\nStarboard-hand marks: green color, cone-shaped (conical), green light",
+    "content_de": "In IALA Region A (Europa, Afrika, Asien, Australien — einschliesslich Kroatien):\n\n• ROTE Bojen an BACKBORD (links) bei Einfahrt von See\n• GRUENE Bojen an STEUERBORD (rechts) bei Einfahrt von See\n\nMerke: 'Rot an Backbord bei Einfahrt'\n\nBackbord-Zeichen: rote Farbe, zylindrisch (Tonne), rotes Licht\nSteuerbord-Zeichen: gruene Farbe, kegelfoermig (Spitztonne), gruenes Licht",
+    "image": "p019_img02.png"
+  },
+  {
+    "type": "learn",
+    "title_en": "Preferred Channel Marks",
+    "content_en": "Where a channel divides into two branches, preferred channel marks show the main (more important) channel:\n\n• Preferred channel to starboard: Red buoy with green horizontal band — treat as port-hand mark\n• Preferred channel to port: Green buoy with red horizontal band — treat as starboard-hand mark\n\nThe main color tells you which side the mark belongs to. The horizontal band indicates it's a modified lateral mark.",
+    "content_de": "Wo sich eine Fahrrinne in zwei Arme teilt, zeigen Bevorzugte-Fahrwasser-Zeichen den Hauptkanal:\n\n• Bevorzugter Kanal an Steuerbord: Rote Boje mit gruenem Querstreifen — als Backbord-Zeichen behandeln\n• Bevorzugter Kanal an Backbord: Gruene Boje mit rotem Querstreifen — als Steuerbord-Zeichen behandeln\n\nDie Hauptfarbe zeigt die Seite. Der Querstreifen zeigt ein modifiziertes Lateralzeichen an."
+  },
+  {
+    "type": "learn",
+    "title_en": "Light Rhythms for Identification",
+    "content_en": "Navigation lights use specific rhythms:\n\n• Fixed (F) — continuous steady light\n• Flashing (Fl) — duration of light shorter than dark\n• Quick (Q) — 50-79 flashes per minute\n• Very Quick (VQ) — 80-159 flashes per minute\n• Occulting (Oc) — duration of light longer than dark\n• Isophase (Iso) — equal light and dark periods\n• Long flash (LFl) — flash of 2+ seconds\n\nEvery light has: color, period (time for one complete cycle), range (visibility distance in nautical miles).",
+    "content_de": "Navigationslichter verwenden bestimmte Rhythmen:\n\n• Festfeuer (F) — durchgehend\n• Blinkfeuer (Fl) — Lichtdauer kuerzer als Dunkelphase\n• Schnelles Blinkfeuer (Q) — 50-79 Blitze pro Minute\n• Sehr schnelles Blinkfeuer (VQ) — 80-159 Blitze pro Minute\n• Unterbrochenes Feuer (Oc) — Lichtdauer laenger als Dunkelphase\n• Gleichtaktfeuer (Iso) — gleiche Licht- und Dunkelphasen\n• Langes Blinkfeuer (LFl) — Blitz von 2+ Sekunden",
+    "image": "p017_img01.png"
+  },
+  {
+    "type": "quiz",
+    "question_en": "In IALA Region A, when entering a harbor from sea, which color are the buoys on the port (left) side?",
+    "question_de": "In IALA Region A, welche Farbe haben die Bojen an Backbord (links) bei der Einfahrt von See?",
+    "options": [
+      {
+        "text": "Green",
+        "correct": false
+      },
+      {
+        "text": "Red",
+        "correct": true
+      },
+      {
+        "text": "Yellow",
+        "correct": false
+      },
+      {
+        "text": "Black",
+        "correct": false
+      }
+    ],
+    "explanation_en": "In IALA Region A (used in Croatia and all of Europe): Red buoys mark the port (left) side when entering from sea. Remember: 'Red to port when returning.'",
+    "explanation_de": "In IALA Region A (Kroatien und ganz Europa): Rote Bojen markieren die Backbordseite (links) bei Einfahrt von See. Merke: 'Rot an Backbord bei Einfahrt.'"
+  },
+  {
+    "type": "quiz",
+    "question_en": "What does a red buoy with a green horizontal band indicate?",
+    "question_de": "Was bedeutet eine rote Boje mit einem gruenen Querstreifen?",
+    "options": [
+      {
+        "text": "Isolated danger",
+        "correct": false
+      },
+      {
+        "text": "Safe water mark",
+        "correct": false
+      },
+      {
+        "text": "Preferred channel to starboard",
+        "correct": true
+      },
+      {
+        "text": "Special mark",
+        "correct": false
+      }
+    ],
+    "explanation_en": "A red buoy with a green band is a preferred channel mark indicating the main channel is to starboard. The main color (red) tells you it's on the port side; the band means the channel splits here.",
+    "explanation_de": "Eine rote Boje mit gruenem Streifen ist ein Bevorzugtes-Fahrwasser-Zeichen — der Hauptkanal liegt an Steuerbord. Die Hauptfarbe (rot) zeigt Backbord; der Streifen zeigt die Kanalverzweigung."
+  },
+  {
+    "type": "quiz_free",
+    "question_en": "Explain the difference between flashing (Fl) and occulting (Oc) light characteristics.",
+    "question_de": "Erklaere den Unterschied zwischen Blinkfeuer (Fl) und unterbrochenem Feuer (Oc).",
+    "model_answer_en": "Flashing (Fl) means the duration of light is shorter than the duration of darkness — the light flashes briefly in periods of darkness. Occulting (Oc) is the opposite: the duration of light is longer than darkness — it's a steady light that is briefly interrupted by dark periods. Both are used to identify navigation marks at night, with specific patterns unique to each mark.",
+    "model_answer_de": "Blinkfeuer (Fl) bedeutet, dass die Lichtdauer kuerzer ist als die Dunkelphase — das Licht blitzt kurz in Dunkelphasen auf. Unterbochenes Feuer (Oc) ist das Gegenteil: die Lichtdauer ist laenger als die Dunkelphase — ein stetiges Licht wird kurz unterbrochen. Beide werden zur Identifikation von Seezeichen bei Nacht verwendet."
+  }
+]

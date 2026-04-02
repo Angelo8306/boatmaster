@@ -1,0 +1,97 @@
+[
+  {
+    "type": "vocab",
+    "term_en": "MAYDAY",
+    "definition_en": "The international distress signal for immediate danger to life or vessel. Spoken three times: 'MAYDAY MAYDAY MAYDAY'. Used on VHF Channel 16.",
+    "term_de": "MAYDAY",
+    "definition_de": "Internationales Notsignal bei unmittelbarer Gefahr für Leben oder Schiff. Dreimal gesprochen: 'MAYDAY MAYDAY MAYDAY'. Auf UKW Kanal 16."
+  },
+  {
+    "type": "vocab",
+    "term_en": "PAN-PAN",
+    "definition_en": "Urgency signal — serious situation but no immediate danger to life. Spoken three times: 'PAN-PAN PAN-PAN PAN-PAN'. Example: engine failure, medical emergency.",
+    "term_de": "PAN-PAN",
+    "definition_de": "Dringlichkeitssignal — ernste Situation aber keine unmittelbare Lebensgefahr. Dreimal gesprochen. Beispiel: Motorausfall, medizinischer Notfall."
+  },
+  {
+    "type": "vocab",
+    "term_en": "SECURITE",
+    "definition_en": "Safety signal for important navigation or weather warnings. Spoken three times: 'SECURITE SECURITE SECURITE'. Example: floating debris, weather warning.",
+    "term_de": "SECURITE",
+    "definition_de": "Sicherheitssignal für wichtige Navigations- oder Wetterwarnungen. Dreimal gesprochen. Beispiel: treibende Gegenstände, Wetterwarnung."
+  },
+  {
+    "type": "vocab",
+    "term_en": "Man Overboard (MOB)",
+    "definition_en": "Emergency when a person falls into the water. Immediate actions: shout 'MAN OVERBOARD', throw lifebuoy, mark position, keep visual contact, maneuver to rescue.",
+    "term_de": "Mann über Bord (MOB)",
+    "definition_de": "Notfall wenn eine Person ins Wasser fällt. Sofort: 'MANN ÜBER BORD' rufen, Rettungsring werfen, Position markieren, Sichtkontakt halten."
+  },
+  {
+    "type": "learn",
+    "title_en": "Distress Signals at Sea",
+    "content_en": "Visual distress signals:\n• Red hand flares (6 required on board) — visible 5-7 km\n• Red parachute rockets — visible 25-40 km, burn 40 sec\n• Orange smoke signals — for daytime, visible 3-5 km\n• SOS signal (· · · — — — · · ·) by light or sound\n• Arms raised and lowered repeatedly\n• Flames on the vessel (burning barrel of oil)\n• Continuous sounding of fog horn\n• Flying the flag N over C (November Charlie)\n\nRadio: MAYDAY on VHF Channel 16 (156.8 MHz)\nEPIRB: Emergency Position Indicating Radio Beacon — sends satellite alert with position",
+    "content_de": "Visuelle Notsignale:\n• Rote Handfackeln (6 Stück Pflicht) — sichtbar 5-7 km\n• Rote Fallschirmraketen — sichtbar 25-40 km, brennen 40 Sek.\n• Orangener Rauch — tagsüber, sichtbar 3-5 km\n• SOS-Signal (· · · — — — · · ·) per Licht oder Ton\n• Arme wiederholt heben und senken\n• Flammen auf dem Schiff\n• Dauersignal des Nebelhorns\n• Flaggen N über C (November Charlie)\n\nFunk: MAYDAY auf UKW Kanal 16 (156,8 MHz)\nEPIRB: Sendet Satelliten-Notsignal mit Position",
+    "image": "p130_img00.jpeg"
+  },
+  {
+    "type": "learn",
+    "title_en": "Man Overboard Procedure",
+    "content_en": "When someone falls overboard:\n1. SHOUT 'Man overboard!' — alert all crew\n2. THROW lifebuoy immediately toward the person\n3. POINT — assign someone to keep constant visual contact\n4. MARK — press MOB button on GPS if available\n5. MANEUVER — turn the boat around safely\n6. APPROACH — come slowly from downwind\n7. RESCUE — get the person out of the water\n8. TREAT — check for hypothermia, give first aid\n\nNEVER jump in after the person unless absolutely necessary!\nAlways approach the person from DOWNWIND to avoid drifting over them.",
+    "content_de": "Wenn jemand über Bord fällt:\n1. RUFEN 'Mann über Bord!' — Besatzung alarmieren\n2. WERFEN — Rettungsring sofort zur Person werfen\n3. ZEIGEN — jemand hält ständigen Sichtkontakt\n4. MARKIEREN — MOB-Taste am GPS drücken\n5. MANÖVRIEREN — Boot sicher wenden\n6. ANFAHREN — langsam von Lee (Windabseite)\n7. RETTEN — Person aus dem Wasser holen\n8. VERSORGEN — auf Unterkühlung prüfen, Erste Hilfe\n\nNIE der Person nachspringen, außer unbedingt nötig!\nImmer von LEESEITE anfahren.",
+    "image": "p133_img00.jpeg"
+  },
+  {
+    "type": "learn",
+    "title_en": "Life-Saving Equipment Required",
+    "content_en": "Mandatory equipment on board:\n• Life jackets — one per person (10% suitable for children)\n• At least one lifebuoy\n• Six red hand flares + matches/lighter\n• Fire extinguisher(s)\n• First aid kit\n• Sound signaling device\n• Flashlight\n\nOptional but recommended:\n• EPIRB (Emergency Position Indicating Radio Beacon)\n• Life raft for offshore passages\n• Radar reflector\n• Safety harnesses and jacklines",
+    "content_de": "Pflichtausrüstung an Bord:\n• Rettungswesten — eine pro Person (10% für Kinder geeignet)\n• Mindestens ein Rettungsring\n• Sechs rote Handfackeln + Streichhölzer/Feuerzeug\n• Feuerlöscher\n• Erste-Hilfe-Kasten\n• Schallsignalgerät\n• Taschenlampe\n\nOptional aber empfohlen:\n• EPIRB (Notsender)\n• Rettungsinsel für Offshore\n• Radarreflektor\n• Sicherheitsgurte und Sicherheitsleinen",
+    "image": "p131_img00.jpeg"
+  },
+  {
+    "type": "quiz",
+    "question_en": "What is the correct distress call on VHF radio?",
+    "question_de": "Wie lautet der korrekte Notruf über UKW-Funk?",
+    "options": [
+      { "text": "PAN-PAN PAN-PAN PAN-PAN on Channel 16", "correct": false },
+      { "text": "MAYDAY MAYDAY MAYDAY on Channel 16", "correct": true },
+      { "text": "SOS SOS SOS on Channel 12", "correct": false },
+      { "text": "SECURITE SECURITE SECURITE on Channel 16", "correct": false }
+    ],
+    "explanation_en": "MAYDAY (spoken three times) on VHF Channel 16 (156.8 MHz) is the correct distress call for immediate danger to life or vessel. PAN-PAN is for urgency (not life-threatening), SECURITE is for safety warnings.",
+    "explanation_de": "MAYDAY (dreimal gesprochen) auf UKW Kanal 16 (156,8 MHz) ist der korrekte Notruf bei unmittelbarer Gefahr. PAN-PAN ist für Dringlichkeit, SECURITE für Sicherheitswarnungen."
+  },
+  {
+    "type": "quiz",
+    "question_en": "What is the FIRST thing you should do when someone falls overboard?",
+    "question_de": "Was ist das ERSTE was du tun musst, wenn jemand über Bord fällt?",
+    "options": [
+      { "text": "Jump in to rescue them", "correct": false },
+      { "text": "Call MAYDAY on the radio", "correct": false },
+      { "text": "Shout 'Man overboard' and throw a lifebuoy", "correct": true },
+      { "text": "Turn the boat around immediately", "correct": false }
+    ],
+    "explanation_en": "First: shout 'Man overboard!' to alert the crew and throw a lifebuoy toward the person. Then assign someone to maintain visual contact, mark position on GPS, and maneuver to rescue. Never jump in yourself!",
+    "explanation_de": "Zuerst: 'Mann über Bord!' rufen und Rettungsring werfen. Dann Sichtkontakt zuweisen, GPS-Position markieren, Rettungsmanöver. Nie selbst nachspringen!"
+  },
+  {
+    "type": "quiz",
+    "question_en": "What is the difference between MAYDAY, PAN-PAN, and SECURITE?",
+    "question_de": "Was ist der Unterschied zwischen MAYDAY, PAN-PAN und SECURITE?",
+    "options": [
+      { "text": "They are all the same — distress signals", "correct": false },
+      { "text": "MAYDAY = distress, PAN-PAN = urgency, SECURITE = safety", "correct": true },
+      { "text": "MAYDAY = fire, PAN-PAN = sinking, SECURITE = collision", "correct": false },
+      { "text": "They are used on different channels", "correct": false }
+    ],
+    "explanation_en": "MAYDAY = grave and imminent danger to life or vessel (distress). PAN-PAN = urgent situation but no immediate danger to life (e.g. engine failure). SECURITE = important safety or weather warning. All three are used on Channel 16.",
+    "explanation_de": "MAYDAY = unmittelbare Gefahr für Leben oder Schiff (Not). PAN-PAN = dringende Situation ohne unmittelbare Lebensgefahr (z.B. Motorausfall). SECURITE = wichtige Sicherheits- oder Wetterwarnung. Alle auf Kanal 16."
+  },
+  {
+    "type": "quiz_free",
+    "question_en": "A crew member has fallen overboard. Describe step by step what you must do.",
+    "question_de": "Ein Besatzungsmitglied ist über Bord gefallen. Beschreibe Schritt für Schritt, was du tun musst.",
+    "model_answer_en": "1) Shout 'Man overboard!' to alert the crew. 2) Immediately throw a lifebuoy toward the person. 3) Assign someone to maintain constant visual contact and point at the person. 4) Press MOB button on GPS to mark position. 5) Maneuver the boat to turn around safely. 6) Approach the person slowly from downwind to avoid drifting over them. 7) Get the person out of the water. 8) Check for hypothermia and provide first aid. Never jump in after the person unless absolutely necessary.",
+    "model_answer_de": "1) 'Mann über Bord!' rufen. 2) Sofort Rettungsring werfen. 3) Jemand hält ständigen Sichtkontakt. 4) MOB-Taste am GPS drücken. 5) Boot sicher wenden. 6) Langsam von Lee (Windabseite) anfahren. 7) Person aus dem Wasser holen. 8) Auf Unterkühlung prüfen, Erste Hilfe leisten. Nie selbst nachspringen!"
+  }
+]

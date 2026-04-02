@@ -1,0 +1,70 @@
+[
+  {
+    "type": "vocab",
+    "term_en": "Displacement",
+    "definition_en": "The weight of water pushed aside by a floating vessel. Equal to the total weight of the vessel. Formula: D = V x density x g",
+    "term_de": "Verdrängung",
+    "definition_de": "Das Gewicht des vom schwimmenden Schiff verdrängten Wassers. Gleich dem Gesamtgewicht des Schiffes."
+  },
+  {
+    "type": "vocab",
+    "term_en": "Deadweight Tonnage (DWT)",
+    "definition_en": "A measure of how much weight a ship can carry — cargo, fuel, water, ballast, passengers, and crew combined. Not the ship's own weight.",
+    "term_de": "Tragfähigkeit (DWT)",
+    "definition_de": "Maß für die Zuladung eines Schiffes — Fracht, Treibstoff, Wasser, Ballast, Passagiere und Besatzung zusammen."
+  },
+  {
+    "type": "vocab",
+    "term_en": "Stability",
+    "definition_en": "The ability of a vessel to return to its upright position after being tilted by an external force. Depends on the relationship between center of gravity (G) and center of buoyancy (B).",
+    "term_de": "Stabilität",
+    "definition_de": "Die Fähigkeit eines Schiffes, nach Neigung durch äußere Kraft in die aufrechte Position zurückzukehren."
+  },
+  {
+    "type": "vocab",
+    "term_en": "Metacenter (M)",
+    "definition_en": "The point around which a vessel rotates when tilted. For a stable vessel, M must be ABOVE the center of gravity (G). If M is below G, the vessel capsizes.",
+    "term_de": "Metazentrum (M)",
+    "definition_de": "Der Punkt, um den ein Schiff bei Neigung rotiert. Für Stabilität muss M ÜBER dem Schwerpunkt (G) liegen."
+  },
+  {
+    "type": "learn",
+    "title_en": "How Stability Works",
+    "content_en": "Three critical points determine stability:\n• B = Center of buoyancy (center of underwater volume)\n• G = Center of gravity (center of all weight)\n• M = Metacenter (pivot point when tilting)\n\nStable: M is above G → vessel returns upright\nUnstable: M is below G → vessel capsizes!\n\nTo improve stability:\n• Keep heavy items LOW (lowers G)\n• Don't overload the deck (raises G)\n• Distribute weight evenly\n• Every person counts as 75 kg\n• Two children under 10 = 1 adult",
+    "content_de": "Drei kritische Punkte bestimmen die Stabilität:\n• B = Auftriebsschwerpunkt (Mitte des Unterwasservolumens)\n• G = Gewichtsschwerpunkt (Mitte allen Gewichts)\n• M = Metazentrum (Drehpunkt bei Neigung)\n\nStabil: M über G → Boot richtet sich auf\nInstabil: M unter G → Boot kentert!\n\nStabilität verbessern:\n• Schweres TIEF lagern (senkt G)\n• Deck nicht überladen (hebt G)\n• Gewicht gleichmäßig verteilen\n• Jede Person = 75 kg\n• Zwei Kinder unter 10 = 1 Erwachsener",
+    "image": "p086_img00.jpeg"
+  },
+  {
+    "type": "quiz",
+    "question_en": "What happens when the metacenter (M) is below the center of gravity (G)?",
+    "question_de": "Was passiert, wenn das Metazentrum (M) unter dem Schwerpunkt (G) liegt?",
+    "options": [
+      { "text": "The vessel is very stable", "correct": false },
+      { "text": "The vessel capsizes", "correct": true },
+      { "text": "The vessel moves faster", "correct": false },
+      { "text": "Nothing changes", "correct": false }
+    ],
+    "explanation_en": "When M is below G, the vessel is unstable and will capsize. For stability, M must always be above G. This is why heavy items should be stored low in the boat — it keeps G low and M above it.",
+    "explanation_de": "Wenn M unter G liegt, ist das Schiff instabil und kentert. Für Stabilität muss M immer über G sein. Deshalb schwere Gegenstände tief lagern — das hält G niedrig."
+  },
+  {
+    "type": "quiz",
+    "question_en": "How much does each person weigh for stability calculations?",
+    "question_de": "Wie viel wiegt jede Person bei Stabilitätsberechnungen?",
+    "options": [
+      { "text": "50 kg", "correct": false },
+      { "text": "75 kg", "correct": true },
+      { "text": "100 kg", "correct": false },
+      { "text": "80 kg", "correct": false }
+    ],
+    "explanation_en": "For stability calculations, every person counts as 75 kg. Two children under 10 years old count as one adult (75 kg total).",
+    "explanation_de": "Bei Stabilitätsberechnungen zählt jede Person als 75 kg. Zwei Kinder unter 10 Jahren zählen als ein Erwachsener (75 kg gesamt)."
+  },
+  {
+    "type": "quiz_free",
+    "question_en": "Explain what stability means for a boat and what factors affect it.",
+    "question_de": "Erkläre, was Stabilität für ein Boot bedeutet und welche Faktoren sie beeinflussen.",
+    "model_answer_en": "Stability is the ability of a vessel to return to its upright position after being tilted. It depends on three points: B (center of buoyancy), G (center of gravity), and M (metacenter). For a stable vessel, M must be above G. Stability is improved by keeping heavy items low, distributing weight evenly, and not overloading. Each person is calculated as 75 kg. If the center of gravity is too high, the vessel becomes unstable and may capsize.",
+    "model_answer_de": "Stabilität ist die Fähigkeit eines Schiffes, nach Neigung in die aufrechte Position zurückzukehren. Sie hängt von drei Punkten ab: B (Auftriebsschwerpunkt), G (Gewichtsschwerpunkt) und M (Metazentrum). M muss über G liegen. Stabilität wird verbessert durch tiefe Lagerung schwerer Gegenstände, gleichmäßige Gewichtsverteilung und keine Überladung. Jede Person = 75 kg."
+  }
+]

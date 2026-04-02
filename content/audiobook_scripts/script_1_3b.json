@@ -1,0 +1,77 @@
+[
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Kompass, Kurs und Azimut. In dieser Lektion geht es darum, wie du deinen Kurs berechnest und warum es drei verschiedene Arten von Nord gibt."
+  },
+  {
+    "speaker": "george",
+    "lang": "en",
+    "text": "Compass, course, and azimuth. Three types of north: true north, magnetic north, and compass north."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Geographisch Nord — das ist der echte Nordpol, wie er auf der Karte steht. Magnetisch Nord — da zeigt die Kompassnadel hin. Und Kompassnord — das zeigt der Kompass auf DEINEM Boot an."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Der Unterschied zwischen geographisch Nord und magnetisch Nord heißt Missweisung. Auf Englisch:"
+  },
+  {
+    "speaker": "george",
+    "lang": "en",
+    "text": "Magnetic variation or declination. The angle between true north and magnetic north. Found on the compass rose of every chart. Changes slowly over time."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Und der Unterschied zwischen magnetisch Nord und Kompassnord heißt Deviation — verursacht durch den Motor, die Elektronik und Metallteile auf deinem Boot."
+  },
+  {
+    "speaker": "george",
+    "lang": "en",
+    "text": "Deviation. The compass error caused by the boat's own magnetic influences. Varies with heading. Recorded in a deviation table."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Jetzt die Umrechnung. Vom rechtweisenden Kurs zum Kompasskurs: Rechtweisender Kurs plus oder minus Missweisung ergibt den missweisenden Kurs. Plus oder minus Deviation ergibt den Kompasskurs."
+  },
+  {
+    "speaker": "george",
+    "lang": "en",
+    "text": "True course plus or minus variation equals magnetic course. Magnetic course plus or minus deviation equals compass course. West: add. East: subtract."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Merke dir: West wird addiert, Ost wird subtrahiert. Ein Beispiel: Rechtweisender Kurs neunzig Grad, Missweisung drei Grad West. Dann ist der missweisende Kurs neunzig plus drei gleich dreiundneunzig Grad."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Peilung oder Azimut ist der Winkel von Nord zu einem Objekt, gemessen im Uhrzeigersinn. Auf Englisch:"
+  },
+  {
+    "speaker": "george",
+    "lang": "en",
+    "text": "Bearing or azimuth. The horizontal angle measured clockwise from north to an object. Used for position fixing and navigation."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Und noch die Grundformel für die Navigation: Geschwindigkeit mal Zeit gleich Strecke. Geschwindigkeit wird in Knoten gemessen, Strecke in Seemeilen."
+  },
+  {
+    "speaker": "george",
+    "lang": "en",
+    "text": "Speed in knots, distance in nautical miles, time in hours. Speed equals distance divided by time. One knot equals one nautical mile per hour."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Zusammenfassung: Drei Arten von Nord, Missweisung kommt von der Erde, Deviation kommt vom Boot. West addieren, Ost subtrahieren. Peilung ist der Winkel zu einem Objekt."
+  }
+]

@@ -1,0 +1,106 @@
+[
+  {
+    "type": "vocab",
+    "term_en": "Navigation Lights",
+    "definition_en": "Lights displayed by vessels between sunset and sunrise (and in reduced visibility) to show position, heading, and type of vessel. Required by COLREGS.",
+    "term_de": "Navigationslichter / Positionslichter",
+    "definition_de": "Lichter die Schiffe zwischen Sonnenuntergang und -aufgang (und bei schlechter Sicht) zeigen. Zeigen Position, Kurs und Schiffstyp."
+  },
+  {
+    "type": "vocab",
+    "term_en": "Sidelights",
+    "definition_en": "Red light on port (left) side, green light on starboard (right) side. Visible from ahead to 22.5° abaft the beam. Show which side of the vessel you're seeing.",
+    "term_de": "Seitenlichter",
+    "definition_de": "Rotes Licht an Backbord (links), gruenes Licht an Steuerbord (rechts). Zeigen welche Seite des Schiffes man sieht."
+  },
+  {
+    "type": "vocab",
+    "term_en": "Stern Light",
+    "definition_en": "White light at the stern, visible from behind over an arc of 135°. Shows that the vessel is moving away from you.",
+    "term_de": "Hecklicht",
+    "definition_de": "Weisses Licht am Heck, sichtbar von hinten ueber einen Bogen von 135°. Zeigt dass das Schiff sich entfernt."
+  },
+  {
+    "type": "vocab",
+    "term_en": "Masthead Light",
+    "definition_en": "White light on the mast, visible from ahead over an arc of 225°. Required for power-driven vessels underway. A second higher masthead light is required for vessels over 50m.",
+    "term_de": "Topplicht / Mastlicht",
+    "definition_de": "Weisses Licht am Mast, sichtbar von vorn ueber 225°. Pflicht fuer Maschinenfahrzeuge in Fahrt. Zweites hoeheres Topplicht fuer Schiffe ueber 50m.",
+    "image": "p120_img01.jpeg"
+  },
+  {
+    "type": "learn",
+    "title_en": "Power-Driven Vessel Lights",
+    "content_en": "A power-driven vessel underway shows:\n\n• MASTHEAD LIGHT — white, forward, 225° arc\n• SIDELIGHTS — red (port), green (starboard), each 112.5°\n• STERN LIGHT — white, aft, 135°\n\nVessels over 50m: two masthead lights (forward one lower)\nVessels under 12m: may combine all lights in one all-round light\n\nWhat you see tells you the situation:\n• Both sidelights + masthead = vessel coming toward you\n• Red sidelight only = vessel crossing from right to left\n• Green sidelight only = vessel crossing from left to right\n• Stern light only = vessel moving away",
+    "content_de": "Ein Maschinenfahrzeug in Fahrt zeigt:\n\n• TOPPLICHT — weiss, vorn, 225°\n• SEITENLICHTER — rot (Backbord), gruen (Steuerbord), je 112.5°\n• HECKLICHT — weiss, hinten, 135°\n\nWas du siehst:\n• Beide Seitenlichter + Topplicht = kommt auf dich zu\n• Nur rotes Seitenlicht = kreuzt von rechts nach links\n• Nur gruenes Seitenlicht = kreuzt von links nach rechts\n• Nur Hecklicht = entfernt sich"
+  },
+  {
+    "type": "learn",
+    "title_en": "Sailing Vessel & Special Lights",
+    "content_en": "SAILING VESSEL under sail only:\n• Sidelights (red + green)\n• Stern light (white)\n• NO masthead light!\n• Optional: red over green at masthead ('red over green, sailing machine')\n\nVESSEL AT ANCHOR:\n• All-round white light (two if over 50m)\n• No sidelights or stern light needed\n\nVESSEL NOT UNDER COMMAND:\n• Two red all-round lights vertically\n\nVESSEL RESTRICTED IN ABILITY TO MANEUVER:\n• Red, white, red all-round lights vertically\n\nVESSEL ENGAGED IN FISHING:\n• Red over white all-round lights (trawling: green over white)",
+    "content_de": "SEGELFAHRZEUG nur unter Segeln:\n• Seitenlichter (rot + gruen)\n• Hecklicht (weiss)\n• KEIN Topplicht!\n\nVOR ANKER:\n• Rundumlicht weiss (zwei bei ueber 50m)\n\nMANOEVRIERUNFAEHIG:\n• Zwei rote Rundumlichter uebereinander\n\nBESCHRAENKT MANOEVRIERFAEHIG:\n• Rot, weiss, rot uebereinander\n\nFISCHEND:\n• Rot ueber weiss (Schleppnetz: gruen ueber weiss)"
+  },
+  {
+    "type": "learn",
+    "title_en": "Sound Signals",
+    "content_en": "Sound signals in restricted visibility and for maneuvering:\n\nShort blast = about 1 second\nProlonged blast = 4-6 seconds\n\nMANEUVERING signals:\n• One short blast — I am turning to starboard\n• Two short blasts — I am turning to port\n• Three short blasts — my engines are going astern\n• Five short blasts — I doubt your intentions / danger!\n\nFOG signals (every 2 minutes):\n• Power vessel making way: one prolonged blast\n• Power vessel stopped: two prolonged blasts\n• Sailing vessel / fishing / towing: one prolonged + two short\n• Vessel at anchor: rapid bell ringing for 5 seconds",
+    "content_de": "Schallsignale bei schlechter Sicht und zum Manovrieren:\n\nKurzer Ton = ca. 1 Sekunde\nLanger Ton = 4-6 Sekunden\n\nMANOEVRIER-Signale:\n• Ein kurzer Ton — Ich drehe nach Steuerbord\n• Zwei kurze Toene — Ich drehe nach Backbord\n• Drei kurze Toene — Meine Maschine geht rueckwaerts\n• Fuenf kurze Toene — Ich bezweifle Ihre Absichten / Gefahr!\n\nNEBEL-Signale (alle 2 Minuten):\n• Maschinenfahrzeug in Fahrt: ein langer Ton\n• Maschinenfahrzeug gestoppt: zwei lange Toene\n• Segler/Fischer/Schleppend: ein langer + zwei kurze"
+  },
+  {
+    "type": "quiz",
+    "question_en": "At night you see a red sidelight and a masthead light ahead. What does this tell you?",
+    "question_de": "Nachts siehst du ein rotes Seitenlicht und ein Topplicht voraus. Was bedeutet das?",
+    "options": [
+      {
+        "text": "A vessel is moving away from you",
+        "correct": false
+      },
+      {
+        "text": "A vessel is crossing from your right to left",
+        "correct": true
+      },
+      {
+        "text": "A sailing vessel approaching",
+        "correct": false
+      },
+      {
+        "text": "A vessel at anchor",
+        "correct": false
+      }
+    ],
+    "explanation_en": "Red sidelight + masthead light = a power-driven vessel showing its port (left) side, meaning it's crossing from your right to left. The masthead light confirms it's power-driven (sailing vessels don't show masthead lights).",
+    "explanation_de": "Rotes Seitenlicht + Topplicht = ein Maschinenfahrzeug zeigt seine Backbordseite, kreuzt also von rechts nach links. Das Topplicht bestaetigt Maschinenantrieb (Segler zeigen kein Topplicht)."
+  },
+  {
+    "type": "quiz",
+    "question_en": "What does five short blasts on the horn mean?",
+    "question_de": "Was bedeuten fuenf kurze Toene mit dem Horn?",
+    "options": [
+      {
+        "text": "I am turning to starboard",
+        "correct": false
+      },
+      {
+        "text": "I am going astern",
+        "correct": false
+      },
+      {
+        "text": "I am in distress",
+        "correct": false
+      },
+      {
+        "text": "I doubt your intentions / danger warning",
+        "correct": true
+      }
+    ],
+    "explanation_en": "Five or more short blasts is the danger/doubt signal: 'I am unsure of your intentions' or 'You are standing into danger.' One short = starboard turn, two = port turn, three = engines astern.",
+    "explanation_de": "Fuenf oder mehr kurze Toene sind das Gefahren-/Zweifelsignal: 'Ich bin unsicher ueber Ihre Absichten.' Ein kurzer = Steuerbord, zwei = Backbord, drei = Maschine rueckwaerts."
+  },
+  {
+    "type": "quiz_free",
+    "question_en": "Describe the navigation lights for a power-driven vessel under 50 meters, underway at night.",
+    "question_de": "Beschreibe die Navigationslichter eines Maschinenfahrzeugs unter 50 Metern, nachts in Fahrt.",
+    "model_answer_en": "A power-driven vessel under 50 meters underway at night must display: one white masthead light forward, visible over an arc of 225 degrees from right ahead to 22.5 degrees abaft the beam on each side. A green sidelight on the starboard side and a red sidelight on the port side, each visible over 112.5 degrees. And a white stern light visible over 135 degrees from astern. Vessels under 12 meters may combine all lights into one all-round white light plus sidelights, or even a single tri-color lantern at the masthead.",
+    "model_answer_de": "Ein Maschinenfahrzeug unter 50m zeigt nachts: Ein weisses Topplicht vorn, sichtbar ueber 225 Grad. Ein gruenes Seitenlicht an Steuerbord und ein rotes an Backbord, je 112,5 Grad. Ein weisses Hecklicht ueber 135 Grad von achtern. Boote unter 12m duerfen alle Lichter in einem Rundumlicht kombinieren."
+  }
+]

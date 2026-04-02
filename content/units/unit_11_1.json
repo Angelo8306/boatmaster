@@ -1,0 +1,77 @@
+[
+  {
+    "type": "vocab",
+    "term_en": "VHF Radio",
+    "definition_en": "Very High Frequency radio — the primary communication system at sea. Range: 20-60 nautical miles (line of sight). Required on commercial boats in Croatia.",
+    "term_de": "UKW-Funk",
+    "definition_de": "Ultrakurzwellen-Funk — das primäre Kommunikationssystem auf See. Reichweite: 20-60 Seemeilen (Sichtlinie)."
+  },
+  {
+    "type": "vocab",
+    "term_en": "Channel 16",
+    "definition_en": "The international distress, safety, and calling channel (156.8 MHz). Must be monitored at all times when at sea. Used for MAYDAY, PAN-PAN, and SECURITE calls.",
+    "term_de": "Kanal 16",
+    "definition_de": "Internationaler Not-, Sicherheits- und Anrufkanal (156,8 MHz). Muss auf See ständig abgehört werden."
+  },
+  {
+    "type": "vocab",
+    "term_en": "DSC (Digital Selective Calling)",
+    "definition_en": "Digital system that automatically sends vessel identification (MMSI number) and position with distress alerts. Press the red distress button for 5 seconds to send automatic MAYDAY.",
+    "term_de": "DSC (Digitaler Selektivruf)",
+    "definition_de": "Digitales System, das automatisch Schiffskennung (MMSI) und Position mit Notalarmen sendet."
+  },
+  {
+    "type": "vocab",
+    "term_en": "MMSI Number",
+    "definition_en": "Maritime Mobile Service Identity — a unique 9-digit number assigned to each vessel's radio station. Like a phone number for your boat. Required for DSC operation.",
+    "term_de": "MMSI-Nummer",
+    "definition_de": "Maritime Mobile Service Identity — eine einzigartige 9-stellige Nummer für jede Schiffsfunkstelle. Wie eine Telefonnummer für das Boot."
+  },
+  {
+    "type": "learn",
+    "title_en": "Important VHF Channels",
+    "content_en": "Key channels to know:\n• Channel 16 (156.8 MHz) — Distress, safety, and calling\n• Channel 70 — DSC digital distress and safety\n• Channel 67 — Croatian coast guard working channel\n• Channel 73 — Safety information broadcasts\n• Channel 17 — Port operations (some Croatian ports)\n• Channel 09 — Calling channel (alternative)\n• Channel 06 — Ship-to-ship safety\n\nProcedure for routine call:\n1. Listen before transmitting\n2. Call on Channel 16 (or designated channel)\n3. State vessel name (3 times), 'this is' your name (3 times)\n4. Switch to working channel for conversation",
+    "content_de": "Wichtige Kanäle:\n• Kanal 16 (156,8 MHz) — Not, Sicherheit, Anruf\n• Kanal 70 — DSC digitaler Not- und Sicherheitskanal\n• Kanal 67 — Kroatische Küstenwache Arbeitskanal\n• Kanal 73 — Sicherheitsinformationen\n• Kanal 17 — Hafenbetrieb\n• Kanal 09 — Alternativ-Anrufkanal\n• Kanal 06 — Schiff-zu-Schiff Sicherheit\n\nRoutine-Anruf:\n1. Vor dem Senden zuhören\n2. Auf Kanal 16 anrufen\n3. Schiffsname (3x), 'this is' eigener Name (3x)\n4. Auf Arbeitskanal wechseln",
+    "image": "p137_img00.jpeg"
+  },
+  {
+    "type": "learn",
+    "title_en": "MAYDAY Procedure",
+    "content_en": "How to send a MAYDAY call:\n1. Check radio is on Channel 16, full power\n2. Press transmit button and say:\n   'MAYDAY MAYDAY MAYDAY'\n   'This is [vessel name] [vessel name] [vessel name]'\n   'MAYDAY [vessel name]'\n   'My position is [latitude/longitude or bearing/distance from landmark]'\n   'I am [nature of distress: sinking, fire, etc.]'\n   'I require [immediate assistance]'\n   'Number of persons on board: [number]'\n   'OVER'\n3. Release button and wait for response\n4. If no response, repeat after 1 minute\n\nIf you hear a MAYDAY: write down all details and stand by to assist.",
+    "content_de": "MAYDAY-Ruf senden:\n1. Funk auf Kanal 16, volle Leistung\n2. Sendetaste drücken:\n   'MAYDAY MAYDAY MAYDAY'\n   'This is [Schiffsname] (3x)'\n   'MAYDAY [Schiffsname]'\n   'My position is [Position]'\n   'I am [Art der Not: sinking, fire, etc.]'\n   'I require [immediate assistance]'\n   'Number of persons on board: [Anzahl]'\n   'OVER'\n3. Taste loslassen, auf Antwort warten\n4. Keine Antwort: nach 1 Minute wiederholen\n\nMAYDAY gehört: Alle Details notieren, bereit zur Hilfe.",
+    "image": "p139_img00.jpeg"
+  },
+  {
+    "type": "quiz",
+    "question_en": "Which VHF channel must be monitored at all times when at sea?",
+    "question_de": "Welcher UKW-Kanal muss auf See ständig abgehört werden?",
+    "options": [
+      { "text": "Channel 6", "correct": false },
+      { "text": "Channel 9", "correct": false },
+      { "text": "Channel 16", "correct": true },
+      { "text": "Channel 70", "correct": false }
+    ],
+    "explanation_en": "Channel 16 (156.8 MHz) is the international distress, safety, and calling channel. It must be monitored at all times when at sea. Channel 70 is for DSC digital distress, Channel 6 for ship-to-ship safety.",
+    "explanation_de": "Kanal 16 (156,8 MHz) ist der internationale Not-, Sicherheits- und Anrufkanal. Muss auf See ständig abgehört werden."
+  },
+  {
+    "type": "quiz",
+    "question_en": "In a MAYDAY call, how many times do you say 'MAYDAY'?",
+    "question_de": "Wie oft sagst du 'MAYDAY' bei einem Notruf?",
+    "options": [
+      { "text": "Once", "correct": false },
+      { "text": "Twice", "correct": false },
+      { "text": "Three times", "correct": true },
+      { "text": "Five times", "correct": false }
+    ],
+    "explanation_en": "MAYDAY is always spoken three times: 'MAYDAY MAYDAY MAYDAY'. This applies to all priority signals: MAYDAY (3x), PAN-PAN (3x), and SECURITE (3x).",
+    "explanation_de": "MAYDAY wird immer dreimal gesprochen: 'MAYDAY MAYDAY MAYDAY'. Gilt für alle Vorrangsignale: MAYDAY (3x), PAN-PAN (3x), SECURITE (3x)."
+  },
+  {
+    "type": "quiz_free",
+    "question_en": "Your boat is sinking. Send a MAYDAY call. Your position is 43°30'N, 016°26'E. There are 4 persons on board.",
+    "question_de": "Dein Boot sinkt. Sende einen MAYDAY-Ruf. Position: 43°30'N, 016°26'E. 4 Personen an Bord.",
+    "model_answer_en": "MAYDAY MAYDAY MAYDAY. This is [vessel name] [vessel name] [vessel name]. MAYDAY [vessel name]. My position is 43 degrees 30 minutes North, 016 degrees 26 minutes East. I am sinking. I require immediate assistance. Number of persons on board: four. Over.",
+    "model_answer_de": "MAYDAY MAYDAY MAYDAY. This is [Schiffsname] (3x). MAYDAY [Schiffsname]. My position is 43 degrees 30 minutes North, 016 degrees 26 minutes East. I am sinking. I require immediate assistance. Number of persons on board: four. Over."
+  }
+]

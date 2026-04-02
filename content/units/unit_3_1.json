@@ -1,0 +1,75 @@
+[
+  {
+    "type": "vocab",
+    "term_en": "Territorial Sea",
+    "definition_en": "A marine belt 12 nautical miles wide, measured from the baseline of internal waters. Croatia has full sovereignty over its territorial sea.",
+    "term_de": "Küstenmeer",
+    "definition_de": "Ein 12 Seemeilen breiter Meeresstreifen, gemessen von der Basislinie der Binnengewässer. Kroatien hat volle Souveränität."
+  },
+  {
+    "type": "vocab",
+    "term_en": "Boat (Legal Definition)",
+    "definition_en": "A vessel with length of 2.5m to under 15m, or propulsion power over 5 kW, that cannot carry more than 12 passengers. Not a ship, not a yacht.",
+    "term_de": "Boot (rechtliche Definition)",
+    "definition_de": "Ein Wasserfahrzeug von 2,5m bis unter 15m Länge, oder Antriebsleistung über 5 kW, max. 12 Passagiere."
+  },
+  {
+    "type": "vocab",
+    "term_en": "Category C License (Voditelj brodice)",
+    "definition_en": "Boat leader license for vessels up to 30 GT and engine power up to 500 kW. Valid for coastal navigation. Requires passing an oral exam in English.",
+    "term_de": "Kategorie C Schein (Voditelj brodice)",
+    "definition_de": "Bootsführerschein für Fahrzeuge bis 30 GT und Motorleistung bis 500 kW. Gültig für Küstenfahrt. Mündliche Prüfung auf Englisch."
+  },
+  {
+    "type": "vocab",
+    "term_en": "Seaworthiness",
+    "definition_en": "The condition of a vessel being fit and safe for navigation. Includes hull integrity, equipment, crew qualifications, and proper documentation.",
+    "term_de": "Seetüchtigkeit",
+    "definition_de": "Der Zustand eines Fahrzeugs, das für die Navigation geeignet und sicher ist. Umfasst Rumpf, Ausrüstung, Qualifikation und Dokumente."
+  },
+  {
+    "type": "learn",
+    "title_en": "Croatian Maritime Zones",
+    "content_en": "Croatia's maritime zones:\n• Internal waters — harbors, bays, areas behind baseline\n• Territorial sea — 12 NM from baseline, full sovereignty\n• Economic zone — beyond territorial sea, sovereign rights for resources\n\nAll foreign vessels have the right of INNOCENT PASSAGE through territorial waters.\n\nBaseline = line of low water along coasts + straight lines connecting islands.\n\nThe outer limit of territorial sea: every point is 12 NM from the nearest baseline point.",
+    "content_de": "Kroatiens Seezonen:\n• Binnengewässer — Häfen, Buchten, Gebiete hinter der Basislinie\n• Küstenmeer — 12 SM ab Basislinie, volle Souveränität\n• Wirtschaftszone — jenseits des Küstenmeers, Hoheitsrechte für Ressourcen\n\nAlle ausländischen Schiffe haben das Recht auf FRIEDLICHE DURCHFAHRT.\n\nBasislinie = Niedrigwasserlinie an Küsten + gerade Linien zwischen Inseln."
+  },
+  {
+    "type": "learn",
+    "title_en": "Required Documents on Board",
+    "content_en": "Documents required on a Croatian registered boat:\n• Registration certificate (Upisni list)\n• Crew list\n• Logbook (for commercial vessels)\n• Certificate of seaworthiness\n• Insurance certificate\n• Radio station license (if equipped with VHF)\n• Skipper's license (Category C or higher)\n\nRegular inspections:\n• Every 2 years — commercial boats\n• Every 5 years — private boats >7m or >15 kW\n• Every 4 years — dry land inspection (commercial)\n• Boats over 20 years: same intervals but ALL inspections on dry land",
+    "content_de": "Pflichtdokumente an Bord:\n• Registrierungsbescheinigung (Upisni list)\n• Besatzungsliste\n• Logbuch (gewerbliche Fahrzeuge)\n• Seetüchtigkeitszeugnis\n• Versicherungsnachweis\n• Funkzulassung (bei UKW-Funk)\n• Skipper-Lizenz (Kategorie C oder höher)\n\nRegelmäßige Inspektionen:\n• Alle 2 Jahre — gewerbliche Boote\n• Alle 5 Jahre — private Boote >7m oder >15 kW\n• Alle 4 Jahre — Trocken-Inspektion (gewerblich)\n• Boote über 20 Jahre: gleiche Intervalle, aber ALLE an Land"
+  },
+  {
+    "type": "quiz",
+    "question_en": "How wide is Croatia's territorial sea?",
+    "question_de": "Wie breit ist Kroatiens Küstenmeer?",
+    "options": [
+      { "text": "3 nautical miles", "correct": false },
+      { "text": "6 nautical miles", "correct": false },
+      { "text": "12 nautical miles", "correct": true },
+      { "text": "200 nautical miles", "correct": false }
+    ],
+    "explanation_en": "Croatia's territorial sea is 12 nautical miles wide, measured from the baseline. This is the standard width for most countries. The 200 NM zone is the economic zone.",
+    "explanation_de": "Kroatiens Küstenmeer ist 12 Seemeilen breit, gemessen von der Basislinie. Das ist der Standard für die meisten Länder. Die 200-SM-Zone ist die Wirtschaftszone."
+  },
+  {
+    "type": "quiz",
+    "question_en": "What is the maximum length of a 'boat' according to Croatian maritime law?",
+    "question_de": "Was ist die maximale Länge eines 'Bootes' laut kroatischem Seerecht?",
+    "options": [
+      { "text": "Under 10 meters", "correct": false },
+      { "text": "Under 12 meters", "correct": false },
+      { "text": "Under 15 meters", "correct": true },
+      { "text": "Under 20 meters", "correct": false }
+    ],
+    "explanation_en": "A 'boat' in Croatian law is a vessel with length from 2.5m to under 15m, with propulsion power over 5 kW, that cannot carry more than 12 passengers. Larger vessels are classified as ships.",
+    "explanation_de": "Ein 'Boot' ist laut kroatischem Recht ein Fahrzeug von 2,5m bis unter 15m, Antriebsleistung über 5 kW, max. 12 Passagiere. Größere Fahrzeuge sind Schiffe."
+  },
+  {
+    "type": "quiz_free",
+    "question_en": "What documents must you have on board when navigating in Croatian waters?",
+    "question_de": "Welche Dokumente musst du an Bord haben, wenn du in kroatischen Gewässern fährst?",
+    "model_answer_en": "Required documents include: Registration certificate, crew list, certificate of seaworthiness, insurance certificate, skipper's license (Category C or higher), radio station license if equipped with VHF. Commercial vessels also need a logbook. The boat must pass regular inspections — every 2 years for commercial boats, every 5 years for private boats over 7 meters or with power over 15 kW.",
+    "model_answer_de": "Pflichtdokumente: Registrierungsbescheinigung, Besatzungsliste, Seetüchtigkeitszeugnis, Versicherungsnachweis, Skipper-Lizenz (Kategorie C oder höher), Funkzulassung bei UKW-Funk. Gewerbliche Fahrzeuge brauchen ein Logbuch. Regelmäßige Inspektionen: alle 2 Jahre (gewerblich), alle 5 Jahre (privat >7m oder >15 kW)."
+  }
+]

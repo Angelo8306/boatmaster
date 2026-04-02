@@ -1,0 +1,118 @@
+[
+  {
+    "type": "vocab",
+    "term_en": "Navigation",
+    "definition_en": "The process of monitoring and controlling the movement of a craft from one place to another. Includes land, marine, aeronautic, and space navigation.",
+    "term_de": "Navigation",
+    "definition_de": "Der Prozess der Überwachung und Steuerung der Bewegung eines Fahrzeugs von einem Ort zum anderen."
+  },
+  {
+    "type": "vocab",
+    "term_en": "Nautical Chart",
+    "definition_en": "A basic tool for orientation and graphical solving of navigation tasks. Shows sea depths, coastlines, dangers, and aids to navigation.",
+    "term_de": "Seekarte",
+    "definition_de": "Grundlegendes Werkzeug zur Orientierung und grafischen Lösung von Navigationsaufgaben."
+  },
+  {
+    "type": "vocab",
+    "term_en": "Mercator Projection",
+    "definition_en": "A cylindrical map projection used for navigation charts. Earth's surface is projected from the center onto a cylinder, then unrolled flat.",
+    "term_de": "Mercator-Projektion",
+    "definition_de": "Eine zylindrische Kartenprojektion für Navigationskarten. Die Erdoberfläche wird vom Zentrum auf einen Zylinder projiziert."
+  },
+  {
+    "type": "vocab",
+    "term_en": "Latitude / Longitude",
+    "definition_en": "Latitude: angular distance north or south of the equator (0° to 90°). Longitude: angular distance east or west of Greenwich (0° to 180°). 1 minute of latitude = 1 nautical mile.",
+    "term_de": "Breite / Länge",
+    "definition_de": "Breite: Winkelabstand nördlich/südlich des Äquators. Länge: Winkelabstand östlich/westlich von Greenwich. 1 Breitenminute = 1 Seemeile."
+  },
+  {
+    "type": "vocab",
+    "term_en": "Isobath",
+    "definition_en": "A line on a chart connecting points of equal water depth. Similar to contour lines on land maps.",
+    "term_de": "Isobathe",
+    "definition_de": "Eine Linie auf der Seekarte, die Punkte gleicher Wassertiefe verbindet."
+  },
+  {
+    "type": "learn",
+    "title_en": "Types of Navigation",
+    "content_en": "Marine navigation is divided into:\n• Coastal navigation — in sight of the coast, using terrestrial systems (observing objects, measuring sea depth)\n• Ocean navigation — away from coast, using celestial navigation (Sun, Moon, stars)\n• Polar navigation — in polar regions\n\nAdditional systems: radio navigation, satellite navigation (GPS), radar navigation.",
+    "content_de": "Seenavigation wird unterteilt in:\n• Küstennavigation — in Sichtweite der Küste, mit terrestrischen Systemen\n• Hochseenavigation — fern der Küste, mit astronomischer Navigation (Sonne, Mond, Sterne)\n• Polarnavigation — in Polarregionen\n\nZusätzlich: Funknavigation, Satellitennavigation (GPS), Radarnavigation.",
+    "image": "p007_img00.jpeg"
+  },
+  {
+    "type": "learn",
+    "title_en": "Types of Charts",
+    "content_en": "Navigation charts by scale:\n• General charts — large ocean areas, small scale, for route planning\n• Course charts — parts of seas, for navigation outside coastal zones\n• Coastal charts — detailed coast areas, scale 1:50,000 to 1:100,000, fundamental navigation tool\n• Plans — small areas like ports and anchorages, large scale with all details",
+    "content_de": "Navigationskarten nach Maßstab:\n• Übersichtskarten — große Meeresgebiete, kleiner Maßstab, zur Routenplanung\n• Kurskarten — Teile von Meeren, für Navigation außerhalb der Küstenzone\n• Küstenkarten — detaillierte Küstengebiete, Maßstab 1:50.000 bis 1:100.000\n• Pläne — kleine Gebiete wie Häfen und Ankerplätze, großer Maßstab",
+    "image": "p010_img00.jpeg"
+  },
+  {
+    "type": "learn",
+    "title_en": "Chart Content",
+    "content_en": "A chart has two parts:\n• Topographic part — yellowish-orange (ocher), shows islands and coastline, landmarks for orientation. Heights in meters from mean sea level.\n• Hydrographic part — blue shades: 0-5m in blue, 5-10m light blue, deeper areas white. Depths in meters from low spring tide.\n\nType of seabed shown by abbreviations: S=Sand, M=Mud, G=Gravel, R=Rock, Co=Coral.",
+    "content_de": "Eine Seekarte hat zwei Teile:\n• Topographischer Teil — gelblich-orange, zeigt Inseln und Küstenlinie, Landmarken zur Orientierung.\n• Hydrographischer Teil — Blautöne: 0-5m blau, 5-10m hellblau, tiefer weiß. Tiefen in Metern.\n\nMeeresboden: S=Sand, M=Mud (Schlamm), G=Gravel (Kies), R=Rock (Fels), Co=Coral (Koralle).",
+    "image": "p012_img00.png"
+  },
+  {
+    "type": "learn",
+    "title_en": "Chart Symbols — Dangers",
+    "content_en": "Important danger symbols on charts:\n• Danger line — general danger boundary\n• Dangerous rock with known depth (e.g. 5.7m)\n• Dangerous underwater rock — depth unknown\n• Rock awash — at water level\n• Dangerous wreck with known depth\n• Wreck showing hull above water\n• Mandatory/recommended traffic direction\n• Electric cable, oil/gas pipeline, water pipeline",
+    "content_de": "Wichtige Gefahrensymbole auf Seekarten:\n• Gefahrenlinie — allgemeine Gefahrengrenze\n• Gefährlicher Felsen mit bekannter Tiefe (z.B. 5,7m)\n• Gefährlicher Unterwasserfelsen — Tiefe unbekannt\n• Felsen auf Wasserniveau\n• Gefährliches Wrack mit bekannter Tiefe\n• Wrack mit sichtbarem Rumpf\n• Pflicht-/Empfohlene Verkehrsrichtung\n• Stromkabel, Öl-/Gas-Pipeline, Wasserleitung",
+    "image": "p013_img00.png"
+  },
+  {
+    "type": "learn",
+    "title_en": "Notices to Mariners (NTM)",
+    "content_en": "Charts must be kept up to date for safe navigation:\n• Published monthly by Croatian Hydrographic Institute (HHI) in Split\n• Contains all changes relevant to navigation safety in the Adriatic\n• Temporary changes — entered in pencil, marked with T\n• Permanent changes — entered in purple or red ink, marked with P\n• Record of corrections in lower left corner of chart\n• Available at WWW.HHI.HR",
+    "content_de": "Seekarten müssen aktuell gehalten werden:\n• Monatlich veröffentlicht vom Kroatischen Hydrographischen Institut (HHI) in Split\n• Enthält alle Änderungen für die Sicherheit der Navigation in der Adria\n• Vorübergehende Änderungen — mit Bleistift, markiert mit T\n• Dauerhafte Änderungen — in lila oder roter Tinte, markiert mit P\n• Korrekturen im linken unteren Kartenrand",
+    "image": "p015_img00.jpeg"
+  },
+  {
+    "type": "quiz",
+    "question_en": "What does 1 minute of latitude equal in nautical measurement?",
+    "question_de": "Was entspricht 1 Breitenminute in der nautischen Messung?",
+    "options": [
+      { "text": "1 nautical mile", "correct": true },
+      { "text": "1 kilometer", "correct": false },
+      { "text": "1 statute mile", "correct": false },
+      { "text": "1 cable length", "correct": false }
+    ],
+    "explanation_en": "1 minute of latitude equals 1 nautical mile (1,852 meters). This is why distances are measured on the latitude scale (sides of the chart), never on the longitude scale.",
+    "explanation_de": "1 Breitenminute entspricht 1 Seemeile (1.852 Meter). Deshalb werden Entfernungen an der Breitenskala (Seiten der Karte) gemessen, nie an der Längenskala."
+  },
+  {
+    "type": "quiz",
+    "question_en": "On a nautical chart, what color indicates water depths of 0 to 5 meters?",
+    "question_de": "Welche Farbe zeigt auf einer Seekarte Wassertiefen von 0 bis 5 Metern an?",
+    "options": [
+      { "text": "White", "correct": false },
+      { "text": "Blue", "correct": true },
+      { "text": "Light blue", "correct": false },
+      { "text": "Yellow", "correct": false }
+    ],
+    "explanation_en": "On charts: 0-5m depth is shown in blue, 5-10m in light blue, and deeper areas in white. The topographic (land) part is yellowish-orange.",
+    "explanation_de": "Auf Seekarten: 0-5m Tiefe ist blau, 5-10m hellblau, und tiefere Bereiche weiß. Der topographische (Land-) Teil ist gelblich-orange."
+  },
+  {
+    "type": "quiz",
+    "question_en": "Which type of chart would you use for entering a specific port?",
+    "question_de": "Welchen Kartentyp würdest du zum Einlaufen in einen bestimmten Hafen verwenden?",
+    "options": [
+      { "text": "General chart", "correct": false },
+      { "text": "Course chart", "correct": false },
+      { "text": "Coastal chart", "correct": false },
+      { "text": "Plan", "correct": true }
+    ],
+    "explanation_en": "Plans show small areas like ports, anchorages, and passages in large scale with all important details. General charts show large areas, course charts show parts of seas, coastal charts show detailed coastlines.",
+    "explanation_de": "Pläne zeigen kleine Gebiete wie Häfen und Ankerplätze im großen Maßstab mit allen Details. Übersichtskarten zeigen große Gebiete, Kurskarten Teile von Meeren, Küstenkarten detaillierte Küstenlinien."
+  },
+  {
+    "type": "quiz_free",
+    "question_en": "Describe the two main parts of a nautical chart and what information each part contains.",
+    "question_de": "Beschreibe die zwei Hauptteile einer Seekarte und welche Informationen jeder Teil enthält.",
+    "model_answer_en": "A nautical chart consists of a topographic part and a hydrographic part. The topographic part is yellowish-orange in color and shows the land: islands, coastline, and landmarks useful for orientation. Heights are given in meters from mean sea level. The hydrographic part shows the sea: depths in meters, with 0-5m shown in blue, 5-10m in light blue, and deeper areas in white. It includes depth numbers, isobaths, seabed type, dangers, shipping lanes, and navigation aids.",
+    "model_answer_de": "Eine Seekarte besteht aus einem topographischen und einem hydrographischen Teil. Der topographische Teil ist gelblich-orange und zeigt das Land: Inseln, Küstenlinie und Landmarken. Höhen in Metern über Meeresniveau. Der hydrographische Teil zeigt das Meer: Tiefen in Metern, 0-5m blau, 5-10m hellblau, tiefer weiß. Er enthält Tiefenzahlen, Isobathen, Meeresbodentyp, Gefahren, Schifffahrtswege und Navigationshilfen."
+  }
+]

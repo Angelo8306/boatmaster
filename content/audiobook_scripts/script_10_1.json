@@ -1,0 +1,21 @@
+[
+  {"speaker": "dieter", "lang": "de", "text": "Sicherheit auf See — das sind die Notfallverfahren, die dir das Leben retten können. MAYDAY, Mann über Bord, Notsignale."},
+  {"speaker": "dieter", "lang": "de", "text": "Es gibt drei Stufen von Notrufen. Die höchste ist MAYDAY — unmittelbare Gefahr für Leben oder Schiff."},
+  {"speaker": "george", "lang": "en", "text": "MAYDAY MAYDAY MAYDAY. Used for grave and imminent danger to life or vessel. On VHF Channel sixteen, frequency one hundred fifty-six point eight megahertz."},
+  {"speaker": "dieter", "lang": "de", "text": "Die zweite Stufe ist PAN-PAN — eine dringende Situation, aber keine unmittelbare Lebensgefahr. Zum Beispiel Motorausfall."},
+  {"speaker": "george", "lang": "en", "text": "PAN-PAN PAN-PAN PAN-PAN. Urgency signal. Serious situation but no immediate danger to life."},
+  {"speaker": "dieter", "lang": "de", "text": "Die dritte Stufe ist SECURITE — Sicherheitswarnungen, zum Beispiel treibende Gegenstände oder Wetterwarnungen."},
+  {"speaker": "george", "lang": "en", "text": "SECURITE SECURITE SECURITE. Safety signal for navigation or weather warnings."},
+  {"speaker": "dieter", "lang": "de", "text": "Alle drei werden dreimal gesprochen und auf Kanal sechzehn gesendet. Jetzt der MAYDAY-Ablauf:"},
+  {"speaker": "george", "lang": "en", "text": "MAYDAY MAYDAY MAYDAY. This is vessel name, three times. MAYDAY vessel name. My position is... I am sinking, or on fire, or... I require immediate assistance. Number of persons on board. Over."},
+  {"speaker": "dieter", "lang": "de", "text": "Jetzt zu Mann über Bord — einer der häufigsten und gefährlichsten Notfälle."},
+  {"speaker": "george", "lang": "en", "text": "Man overboard. MOB."},
+  {"speaker": "dieter", "lang": "de", "text": "Schritt eins: RUFEN — Mann über Bord! Alle alarmieren. Schritt zwei: WERFEN — Rettungsring sofort zur Person werfen."},
+  {"speaker": "dieter", "lang": "de", "text": "Schritt drei: ZEIGEN — jemand zeigt ständig auf die Person, damit ihr sie nicht aus den Augen verliert. Schritt vier: GPS-Taste drücken."},
+  {"speaker": "dieter", "lang": "de", "text": "Schritt fünf: Boot wenden. Schritt sechs: Langsam von der Leeseite anfahren — also von der windgeschützten Seite, damit das Boot nicht über die Person treibt."},
+  {"speaker": "george", "lang": "en", "text": "Always approach from leeward — the sheltered side. Never jump in after the person unless absolutely necessary."},
+  {"speaker": "dieter", "lang": "de", "text": "Und NIE der Person nachspringen! Dann habt ihr zwei Personen im Wasser und keinen am Steuer."},
+  {"speaker": "dieter", "lang": "de", "text": "Pflichtausrüstung: Rettungswesten für alle, ein Rettungsring, sechs rote Handfackeln, Feuerlöscher, Erste-Hilfe-Kasten, Schallsignal und Taschenlampe."},
+  {"speaker": "george", "lang": "en", "text": "Required: life jackets for all persons, lifebuoy, six red hand flares, fire extinguisher, first aid kit, sound signaling device, flashlight."},
+  {"speaker": "dieter", "lang": "de", "text": "Zusammenfassung: MAYDAY bei Lebensgefahr, PAN-PAN bei Dringlichkeit, SECURITE bei Warnungen. Mann über Bord: rufen, werfen, zeigen, wenden, von Lee anfahren. Nie nachspringen!"}
+]

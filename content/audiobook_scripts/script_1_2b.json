@@ -1,0 +1,97 @@
+[
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "IALA — Kardinalzeichen und Sonderzeichen. Diese Zeichen warnen vor Gefahren und zeigen dir, auf welcher Seite du sicher passieren kannst."
+  },
+  {
+    "speaker": "george",
+    "lang": "en",
+    "text": "Cardinal marks. They show where safe water lies relative to a danger. Named after compass directions: North, South, East, West."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Kardinalzeichen sind schwarz und gelb. Und jetzt kommt der Trick: Die Position von SCHWARZ zeigt dir die Richtung."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Nord-Kardinalzeichen: Schwarz OBEN. Stell dir vor, das Schwarz zeigt nach oben wie ein Pfeil nach Norden. Du fährst NÖRDLICH daran vorbei."
+  },
+  {
+    "speaker": "george",
+    "lang": "en",
+    "text": "North cardinal: black on top, yellow below. Top mark: two cones pointing UP. Pass to the NORTH. Light: continuous quick flashing."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Süd-Kardinalzeichen: Schwarz UNTEN. Das Schwarz zeigt nach unten, also nach Süden. Du fährst SÜDLICH vorbei."
+  },
+  {
+    "speaker": "george",
+    "lang": "en",
+    "text": "South cardinal: yellow on top, black below. Top mark: two cones pointing DOWN. Pass to the SOUTH. Light: six flashes plus one long flash."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Ost-Kardinalzeichen: Schwarz OBEN und UNTEN, Gelb in der Mitte. Du fährst ÖSTLICH vorbei."
+  },
+  {
+    "speaker": "george",
+    "lang": "en",
+    "text": "East cardinal: black on top and bottom, yellow in the middle. Top mark: two cones base to base, like a diamond. Pass to the EAST. Light: three flashes."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "West-Kardinalzeichen: Gelb oben und unten, Schwarz in der MITTE — wie ein Gürtel. Du fährst WESTLICH vorbei."
+  },
+  {
+    "speaker": "george",
+    "lang": "en",
+    "text": "West cardinal: yellow on top and bottom, black in the middle. Top mark: two cones point to point, like an hourglass. Pass to the WEST. Light: nine flashes."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Und jetzt der Uhr-Trick für die Lichter: Ost ist drei Blitze — wie drei Uhr. Süd ist sechs Blitze plus Langblitz — wie sechs Uhr. West ist neun Blitze — wie neun Uhr. Und Nord blinkt durchgehend."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Dann gibt es noch das Einzelgefahrenzeichen. Das steht DIREKT über einer Gefahr — einem Felsen oder Wrack. Du kannst auf JEDER Seite vorbeifahren. Auf Englisch:"
+  },
+  {
+    "speaker": "george",
+    "lang": "en",
+    "text": "Isolated danger mark. Black with red horizontal bands. Top mark: two black spheres. Light: white, group flashing two. You may pass on any side."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Und das Sicheres-Wasser-Zeichen — rot-weiß gestreift mit einer roten Kugel oben drauf. Es zeigt befahrbares Wasser rundherum an, zum Beispiel die Fahrwassermitte."
+  },
+  {
+    "speaker": "george",
+    "lang": "en",
+    "text": "Safe water mark. Red and white vertical stripes. Spherical shape. Top mark: single red sphere. Indicates navigable water all around."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Zu guter Letzt: Sonderzeichen sind GELB mit einem X-förmigen Toppzeichen. Sie kennzeichnen besondere Gebiete wie Militärzonen, Naturschutzgebiete oder Wasserskibereiche."
+  },
+  {
+    "speaker": "george",
+    "lang": "en",
+    "text": "Special marks. Yellow color, X-shaped top mark, yellow light. Mark special areas: military zones, nature reserves, water ski areas, cable zones."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Zusammenfassung: Kardinalzeichen — Schwarz zeigt die Richtung, Uhr-Trick für die Lichter. Einzelgefahrenzeichen — schwarz mit roten Streifen, auf jeder Seite passierbar. Sonderzeichen — gelb mit X."
+  }
+]

@@ -1,0 +1,77 @@
+[
+  {
+    "type": "vocab",
+    "term_en": "Bow Rope",
+    "definition_en": "The mooring rope that goes from the bow (front) of the boat to the dock. Prevents the boat from moving backward.",
+    "term_de": "Bugleine",
+    "definition_de": "Das Festmachertau, das vom Bug (vorne) des Bootes zum Dock führt. Verhindert Rückwärtsbewegung."
+  },
+  {
+    "type": "vocab",
+    "term_en": "Stern Rope",
+    "definition_en": "The mooring rope going from the stern (back) of the boat to the dock. Prevents the boat from moving forward.",
+    "term_de": "Heckleine",
+    "definition_de": "Das Festmachertau vom Heck (hinten) des Bootes zum Dock. Verhindert Vorwärtsbewegung."
+  },
+  {
+    "type": "vocab",
+    "term_en": "Spring Line",
+    "definition_en": "A mooring rope running at an angle from the boat. Prevents forward and backward movement. Can be bow spring or stern spring.",
+    "term_de": "Springleine",
+    "definition_de": "Ein Festmachertau, das schräg vom Boot verläuft. Verhindert Vor- und Rückwärtsbewegung."
+  },
+  {
+    "type": "vocab",
+    "term_en": "Breast Line",
+    "definition_en": "A mooring rope running perpendicular from the boat to the dock. Keeps the boat close to the pier.",
+    "term_de": "Querleine",
+    "definition_de": "Ein Festmachertau, das senkrecht vom Boot zum Dock verläuft. Hält das Boot nah am Pier."
+  },
+  {
+    "type": "learn",
+    "title_en": "Essential Knots for Boating",
+    "content_en": "Every skipper must know these knots:\n\n• Figure-eight knot — Stopper knot, prevents rope from running through fittings\n• Reef knot (Square knot) — Joins two ropes of equal thickness, or secures a rope around an object\n• Sheet bend — Joins two ropes of DIFFERENT thickness\n• Anchor hitch — Attaches rope to anchor ring or bollard\n• Cow hitch — Attaches rope to an object, uses opposing half-hitches\n• Mooring hitch — Quick-release temporary knot, holds under load\n• Cleat hitch — Secures rope to a cleat on the boat or dock",
+    "content_de": "Jeder Skipper muss diese Knoten kennen:\n\n• Achtknoten — Stopperknoten, verhindert Durchrutschen\n• Kreuzknoten — Verbindet zwei gleich dicke Seile\n• Schotstek — Verbindet zwei VERSCHIEDEN dicke Seile\n• Ankerstich — Befestigt Seil am Ankerring oder Poller\n• Kuhstich — Befestigt Seil an einem Gegenstand\n• Festmacherknoten — Schnell lösbar, temporär\n• Klampe belegen — Seil an Klampe befestigen",
+    "image": "p084_img00.jpeg"
+  },
+  {
+    "type": "learn",
+    "title_en": "Anchoring",
+    "content_en": "Anchoring procedure:\n1. Choose a sheltered spot with good holding ground\n2. Approach slowly into the wind or current\n3. When stopped, lower anchor — don't throw it!\n4. Pay out rope/chain as boat drifts back\n5. Scope: ratio of rope length to water depth, minimum 3:1, better 5:1 to 7:1\n\nAnchor types:\n• CQR (plow) — good in sand and mud\n• Danforth — excellent holding, flat storage\n• Bruce — good all-round anchor\n\nAlways check the anchor is holding by taking bearings on fixed objects.",
+    "content_de": "Ankerverfahren:\n1. Geschützten Platz mit gutem Ankergrund wählen\n2. Langsam gegen Wind oder Strömung anfahren\n3. Bei Stillstand Anker ablassen — nicht werfen!\n4. Kette/Seil fieren während Boot zurücktreibt\n5. Verhältnis Leinenlänge zu Wassertiefe: mindestens 3:1, besser 5:1 bis 7:1\n\nAnkertypen:\n• CQR (Pflug) — gut in Sand und Schlamm\n• Danforth — hervorragende Haltekraft, flach verstaubar\n• Bruce — guter Allround-Anker",
+    "image": "p085_img00.jpeg"
+  },
+  {
+    "type": "quiz",
+    "question_en": "Which knot is used to join two ropes of DIFFERENT thickness?",
+    "question_de": "Welcher Knoten wird verwendet, um zwei Seile UNTERSCHIEDLICHER Dicke zu verbinden?",
+    "options": [
+      { "text": "Reef knot", "correct": false },
+      { "text": "Figure-eight knot", "correct": false },
+      { "text": "Sheet bend", "correct": true },
+      { "text": "Anchor hitch", "correct": false }
+    ],
+    "explanation_en": "The sheet bend is specifically designed to join two ropes of different thickness. The reef knot (square knot) is for ropes of equal thickness. The figure-eight is a stopper knot, and the anchor hitch attaches to rings or bollards.",
+    "explanation_de": "Der Schotstek verbindet speziell zwei verschieden dicke Seile. Der Kreuzknoten ist für gleich dicke Seile. Der Achtknoten ist ein Stopperknoten, der Ankerstich befestigt an Ringen oder Pollern."
+  },
+  {
+    "type": "quiz",
+    "question_en": "What is a spring line used for when mooring?",
+    "question_de": "Wofür wird eine Springleine beim Festmachen verwendet?",
+    "options": [
+      { "text": "To keep the boat close to the dock", "correct": false },
+      { "text": "To prevent forward and backward movement", "correct": true },
+      { "text": "To tow another boat", "correct": false },
+      { "text": "To secure the anchor", "correct": false }
+    ],
+    "explanation_en": "Spring lines run at an angle and prevent the boat from moving forward or backward along the dock. Breast lines keep the boat close to the dock. Bow/stern ropes prevent movement in one direction.",
+    "explanation_de": "Springleinen verlaufen schräg und verhindern, dass das Boot sich vorwärts oder rückwärts am Dock bewegt. Querleinen halten das Boot nah am Dock."
+  },
+  {
+    "type": "quiz_free",
+    "question_en": "Name the mooring lines used to secure a boat to a dock and describe the purpose of each.",
+    "question_de": "Nenne die Festmacherleinen zum Sichern eines Bootes am Dock und beschreibe den Zweck jeder Leine.",
+    "model_answer_en": "The main mooring lines are: Bow rope — goes from the bow forward to the dock, prevents backward movement. Stern rope — goes from the stern backward to the dock, prevents forward movement. Breast lines — run perpendicular from the boat to the dock, keeping the boat close. Spring lines — run at an angle, preventing forward and backward movement along the dock. Additionally, there is the tow rope for towing and the anchor rope for the anchor.",
+    "model_answer_de": "Die wichtigsten Festmacherleinen sind: Bugleine — vom Bug nach vorne zum Dock, verhindert Rückwärtsbewegung. Heckleine — vom Heck nach hinten zum Dock, verhindert Vorwärtsbewegung. Querleinen — senkrecht vom Boot zum Dock, halten das Boot nah. Springleinen — schräg, verhindern Vor- und Rückwärtsbewegung entlang des Docks."
+  }
+]

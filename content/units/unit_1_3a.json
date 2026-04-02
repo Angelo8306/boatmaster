@@ -1,0 +1,84 @@
+[
+  {
+    "type": "vocab",
+    "term_en": "Latitude",
+    "definition_en": "Angular distance north or south of the equator, measured from 0° to 90°. Marked with N (north) or S (south). On a chart, shown on the left and right edges.",
+    "term_de": "Breite (Breitengrad)",
+    "definition_de": "Winkelabstand nördlich oder südlich des Äquators, gemessen von 0° bis 90°. Mit N (Nord) oder S (Süd) gekennzeichnet."
+  },
+  {
+    "type": "vocab",
+    "term_en": "Longitude",
+    "definition_en": "Angular distance east or west of the Greenwich meridian, measured from 0° to 180°. Marked with E (east) or W (west). On a chart, shown on top and bottom edges.",
+    "term_de": "Länge (Längengrad)",
+    "definition_de": "Winkelabstand östlich oder westlich des Greenwich-Meridians, gemessen von 0° bis 180°."
+  },
+  {
+    "type": "vocab",
+    "term_en": "Nautical Mile",
+    "definition_en": "The standard unit of distance at sea. 1 nautical mile = 1,852 meters = 1 minute of latitude. Speed at sea is measured in knots (1 knot = 1 nautical mile per hour).",
+    "term_de": "Seemeile",
+    "definition_de": "Die Standard-Entfernungseinheit auf See. 1 Seemeile = 1.852 Meter = 1 Breitenminute. Geschwindigkeit in Knoten (1 Knoten = 1 Seemeile pro Stunde)."
+  },
+  {
+    "type": "vocab",
+    "term_en": "Course",
+    "definition_en": "The intended direction of travel, measured as an angle from north (0°/360°) clockwise. True course uses true north, magnetic course uses magnetic north.",
+    "term_de": "Kurs",
+    "definition_de": "Die beabsichtigte Fahrtrichtung, als Winkel von Nord (0°/360°) im Uhrzeigersinn gemessen."
+  },
+  {
+    "type": "vocab",
+    "term_en": "Bearing / Azimuth",
+    "definition_en": "The direction of an object from the observer, measured as an angle from north clockwise (0° to 360°). Used to determine position by taking bearings of known landmarks.",
+    "term_de": "Peilung / Azimut",
+    "definition_de": "Die Richtung eines Objekts vom Beobachter, als Winkel von Nord im Uhrzeigersinn (0° bis 360°)."
+  },
+  {
+    "type": "learn",
+    "title_en": "Geographic Coordinates",
+    "content_en": "Every position on Earth is defined by two coordinates:\n• Latitude (φ) — distance from equator, 0° to 90° N or S\n• Longitude (λ) — distance from Greenwich, 0° to 180° E or W\n\nFormat: degrees (°), minutes ('), seconds (\")\nExample: 43° 30' 15\" N, 016° 26' 20\" E (Split, Croatia)\n\nOn a Mercator chart:\n- Latitude scale on left/right edges (also used to measure distance)\n- Longitude scale on top/bottom edges (NEVER use for distance!)",
+    "content_de": "Jede Position auf der Erde wird durch zwei Koordinaten bestimmt:\n• Breite (φ) — Abstand vom Äquator, 0° bis 90° N oder S\n• Länge (λ) — Abstand von Greenwich, 0° bis 180° E oder W\n\nFormat: Grad (°), Minuten ('), Sekunden (\")\nBeispiel: 43° 30' 15\" N, 016° 26' 20\" E (Split, Kroatien)\n\nAuf Mercator-Karte:\n- Breitenskala links/rechts (auch für Entfernungsmessung)\n- Längenskala oben/unten (NIE für Entfernung verwenden!)",
+    "image": "p028_img00.jpeg"
+  },
+  {
+    "type": "learn",
+    "title_en": "Measuring Distance on a Chart",
+    "content_en": "To measure distance on a nautical chart:\n1. Use dividers (compasses) to span the distance between two points\n2. Transfer the span to the LATITUDE scale (left or right edge)\n3. Read the distance in nautical miles (1' latitude = 1 NM)\n\nIMPORTANT: Always measure at the same latitude as your position!\nNEVER measure distance on the longitude scale (top/bottom).\n\nSpeed formula: Speed (knots) = Distance (NM) / Time (hours)\nTime formula: Time = Distance / Speed",
+    "content_de": "Entfernung auf Seekarte messen:\n1. Stechzirkel zwischen zwei Punkten spannen\n2. Spanne auf die BREITENSKALA (links oder rechts) übertragen\n3. Entfernung in Seemeilen ablesen (1' Breite = 1 SM)\n\nWICHTIG: Immer auf gleicher Breite wie die Position messen!\nNIE auf der Längenskala (oben/unten) messen.\n\nGeschwindigkeit: Knoten = Seemeilen / Stunden",
+    "image": "p029_img00.jpeg"
+  },
+  {
+    "type": "quiz",
+    "question_en": "Where on a nautical chart should you measure distance?",
+    "question_de": "Wo auf einer Seekarte sollst du Entfernungen messen?",
+    "options": [
+      { "text": "On the longitude scale (top/bottom)", "correct": false },
+      { "text": "On the latitude scale (left/right sides)", "correct": true },
+      { "text": "Using the title block scale bar", "correct": false },
+      { "text": "On any edge of the chart", "correct": false }
+    ],
+    "explanation_en": "Distance is always measured on the latitude scale (left or right edges) because 1 minute of latitude = 1 nautical mile. The longitude scale cannot be used because longitude minutes change size with latitude on a Mercator chart.",
+    "explanation_de": "Entfernungen werden immer an der Breitenskala gemessen (links/rechts), weil 1 Breitenminute = 1 Seemeile. Die Längenskala kann nicht verwendet werden, da Längenminuten auf einer Mercator-Karte ihre Größe mit der Breite ändern."
+  },
+  {
+    "type": "quiz",
+    "question_en": "A boat travels 15 nautical miles in 3 hours. What is its speed?",
+    "question_de": "Ein Boot fährt 15 Seemeilen in 3 Stunden. Wie schnell ist es?",
+    "options": [
+      { "text": "3 knots", "correct": false },
+      { "text": "5 knots", "correct": true },
+      { "text": "15 knots", "correct": false },
+      { "text": "45 knots", "correct": false }
+    ],
+    "explanation_en": "Speed = Distance / Time = 15 NM / 3 h = 5 knots. A knot is 1 nautical mile per hour.",
+    "explanation_de": "Geschwindigkeit = Entfernung / Zeit = 15 SM / 3 h = 5 Knoten. Ein Knoten ist 1 Seemeile pro Stunde."
+  },
+  {
+    "type": "quiz_free",
+    "question_en": "What is the difference between latitude and longitude? How are they used in navigation?",
+    "question_de": "Was ist der Unterschied zwischen Breite und Länge? Wie werden sie in der Navigation verwendet?",
+    "model_answer_en": "Latitude is the angular distance north or south of the equator, measured from 0° to 90°. Longitude is the angular distance east or west of the Greenwich meridian, measured from 0° to 180°. Together they define any position on Earth. In navigation, latitude is especially important because 1 minute of latitude equals 1 nautical mile, making the latitude scale the tool for measuring distances on a chart. Longitude minutes vary in size depending on the latitude, so they cannot be used for distance measurement.",
+    "model_answer_de": "Breite ist der Winkelabstand nördlich oder südlich des Äquators, von 0° bis 90°. Länge ist der Winkelabstand östlich oder westlich des Greenwich-Meridians, von 0° bis 180°. Zusammen definieren sie jede Position auf der Erde. In der Navigation ist Breite besonders wichtig, weil 1 Breitenminute = 1 Seemeile, was die Breitenskala zum Werkzeug für Entfernungsmessung macht."
+  }
+]

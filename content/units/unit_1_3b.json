@@ -1,0 +1,107 @@
+[
+  {
+    "type": "vocab",
+    "term_en": "Compass Rose",
+    "definition_en": "A circle on a chart showing directions. Has an outer ring for true directions (geographic) and an inner ring for magnetic directions. Shows magnetic variation.",
+    "term_de": "Kompassrose",
+    "definition_de": "Ein Kreis auf der Seekarte mit Richtungsangaben. Aeusserer Ring fuer rechtweisende (geographische) Richtungen, innerer Ring fuer missweisende (magnetische) Richtungen."
+  },
+  {
+    "type": "vocab",
+    "term_en": "Magnetic Variation / Declination",
+    "definition_en": "The angle between true north and magnetic north at a given location. Changes slowly over time. Found on the compass rose of every chart. Must be corrected for accurate navigation.",
+    "term_de": "Missweisung / Deklination",
+    "definition_de": "Der Winkel zwischen geographisch Nord und magnetisch Nord an einem bestimmten Ort. Aendert sich langsam. Auf jeder Kompassrose verzeichnet."
+  },
+  {
+    "type": "vocab",
+    "term_en": "Deviation",
+    "definition_en": "The error in a magnetic compass caused by the boat's own magnetic influences (engine, electronics, metal parts). Varies with heading and is recorded in a deviation table.",
+    "term_de": "Deviation / Ablenkung",
+    "definition_de": "Der Fehler eines Magnetkompasses durch die magnetischen Einfluesse des Bootes selbst (Motor, Elektronik, Metallteile). Aendert sich mit dem Kurs."
+  },
+  {
+    "type": "vocab",
+    "term_en": "Bearing / Azimuth",
+    "definition_en": "The horizontal angle measured clockwise from north to an object. True bearing (from true north), magnetic bearing (from magnetic north), compass bearing (from compass north).",
+    "term_de": "Peilung / Azimut",
+    "definition_de": "Der horizontale Winkel von Nord im Uhrzeigersinn zu einem Objekt gemessen. Rechtweisende Peilung (von geogr. Nord), missweisende Peilung (von magn. Nord), Kompasspeilung."
+  },
+  {
+    "type": "learn",
+    "title_en": "True, Magnetic & Compass Course",
+    "content_en": "Three types of course (direction):\n\n1. TRUE COURSE (TC) — measured from true/geographic north on the chart\n2. MAGNETIC COURSE (MC) — true course corrected for variation\n3. COMPASS COURSE (CC) — magnetic course corrected for deviation\n\nFormula: CC = TC + Variation + Deviation\n\nVariation: found on chart's compass rose\nDeviation: from the boat's deviation table\n\nWest variation/deviation: ADD to true course\nEast variation/deviation: SUBTRACT from true course\n\nMnemonic: 'Cadbury's Dairy Milk Very Tasty' → CC ± D = MC ± V = TC",
+    "content_de": "Drei Kursarten:\n\n1. RECHTWEISENDER KURS (rwK) — von geographisch Nord auf der Karte gemessen\n2. MISSWEISENDER KURS (mwK) — rwK korrigiert um die Missweisung\n3. KOMPASSKURS (KK) — mwK korrigiert um die Deviation\n\nFormel: KK = rwK + Missweisung + Deviation\n\nMissweisung: auf der Kompassrose der Karte\nDeviation: aus der Deviationstabelle des Bootes\n\nWest-Missweisung: ADDIEREN\nOst-Missweisung: SUBTRAHIEREN",
+    "image": "p034_img00.jpeg"
+  },
+  {
+    "type": "learn",
+    "title_en": "Speed, Distance & Time",
+    "content_en": "The basic navigation formula:\n\nSpeed = Distance / Time\nDistance = Speed × Time\nTime = Distance / Speed\n\n• Speed at sea is measured in KNOTS (kn) — 1 knot = 1 nautical mile per hour\n• Distance is measured in NAUTICAL MILES (NM) — 1 NM = 1,852 meters\n• Time in hours and minutes\n\nExample: If speed = 6 knots and time = 2.5 hours → Distance = 6 × 2.5 = 15 NM",
+    "content_de": "Die grundlegende Navigationsformel:\n\nGeschwindigkeit = Strecke / Zeit\nStrecke = Geschwindigkeit × Zeit\nZeit = Strecke / Geschwindigkeit\n\n• Geschwindigkeit auf See in KNOTEN (kn) — 1 Knoten = 1 Seemeile pro Stunde\n• Entfernung in SEEMEILEN (sm) — 1 sm = 1.852 Meter\n• Zeit in Stunden und Minuten"
+  },
+  {
+    "type": "learn",
+    "title_en": "Types of Compass",
+    "content_en": "Two main types of compass on boats:\n\n1. MAGNETIC COMPASS — uses Earth's magnetic field. Simple, reliable, no power needed. But affected by variation and deviation.\n\n2. GYROCOMPASS — uses a spinning gyroscope to find TRUE north. Not affected by magnetism. Expensive, used on larger vessels.\n\nAlso: FLUXGATE COMPASS — electronic magnetic compass, can be connected to autopilot and chart plotter. Needs calibration (swing) to compensate for deviation.",
+    "content_de": "Zwei Haupttypen von Kompassen:\n\n1. MAGNETKOMPASS — nutzt das Erdmagnetfeld. Einfach, zuverlaessig, braucht keinen Strom. Aber beeinflusst durch Missweisung und Deviation.\n\n2. KREISELKOMPASS — nutzt einen Kreisel um geographisch Nord zu finden. Nicht magnetisch beeinflusst. Teuer, auf groesseren Schiffen.\n\nAuch: FLUXGATE-KOMPASS — elektronischer Magnetkompass, verbindbar mit Autopilot und Kartenplotter.",
+    "image": "p034_img02.png"
+  },
+  {
+    "type": "quiz",
+    "question_en": "If the true course is 090° and the magnetic variation is 3° West, what is the magnetic course?",
+    "question_de": "Wenn der rechtweisende Kurs 090° und die Missweisung 3° West betraegt, wie lautet der missweisende Kurs?",
+    "options": [
+      {
+        "text": "087°",
+        "correct": false
+      },
+      {
+        "text": "090°",
+        "correct": false
+      },
+      {
+        "text": "093°",
+        "correct": true
+      },
+      {
+        "text": "096°",
+        "correct": false
+      }
+    ],
+    "explanation_en": "West variation is ADDED: 090° + 3° = 093°. Remember: 'Variation West, compass best (higher)' — when going from true to compass, add west.",
+    "explanation_de": "West-Missweisung wird ADDIERT: 090° + 3° = 093°. Merke: Bei West-Missweisung wird vom rwK zum mwK addiert."
+  },
+  {
+    "type": "quiz",
+    "question_en": "What is the difference between magnetic variation and deviation?",
+    "question_de": "Was ist der Unterschied zwischen Missweisung und Deviation?",
+    "options": [
+      {
+        "text": "Variation is caused by the boat, deviation by the Earth",
+        "correct": false
+      },
+      {
+        "text": "Variation is caused by the Earth, deviation by the boat",
+        "correct": true
+      },
+      {
+        "text": "Both are caused by the Earth's magnetic field",
+        "correct": false
+      },
+      {
+        "text": "Both are caused by the boat's equipment",
+        "correct": false
+      }
+    ],
+    "explanation_en": "Variation is the natural difference between true and magnetic north (caused by Earth's magnetic field). Deviation is caused by the boat's own magnetic influences (engine, electronics, metal). Variation is shown on the chart; deviation depends on the individual boat.",
+    "explanation_de": "Missweisung ist der natuerliche Unterschied zwischen geographisch und magnetisch Nord (Erdmagnetfeld). Deviation wird durch die magnetischen Einfluesse des Bootes verursacht (Motor, Elektronik, Metall)."
+  },
+  {
+    "type": "quiz_free",
+    "question_en": "Explain the three types of north and how they relate to course corrections.",
+    "question_de": "Erklaere die drei Arten von Nord und wie sie mit Kurskorrekturen zusammenhaengen.",
+    "model_answer_en": "True north is the geographic north pole, shown on charts. Magnetic north is where a compass needle points, differing from true north by the variation angle. Compass north is what the boat's compass shows, differing from magnetic north by the deviation caused by the boat itself. To convert: True Course plus or minus Variation gives Magnetic Course, plus or minus Deviation gives Compass Course.",
+    "model_answer_de": "Geographisch Nord ist der geographische Nordpol, auf Karten. Magnetisch Nord ist wo die Kompassnadel zeigt, unterscheidet sich um die Missweisung. Kompassnord ist was der Bootskompass anzeigt, unterscheidet sich um die Deviation. Umrechnung: rwK plus/minus Missweisung ergibt mwK, plus/minus Deviation ergibt Kompasskurs."
+  }
+]

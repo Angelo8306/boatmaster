@@ -1,0 +1,77 @@
+[
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "IALA — Lichter und Lateralzeichen. In dieser Lektion geht es um die Seitenmarkierungen und ihre Lichter, die dir zeigen wo die Fahrrinne ist."
+  },
+  {
+    "speaker": "george",
+    "lang": "en",
+    "text": "IALA buoyage system. Lateral marks and light characteristics. How to identify navigation marks by their lights at night."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Zuerst das Wichtigste: In IALA Region A — und dazu gehört ganz Europa und Kroatien — gilt diese Regel:"
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Wenn du von See in einen Hafen einfährst: ROTE Bojen sind LINKS, also an Backbord. GRÜNE Bojen sind RECHTS, also an Steuerbord. Auf Englisch:"
+  },
+  {
+    "speaker": "george",
+    "lang": "en",
+    "text": "Red to port, green to starboard, when entering from sea. Port-hand marks are red, cylindrical shape, with red light. Starboard-hand marks are green, conical shape, with green light."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Backbord-Zeichen: rot, zylindrisch wie eine Tonne, rotes Licht. Steuerbord-Zeichen: grün, kegelförmig wie eine Spitztonne, grünes Licht."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Manchmal teilt sich eine Fahrrinne in zwei Richtungen. Dann gibt es Bevorzugte-Fahrwasser-Zeichen. Auf Englisch:"
+  },
+  {
+    "speaker": "george",
+    "lang": "en",
+    "text": "Preferred channel buoy. A red buoy with a green horizontal band means the preferred channel is to starboard. A green buoy with a red horizontal band means the preferred channel is to port."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Merke: Die Hauptfarbe sagt dir die Seite. Der Querstreifen zeigt an, dass sich die Fahrrinne hier teilt."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Jetzt zu den Lichtern. Jedes Seezeichen hat nachts ein bestimmtes Blinkrhythmus, damit du es identifizieren kannst. Die wichtigsten auf Englisch:"
+  },
+  {
+    "speaker": "george",
+    "lang": "en",
+    "text": "Fixed light, F — continuous steady light. Flashing, Fl — light shorter than dark. Occulting, Oc — light longer than dark. Quick, Q — fifty to seventy-nine flashes per minute. Isophase, Iso — equal light and dark periods."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Festfeuer brennt durchgehend. Blinkfeuer blitzt kurz auf. Unterbrochenes Feuer ist meistens an und wird kurz unterbrochen. Schnelles Blinkfeuer blinkt fünfzig bis neunundsiebzig Mal pro Minute."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Jedes Licht hat drei Merkmale: Farbe, Periode — also die Zeit für einen kompletten Zyklus — und Tragweite in Seemeilen. Auf Englisch:"
+  },
+  {
+    "speaker": "george",
+    "lang": "en",
+    "text": "Every light has three characteristics: color, period — the time for one complete cycle, and range — visibility distance in nautical miles."
+  },
+  {
+    "speaker": "dieter",
+    "lang": "de",
+    "text": "Zusammenfassung: Rot links, grün rechts bei Einfahrt von See. Bevorzugte-Fahrwasser-Zeichen haben einen Querstreifen. Lichter erkennt man am Rhythmus: Blinkfeuer, Festfeuer, unterbrochenes Feuer."
+  }
+]

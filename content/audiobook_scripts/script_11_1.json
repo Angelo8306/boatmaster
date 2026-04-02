@@ -1,0 +1,16 @@
+[
+  {"speaker": "dieter", "lang": "de", "text": "Seefunk — die Kommunikation auf See. Das VHF-Funkgerät ist dein Telefon auf dem Wasser. Jeder Skipper muss damit umgehen können."},
+  {"speaker": "george", "lang": "en", "text": "VHF radio. Very High Frequency. The primary communication system at sea. Range twenty to sixty nautical miles, line of sight."},
+  {"speaker": "dieter", "lang": "de", "text": "Der wichtigste Kanal ist Kanal sechzehn — der internationale Not- und Anrufkanal. Den musst du auf See IMMER abhören."},
+  {"speaker": "george", "lang": "en", "text": "Channel sixteen. Frequency one hundred fifty-six point eight megahertz. International distress, safety, and calling channel. Must be monitored at all times when at sea."},
+  {"speaker": "dieter", "lang": "de", "text": "Weitere wichtige Kanäle in Kroatien: Kanal siebenundsechzig für die Küstenwache, Kanal dreiundsiebzig für Sicherheitsinformationen."},
+  {"speaker": "dieter", "lang": "de", "text": "Moderne Funkgeräte haben DSC — Digital Selective Calling. Damit wird automatisch deine Schiffskennung und Position mitgesendet."},
+  {"speaker": "george", "lang": "en", "text": "DSC. Digital Selective Calling. Automatically sends your MMSI number and position with distress alerts."},
+  {"speaker": "dieter", "lang": "de", "text": "MMSI steht für Maritime Mobile Service Identity — das ist wie eine Telefonnummer für dein Boot. Neun Ziffern, einmalig zugewiesen."},
+  {"speaker": "george", "lang": "en", "text": "MMSI number. Maritime Mobile Service Identity. A unique nine-digit number assigned to each vessel's radio station."},
+  {"speaker": "dieter", "lang": "de", "text": "Bei einem Notruf drückst du einfach fünf Sekunden den roten DSC-Knopf. Das sendet automatisch einen MAYDAY mit deiner Position."},
+  {"speaker": "dieter", "lang": "de", "text": "Für einen normalen Anruf gilt: Erst hören ob der Kanal frei ist. Dann den Namen des anderen Schiffes dreimal sagen, then this is, dann deinen Namen dreimal."},
+  {"speaker": "george", "lang": "en", "text": "Calling procedure: listen before transmitting. State the other vessel's name three times, then 'this is' and your vessel's name three times. Then switch to a working channel."},
+  {"speaker": "dieter", "lang": "de", "text": "Nachrichtenpriorität: MAYDAY hat höchste Priorität, dann PAN-PAN, dann SECURITE, dann Routine-Nachrichten."},
+  {"speaker": "dieter", "lang": "de", "text": "Zusammenfassung: Kanal sechzehn immer abhören. MMSI ist deine Bootsnummer. DSC-Taste fünf Sekunden für automatischen Notruf. Und bei MAYDAY: dreimal sagen, Position, Art der Not, Personenzahl."}
+]

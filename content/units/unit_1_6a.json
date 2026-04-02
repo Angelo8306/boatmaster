@@ -1,0 +1,69 @@
+[
+  {
+    "type": "vocab",
+    "term_en": "Radar",
+    "definition_en": "Radio Detection And Ranging. Sends microwave pulses and measures reflected echoes to detect objects, their distance, and bearing. Works in darkness, fog, rain.",
+    "term_de": "Radar",
+    "definition_de": "Radio Detection And Ranging. Sendet Mikrowellenimpulse und misst reflektierte Echos um Objekte, deren Entfernung und Richtung zu erkennen. Funktioniert bei Dunkelheit, Nebel, Regen."
+  },
+  {
+    "type": "vocab",
+    "term_en": "ARPA",
+    "definition_en": "Automatic Radar Plotting Aid. Tracks detected targets automatically, calculates their course, speed, CPA (Closest Point of Approach), and TCPA (Time to CPA). Essential for collision avoidance.",
+    "term_de": "ARPA",
+    "definition_de": "Automatic Radar Plotting Aid. Verfolgt erkannte Ziele automatisch, berechnet deren Kurs, Geschwindigkeit, CPA (naechster Passierabstand) und TCPA (Zeit bis CPA)."
+  },
+  {
+    "type": "vocab",
+    "term_en": "Radar Range / Bearing",
+    "definition_en": "Range: distance to a target (from echo delay). Bearing: direction to a target (from antenna position). Together they give the position of any detected object.",
+    "term_de": "Radar-Entfernung / -Peilung",
+    "definition_de": "Entfernung: Abstand zum Ziel (aus Echoverzoegerung). Peilung: Richtung zum Ziel (aus Antennenstellung). Zusammen ergeben sie die Position des Objekts.",
+    "image": "p049_img00.png"
+  },
+  {
+    "type": "learn",
+    "title_en": "How Radar Works",
+    "content_en": "Radar principle:\n1. Transmitter sends short microwave pulses through rotating antenna\n2. Pulses travel at speed of light, hit objects, reflect back\n3. Receiver picks up echoes\n4. Time delay = distance (range)\n5. Antenna direction = bearing to target\n\nDisplay shows: your vessel at center, objects as bright dots/shapes\n\nTwo frequencies used:\n• X-band (3 cm / 9 GHz) — better resolution, affected by rain\n• S-band (10 cm / 3 GHz) — better in rain, less detail",
+    "content_de": "Radar-Prinzip:\n1. Sender schickt kurze Mikrowellenimpulse ueber drehende Antenne\n2. Impulse wandern mit Lichtgeschwindigkeit, treffen Objekte, werden reflektiert\n3. Empfaenger nimmt Echos auf\n4. Zeitverzoegerung = Entfernung\n5. Antennenrichtung = Peilung zum Ziel\n\nZwei Frequenzen:\n• X-Band (3 cm / 9 GHz) — bessere Aufloesung, Regenprobleme\n• S-Band (10 cm / 3 GHz) — besser bei Regen, weniger Detail",
+    "image": "p049_img01.png"
+  },
+  {
+    "type": "learn",
+    "title_en": "Radar Limitations",
+    "content_en": "Radar has limitations:\n• Shadow sectors — blind spots behind mast, funnel\n• Sea clutter — false echoes from waves (worse in rough seas)\n• Rain clutter — echoes from heavy rain\n• Side lobes — false echoes at wrong bearings\n• Small targets — wooden/fiberglass boats reflect poorly\n• Radar horizon — limited by antenna height, about 1.2× √height(m) in NM\n\nNever rely on radar alone! Always maintain visual lookout and use all available means.",
+    "content_de": "Radar hat Grenzen:\n• Schattenbereich — tote Winkel hinter Mast, Schornstein\n• Seegang-Clutter — Falschechos von Wellen\n• Regen-Clutter — Echos von starkem Regen\n• Nebenkeulen — Falschechos in falscher Richtung\n• Kleine Ziele — Holz-/GFK-Boote reflektieren schlecht\n• Radarhorizont — begrenzt durch Antennenhoehe\n\nNie nur auf Radar verlassen! Immer visuelle Ausguck halten."
+  },
+  {
+    "type": "quiz",
+    "question_en": "What does CPA stand for in radar navigation?",
+    "question_de": "Wofuer steht CPA in der Radarnavigation?",
+    "options": [
+      {
+        "text": "Central Positioning Array",
+        "correct": false
+      },
+      {
+        "text": "Course Plot Analysis",
+        "correct": false
+      },
+      {
+        "text": "Closest Point of Approach",
+        "correct": true
+      },
+      {
+        "text": "Compass Position Angle",
+        "correct": false
+      }
+    ],
+    "explanation_en": "CPA = Closest Point of Approach — the minimum distance between your vessel and another target. TCPA = Time to Closest Point of Approach. Both are crucial for collision avoidance.",
+    "explanation_de": "CPA = Closest Point of Approach — der minimale Abstand zwischen deinem Boot und einem anderen Ziel. TCPA = Zeit bis zum naechsten Passierabstand. Beide sind entscheidend zur Kollisionsvermeidung."
+  },
+  {
+    "type": "quiz_free",
+    "question_en": "Name three limitations of radar and explain why visual lookout is still essential.",
+    "question_de": "Nenne drei Einschraenkungen von Radar und erklaere warum visueller Ausguck trotzdem wichtig ist.",
+    "model_answer_en": "Three radar limitations: 1) Shadow sectors behind the mast create blind spots where targets cannot be detected. 2) Sea clutter from waves creates false echoes that can mask small targets. 3) Small wooden or fiberglass boats reflect radar poorly and may not appear on screen. Visual lookout remains essential because radar cannot see everything — small boats, floating debris, and swimmers are often invisible to radar. COLREGS Rule 5 requires every vessel to maintain a proper lookout by all available means.",
+    "model_answer_de": "Drei Radar-Einschraenkungen: 1) Schattenbereiche hinter dem Mast erzeugen tote Winkel. 2) Seegang-Clutter von Wellen erzeugt Falschechos die kleine Ziele verdecken. 3) Kleine Holz-/GFK-Boote reflektieren schlecht. Visueller Ausguck bleibt wichtig weil Radar nicht alles sieht — kleine Boote, treibende Gegenstaende und Schwimmer sind oft unsichtbar."
+  }
+]

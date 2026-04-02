@@ -1,0 +1,68 @@
+[
+  {
+    "type": "vocab",
+    "term_en": "Cooling System",
+    "definition_en": "System to prevent engine overheating. Two types: direct seawater cooling (raw water) or indirect cooling (freshwater circuit cooled by seawater through heat exchanger).",
+    "term_de": "Kuehlsystem",
+    "definition_de": "System zur Vermeidung von Motorueberhitzung. Zwei Typen: direkte Seekuehlung (Rohwasser) oder indirekte Kuehlung (Suesswasserkreislauf gekuehlt durch Seewasser ueber Waermetauscher)."
+  },
+  {
+    "type": "vocab",
+    "term_en": "Impeller",
+    "definition_en": "A rubber pump wheel in the seawater cooling pump. Pumps cooling water through the engine. Wears out and should be replaced annually — most common cause of overheating.",
+    "term_de": "Impeller",
+    "definition_de": "Ein Gummi-Pumpenrad in der Seekuehlwasserpumpe. Pumpt Kuehlwasser durch den Motor. Verschleisst und sollte jaehrlich gewechselt werden — haeufigste Ursache fuer Ueberhitzung."
+  },
+  {
+    "type": "vocab",
+    "term_en": "Fuel System",
+    "definition_en": "Components that store and deliver fuel: fuel tank, fuel filter/water separator, fuel lines, injection pump, injectors. Diesel engines use compression ignition, petrol engines use spark plugs.",
+    "term_de": "Kraftstoffsystem",
+    "definition_de": "Komponenten die Treibstoff lagern und liefern: Tank, Kraftstofffilter/Wasserabscheider, Leitungen, Einspritzpumpe, Einspritzduesen."
+  },
+  {
+    "type": "learn",
+    "title_en": "Engine Cooling Systems",
+    "content_en": "Two cooling methods:\n\n1. DIRECT (raw water) cooling:\n• Seawater pumped directly through engine\n• Simple system\n• Risk: salt deposits, corrosion over time\n\n2. INDIRECT (freshwater) cooling:\n• Closed freshwater circuit cools the engine\n• Seawater cools the freshwater through a heat exchanger\n• Better for the engine, less corrosion\n\nKey parts: seawater intake (with strainer), impeller pump, thermostat, heat exchanger\n\nCheck: water coming out the exhaust? If not = cooling problem!",
+    "content_de": "Zwei Kuehlmethoden:\n\n1. DIREKTE (Rohwasser-) Kuehlung:\n• Seewasser wird direkt durch den Motor gepumpt\n• Einfaches System, Risiko: Salzablagerungen, Korrosion\n\n2. INDIREKTE (Suesswasser-) Kuehlung:\n• Geschlossener Suesswasserkreislauf kuehlt den Motor\n• Seewasser kuehlt das Suesswasser ueber Waermetauscher\n\nWichtig: Kommt Wasser aus dem Auspuff? Wenn nicht = Kuehlproblem!",
+    "image": "p066_img01.jpeg"
+  },
+  {
+    "type": "learn",
+    "title_en": "Pre-Departure Engine Checks",
+    "content_en": "Before starting the engine, ALWAYS check:\n\n1. ENGINE OIL — check level with dipstick, top up if low\n2. COOLANT LEVEL — check in expansion tank (indirect) or raw water strainer\n3. FUEL — sufficient fuel, check for water in fuel filter\n4. DRIVE BELTS — proper tension, no cracks\n5. SEAWATER INTAKE — valve open, strainer clean\n6. EXHAUST — check for water flow after starting (cooling working)\n7. BILGE — check for oil or water leaks\n8. GEAR/PROPELLER — check for lines or debris around propeller\n\nAfter starting: check oil pressure, temperature, charging, water exhaust.",
+    "content_de": "Vor dem Motorstart IMMER pruefen:\n\n1. MOTOROEL — Fuellstand am Peilstab\n2. KUEHLMITTEL — im Ausgleichsbehaelter pruefen\n3. TREIBSTOFF — genug vorhanden, Wasserabscheider pruefen\n4. KEILRIEMEN — Spannung, keine Risse\n5. SEEKUEHLWASSER — Ventil offen, Seiher sauber\n6. AUSPUFF — nach Start auf Wasserfluss pruefen\n7. BILGE — auf Oel- oder Wasserlecks pruefen\n8. PROPELLER — auf Leinen oder Muell pruefen"
+  },
+  {
+    "type": "quiz",
+    "question_en": "What is the most common cause of engine overheating on a boat?",
+    "question_de": "Was ist die haeufigste Ursache fuer Motorueberhitzung auf einem Boot?",
+    "options": [
+      {
+        "text": "Low oil level",
+        "correct": false
+      },
+      {
+        "text": "Failed impeller or blocked seawater intake",
+        "correct": true
+      },
+      {
+        "text": "Old fuel",
+        "correct": false
+      },
+      {
+        "text": "Loose drive belt",
+        "correct": false
+      }
+    ],
+    "explanation_en": "A worn-out impeller or a blocked seawater intake stops cooling water from flowing through the engine. Check that water is coming out the exhaust after starting. Replace the impeller annually.",
+    "explanation_de": "Ein verschlissener Impeller oder verstopfter Seekuehlwassereinlass stoppt den Kuehlwasserfluss. Pruefen ob Wasser aus dem Auspuff kommt. Impeller jaehrlich wechseln."
+  },
+  {
+    "type": "quiz_free",
+    "question_en": "What engine checks should you perform before departure?",
+    "question_de": "Welche Motorpruefungen solltest du vor der Abfahrt durchfuehren?",
+    "model_answer_en": "Before departure: Check engine oil level with the dipstick and top up if needed. Check coolant level in the expansion tank. Ensure sufficient fuel and check the fuel filter for water. Inspect drive belts for proper tension and cracks. Open the seawater intake valve and clean the strainer. After starting, verify cooling water is flowing from the exhaust. Check the bilge for oil or water leaks. Inspect the propeller area for lines or debris. Monitor oil pressure, temperature gauge, and battery charging.",
+    "model_answer_de": "Vor der Abfahrt: Motoroel am Peilstab pruefen. Kuehlmittelstand im Ausgleichsbehaelter. Genug Treibstoff, Wasserabscheider pruefen. Keilriemen auf Spannung und Risse pruefen. Seekuehlwasserventil oeffnen, Seiher reinigen. Nach Start Wasserfluss am Auspuff pruefen. Bilge auf Lecks pruefen. Propeller auf Leinen/Muell pruefen. Oeldruck, Temperatur und Ladung ueberwachen."
+  }
+]
